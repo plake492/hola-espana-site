@@ -1,0 +1,10 @@
+{
+  "name": "hola-espana",
+  "version": "1.0.0",
+  "description": "Legal services for immigrating to Spain",
+  "main": "index.js",
+  "repository": "https://github.com/plake492/hola-espana.git",
+  "author": "Patrick Lake",
+  "license": "MIT",
+  "private": true
+}
