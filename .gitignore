@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# fonts - keep only woff2 for web
+public/fonts/**/*.ttf
+public/fonts/**/*.otf
+public/fonts/**/*.woff
