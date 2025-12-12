@@ -11,7 +11,7 @@ These are the additional schemas to implement after TASK-004 (Blog Post schema).
 **File:** `sanity/schemas/documents/service.ts`
 
 ```typescript
-import { defineField, defineType } from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'service',
@@ -70,15 +70,15 @@ export default defineType({
           name: 'alt',
           type: 'string',
           title: 'Alternative Text',
-        }
-      ]
+        },
+      ],
     }),
     defineField({
       name: 'features',
       title: 'Key Features',
       type: 'array',
       of: [{ type: 'string' }],
-      description: 'Bullet points of what\'s included',
+      description: "Bullet points of what's included",
     }),
     defineField({
       name: 'order',
@@ -107,7 +107,7 @@ export default defineType({
       by: [{ field: 'title', direction: 'asc' }],
     },
   ],
-})
+});
 ```
 
 ---
@@ -119,7 +119,7 @@ export default defineType({
 **File:** `sanity/schemas/documents/package.ts`
 
 ```typescript
-import { defineField, defineType } from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'package',
@@ -180,7 +180,7 @@ export default defineType({
       title: 'Included Features',
       type: 'array',
       of: [{ type: 'string' }],
-      description: 'List of what\'s included in this package',
+      description: "List of what's included in this package",
       validation: (Rule) => Rule.required().min(1),
     }),
     defineField({
@@ -219,11 +219,11 @@ export default defineType({
       highlighted: 'highlighted',
     },
     prepare(selection) {
-      const { title, tier, highlighted } = selection
+      const { title, tier, highlighted } = selection;
       return {
         title,
         subtitle: `${tier}${highlighted ? ' • HIGHLIGHTED' : ''}`,
-      }
+      };
     },
   },
   orderings: [
@@ -233,7 +233,7 @@ export default defineType({
       by: [{ field: 'order', direction: 'asc' }],
     },
   ],
-})
+});
 ```
 
 ---
@@ -245,7 +245,7 @@ export default defineType({
 **File:** `sanity/schemas/documents/teamMember.ts`
 
 ```typescript
-import { defineField, defineType } from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'teamMember',
@@ -256,7 +256,7 @@ export default defineType({
       name: 'name',
       title: 'Full Name',
       type: 'string',
-      description: 'Team member\'s full name',
+      description: "Team member's full name",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
@@ -370,7 +370,7 @@ export default defineType({
       by: [{ field: 'name', direction: 'asc' }],
     },
   ],
-})
+});
 ```
 
 ---
@@ -384,7 +384,7 @@ export default defineType({
 **File:** `sanity/schemas/objects/callToAction.ts`
 
 ```typescript
-import { defineField, defineType } from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'callToAction',
@@ -433,14 +433,14 @@ export default defineType({
       style: 'style',
     },
     prepare(selection) {
-      const { text, url, style } = selection
+      const { text, url, style } = selection;
       return {
         title: text,
         subtitle: `${style} → ${url}`,
-      }
+      };
     },
   },
-})
+});
 ```
 
 ### Testimonial Object
@@ -450,7 +450,7 @@ export default defineType({
 **File:** `sanity/schemas/objects/testimonial.ts`
 
 ```typescript
-import { defineField, defineType } from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'testimonial',
@@ -515,7 +515,7 @@ export default defineType({
       media: 'photo',
     },
   },
-})
+});
 ```
 
 ---
@@ -525,19 +525,19 @@ export default defineType({
 After creating all schemas, update `sanity/schema.ts`:
 
 ```typescript
-import { type SchemaTypeDefinition } from 'sanity'
+import { type SchemaTypeDefinition } from 'sanity';
 
 // Documents
-import post from './schemas/documents/post'
-import service from './schemas/documents/service'
-import package from './schemas/documents/package'
-import teamMember from './schemas/documents/teamMember'
-import testimonial from './schemas/objects/testimonial'
+import post from './schemas/documents/post';
+import service from './schemas/documents/service';
+import package from './schemas/documents/package';
+import teamMember from './schemas/documents/teamMember';
+import testimonial from './schemas/objects/testimonial';
 
 // Objects
-import blockContent from './schemas/objects/blockContent'
-import seo from './schemas/objects/seo'
-import callToAction from './schemas/objects/callToAction'
+import blockContent from './schemas/objects/blockContent';
+import seo from './schemas/objects/seo';
+import callToAction from './schemas/objects/callToAction';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -547,13 +547,13 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     package,
     teamMember,
     testimonial,
-    
+
     // Objects
     blockContent,
     seo,
     callToAction,
   ],
-}
+};
 ```
 
 ---
@@ -604,7 +604,7 @@ export const servicesQuery = groq`
     },
     features
   }
-`
+`;
 ```
 
 ### Fetching Packages
@@ -624,7 +624,7 @@ export const packagesQuery = groq`
     highlightText,
     ctaText
   }
-`
+`;
 ```
 
 ### Fetching Team Members
@@ -648,7 +648,7 @@ export const teamQuery = groq`
     socialLinks,
     featured
   }
-`
+`;
 ```
 
 ### Fetching Testimonials
@@ -665,7 +665,7 @@ export const testimonialsQuery = groq`
     quote,
     rating
   }
-`
+`;
 ```
 
 ---

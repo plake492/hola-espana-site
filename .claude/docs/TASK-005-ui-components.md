@@ -11,6 +11,7 @@
 ## Background: Component Library
 
 These are foundational building blocks used throughout the site:
+
 - **Container:** Centers content with max-width
 - **Section:** Full-width sections with consistent padding
 - **Button:** Styled buttons/links
@@ -29,8 +30,8 @@ This merges Tailwind classes safely.
 Create `src/lib/utils/cn.ts`:
 
 ```typescript
-import { type ClassValue, clsx } from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
 /**
  * Merge Tailwind CSS classes with proper precedence
@@ -38,7 +39,7 @@ import { twMerge } from 'tailwind-merge'
  * @returns Merged class string
  */
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
 ```
 
@@ -68,8 +69,8 @@ const sizeClasses = {
  * @param className - Additional CSS classes
  * @param size - Max width preset (default: lg)
  */
-export default function Container({ 
-  children, 
+export default function Container({
+  children,
   className,
   size = 'lg'
 }: ContainerProps) {
@@ -246,10 +247,10 @@ interface CardProps {
  * @param className - Additional CSS classes
  * @param hover - Enable hover effect
  */
-export default function Card({ 
-  children, 
-  className, 
-  hover = false 
+export default function Card({
+  children,
+  className,
+  hover = false
 }: CardProps) {
   return (
     <div className={cn(
@@ -265,12 +266,12 @@ export default function Card({
 /**
  * CardHeader - Top section of card with padding
  */
-export function CardHeader({ 
-  children, 
-  className 
-}: { 
+export function CardHeader({
+  children,
+  className
+}: {
   children: React.ReactNode
-  className?: string 
+  className?: string
 }) {
   return (
     <div className={cn('p-6', className)}>
@@ -282,12 +283,12 @@ export function CardHeader({
 /**
  * CardContent - Bottom section of card with padding
  */
-export function CardContent({ 
-  children, 
-  className 
-}: { 
+export function CardContent({
+  children,
+  className
+}: {
   children: React.ReactNode
-  className?: string 
+  className?: string
 }) {
   return (
     <div className={cn('px-6 pb-6', className)}>
@@ -302,52 +303,60 @@ export function CardContent({
 Create `src/app/test-components/page.tsx`:
 
 ```tsx
-import Container from '@/components/ui/Container'
-import Section from '@/components/ui/Section'
-import Button from '@/components/ui/Button'
-import Card, { CardHeader, CardContent } from '@/components/ui/Card'
+import Container from '@/components/ui/Container';
+import Section from '@/components/ui/Section';
+import Button from '@/components/ui/Button';
+import Card, { CardHeader, CardContent } from '@/components/ui/Card';
 
 export default function TestComponentsPage() {
   return (
     <>
       {/* Container Tests */}
       <Section>
-        <h1 className="text-4xl font-bold mb-8">Component Library Test</h1>
-        
+        <h1 className="mb-8 text-4xl font-bold">Component Library Test</h1>
+
         <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Containers</h2>
+          <h2 className="mb-4 text-2xl font-semibold">Containers</h2>
           <div className="space-y-4">
-            <Container size="sm" className="bg-muted p-4 rounded">Small Container</Container>
-            <Container size="md" className="bg-muted p-4 rounded">Medium Container</Container>
-            <Container size="lg" className="bg-muted p-4 rounded">Large Container (default)</Container>
-            <Container size="xl" className="bg-muted p-4 rounded">Extra Large Container</Container>
+            <Container size="sm" className="bg-muted rounded p-4">
+              Small Container
+            </Container>
+            <Container size="md" className="bg-muted rounded p-4">
+              Medium Container
+            </Container>
+            <Container size="lg" className="bg-muted rounded p-4">
+              Large Container (default)
+            </Container>
+            <Container size="xl" className="bg-muted rounded p-4">
+              Extra Large Container
+            </Container>
           </div>
         </div>
       </Section>
 
       {/* Section Tests */}
       <Section background="default" padding="md">
-        <h2 className="text-2xl font-semibold mb-4">Sections</h2>
+        <h2 className="mb-4 text-2xl font-semibold">Sections</h2>
         <p className="text-muted-foreground">Default background, medium padding</p>
       </Section>
 
       <Section background="muted" padding="lg">
-        <h2 className="text-2xl font-semibold mb-4">Muted Background</h2>
+        <h2 className="mb-4 text-2xl font-semibold">Muted Background</h2>
         <p className="text-muted-foreground">Muted background, large padding (default)</p>
       </Section>
 
       <Section background="accent" padding="sm">
-        <h2 className="text-2xl font-semibold mb-4">Accent Background</h2>
+        <h2 className="mb-4 text-2xl font-semibold">Accent Background</h2>
         <p>Accent background with contrasting text, small padding</p>
       </Section>
 
       {/* Button Tests */}
       <Section>
-        <h2 className="text-2xl font-semibold mb-6">Buttons</h2>
-        
+        <h2 className="mb-6 text-2xl font-semibold">Buttons</h2>
+
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-medium mb-3">Variants</h3>
+            <h3 className="mb-3 text-lg font-medium">Variants</h3>
             <div className="flex flex-wrap gap-4">
               <Button variant="primary">Primary Button</Button>
               <Button variant="secondary">Secondary Button</Button>
@@ -356,7 +365,7 @@ export default function TestComponentsPage() {
           </div>
 
           <div>
-            <h3 className="text-lg font-medium mb-3">Sizes</h3>
+            <h3 className="mb-3 text-lg font-medium">Sizes</h3>
             <div className="flex flex-wrap items-center gap-4">
               <Button size="sm">Small</Button>
               <Button size="md">Medium</Button>
@@ -365,12 +374,12 @@ export default function TestComponentsPage() {
           </div>
 
           <div>
-            <h3 className="text-lg font-medium mb-3">As Link</h3>
+            <h3 className="mb-3 text-lg font-medium">As Link</h3>
             <Button href="/test-components">Button as Link</Button>
           </div>
 
           <div>
-            <h3 className="text-lg font-medium mb-3">Disabled</h3>
+            <h3 className="mb-3 text-lg font-medium">Disabled</h3>
             <Button disabled>Disabled Button</Button>
           </div>
         </div>
@@ -378,17 +387,15 @@ export default function TestComponentsPage() {
 
       {/* Card Tests */}
       <Section background="muted">
-        <h2 className="text-2xl font-semibold mb-6">Cards</h2>
-        
-        <div className="grid md:grid-cols-3 gap-6">
+        <h2 className="mb-6 text-2xl font-semibold">Cards</h2>
+
+        <div className="grid gap-6 md:grid-cols-3">
           <Card>
             <CardHeader>
               <h3 className="text-xl font-semibold">Basic Card</h3>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground">
-                Card with header and content sections.
-              </p>
+              <p className="text-muted-foreground">Card with header and content sections.</p>
             </CardContent>
           </Card>
 
@@ -397,9 +404,7 @@ export default function TestComponentsPage() {
               <h3 className="text-xl font-semibold">Hover Card</h3>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground">
-                This card has a hover effect.
-              </p>
+              <p className="text-muted-foreground">This card has a hover effect.</p>
             </CardContent>
           </Card>
 
@@ -414,7 +419,7 @@ export default function TestComponentsPage() {
         </div>
       </Section>
     </>
-  )
+  );
 }
 ```
 
@@ -438,6 +443,7 @@ export default function TestComponentsPage() {
 ### 1. Visual Inspection
 
 Open `localhost:3000/test-components` and verify:
+
 - Containers have correct max-widths
 - Sections have proper spacing
 - Buttons have correct colors from theme
@@ -447,6 +453,7 @@ Open `localhost:3000/test-components` and verify:
 ### 2. Interaction Testing
 
 Test these interactions:
+
 - Hover over buttons (should show hover state)
 - Hover over hover cards (shadow should increase)
 - Click button link (should navigate)
@@ -456,6 +463,7 @@ Test these interactions:
 ### 3. Browser DevTools
 
 Inspect elements and verify:
+
 - Tailwind classes are applied
 - CSS variables resolve to correct colors
 - No console errors
@@ -464,6 +472,7 @@ Inspect elements and verify:
 ### 4. Component Props
 
 Test that props work:
+
 ```tsx
 <Container size="sm" className="custom-class" />
 <Section background="muted" padding="xl" />
@@ -509,6 +518,7 @@ className={cn('base-class', hover && 'hover-class', className)}
 ```
 
 Benefits:
+
 - Handles conditionals cleanly
 - Resolves Tailwind conflicts (twMerge)
 - Easier to read
@@ -574,6 +584,7 @@ But keep it simple for now. Build only what you need.
 ## Next Steps
 
 After verification passes, proceed to:
+
 - **TASK-006:** Create Playground Structure
 
 ---

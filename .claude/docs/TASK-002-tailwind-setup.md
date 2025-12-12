@@ -111,33 +111,33 @@ Update `src/app/page.tsx` to test colors:
 ```tsx
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="bg-background min-h-screen">
       <div className="container mx-auto p-8">
-        <h1 className="text-4xl font-bold text-foreground mb-8">Hola España Theme Test</h1>
+        <h1 className="text-foreground mb-8 text-4xl font-bold">Hola España Theme Test</h1>
 
         {/* Brand Colors Test */}
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Brand Colors</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="bg-brand-gold text-foreground p-4 rounded-lg">Gold</div>
-            <div className="bg-brand-teal text-white p-4 rounded-lg">Dark Teal</div>
-            <div className="bg-brand-sienna text-white p-4 rounded-lg">Burnt Sienna</div>
-            <div className="bg-brand-terra-cotta text-white p-4 rounded-lg">Terra Cotta</div>
-            <div className="bg-brand-tan text-foreground p-4 rounded-lg">Tan</div>
-            <div className="bg-brand-mountain text-foreground p-4 rounded-lg">Mountain</div>
-            <div className="bg-brand-cream text-foreground p-4 rounded-lg border border-border">Cream</div>
+          <h2 className="mb-4 text-2xl font-semibold">Brand Colors</h2>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+            <div className="bg-brand-gold text-foreground rounded-lg p-4">Gold</div>
+            <div className="bg-brand-teal rounded-lg p-4 text-white">Dark Teal</div>
+            <div className="bg-brand-sienna rounded-lg p-4 text-white">Burnt Sienna</div>
+            <div className="bg-brand-terra-cotta rounded-lg p-4 text-white">Terra Cotta</div>
+            <div className="bg-brand-tan text-foreground rounded-lg p-4">Tan</div>
+            <div className="bg-brand-mountain text-foreground rounded-lg p-4">Mountain</div>
+            <div className="bg-brand-cream text-foreground border-border rounded-lg border p-4">Cream</div>
           </div>
         </section>
 
         {/* Semantic Colors Test */}
         <section>
-          <h2 className="text-2xl font-semibold mb-4">Semantic Colors</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-primary text-primary-foreground p-4 rounded-lg">Primary (Teal)</div>
-            <div className="bg-secondary text-secondary-foreground p-4 rounded-lg">Secondary (Gold)</div>
-            <div className="bg-accent text-accent-foreground p-4 rounded-lg">Accent (Terra Cotta)</div>
-            <div className="bg-muted text-muted-foreground p-4 rounded-lg">Muted (Mountain)</div>
-            <div className="bg-card text-card-foreground p-4 rounded-lg border border-border">Card</div>
+          <h2 className="mb-4 text-2xl font-semibold">Semantic Colors</h2>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div className="bg-primary text-primary-foreground rounded-lg p-4">Primary (Teal)</div>
+            <div className="bg-secondary text-secondary-foreground rounded-lg p-4">Secondary (Gold)</div>
+            <div className="bg-accent text-accent-foreground rounded-lg p-4">Accent (Terra Cotta)</div>
+            <div className="bg-muted text-muted-foreground rounded-lg p-4">Muted (Mountain)</div>
+            <div className="bg-card text-card-foreground border-border rounded-lg border p-4">Card</div>
           </div>
         </section>
       </div>

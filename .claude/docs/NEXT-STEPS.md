@@ -11,14 +11,17 @@ After completing TASK-001 through TASK-008, you have the foundation. Here's what
 Create the remaining document types:
 
 **Service Schema** (`sanity/schemas/documents/service.ts`)
+
 - Used for: Visa services, real estate services, etc.
 - Fields: title, slug, icon, shortDescription, description, order
 
 **Package Schema** (`sanity/schemas/documents/package.ts`)
+
 - Used for: Essentials, Complete, Premium packages
 - Fields: name, tier, price, priceNote, description, features, highlighted, order
 
 **Team Member Schema** (`sanity/schemas/documents/teamMember.ts`)
+
 - Used for: Attorney bio, team bios
 - Fields: name, role, image, bio, credentials, languages
 
@@ -31,6 +34,7 @@ See `SANITY-SCHEMAS-REMAINING.md` for complete code.
 Start with homepage:
 
 **Homepage Sections:**
+
 1. Hero (value proposition + CTA)
 2. Services overview (3 cards)
 3. Why choose us (2-column)
@@ -38,6 +42,7 @@ Start with homepage:
 5. Final CTA
 
 **Files to Create:**
+
 - `src/components/sections/Hero.tsx`
 - `src/components/sections/ServicesGrid.tsx`
 - `src/components/sections/WhyChooseUs.tsx`
@@ -45,6 +50,7 @@ Start with homepage:
 - `src/components/sections/FinalCTA.tsx`
 
 **Then update:**
+
 - `src/app/page.tsx` - Compose sections
 
 ---
@@ -52,12 +58,14 @@ Start with homepage:
 ### 3. Create Layout Components
 
 **Header/Navigation:**
+
 - `src/components/layout/Header.tsx`
 - Logo
 - Navigation menu (desktop + mobile)
 - CTA button (Schedule Consultation)
 
 **Footer:**
+
 - `src/components/layout/Footer.tsx`
 - Links (pages, services, legal)
 - Contact info
@@ -65,6 +73,7 @@ Start with homepage:
 - Copyright
 
 **Update:**
+
 - `src/app/layout.tsx` - Add Header and Footer
 
 ---
@@ -72,6 +81,7 @@ Start with homepage:
 ### 4. Implement Blog System
 
 **Blog Listing Page:**
+
 - `src/app/blog/page.tsx`
 - Fetch posts from Sanity
 - Display as grid with images
@@ -79,6 +89,7 @@ Start with homepage:
 - Pagination (if many posts)
 
 **Blog Post Page:**
+
 - `src/app/blog/[slug]/page.tsx`
 - Dynamic route for each post
 - Fetch post by slug
@@ -87,6 +98,7 @@ Start with homepage:
 - Related posts (optional)
 
 **Components:**
+
 - `src/components/blog/PostCard.tsx` - For listing
 - `src/components/blog/PostHeader.tsx` - For post page
 - `src/components/sanity/PortableText.tsx` - Render rich text
@@ -98,6 +110,7 @@ Start with homepage:
 ### 5. Build Other Pages
 
 **About Page** (`src/app/about/page.tsx`)
+
 - Attorney bio from Sanity
 - Personal story
 - Credentials and experience
@@ -105,11 +118,13 @@ Start with homepage:
 - Why Spain
 
 **Services Page** (`src/app/services/page.tsx`)
+
 - Fetch services from Sanity
 - Display in grid or sections
 - Link to packages
 
 **Packages Page** (`src/app/packages/page.tsx`)
+
 - Fetch packages from Sanity
 - 3-column layout for tiers
 - Pricing display
@@ -117,6 +132,7 @@ Start with homepage:
 - CTA to contact/schedule
 
 **Contact Page** (`src/app/contact/page.tsx`)
+
 - Contact form
 - Calendly embed
 - Contact information
@@ -127,11 +143,13 @@ Start with homepage:
 ### 6. Form Implementation
 
 **Contact Form Component:**
+
 ```tsx
-src/components/forms/ContactForm.tsx
+src / components / forms / ContactForm.tsx;
 ```
 
 **Features:**
+
 - Name, email, phone, message fields
 - Form validation (react-hook-form or native)
 - Submit to email service or Sanity
@@ -139,6 +157,7 @@ src/components/forms/ContactForm.tsx
 - Track with Vercel Analytics
 
 **Email Service Options:**
+
 1. Vercel API route + Resend
 2. Vercel API route + SendGrid
 3. FormSubmit (simplest, third-party)
@@ -149,22 +168,26 @@ src/components/forms/ContactForm.tsx
 ### 7. Calendly Integration
 
 **Simple Approach:**
+
 ```tsx
 // In contact page or separate /schedule page
 <Script src="https://assets.calendly.com/assets/external/widget.js" />
-<div 
-  className="calendly-inline-widget" 
+<div
+  className="calendly-inline-widget"
   data-url="https://calendly.com/[username]/30min"
   style={{ minWidth: '320px', height: '700px' }}
 />
 ```
 
 **Button Trigger:**
+
 ```tsx
-<Button 
-  onClick={() => window.Calendly.initPopupWidget({
-    url: 'https://calendly.com/[username]/30min'
-  })}
+<Button
+  onClick={() =>
+    window.Calendly.initPopupWidget({
+      url: 'https://calendly.com/[username]/30min',
+    })
+  }
 >
   Schedule Consultation
 </Button>
@@ -175,26 +198,23 @@ src/components/forms/ContactForm.tsx
 ### 8. Image Optimization
 
 **Sanity Image Component:**
+
 ```tsx
-src/components/sanity/SanityImage.tsx
+src / components / sanity / SanityImage.tsx;
 ```
 
 Use `next/image` with Sanity's image URLs:
+
 - Automatic optimization
 - Responsive sizing
 - Lazy loading
 - Blur placeholder
 
 **Usage:**
-```tsx
-import { urlFor } from '@/lib/sanity/image'
 
-<Image
-  src={urlFor(image).url()}
-  alt={image.alt}
-  width={800}
-  height={600}
-/>
+```tsx
+import { urlFor } from '@/lib/sanity/image';
+<Image src={urlFor(image).url()} alt={image.alt} width={800} height={600} />;
 ```
 
 ---
@@ -204,6 +224,7 @@ import { urlFor } from '@/lib/sanity/image'
 ### 9. Animations
 
 Add FadeIn animations to key elements:
+
 - Section headings
 - Service cards
 - Package cards
@@ -217,6 +238,7 @@ Add FadeIn animations to key elements:
 
 **Meta Tags:**
 Create `src/components/SEO.tsx` component for each page:
+
 - Title
 - Description
 - Open Graph tags
@@ -224,6 +246,7 @@ Create `src/components/SEO.tsx` component for each page:
 
 **Sitemap:**
 Use Next.js to generate:
+
 ```tsx
 // src/app/sitemap.ts
 export default function sitemap() {
@@ -231,11 +254,12 @@ export default function sitemap() {
     { url: '/', lastModified: new Date() },
     { url: '/about', lastModified: new Date() },
     // ...
-  ]
+  ];
 }
 ```
 
 **Robots.txt:**
+
 ```tsx
 // src/app/robots.ts
 export default function robots() {
@@ -245,7 +269,7 @@ export default function robots() {
       allow: '/',
     },
     sitemap: 'https://holaespana.com/sitemap.xml',
-  }
+  };
 }
 ```
 
@@ -254,6 +278,7 @@ export default function robots() {
 ### 11. Performance Optimization
 
 **Check and Improve:**
+
 - [ ] Lighthouse score (target 90+)
 - [ ] Image optimization (all images next/image)
 - [ ] Font optimization (next/font)
@@ -261,6 +286,7 @@ export default function robots() {
 - [ ] Bundle size (analyze with webpack-bundle-analyzer)
 
 **Core Web Vitals:**
+
 - LCP (Largest Contentful Paint) < 2.5s
 - FID (First Input Delay) < 100ms
 - CLS (Cumulative Layout Shift) < 0.1
@@ -270,12 +296,14 @@ export default function robots() {
 ### 12. Responsive Testing
 
 Test on:
+
 - [ ] Desktop (Chrome, Safari, Firefox)
 - [ ] Tablet (iPad, Android tablet)
 - [ ] Mobile (iPhone, Android phone)
 - [ ] Different screen sizes (375px to 1920px+)
 
 Check:
+
 - Navigation menu (mobile hamburger)
 - Form layouts
 - Image sizing
@@ -289,6 +317,7 @@ Check:
 ### 13. Content Migration
 
 Work with client to:
+
 - Write/gather all page content
 - Create initial blog posts (5 recommended)
 - Get professional photos
@@ -297,6 +326,7 @@ Work with client to:
 - Set package pricing
 
 **Input into Sanity:**
+
 - Create posts in Studio
 - Upload images
 - Set up services
@@ -308,6 +338,7 @@ Work with client to:
 ### 14. Client Training
 
 **CMS Training Session (1-2 hours):**
+
 1. Sanity Studio overview
 2. Creating blog posts
 3. Adding images
@@ -316,6 +347,7 @@ Work with client to:
 6. Common issues and fixes
 
 **Training Materials:**
+
 - Screen recording of session
 - Written documentation
 - Quick reference guide
@@ -326,6 +358,7 @@ Work with client to:
 ### 15. Testing Phase
 
 **Functional Testing:**
+
 - [ ] All links work
 - [ ] Forms submit correctly
 - [ ] Calendly integration works
@@ -334,6 +367,7 @@ Work with client to:
 - [ ] Blog posts display correctly
 
 **Content Testing:**
+
 - [ ] No lorem ipsum
 - [ ] All images have alt text
 - [ ] SEO meta tags filled
@@ -341,6 +375,7 @@ Work with client to:
 - [ ] Contact info correct
 
 **Browser Testing:**
+
 - [ ] Chrome
 - [ ] Safari
 - [ ] Firefox
@@ -351,6 +386,7 @@ Work with client to:
 ### 16. Deployment
 
 **Pre-Deploy Checklist:**
+
 - [ ] Environment variables set in Vercel
 - [ ] Custom domain configured
 - [ ] SSL certificate active
@@ -359,6 +395,7 @@ Work with client to:
 - [ ] Sanity CORS configured for production domain
 
 **Deploy Process:**
+
 1. Push to GitHub
 2. Connect to Vercel
 3. Configure domain
@@ -372,12 +409,14 @@ Work with client to:
 ### 17. 30-Day Support Period
 
 **Available for:**
+
 - Bug fixes
 - Minor adjustments
 - Technical issues
 - CMS questions
 
 **Not included:**
+
 - New features
 - Content changes
 - Design overhauls
@@ -388,12 +427,14 @@ Work with client to:
 ### 18. Monitoring
 
 **Weekly Checks:**
+
 - Vercel Analytics (traffic)
 - Speed Insights (performance)
 - Form submissions
 - Any errors in logs
 
 **Monthly:**
+
 - SEO rankings (Google Search Console)
 - Blog engagement
 - Conversion metrics
@@ -404,6 +445,7 @@ Work with client to:
 ### 19. Growth Opportunities
 
 **Future Enhancements:**
+
 - Email newsletter signup
 - Resource downloads (visa guides)
 - Video testimonials
@@ -412,6 +454,7 @@ Work with client to:
 - Client portal (for existing clients)
 
 **SEO Continued:**
+
 - Regular blog posts (2-4 per month)
 - Backlink building
 - Guest posting
@@ -432,6 +475,7 @@ Work with client to:
 ### Managing Scope
 
 **When Client Asks for "Just One More Thing":**
+
 1. Acknowledge the request
 2. Check if it's in scope
 3. If not, offer to quote separately
@@ -439,6 +483,7 @@ Work with client to:
 5. Stay friendly but firm
 
 **Red Flags:**
+
 - "While you're at it..."
 - "This should be quick..."
 - "Can't you just..."
@@ -466,18 +511,21 @@ The project is successful when:
 ## Resources
 
 **Documentation:**
+
 - Next.js: https://nextjs.org/docs
 - Tailwind CSS: https://tailwindcss.com
 - Sanity: https://www.sanity.io/docs
 - React Spring: https://www.react-spring.dev
 
 **Tools:**
+
 - Lighthouse (performance)
 - Google Search Console (SEO)
 - Vercel Dashboard (analytics)
 - Sanity Studio (content management)
 
 **Community:**
+
 - Next.js Discord
 - Sanity Slack
 - Stack Overflow

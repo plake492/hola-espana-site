@@ -11,6 +11,7 @@
 ## Background: Sanity Schemas
 
 Schemas define the structure of content in Sanity:
+
 - **Documents** = Main content types (blog posts, services, etc.)
 - **Objects** = Reusable fields (SEO settings, rich text, etc.)
 
@@ -27,7 +28,7 @@ This defines rich text editing capabilities.
 Create `sanity/schemas/objects/blockContent.ts`:
 
 ```typescript
-import { defineType, defineArrayMember } from 'sanity'
+import { defineType, defineArrayMember } from 'sanity';
 
 export default defineType({
   title: 'Block Content',
@@ -78,11 +79,11 @@ export default defineType({
           type: 'string',
           title: 'Alternative Text',
           description: 'Important for SEO and accessibility',
-        }
-      ]
+        },
+      ],
     }),
   ],
-})
+});
 ```
 
 ### 2. Create SEO Object
@@ -90,7 +91,7 @@ export default defineType({
 Create `sanity/schemas/objects/seo.ts`:
 
 ```typescript
-import { defineField, defineType } from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'seo',
@@ -123,7 +124,7 @@ export default defineType({
       },
     }),
   ],
-})
+});
 ```
 
 ### 3. Create Blog Post Document
@@ -131,7 +132,7 @@ export default defineType({
 Create `sanity/schemas/documents/post.ts`:
 
 ```typescript
-import { defineField, defineType } from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'post',
@@ -170,8 +171,8 @@ export default defineType({
           type: 'string',
           title: 'Alternative Text',
           description: 'Describe the image for accessibility and SEO',
-        }
-      ]
+        },
+      ],
     }),
     defineField({
       name: 'categories',
@@ -227,12 +228,12 @@ export default defineType({
       subtitle: 'publishedAt',
     },
     prepare(selection) {
-      const { title, subtitle } = selection
+      const { title, subtitle } = selection;
       return {
         title,
         subtitle: subtitle ? new Date(subtitle).toLocaleDateString() : 'No date',
         ...selection,
-      }
+      };
     },
   },
   orderings: [
@@ -252,7 +253,7 @@ export default defineType({
       by: [{ field: 'title', direction: 'asc' }],
     },
   ],
-})
+});
 ```
 
 ### 4. Update Schema Index
@@ -260,25 +261,25 @@ export default defineType({
 Update `sanity/schema.ts` to include all schemas:
 
 ```typescript
-import { type SchemaTypeDefinition } from 'sanity'
+import { type SchemaTypeDefinition } from 'sanity';
 
 // Documents
-import post from './schemas/documents/post'
+import post from './schemas/documents/post';
 
 // Objects
-import blockContent from './schemas/objects/blockContent'
-import seo from './schemas/objects/seo'
+import blockContent from './schemas/objects/blockContent';
+import seo from './schemas/objects/seo';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
     // Documents
     post,
-    
+
     // Objects
     blockContent,
     seo,
   ],
-}
+};
 ```
 
 ### 5. Restart Sanity Studio
@@ -309,6 +310,7 @@ npm run dev
 ### 1. Test Creating a Blog Post
 
 In Sanity Studio:
+
 1. Click "Create" → "Blog Post"
 2. Fill in title: "Test Post"
 3. Click "Generate" on slug field
@@ -317,6 +319,7 @@ In Sanity Studio:
 6. Click "Publish"
 
 Verify:
+
 - Post appears in document list
 - Preview shows title and date
 - All fields saved correctly
@@ -324,6 +327,7 @@ Verify:
 ### 2. Field Validations
 
 Test these validations work:
+
 - Title: Required (can't publish without it)
 - Slug: Required (can't publish without it)
 - Meta Title: Warning at 60 characters
@@ -333,6 +337,7 @@ Test these validations work:
 ### 3. Rich Text Editor
 
 Verify blockContent editor has:
+
 - Bold, italic formatting
 - Headings (H2, H3, H4)
 - Bullet and numbered lists
@@ -360,12 +365,14 @@ sanity/
 ### Document vs Object
 
 **Document** (post.ts)
+
 - Independent content item
 - Has its own page in Studio
 - Can be published/unpublished
 - Shows in content lists
 
 **Object** (blockContent.ts, seo.ts)
+
 - Reusable field groups
 - Used inside documents
 - Not published independently
@@ -382,6 +389,7 @@ post (document)
 ```
 
 Objects make schemas:
+
 - Reusable (use blockContent in posts, pages, etc.)
 - Maintainable (change once, affects everywhere)
 - Organized (group related fields)
@@ -410,6 +418,7 @@ Objects make schemas:
 ## Next Steps
 
 After verification passes, proceed to:
+
 - **TASK-005:** Create UI Component Library
 
 ---

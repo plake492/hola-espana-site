@@ -43,6 +43,7 @@ ls -la .claude/
 ```
 
 You should see:
+
 - `.claude/settings.json` ✅
 - `.claude/VERSION-CONTROL.md` ✅
 - `.claude/docs/` (folder with 14+ files) ✅
@@ -68,11 +69,13 @@ git commit -m "Add Claude Code configuration and task documentation"
 ### Step 3: Read the Documentation
 
 **For humans:**
+
 1. Open `.claude/docs/README.md` - Documentation index
 2. Read `.claude/docs/PROJECT-OVERVIEW.md` - Full context
 3. Check `.claude/docs/tasks.md` - Current status
 
 **For Claude Code:**
+
 - CLAUDE.md is automatically loaded
 - References `.claude/docs/` for detailed tasks
 
@@ -83,12 +86,14 @@ git commit -m "Add Claude Code configuration and task documentation"
 ### Starting a Task
 
 1. **Check status:**
+
    ```bash
    # Open tasks.md to see what's next
    cat .claude/docs/tasks.md | grep -A 2 "- \[ \]" | head -10
    ```
 
 2. **Read task file:**
+
    ```bash
    # Example: Starting Task 001
    cat .claude/docs/TASK-001-project-initialization.md
@@ -99,6 +104,7 @@ git commit -m "Add Claude Code configuration and task documentation"
 4. **Verify completion** using checklist in task file
 
 5. **Update checkbox** in `tasks.md`:
+
    ```markdown
    - [x] **TASK-001:** Project initialization
    ```
@@ -121,6 +127,7 @@ claude
 ```
 
 Claude will automatically:
+
 1. Load `CLAUDE.md` for context
 2. Have access to all `.claude/docs/` files
 3. Use permissions from `.claude/settings.json`
@@ -151,11 +158,13 @@ Claude will automatically:
 **In `.claude/docs/tasks.md`:**
 
 Before:
+
 ```markdown
 - [ ] **TASK-001:** Project initialization
 ```
 
 After completion:
+
 ```markdown
 - [x] **TASK-001:** Project initialization
 ```
@@ -163,6 +172,7 @@ After completion:
 ### Task Order
 
 Execute sequentially:
+
 1. TASK-001: Project initialization (15-20 min)
 2. TASK-002: Tailwind CSS v4 setup (20-25 min)
 3. TASK-003: Sanity CMS integration (25-30 min)
@@ -179,22 +189,26 @@ Execute sequentially:
 ## ⚙️ Configuration Files
 
 ### `.claude/settings.json` (Team Config)
+
 **Purpose:** Shared permissions for all developers  
 **Commit to Git:** YES  
 **Edit when:** Adjusting team-wide tool permissions
 
 **Key sections:**
+
 - `permissions.allow` - Auto-approved operations
 - `permissions.ask` - Requires confirmation
 - `permissions.deny` - Blocked operations
 - `hooks` - Auto-run commands (e.g., Prettier)
 
 ### `.claude/settings.local.json` (Personal Config)
+
 **Purpose:** Your personal overrides  
 **Commit to Git:** NO (auto-ignored)  
 **Create when:** You want different local behavior
 
 **Example:**
+
 ```json
 {
   "model": "claude-opus-4",
@@ -222,21 +236,25 @@ If you want to use Context7 MCP (more structured documentation):
 ## ❓ Troubleshooting
 
 ### "Claude Code doesn't see my docs"
+
 - Ensure `CLAUDE.md` is at project root
 - Check `.claude/docs/` folder exists
 - Restart Claude Code session
 
 ### "Permission denied errors"
+
 - Check `.claude/settings.json` permissions
 - Update `allow` array for needed operations
 - Restart Claude Code
 
 ### "Can't update checkboxes"
+
 - Edit `.claude/docs/tasks.md` directly
 - Change `- [ ]` to `- [x]`
 - Save file
 
 ### "Git wants to commit settings.local.json"
+
 - Check `.gitignore` includes `.claude/settings.local.json`
 - Run `git rm --cached .claude/settings.local.json`
 
@@ -244,14 +262,14 @@ If you want to use Context7 MCP (more structured documentation):
 
 ## 📚 Key Documentation Files
 
-| File | Purpose |
-|------|---------|
-| `CLAUDE.md` | Project context (auto-loaded) |
-| `.claude/docs/README.md` | Documentation index |
-| `.claude/docs/PROJECT-OVERVIEW.md` | Business context |
-| `.claude/docs/tasks.md` | Task tracker |
-| `.claude/docs/TASK-XXX.md` | Task instructions |
-| `.claude/VERSION-CONTROL.md` | Git guide |
+| File                               | Purpose                       |
+| ---------------------------------- | ----------------------------- |
+| `CLAUDE.md`                        | Project context (auto-loaded) |
+| `.claude/docs/README.md`           | Documentation index           |
+| `.claude/docs/PROJECT-OVERVIEW.md` | Business context              |
+| `.claude/docs/tasks.md`            | Task tracker                  |
+| `.claude/docs/TASK-XXX.md`         | Task instructions             |
+| `.claude/VERSION-CONTROL.md`       | Git guide                     |
 
 ---
 
@@ -267,6 +285,7 @@ If you want to use Context7 MCP (more structured documentation):
 ---
 
 **Questions?** Refer to:
+
 - `.claude/docs/README.md` - Full documentation guide
 - `.claude/VERSION-CONTROL.md` - Git best practices
 - `CLAUDE.md` - Project technical overview

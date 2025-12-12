@@ -2,7 +2,8 @@
 
 @font-face {
   font-family: 'TAN Aegean';
-  src: url('/fonts/TAN_Aegean/TAN_Aegean.woff2') format('woff2'),
+  src:
+    url('/fonts/TAN_Aegean/TAN_Aegean.woff2') format('woff2'),
     url('/fonts/TAN_Aegean/TAN_Aegean.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -159,7 +160,9 @@
 
 @font-face {
   font-family: 'La Luxes';
-  src: url('/fonts/La_Luxes/La_Luxes.woff2') format('woff2'), url('/fonts/La_Luxes/La_Luxes.woff2') format('truetype');
+  src:
+    url('/fonts/La_Luxes/La_Luxes.woff2') format('woff2'),
+    url('/fonts/La_Luxes/La_Luxes.woff2') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

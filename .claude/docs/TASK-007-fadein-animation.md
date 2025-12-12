@@ -11,6 +11,7 @@
 ## Background: Scroll Animations
 
 Scroll-triggered animations make sites feel more dynamic:
+
 - Elements fade in as user scrolls
 - Triggers once when element enters viewport
 - Adds polish without being distracting
@@ -45,7 +46,7 @@ interface FadeInProps {
 /**
  * FadeIn animation component using React Spring
  * Triggers animation when element enters viewport
- * 
+ *
  * @param children - Content to animate
  * @param delay - Delay before animation starts (ms)
  * @param duration - Animation duration (ms)
@@ -109,32 +110,32 @@ export default function FadeIn({
 Update `src/app/playground/animations/page.tsx`:
 
 ```tsx
-'use client'
+'use client';
 
-import { useState } from 'react'
-import Container from '@/components/ui/Container'
-import Section from '@/components/ui/Section'
-import Button from '@/components/ui/Button'
-import Card, { CardHeader, CardContent } from '@/components/ui/Card'
-import FadeIn from '@/components/animations/FadeIn'
+import { useState } from 'react';
+import Container from '@/components/ui/Container';
+import Section from '@/components/ui/Section';
+import Button from '@/components/ui/Button';
+import Card, { CardHeader, CardContent } from '@/components/ui/Card';
+import FadeIn from '@/components/animations/FadeIn';
 
 export default function AnimationsPlayground() {
-  const [reset, setReset] = useState(false)
+  const [reset, setReset] = useState(false);
 
   const handleReset = () => {
-    setReset(true)
-    setTimeout(() => setReset(false), 50)
-  }
+    setReset(true);
+    setTimeout(() => setReset(false), 50);
+  };
 
-  if (reset) return null
+  if (reset) return null;
 
   return (
     <>
       <Section>
         <Container>
           <div className="mb-8">
-            <h1 className="text-4xl font-bold mb-4">Animation Playground</h1>
-            <p className="text-lg text-muted-foreground mb-4">
+            <h1 className="mb-4 text-4xl font-bold">Animation Playground</h1>
+            <p className="text-muted-foreground mb-4 text-lg">
               Scroll down to see animations trigger. All animations use React Spring.
             </p>
             <Button onClick={handleReset} variant="outline">
@@ -145,7 +146,7 @@ export default function AnimationsPlayground() {
           {/* Direction Tests */}
           <div className="space-y-12">
             <div>
-              <h2 className="text-2xl font-semibold mb-6">Fade Directions</h2>
+              <h2 className="mb-6 text-2xl font-semibold">Fade Directions</h2>
               <div className="space-y-8">
                 <FadeIn direction="up">
                   <Card>
@@ -153,9 +154,7 @@ export default function AnimationsPlayground() {
                       <h3 className="text-xl font-semibold">Fade Up ↑</h3>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground">
-                        Default animation direction - slides up and fades in
-                      </p>
+                      <p className="text-muted-foreground">Default animation direction - slides up and fades in</p>
                     </CardContent>
                   </Card>
                 </FadeIn>
@@ -166,9 +165,7 @@ export default function AnimationsPlayground() {
                       <h3 className="text-xl font-semibold">Fade Down ↓</h3>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground">
-                        Slides down and fades in
-                      </p>
+                      <p className="text-muted-foreground">Slides down and fades in</p>
                     </CardContent>
                   </Card>
                 </FadeIn>
@@ -179,9 +176,7 @@ export default function AnimationsPlayground() {
                       <h3 className="text-xl font-semibold">Fade Left ←</h3>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground">
-                        Slides from right to left and fades in
-                      </p>
+                      <p className="text-muted-foreground">Slides from right to left and fades in</p>
                     </CardContent>
                   </Card>
                 </FadeIn>
@@ -192,9 +187,7 @@ export default function AnimationsPlayground() {
                       <h3 className="text-xl font-semibold">Fade Right →</h3>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground">
-                        Slides from left to right and fades in
-                      </p>
+                      <p className="text-muted-foreground">Slides from left to right and fades in</p>
                     </CardContent>
                   </Card>
                 </FadeIn>
@@ -205,9 +198,7 @@ export default function AnimationsPlayground() {
                       <h3 className="text-xl font-semibold">Fade Only</h3>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground">
-                        Just fades in with no directional movement
-                      </p>
+                      <p className="text-muted-foreground">Just fades in with no directional movement</p>
                     </CardContent>
                   </Card>
                 </FadeIn>
@@ -216,19 +207,17 @@ export default function AnimationsPlayground() {
 
             {/* Stagger Effect */}
             <div>
-              <h2 className="text-2xl font-semibold mb-6">Staggered Animations</h2>
-              <div className="grid md:grid-cols-3 gap-6">
+              <h2 className="mb-6 text-2xl font-semibold">Staggered Animations</h2>
+              <div className="grid gap-6 md:grid-cols-3">
                 {[0, 100, 200].map((delay, i) => (
                   <FadeIn key={i} delay={delay}>
                     <Card hover>
                       <CardHeader>
-                        <div className="w-12 h-12 bg-primary rounded-lg mb-4" />
+                        <div className="bg-primary mb-4 h-12 w-12 rounded-lg" />
                         <h3 className="text-xl font-semibold">Card {i + 1}</h3>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-muted-foreground">
-                          Delay: {delay}ms
-                        </p>
+                        <p className="text-muted-foreground">Delay: {delay}ms</p>
                       </CardContent>
                     </Card>
                   </FadeIn>
@@ -238,7 +227,7 @@ export default function AnimationsPlayground() {
 
             {/* Different Durations */}
             <div>
-              <h2 className="text-2xl font-semibold mb-6">Duration Variations</h2>
+              <h2 className="mb-6 text-2xl font-semibold">Duration Variations</h2>
               <div className="space-y-6">
                 <FadeIn duration={400}>
                   <Card>
@@ -267,16 +256,14 @@ export default function AnimationsPlayground() {
             </div>
 
             {/* Add vertical space to enable scrolling */}
-            <div className="h-screen flex items-center justify-center">
+            <div className="flex h-screen items-center justify-center">
               <FadeIn>
-                <Card className="bg-brand-rust text-white max-w-md">
+                <Card className="bg-brand-rust max-w-md text-white">
                   <CardHeader>
                     <h3 className="text-2xl font-bold">You scrolled!</h3>
                   </CardHeader>
                   <CardContent>
-                    <p className="mb-4">
-                      This animation triggered when you scrolled this element into view.
-                    </p>
+                    <p className="mb-4">This animation triggered when you scrolled this element into view.</p>
                     <p className="text-sm opacity-90">
                       By default, animations only trigger once. Click "Reset Animations" above to see them again.
                     </p>
@@ -287,7 +274,7 @@ export default function AnimationsPlayground() {
 
             {/* Threshold Examples */}
             <div>
-              <h2 className="text-2xl font-semibold mb-6">Trigger Thresholds</h2>
+              <h2 className="mb-6 text-2xl font-semibold">Trigger Thresholds</h2>
               <p className="text-muted-foreground mb-6">
                 Threshold determines how much of the element must be visible before animation triggers.
               </p>
@@ -296,9 +283,7 @@ export default function AnimationsPlayground() {
                   <Card>
                     <CardContent>
                       <p className="font-medium">Threshold 0.1 (10% visible)</p>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        Triggers early - default setting
-                      </p>
+                      <p className="text-muted-foreground mt-1 text-sm">Triggers early - default setting</p>
                     </CardContent>
                   </Card>
                 </FadeIn>
@@ -307,9 +292,7 @@ export default function AnimationsPlayground() {
                   <Card>
                     <CardContent>
                       <p className="font-medium">Threshold 0.5 (50% visible)</p>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        Triggers when halfway visible
-                      </p>
+                      <p className="text-muted-foreground mt-1 text-sm">Triggers when halfway visible</p>
                     </CardContent>
                   </Card>
                 </FadeIn>
@@ -318,9 +301,7 @@ export default function AnimationsPlayground() {
                   <Card>
                     <CardContent>
                       <p className="font-medium">Threshold 1.0 (100% visible)</p>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        Triggers only when fully visible
-                      </p>
+                      <p className="text-muted-foreground mt-1 text-sm">Triggers only when fully visible</p>
                     </CardContent>
                   </Card>
                 </FadeIn>
@@ -333,25 +314,30 @@ export default function AnimationsPlayground() {
       {/* Best Practices Section */}
       <Section background="muted">
         <Container size="md">
-          <h2 className="text-2xl font-semibold mb-6">Best Practices</h2>
-          <div className="space-y-4 text-muted-foreground">
+          <h2 className="mb-6 text-2xl font-semibold">Best Practices</h2>
+          <div className="text-muted-foreground space-y-4">
             <p>
-              <strong className="text-foreground">Keep it subtle:</strong> Animations should enhance, not distract. Use moderate distances (20-40px) and durations (600-1000ms).
+              <strong className="text-foreground">Keep it subtle:</strong> Animations should enhance, not distract. Use
+              moderate distances (20-40px) and durations (600-1000ms).
             </p>
             <p>
-              <strong className="text-foreground">Stagger wisely:</strong> For multiple elements, use 100-200ms delays to create smooth stagger effects.
+              <strong className="text-foreground">Stagger wisely:</strong> For multiple elements, use 100-200ms delays
+              to create smooth stagger effects.
             </p>
             <p>
-              <strong className="text-foreground">Respect motion preferences:</strong> Consider adding <code className="text-sm bg-background px-1 py-0.5 rounded">prefers-reduced-motion</code> support for accessibility.
+              <strong className="text-foreground">Respect motion preferences:</strong> Consider adding{' '}
+              <code className="bg-background rounded px-1 py-0.5 text-sm">prefers-reduced-motion</code> support for
+              accessibility.
             </p>
             <p>
-              <strong className="text-foreground">Performance:</strong> FadeIn uses CSS transforms which are GPU-accelerated. Avoid animating too many elements simultaneously.
+              <strong className="text-foreground">Performance:</strong> FadeIn uses CSS transforms which are
+              GPU-accelerated. Avoid animating too many elements simultaneously.
             </p>
           </div>
         </Container>
       </Section>
     </>
-  )
+  );
 }
 ```
 
@@ -375,6 +361,7 @@ export default function AnimationsPlayground() {
 ### 1. Visual Testing
 
 Scroll through the animations page and verify:
+
 - Animations are smooth (no stuttering)
 - Direction matches description
 - Delays create stagger effect
@@ -384,6 +371,7 @@ Scroll through the animations page and verify:
 ### 2. Performance Check
 
 Open browser DevTools:
+
 - Check FPS (should stay at 60fps)
 - Look for layout thrashing warnings
 - Verify no console errors
@@ -392,6 +380,7 @@ Open browser DevTools:
 ### 3. Different Viewports
 
 Test on:
+
 - Desktop (Chrome, Firefox, Safari)
 - Mobile (or mobile viewport in DevTools)
 - Tablet size
@@ -400,6 +389,7 @@ Test on:
 ### 4. Intersection Observer
 
 Verify intersection observer works:
+
 - Elements below fold don't animate until scrolled
 - Elements above fold animate immediately
 - triggerOnce prevents re-animation on scroll up
@@ -412,6 +402,7 @@ Verify intersection observer works:
 ### Why React Spring?
 
 **React Spring** vs **Framer Motion**:
+
 - Lighter weight (~13kb vs ~60kb)
 - Physics-based animations (feels more natural)
 - Better performance with many elements
@@ -421,12 +412,12 @@ Verify intersection observer works:
 
 ```tsx
 const springs = useSpring({
-  from: { opacity: 0 },      // Starting state
-  to: { opacity: 1 },        // Ending state
-  config: { duration: 800 }  // How to animate
-})
+  from: { opacity: 0 }, // Starting state
+  to: { opacity: 1 }, // Ending state
+  config: { duration: 800 }, // How to animate
+});
 
-return <animated.div style={springs}>...</animated.div>
+return <animated.div style={springs}>...</animated.div>;
 ```
 
 The `animated` component accepts spring values as styles.
@@ -434,6 +425,7 @@ The `animated` component accepts spring values as styles.
 ### Intersection Observer
 
 `useInView` from `react-intersection-observer`:
+
 - Triggers when element enters viewport
 - More efficient than scroll listeners
 - Supports threshold (how much must be visible)
@@ -465,7 +457,7 @@ The `animated` component accepts spring values as styles.
 To use FadeIn in real pages:
 
 ```tsx
-import FadeIn from '@/components/animations/FadeIn'
+import FadeIn from '@/components/animations/FadeIn';
 
 export default function AboutPage() {
   return (
@@ -474,12 +466,12 @@ export default function AboutPage() {
         <FadeIn>
           <h1>About Us</h1>
         </FadeIn>
-        
+
         <FadeIn delay={200}>
           <p>Our story...</p>
         </FadeIn>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid gap-6 md:grid-cols-3">
           {features.map((feature, i) => (
             <FadeIn key={i} delay={i * 100}>
               <Card>{feature}</Card>
@@ -488,7 +480,7 @@ export default function AboutPage() {
         </div>
       </Container>
     </Section>
-  )
+  );
 }
 ```
 
@@ -503,13 +495,11 @@ export default function AboutPage() {
 Future enhancement - add this to FadeIn:
 
 ```tsx
-const prefersReducedMotion = window.matchMedia(
-  '(prefers-reduced-motion: reduce)'
-).matches
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // If user prefers reduced motion, skip animation
 if (prefersReducedMotion) {
-  return <div className={className}>{children}</div>
+  return <div className={className}>{children}</div>;
 }
 ```
 
@@ -520,6 +510,7 @@ This respects user's system settings for motion sensitivity.
 ## Next Steps
 
 After verification passes, proceed to:
+
 - **TASK-008:** Setup Vercel Analytics
 
 ---

@@ -1,0 +1,31 @@
+# Dependencies
+node_modules
+package-lock.json
+
+# Build outputs
+.next
+out
+build
+dist
+
+# Cache
+.turbo
+.vercel
+
+# Environment
+.env
+.env.local
+.env*.local
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# Sanity
+.sanity
+
+# Other
+coverage
+*.tsbuildinfo

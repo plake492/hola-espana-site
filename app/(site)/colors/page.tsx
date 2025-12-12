@@ -1,11 +1,9 @@
 export default function ColorReference() {
   return (
-    <div className="min-h-screen bg-background-primary p-4 md:p-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="bg-background-primary min-h-screen p-4 md:p-8">
+      <div className="mx-auto max-w-7xl">
         <header className="mb-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-serif text-text-primary mb-4">
-            Hola España Color System
-          </h1>
+          <h1 className="text-text-primary mb-4 font-serif text-4xl md:text-5xl">Hola España Color System</h1>
           <p className="text-text-secondary">
             Complete visual reference for all available colors and their Tailwind classes
           </p>
@@ -13,10 +11,10 @@ export default function ColorReference() {
 
         {/* Background Colors */}
         <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-serif text-text-primary mb-6 border-b-2 border-border pb-2">
+          <h2 className="text-text-primary border-border mb-6 border-b-2 pb-2 font-serif text-2xl md:text-3xl">
             1. Background Colors
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid gap-6 md:grid-cols-3">
             <ColorCard
               className="bg-background-primary"
               tailwindClass="bg-background-primary"
@@ -39,20 +37,20 @@ export default function ColorReference() {
               usage="Modals, overlays"
             />
           </div>
-          <div className="mt-4 p-4 bg-background-secondary rounded-lg">
-            <p className="text-sm text-text-secondary">
-              <strong>Legacy aliases:</strong> <code className="bg-white px-2 py-1 rounded text-xs">bg-hola-cream</code>,{' '}
-              <code className="bg-white px-2 py-1 rounded text-xs">bg-hola-beige</code>
+          <div className="bg-background-secondary mt-4 rounded-lg p-4">
+            <p className="text-text-secondary text-sm">
+              <strong>Legacy aliases:</strong> <code className="rounded bg-white px-2 py-1 text-xs">bg-hola-cream</code>
+              , <code className="rounded bg-white px-2 py-1 text-xs">bg-hola-beige</code>
             </p>
           </div>
         </section>
 
         {/* Primary Colors (Terracotta) */}
         <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-serif text-text-primary mb-6 border-b-2 border-border pb-2">
+          <h2 className="text-text-primary border-border mb-6 border-b-2 pb-2 font-serif text-2xl md:text-3xl">
             2. Primary Colors (Terracotta)
           </h2>
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid gap-6 md:grid-cols-4">
             <ColorCard
               className="bg-primary text-white"
               tailwindClass="bg-primary"
@@ -85,32 +83,33 @@ export default function ColorReference() {
               textWhite
             />
           </div>
-          <div className="mt-6 p-6 bg-background-secondary rounded-lg">
-            <h3 className="font-semibold text-text-primary mb-4">Primary Button Examples:</h3>
+          <div className="bg-background-secondary mt-6 rounded-lg p-6">
+            <h3 className="text-text-primary mb-4 font-semibold">Primary Button Examples:</h3>
             <div className="flex flex-wrap gap-4">
-              <button className="bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-md transition-colors">
+              <button className="bg-primary hover:bg-primary-hover rounded-md px-6 py-3 text-white transition-colors">
                 Primary CTA
               </button>
-              <button className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-md transition-colors">
+              <button className="border-primary text-primary hover:bg-primary rounded-md border-2 px-6 py-3 transition-colors hover:text-white">
                 Outline Primary
               </button>
-              <span className="bg-primary-light text-primary-dark px-4 py-2 rounded-full text-sm font-medium">
+              <span className="bg-primary-light text-primary-dark rounded-full px-4 py-2 text-sm font-medium">
                 Badge
               </span>
             </div>
-            <p className="text-sm text-text-secondary mt-4">
-              <strong>Legacy alias:</strong> <code className="bg-white px-2 py-1 rounded text-xs">bg-hola-terracotta</code>,{' '}
-              <code className="bg-white px-2 py-1 rounded text-xs">bg-hola-rust</code>
+            <p className="text-text-secondary mt-4 text-sm">
+              <strong>Legacy alias:</strong>{' '}
+              <code className="rounded bg-white px-2 py-1 text-xs">bg-hola-terracotta</code>,{' '}
+              <code className="rounded bg-white px-2 py-1 text-xs">bg-hola-rust</code>
             </p>
           </div>
         </section>
 
         {/* Secondary Colors (Teal) */}
         <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-serif text-text-primary mb-6 border-b-2 border-border pb-2">
+          <h2 className="text-text-primary border-border mb-6 border-b-2 pb-2 font-serif text-2xl md:text-3xl">
             3. Secondary Colors (Teal)
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid gap-6 md:grid-cols-3">
             <ColorCard
               className="bg-secondary text-white"
               tailwindClass="bg-secondary"
@@ -136,58 +135,58 @@ export default function ColorReference() {
               textWhite
             />
           </div>
-          <div className="mt-6 p-6 bg-background-secondary rounded-lg">
-            <h3 className="font-semibold text-text-primary mb-4">Secondary Button Examples:</h3>
+          <div className="bg-background-secondary mt-6 rounded-lg p-6">
+            <h3 className="text-text-primary mb-4 font-semibold">Secondary Button Examples:</h3>
             <div className="flex flex-wrap gap-4">
-              <button className="bg-secondary hover:bg-secondary-hover text-white px-6 py-3 rounded-md transition-colors">
+              <button className="bg-secondary hover:bg-secondary-hover rounded-md px-6 py-3 text-white transition-colors">
                 Secondary CTA
               </button>
-              <button className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-6 py-3 rounded-md transition-colors">
+              <button className="border-secondary text-secondary hover:bg-secondary rounded-md border-2 px-6 py-3 transition-colors hover:text-white">
                 Outline Secondary
               </button>
             </div>
-            <p className="text-sm text-text-secondary mt-4">
-              <strong>Legacy alias:</strong> <code className="bg-white px-2 py-1 rounded text-xs">bg-hola-teal</code>,{' '}
-              <code className="bg-white px-2 py-1 rounded text-xs">bg-hola-teal-dark</code>
+            <p className="text-text-secondary mt-4 text-sm">
+              <strong>Legacy alias:</strong> <code className="rounded bg-white px-2 py-1 text-xs">bg-hola-teal</code>,{' '}
+              <code className="rounded bg-white px-2 py-1 text-xs">bg-hola-teal-dark</code>
             </p>
           </div>
         </section>
 
         {/* Text Colors */}
         <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-serif text-text-primary mb-6 border-b-2 border-border pb-2">
+          <h2 className="text-text-primary border-border mb-6 border-b-2 pb-2 font-serif text-2xl md:text-3xl">
             4. Text Colors
           </h2>
-          <div className="p-6 bg-background-secondary rounded-lg space-y-4">
-            <div className="border-b border-border pb-4">
-              <p className="text-text-primary text-xl font-serif mb-2">Primary Text (#1A1A1A)</p>
-              <code className="text-xs bg-white px-2 py-1 rounded">text-text-primary</code>
-              <p className="text-sm text-text-tertiary mt-2">Use for: Headings, navigation, important text</p>
+          <div className="bg-background-secondary space-y-4 rounded-lg p-6">
+            <div className="border-border border-b pb-4">
+              <p className="text-text-primary mb-2 font-serif text-xl">Primary Text (#1A1A1A)</p>
+              <code className="rounded bg-white px-2 py-1 text-xs">text-text-primary</code>
+              <p className="text-text-tertiary mt-2 text-sm">Use for: Headings, navigation, important text</p>
             </div>
-            <div className="border-b border-border pb-4">
-              <p className="text-text-secondary text-lg mb-2">Secondary Text (#4A4A4A)</p>
-              <code className="text-xs bg-white px-2 py-1 rounded">text-text-secondary</code>
-              <p className="text-sm text-text-tertiary mt-2">Use for: Body text, paragraphs, descriptions</p>
+            <div className="border-border border-b pb-4">
+              <p className="text-text-secondary mb-2 text-lg">Secondary Text (#4A4A4A)</p>
+              <code className="rounded bg-white px-2 py-1 text-xs">text-text-secondary</code>
+              <p className="text-text-tertiary mt-2 text-sm">Use for: Body text, paragraphs, descriptions</p>
             </div>
-            <div className="border-b border-border pb-4">
-              <p className="text-text-tertiary text-base mb-2">Tertiary Text (#6B6B6B)</p>
-              <code className="text-xs bg-white px-2 py-1 rounded">text-text-tertiary</code>
-              <p className="text-sm text-text-tertiary mt-2">Use for: Captions, meta info, subtle details</p>
+            <div className="border-border border-b pb-4">
+              <p className="text-text-tertiary mb-2 text-base">Tertiary Text (#6B6B6B)</p>
+              <code className="rounded bg-white px-2 py-1 text-xs">text-text-tertiary</code>
+              <p className="text-text-tertiary mt-2 text-sm">Use for: Captions, meta info, subtle details</p>
             </div>
             <div>
-              <p className="text-text-muted text-sm mb-2">Muted Text (#8B8B8B)</p>
-              <code className="text-xs bg-white px-2 py-1 rounded">text-text-muted</code>
-              <p className="text-sm text-text-tertiary mt-2">Use for: Disabled states, placeholder text</p>
+              <p className="text-text-muted mb-2 text-sm">Muted Text (#8B8B8B)</p>
+              <code className="rounded bg-white px-2 py-1 text-xs">text-text-muted</code>
+              <p className="text-text-tertiary mt-2 text-sm">Use for: Disabled states, placeholder text</p>
             </div>
           </div>
         </section>
 
         {/* Accent Colors */}
         <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-serif text-text-primary mb-6 border-b-2 border-border pb-2">
+          <h2 className="text-text-primary border-border mb-6 border-b-2 pb-2 font-serif text-2xl md:text-3xl">
             5. Accent Colors (Decorative)
           </h2>
-          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-4">
             <ColorCard
               className="bg-accent-mustard"
               tailwindClass="bg-accent-mustard"
@@ -243,15 +242,15 @@ export default function ColorReference() {
               textWhite
             />
           </div>
-          <div className="mt-6 p-6 bg-background-secondary rounded-lg">
-            <h3 className="font-semibold text-text-primary mb-4">Decorative Arches (Signature Element):</h3>
-            <div className="flex gap-4 justify-center">
-              <div className="w-20 h-40 bg-accent-mustard rounded-t-full"></div>
-              <div className="w-20 h-40 bg-accent-olive rounded-t-full"></div>
-              <div className="w-20 h-40 bg-accent-sage rounded-t-full"></div>
-              <div className="w-20 h-40 bg-accent-gold rounded-t-full"></div>
+          <div className="bg-background-secondary mt-6 rounded-lg p-6">
+            <h3 className="text-text-primary mb-4 font-semibold">Decorative Arches (Signature Element):</h3>
+            <div className="flex justify-center gap-4">
+              <div className="bg-accent-mustard h-40 w-20 rounded-t-full"></div>
+              <div className="bg-accent-olive h-40 w-20 rounded-t-full"></div>
+              <div className="bg-accent-sage h-40 w-20 rounded-t-full"></div>
+              <div className="bg-accent-gold h-40 w-20 rounded-t-full"></div>
             </div>
-            <p className="text-sm text-text-secondary mt-4 text-center">
+            <p className="text-text-secondary mt-4 text-center text-sm">
               Use accent colors for visual interest and Mediterranean-inspired decorative elements
             </p>
           </div>
@@ -259,28 +258,28 @@ export default function ColorReference() {
 
         {/* Functional Colors */}
         <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-serif text-text-primary mb-6 border-b-2 border-border pb-2">
+          <h2 className="text-text-primary border-border mb-6 border-b-2 pb-2 font-serif text-2xl md:text-3xl">
             6. Functional Colors
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-success text-white p-6 rounded-lg">
-              <h3 className="font-bold text-lg mb-2">✓ Success (#7B8C5C)</h3>
-              <code className="text-xs bg-white/20 px-2 py-1 rounded">bg-success / text-success</code>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="bg-success rounded-lg p-6 text-white">
+              <h3 className="mb-2 text-lg font-bold">✓ Success (#7B8C5C)</h3>
+              <code className="rounded bg-white/20 px-2 py-1 text-xs">bg-success / text-success</code>
               <p className="mt-3 text-sm">Use for: Confirmations, successful actions, positive states</p>
             </div>
-            <div className="bg-warning text-text-primary p-6 rounded-lg">
-              <h3 className="font-bold text-lg mb-2">⚠ Warning (#D4A574)</h3>
-              <code className="text-xs bg-white px-2 py-1 rounded">bg-warning / text-warning</code>
+            <div className="bg-warning text-text-primary rounded-lg p-6">
+              <h3 className="mb-2 text-lg font-bold">⚠ Warning (#D4A574)</h3>
+              <code className="rounded bg-white px-2 py-1 text-xs">bg-warning / text-warning</code>
               <p className="mt-3 text-sm">Use for: Warnings, alerts, attention needed</p>
             </div>
-            <div className="bg-error text-white p-6 rounded-lg">
-              <h3 className="font-bold text-lg mb-2">✕ Error (#C4734A)</h3>
-              <code className="text-xs bg-white/20 px-2 py-1 rounded">bg-error / text-error</code>
+            <div className="bg-error rounded-lg p-6 text-white">
+              <h3 className="mb-2 text-lg font-bold">✕ Error (#C4734A)</h3>
+              <code className="rounded bg-white/20 px-2 py-1 text-xs">bg-error / text-error</code>
               <p className="mt-3 text-sm">Use for: Error messages, validation failures, destructive actions</p>
             </div>
-            <div className="bg-info text-white p-6 rounded-lg">
-              <h3 className="font-bold text-lg mb-2">ℹ Info (#4A6660)</h3>
-              <code className="text-xs bg-white/20 px-2 py-1 rounded">bg-info / text-info</code>
+            <div className="bg-info rounded-lg p-6 text-white">
+              <h3 className="mb-2 text-lg font-bold">ℹ Info (#4A6660)</h3>
+              <code className="rounded bg-white/20 px-2 py-1 text-xs">bg-info / text-info</code>
               <p className="mt-3 text-sm">Use for: Informational messages, tips, neutral notifications</p>
             </div>
           </div>
@@ -288,38 +287,38 @@ export default function ColorReference() {
 
         {/* Border Colors */}
         <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-serif text-text-primary mb-6 border-b-2 border-border pb-2">
+          <h2 className="text-text-primary border-border mb-6 border-b-2 pb-2 font-serif text-2xl md:text-3xl">
             7. Border Colors
           </h2>
           <div className="space-y-4">
-            <div className="border-2 border-border bg-background-secondary p-6 rounded-lg">
-              <h3 className="font-semibold text-text-primary mb-2">Default Border (#E0D5C7)</h3>
-              <code className="text-xs bg-white px-2 py-1 rounded">border-border</code>
-              <p className="text-sm text-text-secondary mt-2">Use for: Standard borders, dividers, subtle outlines</p>
+            <div className="border-border bg-background-secondary rounded-lg border-2 p-6">
+              <h3 className="text-text-primary mb-2 font-semibold">Default Border (#E0D5C7)</h3>
+              <code className="rounded bg-white px-2 py-1 text-xs">border-border</code>
+              <p className="text-text-secondary mt-2 text-sm">Use for: Standard borders, dividers, subtle outlines</p>
             </div>
-            <div className="border-4 border-border-accent bg-background-secondary p-6 rounded-lg">
-              <h3 className="font-semibold text-text-primary mb-2">Accent Border (#8B5CF6)</h3>
-              <code className="text-xs bg-white px-2 py-1 rounded">border-border-accent</code>
-              <p className="text-sm text-text-secondary mt-2">Use for: Header accents, special dividers</p>
+            <div className="border-border-accent bg-background-secondary rounded-lg border-4 p-6">
+              <h3 className="text-text-primary mb-2 font-semibold">Accent Border (#8B5CF6)</h3>
+              <code className="rounded bg-white px-2 py-1 text-xs">border-border-accent</code>
+              <p className="text-text-secondary mt-2 text-sm">Use for: Header accents, special dividers</p>
             </div>
-            <div className="border-2 border-border-strong bg-background-secondary p-6 rounded-lg">
-              <h3 className="font-semibold text-text-primary mb-2">Strong Border (#C4C4C4)</h3>
-              <code className="text-xs bg-white px-2 py-1 rounded">border-border-strong</code>
-              <p className="text-sm text-text-secondary mt-2">Use for: Emphasized borders, containers</p>
+            <div className="border-border-strong bg-background-secondary rounded-lg border-2 p-6">
+              <h3 className="text-text-primary mb-2 font-semibold">Strong Border (#C4C4C4)</h3>
+              <code className="rounded bg-white px-2 py-1 text-xs">border-border-strong</code>
+              <p className="text-text-secondary mt-2 text-sm">Use for: Emphasized borders, containers</p>
             </div>
           </div>
         </section>
 
         {/* Recommended Combinations */}
         <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-serif text-text-primary mb-6 border-b-2 border-border pb-2">
+          <h2 className="text-text-primary border-border mb-6 border-b-2 pb-2 font-serif text-2xl md:text-3xl">
             8. Recommended Color Combinations
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid gap-6 md:grid-cols-2">
             {/* Card 1 */}
-            <div className="bg-background-secondary border-l-4 border-accent-terracotta p-6 rounded-lg">
-              <h3 className="text-text-primary text-xl font-serif mb-2">Service Card</h3>
+            <div className="bg-background-secondary border-accent-terracotta rounded-lg border-l-4 p-6">
+              <h3 className="text-text-primary mb-2 font-serif text-xl">Service Card</h3>
               <p className="text-text-secondary mb-4">
                 Background secondary + terracotta accent border creates warm, approachable cards.
               </p>
@@ -329,8 +328,8 @@ export default function ColorReference() {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-background-secondary border-l-4 border-accent-olive p-6 rounded-lg">
-              <h3 className="text-text-primary text-xl font-serif mb-2">Alternative Card</h3>
+            <div className="bg-background-secondary border-accent-olive rounded-lg border-l-4 p-6">
+              <h3 className="text-text-primary mb-2 font-serif text-xl">Alternative Card</h3>
               <p className="text-text-secondary mb-4">
                 Background secondary + olive accent border for a nature-inspired feel.
               </p>
@@ -340,28 +339,28 @@ export default function ColorReference() {
             </div>
 
             {/* Hero Section */}
-            <div className="bg-primary text-white p-8 rounded-lg md:col-span-2">
-              <h3 className="text-3xl font-serif mb-4">Primary Hero Section</h3>
-              <p className="text-white/90 mb-6">
+            <div className="bg-primary rounded-lg p-8 text-white md:col-span-2">
+              <h3 className="mb-4 font-serif text-3xl">Primary Hero Section</h3>
+              <p className="mb-6 text-white/90">
                 Bold primary background with white text creates high impact for hero sections and CTAs.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="bg-white text-primary hover:bg-primary-light px-6 py-3 rounded-md transition-colors">
+                <button className="text-primary hover:bg-primary-light rounded-md bg-white px-6 py-3 transition-colors">
                   Get Started
                 </button>
-                <button className="border-2 border-white text-white hover:bg-white hover:text-primary px-6 py-3 rounded-md transition-colors">
+                <button className="hover:text-primary rounded-md border-2 border-white px-6 py-3 text-white transition-colors hover:bg-white">
                   Learn More
                 </button>
               </div>
             </div>
 
             {/* Calm Section */}
-            <div className="bg-accent-sage text-white p-8 rounded-lg md:col-span-2">
-              <h3 className="text-3xl font-serif mb-4">Sage Background Section</h3>
-              <p className="text-white/90 mb-6">
+            <div className="bg-accent-sage rounded-lg p-8 text-white md:col-span-2">
+              <h3 className="mb-4 font-serif text-3xl">Sage Background Section</h3>
+              <p className="mb-6 text-white/90">
                 Soft sage background creates a calm, natural aesthetic perfect for about sections.
               </p>
-              <button className="bg-white text-accent-sage hover:bg-background-tertiary px-6 py-3 rounded-md transition-colors">
+              <button className="text-accent-sage hover:bg-background-tertiary rounded-md bg-white px-6 py-3 transition-colors">
                 Discover Our Story
               </button>
             </div>
@@ -370,14 +369,14 @@ export default function ColorReference() {
 
         {/* Quick Tips */}
         <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-serif text-text-primary mb-6 border-b-2 border-border pb-2">
+          <h2 className="text-text-primary border-border mb-6 border-b-2 pb-2 font-serif text-2xl md:text-3xl">
             9. Quick Tips
           </h2>
-          <div className="bg-background-secondary p-6 rounded-lg space-y-4">
+          <div className="bg-background-secondary space-y-4 rounded-lg p-6">
             <div className="flex gap-3">
               <span className="text-2xl">🎨</span>
               <div>
-                <h3 className="font-semibold text-text-primary mb-1">Stick to the hierarchy</h3>
+                <h3 className="text-text-primary mb-1 font-semibold">Stick to the hierarchy</h3>
                 <p className="text-text-secondary text-sm">
                   Use background-primary and background-secondary for 90% of your layouts
                 </p>
@@ -386,7 +385,7 @@ export default function ColorReference() {
             <div className="flex gap-3">
               <span className="text-2xl">🎯</span>
               <div>
-                <h3 className="font-semibold text-text-primary mb-1">Primary vs Secondary CTAs</h3>
+                <h3 className="text-text-primary mb-1 font-semibold">Primary vs Secondary CTAs</h3>
                 <p className="text-text-secondary text-sm">
                   Terracotta (primary) for main actions, Teal (secondary) for supporting actions
                 </p>
@@ -395,7 +394,7 @@ export default function ColorReference() {
             <div className="flex gap-3">
               <span className="text-2xl">✨</span>
               <div>
-                <h3 className="font-semibold text-text-primary mb-1">Use accents sparingly</h3>
+                <h3 className="text-text-primary mb-1 font-semibold">Use accents sparingly</h3>
                 <p className="text-text-secondary text-sm">
                   Accent colors (mustard, gold, olive, sage) are for decorative elements and visual interest
                 </p>
@@ -404,7 +403,7 @@ export default function ColorReference() {
             <div className="flex gap-3">
               <span className="text-2xl">⚖️</span>
               <div>
-                <h3 className="font-semibold text-text-primary mb-1">Balance warm and cool</h3>
+                <h3 className="text-text-primary mb-1 font-semibold">Balance warm and cool</h3>
                 <p className="text-text-secondary text-sm">
                   Mix warm tones (mustard, terracotta, gold) with cool tones (teal, olive, sage) for visual harmony
                 </p>
@@ -413,7 +412,7 @@ export default function ColorReference() {
             <div className="flex gap-3">
               <span className="text-2xl">📱</span>
               <div>
-                <h3 className="font-semibold text-text-primary mb-1">Test accessibility</h3>
+                <h3 className="text-text-primary mb-1 font-semibold">Test accessibility</h3>
                 <p className="text-text-secondary text-sm">
                   Ensure text has sufficient contrast (use white text on darker backgrounds)
                 </p>
@@ -437,16 +436,14 @@ interface ColorCardProps {
 
 function ColorCard({ className, tailwindClass, hex, name, usage, textWhite }: ColorCardProps) {
   return (
-    <div className="border border-border rounded-lg overflow-hidden shadow-sm">
-      <div className={`${className} h-32 flex items-center justify-center`}>
+    <div className="border-border overflow-hidden rounded-lg border shadow-sm">
+      <div className={`${className} flex h-32 items-center justify-center`}>
         <span className={`font-mono text-sm ${textWhite ? 'text-white' : 'text-text-primary'}`}>{hex}</span>
       </div>
-      <div className="p-4 bg-white">
-        <h3 className="font-semibold text-text-primary mb-1">{name}</h3>
-        <code className="text-xs bg-background-secondary px-2 py-1 rounded block mb-2 break-all">
-          {tailwindClass}
-        </code>
-        <p className="text-xs text-text-secondary">{usage}</p>
+      <div className="bg-white p-4">
+        <h3 className="text-text-primary mb-1 font-semibold">{name}</h3>
+        <code className="bg-background-secondary mb-2 block rounded px-2 py-1 text-xs break-all">{tailwindClass}</code>
+        <p className="text-text-secondary text-xs">{usage}</p>
       </div>
     </div>
   );

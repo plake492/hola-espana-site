@@ -10,19 +10,21 @@ Your theme has **two naming systems** that both work:
 ---
 
 ## 1. BACKGROUND COLORS
+
 Foundation colors for layouts and sections
 
 ### Available Classes & Usage
 
-| Tailwind Class | Hex Color | Variable | Use Case |
-|----------------|-----------|----------|----------|
-| `bg-background-primary` | #F5EFE7 | `--color-background-primary` | Main page backgrounds |
-| `bg-background-secondary` | #E8DED0 | `--color-background-secondary` | Cards, panels, sections |
-| `bg-background-tertiary` | #FFFEF9 | `--color-background-tertiary` | Modals, overlays, highlights |
-| `bg-hola-cream` | #F5EFE7 | `--color-hola-cream` | Same as background-primary |
-| `bg-hola-beige` | #E8DED0 | `--color-hola-beige` | Same as background-secondary |
+| Tailwind Class            | Hex Color | Variable                       | Use Case                     |
+| ------------------------- | --------- | ------------------------------ | ---------------------------- |
+| `bg-background-primary`   | #F5EFE7   | `--color-background-primary`   | Main page backgrounds        |
+| `bg-background-secondary` | #E8DED0   | `--color-background-secondary` | Cards, panels, sections      |
+| `bg-background-tertiary`  | #FFFEF9   | `--color-background-tertiary`  | Modals, overlays, highlights |
+| `bg-hola-cream`           | #F5EFE7   | `--color-hola-cream`           | Same as background-primary   |
+| `bg-hola-beige`           | #E8DED0   | `--color-hola-beige`           | Same as background-secondary |
 
 **Examples:**
+
 ```tsx
 // Main page wrapper
 <div className="bg-background-primary min-h-screen">
@@ -37,22 +39,24 @@ Foundation colors for layouts and sections
 ---
 
 ## 2. PRIMARY COLORS (Terracotta/Coral)
+
 Main brand color for CTAs and important actions
 
 ### Available Classes & Usage
 
-| Tailwind Class | Hex Color | Variable | Use Case |
-|----------------|-----------|----------|----------|
-| `bg-primary` | #C87B5A | `--color-primary` | Primary buttons, CTAs |
-| `bg-primary-hover` | #B86F52 | `--color-primary-hover` | Hover states |
-| `bg-primary-light` | #D89178 | `--color-primary-light` | Soft accents, badges |
-| `bg-primary-dark` | #A66648 | `--color-primary-dark` | Active states, emphasis |
-| `text-primary` | #C87B5A | - | Primary text color |
-| `border-primary` | #C87B5A | - | Primary borders |
-| `bg-hola-terracotta` | #C87B5A | `--color-hola-terracotta` | Same as primary |
-| `bg-hola-rust` | #B86F52 | `--color-hola-rust` | Same as primary-hover |
+| Tailwind Class       | Hex Color | Variable                  | Use Case                |
+| -------------------- | --------- | ------------------------- | ----------------------- |
+| `bg-primary`         | #C87B5A   | `--color-primary`         | Primary buttons, CTAs   |
+| `bg-primary-hover`   | #B86F52   | `--color-primary-hover`   | Hover states            |
+| `bg-primary-light`   | #D89178   | `--color-primary-light`   | Soft accents, badges    |
+| `bg-primary-dark`    | #A66648   | `--color-primary-dark`    | Active states, emphasis |
+| `text-primary`       | #C87B5A   | -                         | Primary text color      |
+| `border-primary`     | #C87B5A   | -                         | Primary borders         |
+| `bg-hola-terracotta` | #C87B5A   | `--color-hola-terracotta` | Same as primary         |
+| `bg-hola-rust`       | #B86F52   | `--color-hola-rust`       | Same as primary-hover   |
 
 **Examples:**
+
 ```tsx
 // Primary button with hover
 <button className="bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-md">
@@ -73,20 +77,22 @@ Main brand color for CTAs and important actions
 ---
 
 ## 3. SECONDARY COLORS (Teal/Forest Green)
+
 Supporting actions and secondary CTAs
 
 ### Available Classes & Usage
 
-| Tailwind Class | Hex Color | Variable | Use Case |
-|----------------|-----------|----------|----------|
-| `bg-secondary` | #4A6660 | `--color-secondary` | Secondary buttons |
-| `bg-secondary-hover` | #3A524D | `--color-secondary-hover` | Hover states |
-| `bg-secondary-light` | #5A7670 | `--color-secondary-light` | Soft accents |
-| `text-secondary` | #4A6660 | - | Secondary text |
-| `bg-hola-teal` | #4A6660 | `--color-hola-teal` | Same as secondary |
-| `bg-hola-teal-dark` | #3A524D | `--color-hola-teal-dark` | Same as secondary-hover |
+| Tailwind Class       | Hex Color | Variable                  | Use Case                |
+| -------------------- | --------- | ------------------------- | ----------------------- |
+| `bg-secondary`       | #4A6660   | `--color-secondary`       | Secondary buttons       |
+| `bg-secondary-hover` | #3A524D   | `--color-secondary-hover` | Hover states            |
+| `bg-secondary-light` | #5A7670   | `--color-secondary-light` | Soft accents            |
+| `text-secondary`     | #4A6660   | -                         | Secondary text          |
+| `bg-hola-teal`       | #4A6660   | `--color-hola-teal`       | Same as secondary       |
+| `bg-hola-teal-dark`  | #3A524D   | `--color-hola-teal-dark`  | Same as secondary-hover |
 
 **Examples:**
+
 ```tsx
 // Secondary action button
 <button className="bg-secondary hover:bg-secondary-hover text-white px-6 py-3 rounded-md">
@@ -107,18 +113,20 @@ Supporting actions and secondary CTAs
 ---
 
 ## 4. TEXT COLORS
+
 Typography hierarchy for readability
 
 ### Available Classes & Usage
 
-| Tailwind Class | Hex Color | Variable | Use Case |
-|----------------|-----------|----------|----------|
-| `text-text-primary` | #1A1A1A | `--color-text-primary` | Main headings, nav text |
-| `text-text-secondary` | #4A4A4A | `--color-text-secondary` | Body text, paragraphs |
-| `text-text-tertiary` | #6B6B6B | `--color-text-tertiary` | Captions, meta info |
-| `text-text-muted` | #8B8B8B | `--color-text-muted` | Disabled, subtle text |
+| Tailwind Class        | Hex Color | Variable                 | Use Case                |
+| --------------------- | --------- | ------------------------ | ----------------------- |
+| `text-text-primary`   | #1A1A1A   | `--color-text-primary`   | Main headings, nav text |
+| `text-text-secondary` | #4A4A4A   | `--color-text-secondary` | Body text, paragraphs   |
+| `text-text-tertiary`  | #6B6B6B   | `--color-text-tertiary`  | Captions, meta info     |
+| `text-text-muted`     | #8B8B8B   | `--color-text-muted`     | Disabled, subtle text   |
 
 **Examples:**
+
 ```tsx
 // Heading
 <h1 className="text-text-primary text-4xl font-bold">
@@ -144,27 +152,29 @@ Typography hierarchy for readability
 ---
 
 ## 5. ACCENT COLORS
+
 Decorative elements, arches, and visual interest
 
 ### Available Classes & Usage
 
-| Tailwind Class | Hex Color | Variable | Use Case |
-|----------------|-----------|----------|----------|
-| `bg-accent-mustard` | #D4A574 | `--color-accent-mustard` | Warm decorative arches |
-| `bg-accent-gold` | #C89F5D | `--color-accent-gold` | Premium highlights |
-| `bg-accent-terracotta` | #C4734A | `--color-accent-terracotta` | Warm accent elements |
-| `bg-accent-olive` | #7B8C5C | `--color-accent-olive` | Green decorative arches |
-| `bg-accent-sage` | #8C9B73 | `--color-accent-sage` | Soft green accents |
-| `bg-accent-brown` | #8B6F4D | `--color-accent-brown` | Warm details |
-| `bg-accent-purple` | #8B5CF6 | `--color-accent-purple` | Bottom border accents |
-| `bg-hola-mustard` | #D4A574 | `--color-hola-mustard` | Same as accent-mustard |
-| `bg-hola-gold` | #C89F5D | `--color-hola-gold` | Same as accent-gold |
-| `bg-hola-olive` | #7B8C5C | `--color-hola-olive` | Same as accent-olive |
-| `bg-hola-sage` | #8C9B73 | `--color-hola-sage` | Same as accent-sage |
-| `bg-hola-brown` | #8B6F4D | `--color-hola-brown` | Same as accent-brown |
-| `bg-hola-accent` | #C4734A | `--color-hola-accent` | Same as accent-terracotta |
+| Tailwind Class         | Hex Color | Variable                    | Use Case                  |
+| ---------------------- | --------- | --------------------------- | ------------------------- |
+| `bg-accent-mustard`    | #D4A574   | `--color-accent-mustard`    | Warm decorative arches    |
+| `bg-accent-gold`       | #C89F5D   | `--color-accent-gold`       | Premium highlights        |
+| `bg-accent-terracotta` | #C4734A   | `--color-accent-terracotta` | Warm accent elements      |
+| `bg-accent-olive`      | #7B8C5C   | `--color-accent-olive`      | Green decorative arches   |
+| `bg-accent-sage`       | #8C9B73   | `--color-accent-sage`       | Soft green accents        |
+| `bg-accent-brown`      | #8B6F4D   | `--color-accent-brown`      | Warm details              |
+| `bg-accent-purple`     | #8B5CF6   | `--color-accent-purple`     | Bottom border accents     |
+| `bg-hola-mustard`      | #D4A574   | `--color-hola-mustard`      | Same as accent-mustard    |
+| `bg-hola-gold`         | #C89F5D   | `--color-hola-gold`         | Same as accent-gold       |
+| `bg-hola-olive`        | #7B8C5C   | `--color-hola-olive`        | Same as accent-olive      |
+| `bg-hola-sage`         | #8C9B73   | `--color-hola-sage`         | Same as accent-sage       |
+| `bg-hola-brown`        | #8B6F4D   | `--color-hola-brown`        | Same as accent-brown      |
+| `bg-hola-accent`       | #C4734A   | `--color-hola-accent`       | Same as accent-terracotta |
 
 **Examples:**
+
 ```tsx
 // Decorative arches (signature design element)
 <div className="flex gap-4">
@@ -190,17 +200,19 @@ Decorative elements, arches, and visual interest
 ---
 
 ## 6. BORDER COLORS
+
 Dividers and outlines
 
 ### Available Classes & Usage
 
-| Tailwind Class | Hex Color | Variable | Use Case |
-|----------------|-----------|----------|----------|
-| `border-border` | #E0D5C7 | `--color-border` | Default borders |
-| `border-border-accent` | #8B5CF6 | `--color-border-accent` | Accent borders |
-| `border-border-strong` | #C4C4C4 | `--color-border-strong` | Emphasized borders |
+| Tailwind Class         | Hex Color | Variable                | Use Case           |
+| ---------------------- | --------- | ----------------------- | ------------------ |
+| `border-border`        | #E0D5C7   | `--color-border`        | Default borders    |
+| `border-border-accent` | #8B5CF6   | `--color-border-accent` | Accent borders     |
+| `border-border-strong` | #C4C4C4   | `--color-border-strong` | Emphasized borders |
 
 **Examples:**
+
 ```tsx
 // Card with subtle border
 <div className="border border-border rounded-lg p-6">
@@ -221,18 +233,20 @@ Dividers and outlines
 ---
 
 ## 7. FUNCTIONAL COLORS
+
 Status messages and feedback
 
 ### Available Classes & Usage
 
-| Tailwind Class | Hex Color | Variable | Use Case |
-|----------------|-----------|----------|----------|
-| `bg-success` / `text-success` | #7B8C5C | `--color-success` | Success messages |
-| `bg-warning` / `text-warning` | #D4A574 | `--color-warning` | Warning alerts |
-| `bg-error` / `text-error` | #C4734A | `--color-error` | Error messages |
-| `bg-info` / `text-info` | #4A6660 | `--color-info` | Info notifications |
+| Tailwind Class                | Hex Color | Variable          | Use Case           |
+| ----------------------------- | --------- | ----------------- | ------------------ |
+| `bg-success` / `text-success` | #7B8C5C   | `--color-success` | Success messages   |
+| `bg-warning` / `text-warning` | #D4A574   | `--color-warning` | Warning alerts     |
+| `bg-error` / `text-error`     | #C4734A   | `--color-error`   | Error messages     |
+| `bg-info` / `text-info`       | #4A6660   | `--color-info`    | Info notifications |
 
 **Examples:**
+
 ```tsx
 // Success message
 <div className="bg-success text-white p-4 rounded-lg">
@@ -262,19 +276,19 @@ Status messages and feedback
 ### Recommended Combinations
 
 #### 1. Hero Sections
+
 ```tsx
 <section className="bg-background-primary text-text-primary">
   <h1 className="text-primary">Hola España</h1>
   <p className="text-text-secondary">Your relocation experts</p>
-  <button className="bg-primary hover:bg-primary-hover text-white">
-    Get Started
-  </button>
+  <button className="bg-primary hover:bg-primary-hover text-white">Get Started</button>
 </section>
 ```
 
 #### 2. Cards with Accent Borders
+
 ```tsx
-<div className="bg-background-secondary border-l-4 border-accent-terracotta p-6">
+<div className="bg-background-secondary border-accent-terracotta border-l-4 p-6">
   <h3 className="text-text-primary">Visa Services</h3>
   <p className="text-text-secondary">Expert guidance...</p>
   <a className="text-primary hover:text-primary-hover">Learn more →</a>
@@ -282,34 +296,31 @@ Status messages and feedback
 ```
 
 #### 3. Two-Button Pattern
+
 ```tsx
 <div className="flex gap-4">
-  <button className="bg-primary hover:bg-primary-hover text-white">
-    Primary Action
-  </button>
-  <button className="bg-secondary hover:bg-secondary-hover text-white">
-    Secondary Action
-  </button>
+  <button className="bg-primary hover:bg-primary-hover text-white">Primary Action</button>
+  <button className="bg-secondary hover:bg-secondary-hover text-white">Secondary Action</button>
 </div>
 ```
 
 #### 4. Outline Button with Brand Color
+
 ```tsx
-<button className="border-2 border-primary text-primary hover:bg-primary hover:text-white">
-  Learn More
-</button>
+<button className="border-primary text-primary hover:bg-primary border-2 hover:text-white">Learn More</button>
 ```
 
 #### 5. Section with Decorative Arches
+
 ```tsx
 <section className="bg-background-primary py-16">
-  <h2 className="text-text-primary text-4xl mb-8">Our Services</h2>
+  <h2 className="text-text-primary mb-8 text-4xl">Our Services</h2>
 
   {/* Decorative element */}
-  <div className="flex gap-4 justify-center mb-12">
-    <div className="w-32 h-64 bg-accent-mustard rounded-t-full" />
-    <div className="w-32 h-64 bg-accent-olive rounded-t-full" />
-    <div className="w-32 h-64 bg-accent-sage rounded-t-full" />
+  <div className="mb-12 flex justify-center gap-4">
+    <div className="bg-accent-mustard h-64 w-32 rounded-t-full" />
+    <div className="bg-accent-olive h-64 w-32 rounded-t-full" />
+    <div className="bg-accent-sage h-64 w-32 rounded-t-full" />
   </div>
 
   <p className="text-text-secondary">Content...</p>
@@ -317,12 +328,11 @@ Status messages and feedback
 ```
 
 #### 6. Footer
+
 ```tsx
-<footer className="bg-secondary text-white py-12">
+<footer className="bg-secondary py-12 text-white">
   <p className="text-white/80">© 2024 Hola España</p>
-  <a className="text-accent-gold hover:text-accent-mustard">
-    Contact Us
-  </a>
+  <a className="text-accent-gold hover:text-accent-mustard">Contact Us</a>
 </footer>
 ```
 
@@ -331,6 +341,7 @@ Status messages and feedback
 ## Quick Reference: Which System to Use?
 
 ### Use SEMANTIC names (Recommended):
+
 - `bg-primary`, `bg-secondary` - For CTAs and buttons
 - `bg-background-primary`, `bg-background-secondary` - For layouts
 - `text-text-primary`, `text-text-secondary` - For typography
@@ -338,7 +349,8 @@ Status messages and feedback
 
 **Why?** More maintainable, clearer intent, easier to refactor
 
-### Use LEGACY names (hola-*):
+### Use LEGACY names (hola-\*):
+
 - When you need specific color references
 - For decorative elements where exact color matters
 - `bg-hola-mustard`, `bg-hola-olive` - For arch decorations
@@ -349,6 +361,7 @@ Status messages and feedback
 ## Color Accessibility Guidelines
 
 ### High Contrast Pairings (WCAG AA Compliant)
+
 ✅ `text-text-primary` on `bg-background-primary`
 ✅ `text-white` on `bg-primary`
 ✅ `text-white` on `bg-secondary`
@@ -356,6 +369,7 @@ Status messages and feedback
 ✅ `text-text-primary` on `bg-accent-sage`
 
 ### Lower Contrast (Use Carefully)
+
 ⚠️ `text-text-tertiary` on `bg-background-secondary` - OK for meta info
 ⚠️ `text-accent-olive` on `bg-background-primary` - Use for decorative only
 
@@ -364,30 +378,34 @@ Status messages and feedback
 ## Common Patterns
 
 ### Pattern 1: Primary CTA Button
+
 ```tsx
-<button className="bg-primary hover:bg-primary-hover text-white px-8 py-3 rounded-md font-sans tracking-wide transition-colors">
+<button className="bg-primary hover:bg-primary-hover rounded-md px-8 py-3 font-sans tracking-wide text-white transition-colors">
   Book Consultation
 </button>
 ```
 
 ### Pattern 2: Secondary CTA Button
+
 ```tsx
-<button className="bg-secondary hover:bg-secondary-hover text-white px-8 py-3 rounded-md font-sans tracking-wide transition-colors">
+<button className="bg-secondary hover:bg-secondary-hover rounded-md px-8 py-3 font-sans tracking-wide text-white transition-colors">
   Learn More
 </button>
 ```
 
 ### Pattern 3: Outline Button
+
 ```tsx
-<button className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-md font-sans tracking-wide transition-colors">
+<button className="border-primary text-primary hover:bg-primary rounded-md border-2 px-8 py-3 font-sans tracking-wide transition-colors hover:text-white">
   Contact Us
 </button>
 ```
 
 ### Pattern 4: Service Card
+
 ```tsx
-<div className="bg-background-secondary border-l-4 border-accent-terracotta rounded-lg p-6">
-  <h3 className="text-text-primary text-xl font-serif mb-2">Service Title</h3>
+<div className="bg-background-secondary border-accent-terracotta rounded-lg border-l-4 p-6">
+  <h3 className="text-text-primary mb-2 font-serif text-xl">Service Title</h3>
   <p className="text-text-secondary mb-4">Service description...</p>
   <a href="#" className="text-primary hover:text-primary-hover font-medium">
     Learn more →
@@ -396,18 +414,20 @@ Status messages and feedback
 ```
 
 ### Pattern 5: Alert/Notification
+
 ```tsx
-<div className="bg-success text-white p-4 rounded-lg flex items-center gap-3">
-  <svg className="w-6 h-6">✓</svg>
+<div className="bg-success flex items-center gap-3 rounded-lg p-4 text-white">
+  <svg className="h-6 w-6">✓</svg>
   <p>Your application was submitted successfully!</p>
 </div>
 ```
 
 ### Pattern 6: Section with Colored Background
+
 ```tsx
-<section className="bg-accent-sage text-text-primary py-16 px-8">
-  <div className="max-w-4xl mx-auto">
-    <h2 className="text-4xl font-serif mb-6">About Us</h2>
+<section className="bg-accent-sage text-text-primary px-8 py-16">
+  <div className="mx-auto max-w-4xl">
+    <h2 className="mb-6 font-serif text-4xl">About Us</h2>
     <p className="text-text-secondary">Content...</p>
   </div>
 </section>

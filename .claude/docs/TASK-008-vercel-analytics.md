@@ -11,6 +11,7 @@
 ## Background: Why Vercel Analytics?
 
 Vercel Analytics provides:
+
 - **Web Analytics:** Page views, unique visitors, top pages
 - **Speed Insights:** Real-world performance metrics
 - **Privacy-friendly:** No cookies, GDPR/CCPA compliant
@@ -56,15 +57,15 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-        
+
         {/* Vercel Analytics */}
         <Analytics />
         <SpeedInsights />
-        
+
         {/* Development-only playground link */}
         {process.env.NODE_ENV === 'development' && (
-          <a 
-            href="/playground" 
+          <a
+            href="/playground"
             className="fixed bottom-6 right-6 z-50 bg-brand-rust text-white px-4 py-3 rounded-full shadow-lg hover:bg-brand-brick transition-colors flex items-center gap-2 font-medium"
           >
             <span>🛝</span>
@@ -95,10 +96,10 @@ export const trackContactForm = (formName: string) => {
   if (typeof window !== 'undefined' && window.va) {
     window.va('event', {
       name: 'contact_form_submit',
-      data: { form: formName }
-    })
+      data: { form: formName },
+    });
   }
-}
+};
 
 /**
  * Track package view
@@ -108,10 +109,10 @@ export const trackPackageView = (packageName: string) => {
   if (typeof window !== 'undefined' && window.va) {
     window.va('event', {
       name: 'package_view',
-      data: { package: packageName }
-    })
+      data: { package: packageName },
+    });
   }
-}
+};
 
 /**
  * Track blog post read
@@ -121,10 +122,10 @@ export const trackBlogRead = (postTitle: string) => {
   if (typeof window !== 'undefined' && window.va) {
     window.va('event', {
       name: 'blog_read',
-      data: { title: postTitle }
-    })
+      data: { title: postTitle },
+    });
   }
-}
+};
 
 /**
  * Track Calendly scheduler click
@@ -133,10 +134,10 @@ export const trackCalendlyClick = () => {
   if (typeof window !== 'undefined' && window.va) {
     window.va('event', {
       name: 'calendly_click',
-      data: { type: 'scheduler' }
-    })
+      data: { type: 'scheduler' },
+    });
   }
-}
+};
 
 /**
  * Track external link clicks
@@ -147,18 +148,15 @@ export const trackExternalLink = (url: string, label?: string) => {
   if (typeof window !== 'undefined' && window.va) {
     window.va('event', {
       name: 'external_link_click',
-      data: { url, label }
-    })
+      data: { url, label },
+    });
   }
-}
+};
 
 // TypeScript declaration for window.va
 declare global {
   interface Window {
-    va?: (
-      event: 'event',
-      data: { name: string; data?: Record<string, any> }
-    ) => void
+    va?: (event: 'event', data: { name: string; data?: Record<string, any> }) => void;
   }
 }
 ```
@@ -188,6 +186,7 @@ Create or update `src/types/vercel.d.ts`:
 ### 1. Development Testing
 
 In development mode:
+
 - Analytics won't send real data
 - Check console for any errors
 - Verify no build warnings
@@ -196,12 +195,14 @@ In development mode:
 ### 2. Component Integration Check
 
 Verify both components are imported:
+
 ```typescript
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 ```
 
 And rendered in layout:
+
 ```tsx
 <Analytics />
 <SpeedInsights />
@@ -210,6 +211,7 @@ And rendered in layout:
 ### 3. Build Test
 
 Test production build:
+
 ```bash
 npm run build
 ```
@@ -219,6 +221,7 @@ Should build without errors or warnings about analytics.
 ### 4. TypeScript Check
 
 Run TypeScript check:
+
 ```bash
 npx tsc --noEmit
 ```
@@ -232,12 +235,14 @@ Should have no errors related to analytics types.
 ### Two Components
 
 **1. Analytics**
+
 - Tracks page views
 - Tracks custom events (Pro plan)
 - Privacy-friendly (no cookies)
 - Data appears in Vercel dashboard
 
 **2. SpeedInsights**
+
 - Measures real-world performance
 - Tracks Core Web Vitals:
   - LCP (Largest Contentful Paint)
@@ -248,12 +253,14 @@ Should have no errors related to analytics types.
 ### How It Works
 
 When deployed to Vercel:
+
 1. Analytics automatically activates
 2. No configuration needed
 3. Data appears in project dashboard
 4. View at: https://vercel.com/[team]/[project]/analytics
 
 In development:
+
 - Analytics are disabled
 - No data is sent
 - No impact on development
@@ -277,6 +284,7 @@ In development:
 ### Speed Insights
 
 Click "Speed Insights" tab to see:
+
 - Real User Monitoring data
 - Core Web Vitals scores
 - Performance over time
@@ -289,18 +297,18 @@ Click "Speed Insights" tab to see:
 The utility functions we created support custom events, but these require Vercel Pro plan:
 
 ```tsx
-'use client'
+'use client';
 
-import { trackContactForm } from '@/lib/utils/analytics'
+import { trackContactForm } from '@/lib/utils/analytics';
 
 export default function ContactForm() {
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     // ... form logic
-    trackContactForm('main-contact')
-  }
-  
-  return <form onSubmit={handleSubmit}>...</form>
+    trackContactForm('main-contact');
+  };
+
+  return <form onSubmit={handleSubmit}>...</form>;
 }
 ```
 
@@ -332,6 +340,7 @@ export default function ContactForm() {
 ### GDPR/CCPA Compliance
 
 Vercel Analytics is privacy-friendly:
+
 - ✅ No cookies
 - ✅ No personal data collected
 - ✅ Compliant with GDPR, CCPA, PECR
@@ -347,6 +356,7 @@ Vercel Analytics is privacy-friendly:
 ### Privacy Policy
 
 Still recommend having a privacy policy that mentions:
+
 - "We use Vercel Analytics to understand site usage"
 - "No personal data or cookies are used"
 - Link to Vercel's privacy policy
@@ -356,6 +366,7 @@ Still recommend having a privacy policy that mentions:
 ## Alternative: Audience Insights (Pro)
 
 Vercel Pro offers additional features:
+
 - Funnel analysis
 - Custom event tracking
 - Advanced filtering
@@ -370,11 +381,13 @@ For most projects, the free tier is sufficient.
 ### What to Track
 
 **Essential:**
+
 - Page views (automatic)
 - Top pages (automatic)
 - Performance metrics (automatic)
 
 **Optional (with custom events):**
+
 - Form submissions
 - Button clicks
 - External links
@@ -392,6 +405,7 @@ For most projects, the free tier is sufficient.
 ## Next Steps
 
 After verification passes:
+
 - Deploy to Vercel to see analytics in action
 - Review additional Sanity schemas (see SANITY-SCHEMAS-REMAINING.md)
 - Begin building production pages

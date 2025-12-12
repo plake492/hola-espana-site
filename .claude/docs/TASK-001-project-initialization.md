@@ -18,12 +18,13 @@ cd hola-espana
 ```
 
 **Prompts to select:**
+
 - TypeScript: Yes
 - ESLint: Yes
 - Tailwind CSS: Yes
 - `src/` directory: Yes
 - App Router: Yes
-- Import alias: Yes (default @/*)
+- Import alias: Yes (default @/\*)
 
 ### 2. Install core dependencies
 
@@ -64,6 +65,7 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ### 5. Verify .gitignore includes environment files
 
 Ensure `.gitignore` contains:
+
 ```
 # local env files
 .env*.local
@@ -86,11 +88,13 @@ Ensure `.gitignore` contains:
 ## Review Points
 
 ### 1. Package.json Check
+
 - Verify all dependencies are present
 - Check that versions are compatible
 - Ensure scripts are correct (dev, build, start)
 
 ### 2. Folder Structure
+
 ```
 hola-espana/
 ├── src/
@@ -108,10 +112,12 @@ hola-espana/
 ```
 
 ### 3. TypeScript Configuration
+
 - Open `tsconfig.json` and verify paths are configured
 - Check that `@/*` alias points to `./src/*`
 
 ### 4. Security Check
+
 - Confirm `.env.local` is in `.gitignore`
 - Verify no sensitive data in git history
 
@@ -133,6 +139,7 @@ hola-espana/
 ## Next Steps
 
 After verification passes, proceed to:
+
 - **TASK-002:** Tailwind CSS v4 Theme Setup
 
 ---

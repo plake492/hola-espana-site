@@ -70,16 +70,19 @@ git commit -m "Add Claude Code configuration and documentation"
 ### 3. Start Building
 
 **Human developers:**
+
 1. Read `SETUP-GUIDE.md` (this will take 5 minutes)
 2. Open `.claude/docs/PROJECT-OVERVIEW.md`
 3. Check `.claude/docs/tasks.md` for current status
 4. Execute tasks from `.claude/docs/TASK-001-*.md`
 
 **Claude Code:**
+
 ```bash
 cd /path/to/your/hola-espana-project
 claude
 ```
+
 CLAUDE.md is automatically loaded with full project context.
 
 ---
@@ -88,17 +91,18 @@ CLAUDE.md is automatically loaded with full project context.
 
 ### Essential Files
 
-| File | Purpose | Read When |
-|------|---------|-----------|
-| **SETUP-GUIDE.md** | 5-minute setup instructions | First |
-| **CLAUDE.md** | Project context (auto-loaded by Claude Code) | Reference |
-| **.claude/docs/README.md** | Documentation index | Before starting tasks |
-| **.claude/docs/PROJECT-OVERVIEW.md** | Full business context | Before starting tasks |
-| **.claude/docs/tasks.md** | Task tracker with checkboxes ✅ | Every session |
+| File                                 | Purpose                                      | Read When             |
+| ------------------------------------ | -------------------------------------------- | --------------------- |
+| **SETUP-GUIDE.md**                   | 5-minute setup instructions                  | First                 |
+| **CLAUDE.md**                        | Project context (auto-loaded by Claude Code) | Reference             |
+| **.claude/docs/README.md**           | Documentation index                          | Before starting tasks |
+| **.claude/docs/PROJECT-OVERVIEW.md** | Full business context                        | Before starting tasks |
+| **.claude/docs/tasks.md**            | Task tracker with checkboxes ✅              | Every session         |
 
 ### Task Files (Sequential Execution)
 
 Each task is **15-40 minutes** and includes:
+
 - Clear objective
 - Step-by-step instructions
 - Verification checklist
@@ -106,6 +110,7 @@ Each task is **15-40 minutes** and includes:
 - Common issues & solutions
 
 **Execute in order:**
+
 1. TASK-001: Project initialization (Next.js, TypeScript, deps)
 2. TASK-002: Tailwind CSS v4 with @theme directive
 3. TASK-003: Sanity CMS (integrated at /studio)
@@ -120,6 +125,7 @@ Each task is **15-40 minutes** and includes:
 ### After Task 008
 
 See `.claude/docs/NEXT-STEPS.md` for:
+
 - Remaining Sanity schemas (Service, Package, Team Member)
 - Production page layouts
 - Header/Footer components
@@ -133,30 +139,37 @@ See `.claude/docs/NEXT-STEPS.md` for:
 ## 🎯 Key Features
 
 ### ✅ Auto-Updating Task Tracker
+
 `.claude/docs/tasks.md` has checkboxes you update as you complete tasks:
+
 ```markdown
 - [ ] TASK-001: Project initialization
 - [ ] TASK-002: Tailwind setup
 ```
+
 becomes:
+
 ```markdown
 - [x] TASK-001: Project initialization
 - [ ] TASK-002: Tailwind setup
 ```
 
 ### 🤖 Claude Code Integration
+
 - `CLAUDE.md` auto-loads project context
 - `.claude/settings.json` configures permissions
 - `.claude/docs/` provides detailed task instructions
 - No repetitive approval prompts for safe operations
 
 ### 📦 Compartmentalized Tasks
+
 - Each task is self-contained
 - Verify completion before proceeding
 - Review points ensure quality
 - No accumulation of technical debt
 
 ### 🔒 Version Control Ready
+
 - **Commit:** `settings.json`, `docs/`, `CLAUDE.md`
 - **Ignore:** `settings.local.json` (personal preferences)
 - `.gitignore` included and configured
@@ -166,6 +179,7 @@ becomes:
 ## 🏗️ Project Overview
 
 **What you're building:**
+
 - Next.js 14+ website for Spanish immigration law firm
 - Gaudí-inspired earthy luxury design
 - 6 pages: Home, About, Services, Packages, Blog, Contact
@@ -173,6 +187,7 @@ becomes:
 - Tailwind CSS v4 with custom color palette
 
 **Tech stack:**
+
 - Next.js 14+ (App Router)
 - TypeScript (strict mode)
 - Tailwind CSS v4 (@theme directive)
@@ -181,6 +196,7 @@ becomes:
 - Vercel (deployment + analytics)
 
 **Client context:**
+
 - Immigration attorney (friends/family project)
 - Non-technical (CMS must be simple)
 - Budget: $5,500 ($2k services + $3.5k cash)
@@ -193,6 +209,7 @@ becomes:
 ### Permissions Summary
 
 **Auto-approved (no prompts):**
+
 - Reading all files
 - Writing to src/, sanity/schemas/, public/, docs/
 - Safe git operations (status, diff, add, commit)
@@ -200,6 +217,7 @@ becomes:
 - File navigation (ls, cd, cat, pwd)
 
 **Asks for approval:**
+
 - Installing/updating packages
 - Git push/merge/rebase
 - Modifying config files
@@ -207,6 +225,7 @@ becomes:
 - Destructive operations (rm -rf)
 
 **Blocked:**
+
 - Reading/writing .env files
 - sudo commands
 - Force pushes
@@ -214,6 +233,7 @@ becomes:
 - External network calls
 
 ### Auto-Formatting Hooks
+
 Prettier runs automatically on .ts, .tsx, .css files after edits.
 
 ---
@@ -221,12 +241,14 @@ Prettier runs automatically on .ts, .tsx, .css files after edits.
 ## 📚 Additional Resources
 
 ### Documentation Files
+
 - `.claude/VERSION-CONTROL.md` - Git best practices for .claude folder
 - `.claude/docs/CONTEXT7-SETUP.md` - Optional Context7 MCP integration
 - `.claude/docs/SANITY-SCHEMAS-REMAINING.md` - Additional CMS schemas
 - `.claude/docs/NEXT-STEPS.md` - Weeks 2-7 development roadmap
 
 ### External Links
+
 - Next.js: https://nextjs.org/docs
 - Tailwind v4: https://tailwindcss.com/docs
 - Sanity: https://www.sanity.io/docs
@@ -238,18 +260,21 @@ Prettier runs automatically on .ts, .tsx, .css files after edits.
 ## ✨ What Makes This Special
 
 ### For Humans
+
 - **Clear task structure** - No guessing what to do next
 - **Verification checklists** - Ensure quality at each step
 - **Time estimates** - Plan your work effectively
 - **Common issues** - Solutions to problems you might hit
 
 ### For AI Agents (Claude Code)
+
 - **Auto-loaded context** - CLAUDE.md provides instant project knowledge
 - **Permission configuration** - Works smoothly without constant prompts
 - **Task references** - Detailed instructions in `.claude/docs/`
 - **Checkbox tracking** - Clear progress indicators
 
 ### For Teams
+
 - **Shared configuration** - Everyone uses same permissions
 - **Git-friendly** - Clear guidance on what to commit
 - **Documentation as code** - Tasks checked into version control
@@ -278,18 +303,22 @@ This documentation follows a **compartmentalized review approach**:
 ### Questions About...
 
 **Setup & Installation:**
+
 - Read `SETUP-GUIDE.md`
 - Check `.claude/VERSION-CONTROL.md`
 
 **Project Context:**
+
 - Read `CLAUDE.md`
 - Read `.claude/docs/PROJECT-OVERVIEW.md`
 
 **Current Task:**
+
 - Read `.claude/docs/tasks.md` (status)
 - Read `.claude/docs/TASK-XXX-*.md` (instructions)
 
 **Future Work:**
+
 - Read `.claude/docs/NEXT-STEPS.md`
 - Read `.claude/docs/SANITY-SCHEMAS-REMAINING.md`
 
@@ -298,12 +327,14 @@ This documentation follows a **compartmentalized review approach**:
 ## ✅ Version Control Summary
 
 **Add to Git:**
+
 - ✅ `CLAUDE.md`
 - ✅ `.claude/settings.json`
 - ✅ `.claude/docs/` (all files)
 - ✅ `.gitignore`
 
 **Ignore (Already in .gitignore):**
+
 - ❌ `.claude/settings.local.json`
 - ❌ `.claude/cache/`
 
@@ -312,6 +343,7 @@ This documentation follows a **compartmentalized review approach**:
 ## 🎯 Success Criteria
 
 After completing all 8 tasks, you'll have:
+
 - ✅ Next.js 14+ project with TypeScript
 - ✅ Tailwind CSS v4 with Gaudí color palette
 - ✅ Sanity CMS integrated at /studio

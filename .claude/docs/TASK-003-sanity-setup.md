@@ -11,6 +11,7 @@
 ## Background: Why Sanity CMS?
 
 Sanity is a headless CMS that allows non-technical users to:
+
 - Create and edit blog posts
 - Manage services and packages
 - Update team member information
@@ -31,6 +32,7 @@ npm create sanity@latest -- --template clean --create-project "Hola España" --d
 ```
 
 **Prompts to answer:**
+
 - Create new project: Yes
 - Project name: "Hola España"
 - Dataset: production
@@ -71,7 +73,7 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 Create `src/lib/sanity/client.ts`:
 
 ```typescript
-import { createClient } from 'next-sanity'
+import { createClient } from 'next-sanity';
 
 export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
@@ -79,7 +81,7 @@ export const client = createClient({
   apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION!,
   useCdn: process.env.NODE_ENV === 'production',
   token: process.env.SANITY_API_TOKEN,
-})
+});
 ```
 
 ### 5. Create Sanity Config File
@@ -91,7 +93,7 @@ export const sanityConfig = {
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
   apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION!,
-}
+};
 ```
 
 ### 6. Test Sanity Studio
@@ -119,6 +121,7 @@ This should open Sanity Studio at `http://localhost:3333`
 ## Review Points
 
 ### 1. Project Structure Check
+
 ```
 hola-espana/
 ├── sanity/
@@ -137,12 +140,14 @@ hola-espana/
 ```
 
 ### 2. Environment Variables
+
 - Open `.env.local`
 - Verify `NEXT_PUBLIC_SANITY_PROJECT_ID` matches your Sanity project
 - Verify `NEXT_PUBLIC_SANITY_DATASET` is "production"
-- Note: These are PUBLIC variables (prefixed with NEXT_PUBLIC_)
+- Note: These are PUBLIC variables (prefixed with NEXT*PUBLIC*)
 
 ### 3. Sanity Studio Access
+
 - Navigate to localhost:3333
 - Should see Sanity Studio login screen
 - Login with Google or GitHub
@@ -153,16 +158,16 @@ hola-espana/
 Create a test file `src/lib/sanity/test.ts`:
 
 ```typescript
-import { client } from './client'
+import { client } from './client';
 
 export async function testConnection() {
   try {
-    const result = await client.fetch('*[_type == "test"][0]')
-    console.log('Sanity connection successful:', result)
-    return true
+    const result = await client.fetch('*[_type == "test"][0]');
+    console.log('Sanity connection successful:', result);
+    return true;
   } catch (error) {
-    console.error('Sanity connection failed:', error)
-    return false
+    console.error('Sanity connection failed:', error);
+    return false;
   }
 }
 ```
@@ -242,6 +247,7 @@ You don't need this now, but when you need write access from Next.js:
 You can manage your project at: https://sanity.io/manage
 
 Features available:
+
 - View API usage
 - Manage team members
 - Configure CORS (if needed later)
@@ -253,6 +259,7 @@ Features available:
 ## Next Steps
 
 After verification passes, proceed to:
+
 - **TASK-004:** Create Sanity Schema - Blog Post
 
 ---

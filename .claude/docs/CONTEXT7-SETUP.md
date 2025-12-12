@@ -7,6 +7,7 @@ Context7 is a standardized way to document your project for AI coding assistants
 ## Why Use Context7?
 
 When working with AI assistants (Claude, Cursor, GitHub Copilot), they need to understand:
+
 - Your project structure
 - Coding conventions
 - Key patterns and decisions
@@ -41,10 +42,11 @@ Create these files in `.context7/` directory:
 
 ### `.context7/architecture.md`
 
-```markdown
+````markdown
 # Hola España - Project Architecture
 
 ## Tech Stack
+
 - **Framework:** Next.js 14+ (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS v4 (CSS-first with @theme directive)
@@ -56,63 +58,76 @@ Create these files in `.context7/` directory:
 ## Key Directories
 
 ### `/src/app` - Next.js Pages (App Router)
+
 - Each folder is a route
 - `page.tsx` = page component
 - `layout.tsx` = shared layout
 - `/playground` = dev-only testing area
 
 ### `/src/components` - React Components
+
 - `/ui` - Base components (Button, Card, Container)
 - `/sections` - Page sections (Hero, Services, etc.)
 - `/animations` - Animation wrappers (FadeIn, etc.)
 - `/layout` - Header, Footer, Navigation
 
 ### `/src/lib` - Utilities
+
 - `/sanity` - Sanity client, queries, config
 - `/utils` - General utilities (cn, analytics)
 
 ### `/sanity` - Sanity CMS
+
 - `/schemas` - Content schemas
   - `/documents` - Main content types (post, service, package)
   - `/objects` - Reusable fields (blockContent, seo)
 - `schema.ts` - Schema index
 
 ### `/public` - Static Assets
+
 - Images, fonts, etc.
 
 ## Key Patterns
 
 ### 1. Tailwind CSS v4
+
 Colors defined in `globals.css` with `@theme` directive:
+
 ```css
 @theme {
   --color-brand-rust: var(--brand-rust);
 }
 ```
+````
 
 ### 2. Component Structure
+
 - One component per file
 - Props interface: `{ComponentName}Props`
 - Use `'use client'` only when needed (animations, state)
 - Server components by default
 
 ### 3. Sanity Integration
+
 - Queries in `/src/lib/sanity/queries.ts`
 - Client in `/src/lib/sanity/client.ts`
 - Fetch data in server components
 - Use `createClient` from `next-sanity`
 
 ### 4. Animations
+
 - React Spring for scroll-triggered animations
 - Wrap content in `<FadeIn>` component
 - Triggers once when element enters viewport
 
 ## File Naming Conventions
+
 - Components: PascalCase (`Button.tsx`)
 - Utilities: camelCase (`analytics.ts`)
 - Pages: lowercase (`about/page.tsx`)
 - Sanity schemas: camelCase (`post.ts`, `blockContent.ts`)
-```
+
+````
 
 ### `.context7/conventions.md`
 
@@ -159,13 +174,16 @@ Colors defined in `globals.css` with `@theme` directive:
 - One blank line between groups
 
 ## File Organization
-```
+````
+
 Component.tsx structure:
+
 1. Imports
 2. Types/Interfaces
 3. Constants
 4. Component definition
 5. Helper functions (if needed)
+
 ```
 
 ## Sanity
@@ -188,11 +206,13 @@ Component.tsx structure:
 # Current Tasks & Context
 
 ## Project Status
+
 **Phase:** Initial Setup Complete  
 **Current Focus:** Building production pages and schemas  
 **Last Updated:** [Date]
 
 ## Completed Tasks
+
 - ✅ TASK-001: Project initialization
 - ✅ TASK-002: Tailwind CSS v4 setup
 - ✅ TASK-003: Sanity CMS connection
@@ -203,22 +223,26 @@ Component.tsx structure:
 - ✅ TASK-008: Vercel Analytics
 
 ## In Progress
+
 - [ ] Additional Sanity schemas (Service, Package, Team Member)
 - [ ] Production page layouts
 - [ ] Client content integration
 
 ## Blocked/Waiting
+
 - Client branding assets (logo files)
 - Client content (about text, service descriptions)
 - Professional photos
 
 ## Next Up
+
 1. Create remaining Sanity schemas
 2. Build homepage layout
 3. Implement blog listing page
 4. Create service pages
 
 ## Important Decisions Made
+
 - Using React Spring over Framer Motion (lighter weight)
 - Vercel Analytics instead of Google Analytics (privacy-friendly)
 - Tailwind CSS v4 with @theme directive (modern approach)
@@ -226,9 +250,11 @@ Component.tsx structure:
 - Server components by default (better performance)
 
 ## Technical Debt
+
 None currently - project is new
 
 ## Notes
+
 - This is a friends/family project - iterative approach
 - Client is non-technical - CMS must be very simple
 - Design inspired by Antoni Gaudí architecture
@@ -263,7 +289,7 @@ echo ".context7/" >> .gitignore
 When beginning work with an AI assistant:
 
 ```
-I'm working on the Hola España project. Please review the .context7 
+I'm working on the Hola España project. Please review the .context7
 directory for project context before helping me.
 ```
 
@@ -276,7 +302,7 @@ Per our conventions in .context7/conventions.md, I need a new component.
 ### Task-Specific Context
 
 ```
-I'm working on the blog post schema. See .context7/tasks.md for 
+I'm working on the blog post schema. See .context7/tasks.md for
 what's already completed.
 ```
 
@@ -287,16 +313,19 @@ what's already completed.
 ### When to Update
 
 **After Every Session:**
+
 - Update `.context7/tasks.md` with progress
 - Add any new decisions to `architecture.md`
 - Update conventions if patterns change
 
 **Weekly Review:**
+
 - Check that architecture.md is current
 - Update task status
 - Add any new patterns or learnings
 
 **After Major Changes:**
+
 - New tech stack additions
 - Architecture changes
 - Convention updates
@@ -309,20 +338,23 @@ what's already completed.
 
 Document your component library:
 
-```markdown
+````markdown
 # Component Library Reference
 
 ## UI Components
 
 ### Button (`/src/components/ui/Button.tsx`)
+
 Multi-purpose button component that renders as button or link.
 
 **Props:**
+
 - `variant`: 'primary' | 'secondary' | 'outline'
 - `size`: 'sm' | 'md' | 'lg'
 - `href`: If provided, renders as Next.js Link
 
 **Usage:**
+
 ```tsx
 <Button variant="primary" size="lg">
   Click Me
@@ -332,9 +364,11 @@ Multi-purpose button component that renders as button or link.
   Learn More
 </Button>
 ```
+````
 
 [Continue for other components...]
-```
+
+````
 
 ### `.context7/sanity.md`
 
@@ -355,13 +389,14 @@ Document your content model:
 - **Required:** title, shortDescription
 
 [Continue for other document types...]
-```
+````
 
 ---
 
 ## Example AI Prompts with Context7
 
 ### Good Prompt
+
 ```
 I need to create a new service card component. Per .context7/conventions.md:
 - Use TypeScript with interface
@@ -372,8 +407,9 @@ Please create this component following our established patterns.
 ```
 
 ### Better Prompt
+
 ```
-Per .context7/tasks.md, I'm building the services section. I need a 
+Per .context7/tasks.md, I'm building the services section. I need a
 ServiceCard component that:
 - Matches our UI component patterns (.context7/components.md)
 - Uses our brand colors (.context7/architecture.md)
@@ -387,22 +423,29 @@ Please create this component.
 ## Tips for Effective Context7
 
 ### 1. Be Specific
+
 Bad: "This is a React project"  
 Good: "Next.js 14+ App Router with TypeScript and Tailwind CSS v4"
 
 ### 2. Document Decisions
+
 Capture why you made choices:
+
 - "Using React Spring because Framer Motion is too heavy"
 - "Server components by default for better performance"
 
 ### 3. Keep Tasks Current
+
 Update task status immediately:
+
 - Mark completed tasks
 - Add new tasks as they arise
 - Note blockers
 
 ### 4. Reference in Conversations
+
 Train yourself (and AI) to reference Context7:
+
 - "Per our conventions..."
 - "See .context7/tasks.md..."
 - "Our architecture uses..."
@@ -412,16 +455,19 @@ Train yourself (and AI) to reference Context7:
 ## Troubleshooting
 
 **AI Not Using Context7?**
+
 - Explicitly mention it in your prompt
 - Reference specific files
 - Ask AI to summarize context to verify it read it
 
 **Context Too Large?**
+
 - Keep each file focused
 - Use multiple files for different concerns
 - Link between files with references
 
 **Outdated Context?**
+
 - Schedule regular reviews
 - Update after each major change
 - Use git diffs to track what changed
@@ -434,11 +480,11 @@ Context7 transforms how you work with AI assistants:
 
 **Without Context7:**
 "I have a Next.js project with Tailwind and Sanity..."  
-*(Repeat every session)*
+_(Repeat every session)_
 
 **With Context7:**
 "See .context7 for full context"  
-*(AI immediately understands everything)*
+_(AI immediately understands everything)_
 
 ---
 

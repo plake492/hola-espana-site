@@ -11,6 +11,7 @@
 ## Background: Why a Playground?
 
 The playground is a safe space to:
+
 - Test animations before adding to production
 - Experiment with layouts
 - Try component variations
@@ -27,47 +28,43 @@ Key: It's separate from production code, only visible in development.
 Create `src/app/playground/page.tsx`:
 
 ```tsx
-import Link from 'next/link'
-import Container from '@/components/ui/Container'
-import Section from '@/components/ui/Section'
-import Card, { CardHeader, CardContent } from '@/components/ui/Card'
+import Link from 'next/link';
+import Container from '@/components/ui/Container';
+import Section from '@/components/ui/Section';
+import Card, { CardHeader, CardContent } from '@/components/ui/Card';
 
 export default function PlaygroundPage() {
   return (
     <Section>
       <Container>
         <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-2">Development Playground</h1>
-          <p className="text-lg text-muted-foreground">
+          <h1 className="mb-2 text-4xl font-bold">Development Playground</h1>
+          <p className="text-muted-foreground text-lg">
             Non-production testing area for animations, layouts, and components
           </p>
         </div>
-        
+
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <Link href="/playground/animations">
             <Card hover className="h-full">
               <CardHeader>
-                <div className="text-4xl mb-2">🎬</div>
+                <div className="mb-2 text-4xl">🎬</div>
                 <h2 className="text-2xl font-semibold">Animations</h2>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  Test React Spring animations and scroll effects
-                </p>
+                <p className="text-muted-foreground">Test React Spring animations and scroll effects</p>
               </CardContent>
             </Card>
           </Link>
-          
+
           <Link href="/playground/layouts">
             <Card hover className="h-full">
               <CardHeader>
-                <div className="text-4xl mb-2">📐</div>
+                <div className="mb-2 text-4xl">📐</div>
                 <h2 className="text-2xl font-semibold">Layouts</h2>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  Test different page layouts and section combinations
-                </p>
+                <p className="text-muted-foreground">Test different page layouts and section combinations</p>
               </CardContent>
             </Card>
           </Link>
@@ -75,27 +72,25 @@ export default function PlaygroundPage() {
           <Link href="/playground/components">
             <Card hover className="h-full">
               <CardHeader>
-                <div className="text-4xl mb-2">🧩</div>
+                <div className="mb-2 text-4xl">🧩</div>
                 <h2 className="text-2xl font-semibold">Components</h2>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  Test UI components and variations
-                </p>
+                <p className="text-muted-foreground">Test UI components and variations</p>
               </CardContent>
             </Card>
           </Link>
         </div>
 
-        <div className="mt-12 p-6 bg-muted rounded-lg">
-          <h3 className="font-semibold mb-2">⚠️ Development Only</h3>
-          <p className="text-sm text-muted-foreground">
+        <div className="bg-muted mt-12 rounded-lg p-6">
+          <h3 className="mb-2 font-semibold">⚠️ Development Only</h3>
+          <p className="text-muted-foreground text-sm">
             This playground is only visible in development mode. It will not appear in production.
           </p>
         </div>
       </Container>
     </Section>
-  )
+  );
 }
 ```
 
@@ -104,35 +99,35 @@ export default function PlaygroundPage() {
 Create these three files with basic structure:
 
 **File:** `src/app/playground/animations/page.tsx`
+
 ```tsx
-import Section from '@/components/ui/Section'
-import Container from '@/components/ui/Container'
+import Section from '@/components/ui/Section';
+import Container from '@/components/ui/Container';
 
 export default function AnimationsPlayground() {
   return (
     <Section>
       <Container>
-        <h1 className="text-4xl font-bold mb-4">Animations Playground</h1>
-        <p className="text-muted-foreground mb-8">
-          Animation components will be added in TASK-007
-        </p>
-        
-        <div className="p-8 bg-muted rounded-lg text-center">
+        <h1 className="mb-4 text-4xl font-bold">Animations Playground</h1>
+        <p className="text-muted-foreground mb-8">Animation components will be added in TASK-007</p>
+
+        <div className="bg-muted rounded-lg p-8 text-center">
           <p className="text-2xl">🎬</p>
-          <p className="mt-2 text-muted-foreground">Coming soon...</p>
+          <p className="text-muted-foreground mt-2">Coming soon...</p>
         </div>
       </Container>
     </Section>
-  )
+  );
 }
 ```
 
 **File:** `src/app/playground/layouts/page.tsx`
+
 ```tsx
-import Section from '@/components/ui/Section'
-import Container from '@/components/ui/Container'
-import Card, { CardHeader, CardContent } from '@/components/ui/Card'
-import Button from '@/components/ui/Button'
+import Section from '@/components/ui/Section';
+import Container from '@/components/ui/Container';
+import Card, { CardHeader, CardContent } from '@/components/ui/Card';
+import Button from '@/components/ui/Button';
 
 export default function LayoutsPlayground() {
   return (
@@ -140,16 +135,14 @@ export default function LayoutsPlayground() {
       {/* Example: Hero Section */}
       <Section background="accent" padding="xl">
         <Container>
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl font-bold mb-6">
-              Example Hero Section
-            </h1>
-            <p className="text-xl mb-8">
-              Test different layout combinations and see how they work together
-            </p>
-            <div className="flex gap-4 justify-center">
+          <div className="mx-auto max-w-3xl text-center">
+            <h1 className="mb-6 text-5xl font-bold">Example Hero Section</h1>
+            <p className="mb-8 text-xl">Test different layout combinations and see how they work together</p>
+            <div className="flex justify-center gap-4">
               <Button size="lg">Primary CTA</Button>
-              <Button size="lg" variant="outline">Secondary CTA</Button>
+              <Button size="lg" variant="outline">
+                Secondary CTA
+              </Button>
             </div>
           </div>
         </Container>
@@ -158,20 +151,16 @@ export default function LayoutsPlayground() {
       {/* Example: Three Column Grid */}
       <Section>
         <Container>
-          <h2 className="text-3xl font-bold mb-8 text-center">
-            Three Column Layout
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <h2 className="mb-8 text-center text-3xl font-bold">Three Column Layout</h2>
+          <div className="grid gap-6 md:grid-cols-3">
             {[1, 2, 3].map((i) => (
               <Card key={i} hover>
                 <CardHeader>
-                  <div className="w-12 h-12 bg-primary rounded-lg mb-4" />
+                  <div className="bg-primary mb-4 h-12 w-12 rounded-lg" />
                   <h3 className="text-xl font-semibold">Feature {i}</h3>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">
-                    Description of feature and its benefits for users.
-                  </p>
+                  <p className="text-muted-foreground">Description of feature and its benefits for users.</p>
                 </CardContent>
               </Card>
             ))}
@@ -182,42 +171,43 @@ export default function LayoutsPlayground() {
       {/* Example: Two Column */}
       <Section background="muted">
         <Container>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid items-center gap-12 md:grid-cols-2">
             <div>
-              <h2 className="text-3xl font-bold mb-4">Two Column Layout</h2>
-              <p className="text-lg text-muted-foreground mb-6">
+              <h2 className="mb-4 text-3xl font-bold">Two Column Layout</h2>
+              <p className="text-muted-foreground mb-6 text-lg">
                 Great for about sections, features with images, or any content that needs side-by-side presentation.
               </p>
               <Button>Learn More</Button>
             </div>
-            <div className="aspect-video bg-card rounded-lg border border-border flex items-center justify-center">
+            <div className="bg-card border-border flex aspect-video items-center justify-center rounded-lg border">
               <p className="text-muted-foreground">Image placeholder</p>
             </div>
           </div>
         </Container>
       </Section>
     </>
-  )
+  );
 }
 ```
 
 **File:** `src/app/playground/components/page.tsx`
+
 ```tsx
-import Section from '@/components/ui/Section'
-import Container from '@/components/ui/Container'
-import Button from '@/components/ui/Button'
-import Card, { CardHeader, CardContent } from '@/components/ui/Card'
+import Section from '@/components/ui/Section';
+import Container from '@/components/ui/Container';
+import Button from '@/components/ui/Button';
+import Card, { CardHeader, CardContent } from '@/components/ui/Card';
 
 export default function ComponentsPlayground() {
   return (
     <Section>
       <Container>
-        <h1 className="text-4xl font-bold mb-8">Components Playground</h1>
-        
+        <h1 className="mb-8 text-4xl font-bold">Components Playground</h1>
+
         <div className="space-y-12">
           {/* Button Combinations */}
           <div>
-            <h2 className="text-2xl font-semibold mb-4">Button Groups</h2>
+            <h2 className="mb-4 text-2xl font-semibold">Button Groups</h2>
             <div className="flex flex-wrap gap-4">
               <Button variant="primary">Save Changes</Button>
               <Button variant="secondary">Cancel</Button>
@@ -227,16 +217,14 @@ export default function ComponentsPlayground() {
 
           {/* Card Variations */}
           <div>
-            <h2 className="text-2xl font-semibold mb-4">Card Styles</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <h2 className="mb-4 text-2xl font-semibold">Card Styles</h2>
+            <div className="grid gap-6 md:grid-cols-2">
               <Card>
                 <CardHeader>
                   <h3 className="text-xl font-semibold">Standard Card</h3>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    Default card styling with border and subtle shadow.
-                  </p>
+                  <p className="text-muted-foreground mb-4">Default card styling with border and subtle shadow.</p>
                   <Button size="sm">Action</Button>
                 </CardContent>
               </Card>
@@ -246,10 +234,12 @@ export default function ComponentsPlayground() {
                   <h3 className="text-xl font-semibold">Custom Card</h3>
                 </CardHeader>
                 <CardContent>
-                  <p className="mb-4">
-                    Card with custom background and hover effect.
-                  </p>
-                  <Button size="sm" variant="outline" className="border-white text-white hover:bg-white hover:text-brand-teal">
+                  <p className="mb-4">Card with custom background and hover effect.</p>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="hover:text-brand-teal border-white text-white hover:bg-white"
+                  >
                     Action
                   </Button>
                 </CardContent>
@@ -259,7 +249,7 @@ export default function ComponentsPlayground() {
         </div>
       </Container>
     </Section>
-  )
+  );
 }
 ```
 
@@ -268,32 +258,28 @@ export default function ComponentsPlayground() {
 Update `src/app/layout.tsx` to include floating playground link:
 
 ```tsx
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Hola España - Legal and Relocation Experts',
   description: 'Expert immigration services for US citizens relocating to Spain',
-}
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className}>
         {children}
-        
+
         {/* Development-only playground link */}
         {process.env.NODE_ENV === 'development' && (
-          <a 
-            href="/playground" 
-            className="fixed bottom-6 right-6 z-50 bg-brand-rust text-white px-4 py-3 rounded-full shadow-lg hover:bg-brand-brick transition-colors flex items-center gap-2 font-medium"
+          <a
+            href="/playground"
+            className="bg-brand-rust hover:bg-brand-brick fixed right-6 bottom-6 z-50 flex items-center gap-2 rounded-full px-4 py-3 font-medium text-white shadow-lg transition-colors"
           >
             <span>🛝</span>
             <span>Playground</span>
@@ -301,7 +287,7 @@ export default function RootLayout({
         )}
       </body>
     </html>
-  )
+  );
 }
 ```
 
@@ -323,6 +309,7 @@ export default function RootLayout({
 ### 1. Navigation Flow
 
 Test this flow:
+
 1. Visit any page in dev
 2. Click floating playground button
 3. Should go to `/playground`
@@ -333,6 +320,7 @@ Test this flow:
 ### 2. Visual Check
 
 Verify:
+
 - Playground link only shows in development
 - Link is easily accessible (bottom-right)
 - Cards have hover effects
@@ -347,6 +335,7 @@ npm start
 ```
 
 Verify:
+
 - Playground link does NOT show
 - `/playground` routes still work (Next.js builds all routes)
 - But no easy way to access without URL
@@ -356,6 +345,7 @@ Verify:
 ### 4. Responsive Test
 
 Test on mobile viewport:
+
 - Playground link should be visible and tappable
 - Cards should stack vertically
 - Layout sections should be responsive
@@ -375,6 +365,7 @@ Test on mobile viewport:
 ```
 
 Each page is independent. Add more as needed:
+
 - `/playground/forms`
 - `/playground/colors`
 - `/playground/typography`
@@ -442,6 +433,7 @@ Add more playground sections as needed:
 ## Next Steps
 
 After verification passes, proceed to:
+
 - **TASK-007:** Create FadeIn Animation Component
 
 ---
