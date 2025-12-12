@@ -33,12 +33,15 @@ export default function RootLayout({
       >
         <Header />
         <main>{children}</main>
-        <div className="ifxed bottom-0 right-0  z-40 mr-8 mb-8">
+        <div className="fixed bottom-0 right-0 z-40 mr-8 mb-8 flex flex-col gap-2">
           <Link href="/theme" className=" bg-zinc-100 border-black px-4 py-1.5 border-2 shadow-2xl rounded-xl">
             THEME
           </Link>
           <Link href="/colors" className=" bg-zinc-100 border-black px-4 py-1.5 border-2 shadow-2xl rounded-xl">
             COLORS
+          </Link>
+          <Link href="/studio" className=" bg-zinc-100 border-black px-4 py-1.5 border-2 shadow-2xl rounded-xl">
+            CMS
           </Link>
         </div>
       </body>
