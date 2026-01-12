@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const pages = [
   {
@@ -27,7 +28,7 @@ export default function Header() {
   return (
     <header className="flex w-full items-center justify-between border-b p-4">
       <Link href="/">
-        <p className="text-3xl">Logo</p>
+        <Image alt="site logo" src="/logo/logo.svg" width={200} height={100} className="w-[284px]" />
       </Link>
       <nav className="flex gap-4">
         {pages.map((page) => (
