@@ -1,12 +1,4 @@
-import Hero from '@/components/home/Hero';
-import WeKnowSpain from '@/components/home/WeKnowSpain';
-import WhatWeDo from '@/components/home/WhatWeDo';
-import WhyBookUs from '@/components/home/WhyBookUs';
-import HowItWorks from '@/components/home/HowItWorks';
-import OurTeam from '@/components/home/OurTeam';
-import Reviews from '@/components/home/Reviews';
-import Blogs from '@/components/home/Blogs';
-import CTA from '@/components/home/CTA';
+import { Hero, WeKnowSpain, WhatWeDo, WhyBookUs, HowItWorks, OurTeam, Reviews, Blogs, CTA } from '@/components/home';
 
 export default function Home() {
   return (

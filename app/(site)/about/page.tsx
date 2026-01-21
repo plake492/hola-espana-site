@@ -1,5 +1,14 @@
 import React from 'react';
+import { Hero, OurStory, Team, WhatYouGet, CTA } from '@/components/about';
 
 export default function page() {
-  return <div>About</div>;
+  return (
+    <>
+      <Hero />
+      <OurStory />
+      <Team />
+      <WhatYouGet />
+      <CTA />
+    </>
+  );
 }
