@@ -7,5 +7,7 @@ import OurTeam from './OurTeam';
 import Reviews from './Reviews';
 import Blogs from './Blogs';
 import CTA from './CTA';
+import HeroCta from './HeroCta';
+import Services from './Services';
 
-export { Hero, WeKnowSpain, WhatWeDo, WhyBookUs, HowItWorks, OurTeam, Reviews, Blogs, CTA };
+export { Hero, WeKnowSpain, WhatWeDo, WhyBookUs, HowItWorks, OurTeam, Reviews, Blogs, CTA, HeroCta, Services };

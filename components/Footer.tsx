@@ -1,9 +1,15 @@
 import React from 'react';
+import Wave from './Wave';
 
 export default function Footer() {
   return (
-    <footer className="min-h-[400px] border-t bg-gray-500">
-      <p className="text-4xl">footer</p>
-    </footer>
+    <div className="relative">
+      {/* <Wave color="blue" /> */}
+      <footer className="min-h-[100px] bg-[#d2e4ec]">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-4xl">footer</p>
+        </div>
+      </footer>
+    </div>
   );
 }

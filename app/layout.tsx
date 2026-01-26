@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-screen font-sans antialiased">
+      <body className="min-h-screen scroll-smooth bg-[#fcf7f2] font-sans antialiased">
         {children}
 
         {/* Vercel Analytics */}
