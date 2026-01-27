@@ -18,7 +18,7 @@ export const servicesCopy = {
   cards: [
     {
       id: 1,
-      img: 'bg-[url(/images/card-visa.jpg)]',
+      img: 'bg-[url(/images/card-visa.webp)]',
       bgPosition: 'bg-position-[center_calc(100px_*_-1)]',
       title: 'Visa Assistance',
       description: 'Help securing the right visa for you and your family',
@@ -26,7 +26,7 @@ export const servicesCopy = {
     },
     {
       id: 2,
-      img: 'bg-[url(/images/card-healthcare.jpg)]',
+      img: 'bg-[url(/images/card-healthcare.webp)]',
       title: 'Health Insurance',
       bgPosition: 'bg-position-[-340px_calc(50px_*_-1)]',
       description: 'Partnering with ASSSA for quality visa required insurance',
@@ -34,7 +34,7 @@ export const servicesCopy = {
     },
     {
       id: 3,
-      img: 'bg-[url(/images/card-relocation.jpg)]',
+      img: 'bg-[url(/images/card-relocation.webp)]',
       title: 'Relocation Plan',
       bgPosition: 'bg-position-[center_calc(50px_*_-1)]',
       description: 'All inclusive packages with your family in mind',
@@ -43,7 +43,7 @@ export const servicesCopy = {
     },
     {
       id: 4,
-      img: 'bg-[url(/images/card-tax.jpg)]',
+      img: 'bg-[url(/images/card-tax.webp)]',
       bgPosition: 'bg-position-[-150px_center]',
       title: 'Tax Services',
       description: 'Tax advice and preparation from Spanish tax experts',
@@ -51,7 +51,7 @@ export const servicesCopy = {
     },
     {
       id: 5,
-      img: 'bg-[url(/images/card-law-legal.jpg)]',
+      img: 'bg-[url(/images/card-law-legal.webp)]',
       bgPosition: 'bg-position-[center_calc(100px_*_-1)]',
       title: 'Law & Legal',
       description: 'Spanish attorneys to help with any legal situation',
@@ -59,7 +59,7 @@ export const servicesCopy = {
     },
     {
       id: 6,
-      img: 'bg-[url(/images/card-housing.jpg)]',
+      img: 'bg-[url(/images/card-housing.webp)]',
       imgPosition: '-100px',
       title: 'Housing Solutions',
       bgPosition: 'bg-position-[center_calc(100px_*_-1)]',

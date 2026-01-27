@@ -25,8 +25,8 @@ export default function WhyBookUs() {
             </ul>
           </div>
           <div className="flex flex-col gap-16">
-            <Image src={'/images/mosaic-casa.jpg'} height={800} width={600} className="flex-1 object-cover" alt="" />
-            <Image src={'/images/cafe.png'} height={800} width={600} className="flex-1 object-cover" alt="" />
+            <Image src={'/images/mosaic-casa.webp'} height={800} width={600} className="flex-1 object-cover" alt="" />
+            <Image src={'/images/cafe.webp'} height={800} width={600} className="flex-1 object-cover" alt="" />
           </div>
         </div>
       </section>

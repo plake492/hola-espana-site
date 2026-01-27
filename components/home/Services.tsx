@@ -18,7 +18,7 @@ export default function Services() {
 
       <div className="absolute bottom-0 left-[50%] -z-1 h-full w-full -translate-x-1/2 translate-y-[475px]">
         <div className="absolute top-0 left-0 z-1 h-1/1 w-full bg-[linear-gradient(#fcf7f2_20,#0000)]"></div>
-        <div className="relative z-0 h-full bg-[url(/images/mosaic-bg.png)] opacity-50"></div>
+        <div className="relative z-0 h-full bg-[url(/images/mosaic-bg.webp)] opacity-50"></div>
       </div>
     </section>
   );
