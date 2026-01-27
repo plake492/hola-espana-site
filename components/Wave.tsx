@@ -5,7 +5,7 @@ export default function Wave({ className, color }: { className?: string; color: 
     return (
       <>
         <div className={`relative w-full ${className || ''}`}>
-          <Image alt="" src={`/images/wave-mosaic.svg`} width={1200} height={100} className="h-[200px] w-full object-cover object-top" />
+          <Image alt="" src={`/images/wave-mosaic.webp`} width={1200} height={100} className="h-[200px] w-full object-cover object-top" />
         </div>
       </>
     );
