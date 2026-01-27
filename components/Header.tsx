@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useSpring, animated } from '@react-spring/web';
+import { HEADER_HEIGHT } from '@/lib/constants';
 
 const previewPage = [{ id: 'preview', href: '#contact', text: 'contact' }];
 
@@ -30,15 +31,13 @@ const pages = [
   },
 ];
 
-const HEADER_HEIGHT = 96;
-
 export default function Header({ isPreview }: { isPreview?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
   const pagesFilteres = isPreview ? previewPage : pages;
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > HEADER_HEIGHT);
+      setScrolled(window.scrollY > HEADER_HEIGHT / 1.5);
     };
 
     handleScroll();
@@ -48,7 +47,7 @@ export default function Header({ isPreview }: { isPreview?: boolean }) {
 
   const springStyles = useSpring({
     color: scrolled ? '#000000' : '#ffffff',
-    backgroundColor: scrolled ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0)',
+    backgroundColor: scrolled ? '#fcf7f2' : 'rgba(255, 255, 255, 0)',
     boxShadow: scrolled ? 'rgba(33, 35, 38, 0.1) 0px 10px 10px -10px' : 'rgba(33, 35, 38, 0) 0px 10px 10px -10px',
     config: { tension: 200, friction: 20 },
   });

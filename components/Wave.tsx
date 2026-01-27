@@ -1,7 +1,15 @@
-import React from 'react';
 import Image from 'next/image';
 
-export default function Wave({ className, color }: { className?: string; color: 'tan' | 'blue' }) {
+export default function Wave({ className, color }: { className?: string; color: 'tan' | 'blue' | 'mosaic' }) {
+  if (color === 'mosaic') {
+    return (
+      <>
+        <div className={`relative w-full ${className || ''}`}>
+          <Image alt="" src={`/images/wave-mosaic.svg`} width={1200} height={100} className="h-[200px] w-full object-cover object-top" />
+        </div>
+      </>
+    );
+  }
   const imgColor = color;
   return (
     <>

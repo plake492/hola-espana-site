@@ -9,5 +9,6 @@ import Blogs from './Blogs';
 import CTA from './CTA';
 import HeroCta from './HeroCta';
 import Services from './Services';
+import About from './About';
 
-export { Hero, WeKnowSpain, WhatWeDo, WhyBookUs, HowItWorks, OurTeam, Reviews, Blogs, CTA, HeroCta, Services };
+export { Hero, WeKnowSpain, WhatWeDo, WhyBookUs, HowItWorks, OurTeam, Reviews, Blogs, CTA, HeroCta, Services, About };

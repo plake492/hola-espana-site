@@ -3,173 +3,22 @@
 @font-face {
   font-family: 'TAN Aegean';
   src:
-    url('/fonts/TAN_Aegean/TAN_Aegean.woff2') format('woff2'),
-    url('/fonts/TAN_Aegean/TAN_Aegean.ttf') format('truetype');
+    url('/fonts/Tan_Aeagean/TANAEGEAN-Regular.woff2') format('woff2'),
+    url('/fonts/Tan_Aeagean/TANAEGEAN-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
-
-  ascent-override: 100%;
-  descent-override: 0%;
-  line-gap-override: 0%;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/static/Montserrat-Thin.ttf') format('truetype');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/static/Montserrat-ThinItalic.ttf') format('truetype');
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/static/Montserrat-ExtraLight.ttf') format('truetype');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/static/Montserrat-ExtraLightItalic.ttf') format('truetype');
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/static/Montserrat-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/static/Montserrat-LightItalic.ttf') format('truetype');
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/static/Montserrat-Italic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/static/Montserrat-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/static/Montserrat-MediumItalic.ttf') format('truetype');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/static/Montserrat-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/static/Montserrat-SemiBoldItalic.ttf') format('truetype');
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/static/Montserrat-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/static/Montserrat-BoldItalic.ttf') format('truetype');
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/static/Montserrat-ExtraBold.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/static/Montserrat-ExtraBoldItalic.ttf') format('truetype');
-  font-weight: 800;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/static/Montserrat-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/static/Montserrat-BlackItalic.ttf') format('truetype');
-  font-weight: 900;
-  font-style: italic;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'La Luxes';
   src:
-    url('/fonts/La_Luxes/La_Luxes.woff2') format('woff2'),
-    url('/fonts/La_Luxes/La_Luxes.woff2') format('truetype');
+    url('/fonts/La_Luxes_Script/LaLuxesScript.woff2') format('woff2'),
+    url('/fonts/La_Luxes_Script/LaLuxesScript.woff') format('woff');
+  /* url('/fonts/La_Luxes_Script/La_Luxes_Script.f6d03b36d276fb6b05a49611.f14bdd2c1305658c4865e081192e3b8e.ttf') format('truetype'); */
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-
-  ascent-override: 100%;
-  descent-override: 0%;
-  line-gap-override: 0%;
 }
 
 @theme {
@@ -256,32 +105,41 @@
   /* ========================================
      FONT FAMILIES
      ======================================== */
-  --font-sans: 'TAN Aegean', sans-serif; /* Primary font */
-  --font-serif: 'Montserrat', sans-serif; /* Secondary font (aliased as serif for compatibility) */
-  --font-secondary: 'Montserrat', sans-serif; /* Secondary font */
-  --font-script: 'La Luxes', cursive; /* Decorative font */
+  --font-sans: 'TAN Aegean', ui-sans-serif, system-ui, sans-serif; /* Primary/display font */
+  --font-serif: serif-roboto, ui-serif, Georgia, serif; /* Serif fallback */
+  --font-script: 'La Luxes', cursive; /* Decorative script font */
 
   /* ========================================
-     RESPONSIVE FONT SIZES (Fluid Typography)
-     Scales smoothly between min and max viewport widths
-     Formula: clamp(min-size, preferred-size, max-size)
+     FONT SIZES - Fluid Typography
+     Scales between 320px and 1440px viewports
+     Formula: clamp(min, base + scale*vw, max)
      ======================================== */
-  /* RESPONSIVE TEXT SIZES - Aggressive Scaling */
+  --font-size-xs: clamp(0.75rem, 0.714rem + 0.18vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 0.839rem + 0.18vw, 1rem);
+  --font-size-base: clamp(1rem, 0.964rem + 0.18vw, 1.125rem);
+  --font-size-lg: clamp(1.125rem, 1.089rem + 0.18vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 1.179rem + 0.36vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 1.357rem + 0.71vw, 2rem);
+  --font-size-3xl: clamp(1.875rem, 1.696rem + 0.89vw, 2.5rem);
+  --font-size-4xl: clamp(2.25rem, 2.036rem + 1.07vw, 3rem);
+  --font-size-5xl: clamp(3rem, 2.714rem + 1.43vw, 4rem);
+  --font-size-6xl: clamp(3.75rem, 3.393rem + 1.79vw, 5rem);
+  --font-size-7xl: clamp(4.5rem, 4.071rem + 2.14vw, 6rem);
+  --font-size-8xl: clamp(6rem, 5.429rem + 2.86vw, 8rem);
+  --font-size-9xl: clamp(8rem, 7.429rem + 2.86vw, 10rem);
 
-  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-  --text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
-  --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
-
-  --text-lg: clamp(1rem, 0.8rem + 1vw, 1.25rem);
-  --text-xl: clamp(1.125rem, 0.85rem + 1.375vw, 1.5rem);
-  --text-2xl: clamp(1.25rem, 0.75rem + 2.5vw, 2rem);
-
-  --text-3xl: clamp(1.5rem, 0.5rem + 5vw, 2.5rem);
-  --text-4xl: clamp(1.75rem, 0.25rem + 7vw, 3rem);
-  --text-5xl: clamp(2rem, 0rem + 10vw, 4rem);
-
-  --text-6xl: clamp(2.5rem, -0.5rem + 12.5vw, 5rem);
-  --text-7xl: clamp(3rem, -1.5rem + 15vw, 6rem);
-  --text-8xl: clamp(3.5rem, -2.5rem + 20vw, 8rem);
-  --text-9xl: clamp(4rem, -4rem + 25vw, 10rem);
+  /* Line Heights - paired with font sizes */
+  --text-xs--line-height: 1.5;
+  --text-sm--line-height: 1.5;
+  --text-base--line-height: 1.625;
+  --text-lg--line-height: 1.625;
+  --text-xl--line-height: 1.5;
+  --text-2xl--line-height: 1.4;
+  --text-3xl--line-height: 1.35;
+  --text-4xl--line-height: 1.25;
+  --text-5xl--line-height: 1.2;
+  --text-6xl--line-height: 1.15;
+  --text-7xl--line-height: 1.1;
+  --text-8xl--line-height: 1.1;
+  --text-9xl--line-height: 1;
 }
