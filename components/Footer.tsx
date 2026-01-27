@@ -1,9 +1,12 @@
-import React from 'react';
-
 export default function Footer() {
   return (
-    <footer className="min-h-[400px] border-t bg-gray-500">
-      <p className="text-4xl">footer</p>
-    </footer>
+    <div className="relative">
+      {/* <Wave color="blue" /> */}
+      <footer className="bg-[#d2e4ec] py-8">
+        <div className="mx-auto max-w-7xl text-center">
+          <p className="text-md font-serif">© 2026 Copyright: hola-espana.com</p>
+        </div>
+      </footer>
+    </div>
   );
 }
