@@ -114,19 +114,19 @@
      Scales between 320px and 1440px viewports
      Formula: clamp(min, base + scale*vw, max)
      ======================================== */
-  --font-size-xs: clamp(0.75rem, 0.714rem + 0.18vw, 0.875rem);
-  --font-size-sm: clamp(0.875rem, 0.839rem + 0.18vw, 1rem);
-  --font-size-base: clamp(1rem, 0.964rem + 0.18vw, 1.125rem);
-  --font-size-lg: clamp(1.125rem, 1.089rem + 0.18vw, 1.25rem);
-  --font-size-xl: clamp(1.25rem, 1.179rem + 0.36vw, 1.5rem);
-  --font-size-2xl: clamp(1.5rem, 1.357rem + 0.71vw, 2rem);
-  --font-size-3xl: clamp(1.875rem, 1.696rem + 0.89vw, 2.5rem);
-  --font-size-4xl: clamp(2.25rem, 2.036rem + 1.07vw, 3rem);
-  --font-size-5xl: clamp(3rem, 2.714rem + 1.43vw, 4rem);
-  --font-size-6xl: clamp(3.75rem, 3.393rem + 1.79vw, 5rem);
-  --font-size-7xl: clamp(4.5rem, 4.071rem + 2.14vw, 6rem);
-  --font-size-8xl: clamp(6rem, 5.429rem + 2.86vw, 8rem);
-  --font-size-9xl: clamp(8rem, 7.429rem + 2.86vw, 10rem);
+  --text-xs: clamp(0.625rem, 0.51rem + 0.40vw, 0.875rem);   /* 10px @ 450px → 14px */
+  --text-sm: clamp(0.75rem, 0.64rem + 0.40vw, 1rem);        /* 12px @ 450px → 16px */
+  --text-base: clamp(0.875rem, 0.76rem + 0.40vw, 1.125rem); /* 14px @ 450px → 18px */
+  --text-lg: clamp(0.94rem, 0.79rem + 0.51vw, 1.25rem);     /* 15px @ 450px → 20px */
+  --text-xl: clamp(1rem, 0.77rem + 0.81vw, 1.5rem);         /* 16px @ 450px → 24px */
+  --text-2xl: clamp(1.125rem, 0.73rem + 1.41vw, 2rem);      /* 18px @ 450px → 32px */
+  --text-3xl: clamp(1.25rem, 0.68rem + 2.02vw, 2.5rem);     /* 20px @ 450px → 40px */
+  --text-4xl: clamp(1rem, 0.09rem + 3.23vw, 3rem); /* 16px @ 450px → 48px */
+  --text-5xl: clamp(1.125rem, -0.18rem + 4.65vw, 4rem); /* 18px @ 450px → 64px */
+  --text-6xl: clamp(1.5rem, -0.54rem + 7.27vw, 6rem); /* 20px @ 450px → 80px */
+  --text-7xl: clamp(1.5rem, -0.54rem + 7.27vw, 6rem); /* 24px @ 450px → 96px */
+  --text-8xl: clamp(4rem, 2.86rem + 5.71vw, 8rem); /* 64px min → 128px */
+  --text-9xl: clamp(2rem, -1.64rem + 12.93vw, 10rem); /* 32px @ 450px → 160px */
 
   /* Line Heights - paired with font sizes */
   --text-xs--line-height: 1.5;
@@ -143,3 +143,13 @@
   --text-8xl--line-height: 1.1;
   --text-9xl--line-height: 1;
 }
+
+/* Mobile overrides (< 640px) */
+/* @media (max-width: 639px) {
+  :root {
+    --text-6xl: 2rem;
+    --text-7xl: 3rem;
+    --text-8xl: 4rem;
+    --text-9xl: 4rem;
+  }
+} */

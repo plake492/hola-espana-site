@@ -6,8 +6,9 @@ export default function About() {
   return (
     <section>
       <Wave color={'mosaic'} className={'bg-[#d2e4ec]'} />
-      <div className="bg-[#EDE2D7]">
-        <div className="mx-auto grid max-w-6xl grid-cols-[auto_1fr] items-center gap-18 py-30 pr-8">
+      <div className="bg-[#EDE2D7] py-12 sm:py-20">
+        {/* Desktop */}
+        <div className="mx-auto hidden max-w-6xl grid-cols-[auto_1fr] items-center gap-18 pr-8 sm:grid">
           <Image width={400} height={600} src={'/images/fatima.webp'} alt="" />
           <div className="flex flex-col gap-7">
             <h3 className="text-3xl">{aboutCopy.heading}</h3>
@@ -16,6 +17,14 @@ export default function About() {
                 {text}
               </p>
             ))}
+          </div>
+        </div>
+        {/* Mobile */}
+        <div className="block px-4 min-[400px]:px-8 sm:hidden">
+          <h4 className="mb-8 text-center text-4xl">{aboutCopy.heading}</h4>
+          <div className="clear-both">
+            <Image width={400} height={600} src={'/images/fatima.webp'} alt="" className="float-left mr-2 h-[200px] w-auto" />
+            <p className="font-serif text-lg">{aboutCopy.content.join(' ')}</p>
           </div>
         </div>
       </div>

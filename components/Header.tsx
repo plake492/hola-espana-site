@@ -53,8 +53,8 @@ export default function Header({ isPreview }: { isPreview?: boolean }) {
   });
 
   return (
-    <animated.header style={springStyles} className={`h-[${HEADER_HEIGHT}px] fixed top-0 left-0 z-10 w-full text-white`}>
-      <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-4 py-2">
+    <animated.header style={springStyles} className={`h-[${HEADER_HEIGHT}px] absolute top-0 left-0 z-10 w-full text-white md:fixed`}>
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center justify-between px-4 py-2 md:flex-row">
         <Link href="/" className="flex-1">
           <Image
             alt="site logo"
@@ -67,8 +67,8 @@ export default function Header({ isPreview }: { isPreview?: boolean }) {
             }}
           />
         </Link>
-        {isPreview && <p>FULL SITE COMING SOON!</p>}
-        <nav className="flex flex-1 justify-end gap-4">
+        {isPreview && <p className="text-xs sm:text-sm">FULL SITE COMING SOON!</p>}
+        <nav className="hidden flex-1 justify-end gap-4 md:flex">
           {pagesFilteres.map((page) => (
             <Link key={page.id} href={page.href}>
               {page.text}

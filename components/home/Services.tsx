@@ -3,13 +3,13 @@ import { servicesCopy } from '@/lib/siteCopy';
 
 export default function Services() {
   return (
-    <section className="relative">
-      <div className="mx-auto mt-24 max-w-6xl px-4">
-        <div className="flex flex-col items-center gap-4">
-          <h3 className="text-4xl">{servicesCopy.heading}</h3>
-          <p className="max-w-3xl pt-8 text-center font-serif text-2xl font-light text-balance">{servicesCopy.description}</p>
+    <section className="relative mt-32">
+      <div className="mx-auto max-w-6xl px-4 py-8">
+        <div className="flex flex-col items-center gap-4 text-center text-balance">
+          <h3 className="text-6xl sm:text-4xl">{servicesCopy.heading}</h3>
+          <p className="max-w-3xl pt-6 font-serif text-2xl font-light">{servicesCopy.description}</p>
         </div>
-        <div className="mt-18 grid grid-cols-3 gap-16">
+        <div className="mt-18 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
           {servicesCopy.cards.map((s) => (
             <ServiceCard content={s} key={s.id} />
           ))}
