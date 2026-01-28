@@ -21,7 +21,7 @@ export default function About() {
         </div>
         {/* Mobile */}
         <div className="block px-4 min-[400px]:px-8 md:hidden">
-          <h4 className="mb-8 text-center text-4xl">{aboutCopy.heading}</h4>
+          <h3 className="mb-8 text-center text-4xl">{aboutCopy.heading}</h3>
           <div className="clear-both">
             <Image width={400} height={600} src={'/images/fatima.webp'} alt="" className="float-left mr-2 h-[200px] w-auto sm:h-[300px]" />
             <p className="font-serif text-lg">{aboutCopy.content.join(' ')}</p>

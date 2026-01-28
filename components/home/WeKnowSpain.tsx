@@ -4,14 +4,14 @@ import { weKnowSpainCopy } from '@/lib/siteCopy';
 
 export default function WeKnowSpain() {
   return (
-    <>
+    <section className="">
       <Wave className="mt-36" color="tan" />
-      <section className="bg-[#ede2d7] py-12">
+      <div className="bg-[#ede2d7] py-12">
         {/* Desktop */}
         <div className="mx-auto hidden max-w-[1480px] grid-cols-[3fr_4fr] items-center justify-items-center pt-4 pb-18 md:grid">
           <Image src={'/images/city-mosaic.webp'} height={800} width={600} className="min-h-[650px] object-cover object-right" alt="" />
           <div className="flex max-w-xl flex-col gap-16 text-center text-balance">
-            <h4 className="text-4xl">{weKnowSpainCopy.heading}</h4>
+            <h3 className="text-4xl">{weKnowSpainCopy.heading}</h3>
             <div className="flex flex-col gap-3">
               {weKnowSpainCopy.description.map((text, i) => (
                 <p key={i} className="font-serif text-xl italic">
@@ -25,7 +25,7 @@ export default function WeKnowSpain() {
         </div>
         {/* Mobile */}
         <div className="block px-4 min-[400px]:px-8 md:hidden">
-          <h4 className="mb-8 text-center text-4xl">{weKnowSpainCopy.heading}</h4>
+          <h3 className="mb-8 text-center text-4xl">{weKnowSpainCopy.heading}</h3>
           <div className="clear-both">
             <Image
               src={'/images/city-mosaic.webp'}
@@ -37,7 +37,7 @@ export default function WeKnowSpain() {
             <p className="mb-2 font-serif text-xl italic">{weKnowSpainCopy.description.join('')}</p>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

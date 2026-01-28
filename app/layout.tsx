@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
@@ -7,6 +6,15 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Hola España - Legal and Relocation Experts',
   description: 'Expert immigration services for US citizens relocating to Spain. Visa applications, real estate support, and complete relocation packages.',
+  icons: {
+    icon: [
+      { url: '/favicon/favicon.ico', sizes: 'any' },
+      { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: '/favicon/apple-touch-icon.png',
+  },
+  manifest: '/favicon/site.webmanifest',
 };
 
 export default function RootLayout({
@@ -16,9 +24,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-screen scroll-smooth bg-[#fcf7f2] font-sans antialiased">
+      <body className="flex min-h-dvh w-full flex-col justify-between scroll-smooth bg-[#fcf7f2] font-sans antialiased">
         {children}
-
         {/* Vercel Analytics */}
         <Analytics />
         <SpeedInsights />

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function MainLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div className="flex min-h-dvh w-full flex-col justify-between">
+    <>
       <Header isPreview />
       <main className="flex-1">{children}</main>
       <Footer />
@@ -15,6 +15,6 @@ export default function MainLayout({ children }: Readonly<{ children: React.Reac
           </Link>
         </div>
       )}
-    </div>
+    </>
   );
 }

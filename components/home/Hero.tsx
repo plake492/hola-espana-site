@@ -29,7 +29,7 @@ export default function Hero() {
               <span className="text-center text-8xl uppercase sm:text-start">{heroCopy.header.second}</span>
               <span className="text-end text-5xl sm:text-start">{heroCopy.header.third}</span>
             </h1>
-            <h5 className="hidden pt-12 font-serif text-2xl tracking-wide italic sm:block">{heroCopy.subHeader}</h5>
+            <p className="hidden pt-12 font-serif text-2xl tracking-wide italic sm:block">{heroCopy.subHeader}</p>
           </div>
         </div>
       </div>

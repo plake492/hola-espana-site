@@ -29,7 +29,7 @@ export default function ServiceCard({ content }: { content: CardContent }) {
           style={{ clipPath: 'polygon(-1px -1px, 101% 20%, 101% 101%, -1px 101%)' }}
         >
           <div className="relative text-center">
-            <h6 className="mb-[unset] font-serif text-2xl font-light italic sm:mb-2">{title}</h6>
+            <h4 className="mb-[unset] font-serif text-2xl font-light italic sm:mb-2">{title}</h4>
             <p className="text-md font-serif">{description}</p>
           </div>
         </div>
