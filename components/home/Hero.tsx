@@ -24,12 +24,12 @@ export default function Hero() {
                 <Image alt="spain" src="/icons/marker.png" width={1000} height={1000} className="h-8 w-auto" />
               </div>
             </div>
-            <div className="flex w-full flex-col gap-4 pt-10 sm:w-3/4 md:pt-24">
-              <p className="font-h text-start text-6xl sm:mb-4">{heroCopy.header.first}</p>
-              <h1 className="text-center text-8xl uppercase sm:text-start">{heroCopy.header.second}</h1>
-              <p className="text-end text-6xl sm:text-start">{heroCopy.header.third}</p>
-              <p className="hidden pt-8 font-serif text-2xl font-semibold tracking-wide italic sm:block">{heroCopy.subHeader}</p>
-            </div>
+            <h1 className="flex w-full flex-col gap-4 pt-10 sm:w-3/4 md:pt-24">
+              <span className="text-start text-5xl sm:mb-4">{heroCopy.header.first}</span>
+              <span className="text-center text-8xl uppercase sm:text-start">{heroCopy.header.second}</span>
+              <span className="text-end text-5xl sm:text-start">{heroCopy.header.third}</span>
+            </h1>
+            <h5 className="hidden pt-12 font-serif text-2xl tracking-wide italic sm:block">{heroCopy.subHeader}</h5>
           </div>
         </div>
       </div>

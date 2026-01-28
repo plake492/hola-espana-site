@@ -8,7 +8,7 @@ export default function WeKnowSpain() {
       <Wave className="mt-36" color="tan" />
       <section className="bg-[#ede2d7] py-12">
         {/* Desktop */}
-        <div className="mx-auto hidden max-w-[1480px] grid-cols-[3fr_4fr] items-center justify-items-center pt-4 pb-18 sm:grid">
+        <div className="mx-auto hidden max-w-[1480px] grid-cols-[3fr_4fr] items-center justify-items-center pt-4 pb-18 md:grid">
           <Image src={'/images/city-mosaic.webp'} height={800} width={600} className="min-h-[650px] object-cover object-right" alt="" />
           <div className="flex max-w-xl flex-col gap-16 text-center text-balance">
             <h4 className="text-4xl">{weKnowSpainCopy.heading}</h4>
@@ -24,11 +24,17 @@ export default function WeKnowSpain() {
           </div>
         </div>
         {/* Mobile */}
-        <div className="block px-4 min-[400px]:px-8 sm:hidden">
+        <div className="block px-4 min-[400px]:px-8 md:hidden">
           <h4 className="mb-8 text-center text-4xl">{weKnowSpainCopy.heading}</h4>
           <div className="clear-both">
-            <Image src={'/images/city-mosaic.webp'} height={800} width={600} className="float-left mr-4 h-[200px] w-[200px] object-cover object-right" alt="" />
-            <p className="mb-2 font-serif text-xl italic">{weKnowSpainCopy.description.join(' ')}</p>
+            <Image
+              src={'/images/city-mosaic.webp'}
+              height={800}
+              width={600}
+              className="float-left mr-4 h-[200px] w-[200px] object-cover object-right sm:h-[300px]"
+              alt=""
+            />
+            <p className="mb-2 font-serif text-xl italic">{weKnowSpainCopy.description.join('')}</p>
           </div>
         </div>
       </section>

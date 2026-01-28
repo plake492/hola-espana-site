@@ -8,7 +8,7 @@ export default function WhyBookUs() {
       <Wave color="blue" />
       <section className="bg-[#d2e4ec] px-4 pt-4 pb-18 min-[400px]:px-8 sm:pl-16">
         <h4 className="mb-12 block text-4xl sm:hidden">{whyChooseUsCopy.heading}</h4>
-        <div className="grid max-w-[1240px] grid-cols-[5fr_3fr] gap-4 sm:mx-auto sm:grid-cols-[4fr_3fr] sm:gap-12 lg:gap-32">
+        <div className="block max-w-[1240px] grid-cols-[5fr_3fr] gap-4 min-[380px]:grid sm:mx-auto sm:grid-cols-[4fr_3fr] sm:gap-12 lg:gap-32">
           <div>
             <h4 className="mb-12 hidden text-4xl sm:block">{whyChooseUsCopy.heading}</h4>
             <ul className="flex flex-col justify-between gap-8 sm:gap-16">
@@ -25,9 +25,9 @@ export default function WhyBookUs() {
               ))}
             </ul>
           </div>
-          <div className="flex flex-col justify-between gap-8 *:aspect-square *:w-full *:object-cover sm:h-[220px] sm:w-[220px] sm:*:h-full sm:*:flex-1 md:h-[unset] md:w-auto md:*:w-auto">
+          <div className="hidden flex-col justify-between gap-8 *:aspect-square *:w-full *:object-cover min-[380px]:flex sm:my-8 sm:h-[220px] sm:w-[220px] sm:*:h-full sm:*:flex-1 md:my-0 md:h-[unset] md:w-auto md:*:w-auto">
             {whyChooseUsCopy.images.map((image, i) => (
-              <Image src={image.src} height={800} width={800} className={image.className} alt={image.alt} />
+              <Image key={i} src={image.src} height={800} width={800} className={image.className} alt={image.alt} />
             ))}
           </div>
         </div>
