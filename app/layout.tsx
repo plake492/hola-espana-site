@@ -24,6 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="preload" href="/fonts/Tan_Aeagean/TANAEGEAN-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/La_Luxes_Script/LaLuxesScript.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      </head>
       <body className="flex min-h-dvh w-full flex-col justify-between bg-[#fcf7f2] font-sans antialiased">
         {children}
         {/* Vercel Analytics */}

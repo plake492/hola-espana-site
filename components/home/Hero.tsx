@@ -10,7 +10,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute top-0 left-0 z-0 h-full w-full">
         <div>
-          <Image alt="spain" src="/images/hero.webp" width={1000} height={1000} className="absolute right-0 left-0 z-0 h-full w-full" />
+          <Image alt="spain" src="/images/hero.webp" width={1000} height={1000} priority className="absolute right-0 left-0 z-0 h-full w-full object-cover" />
           <div className="absolute right-0 left-0 z-1 h-full w-full bg-[#559FC7C4]"></div>
         </div>
       </div>
