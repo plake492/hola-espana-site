@@ -8,15 +8,17 @@ export default function About() {
       <Wave color={'mosaic'} className={'bg-[#d2e4ec]'} />
       <div className="bg-[#EDE2D7] py-12 sm:py-20">
         {/* Desktop */}
-        <div className="mx-auto hidden max-w-6xl grid-cols-[auto_1fr] items-center gap-18 pr-8 md:grid">
+        <div className="mx-auto hidden max-w-6xl grid-cols-[auto_1fr] items-center gap-20 pr-8 md:grid">
           <Image width={400} height={600} src={'/images/fatima.webp'} alt="" />
-          <div className="flex flex-col gap-7">
-            <h3 className="text-3xl">{aboutCopy.heading}</h3>
-            {aboutCopy.content.map((text, i) => (
-              <p key={i} className="font-serif text-lg">
-                {text}
-              </p>
-            ))}
+          <div>
+            <h3 className="mb-12 text-3xl">{aboutCopy.heading}</h3>
+            <div className="flex flex-col gap-4">
+              {aboutCopy.content.map((text, i) => (
+                <p key={i} className="text-md">
+                  {text}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
         {/* Mobile */}
@@ -24,7 +26,7 @@ export default function About() {
           <h3 className="mb-8 text-center text-4xl">{aboutCopy.heading}</h3>
           <div className="clear-both">
             <Image width={400} height={600} src={'/images/fatima.webp'} alt="" className="float-left mr-2 h-[200px] w-auto sm:h-[300px]" />
-            <p className="font-serif text-lg">{aboutCopy.content.join(' ')}</p>
+            <p className="text-md">{aboutCopy.content.join(' ')}</p>
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-// import FadeIn from '../animations/FadeIn';
 import Image from 'next/image';
 
 interface CardContent {
@@ -29,8 +28,8 @@ export default function ServiceCard({ content }: { content: CardContent }) {
           style={{ clipPath: 'polygon(-1px -1px, 101% 20%, 101% 101%, -1px 101%)' }}
         >
           <div className="relative text-center">
-            <h4 className="mb-[unset] font-serif text-2xl font-light italic sm:mb-2">{title}</h4>
-            <p className="text-md font-serif">{description}</p>
+            <h4 className="mb-[unset] font-serif! text-lg font-light italic sm:mb-2">{title}</h4>
+            <p className="font-serif text-sm">{description}</p>
           </div>
         </div>
       </div>

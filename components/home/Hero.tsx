@@ -6,7 +6,7 @@ import { HEADER_HEIGHT } from '@/lib/constants';
 export default function Hero() {
   const paddingTop = HEADER_HEIGHT / 1.5;
   return (
-    <section className="hero relative h-[550px] sm:h-[unset]">
+    <section className="hero relative h-[550px] bg-black pt-0 sm:h-[unset]" id="hero">
       {/* Background Image */}
       <div className="absolute top-0 left-0 z-0 h-full w-full">
         <div>
@@ -24,12 +24,12 @@ export default function Hero() {
                 <Image alt="spain" src="/icons/marker.png" width={1000} height={1000} className="h-8 w-auto" />
               </div>
             </div>
-            <h1 className="flex w-full flex-col gap-4 pt-10 sm:w-3/4 md:pt-24">
-              <span className="text-start text-5xl sm:mb-4">{heroCopy.header.first}</span>
-              <span className="text-center text-8xl uppercase sm:text-start">{heroCopy.header.second}</span>
-              <span className="text-end text-5xl sm:text-start">{heroCopy.header.third}</span>
+            <h1 className="mb-10 flex w-full flex-col gap-4 pt-10 sm:w-3/4 md:pt-24">
+              <span className="text-start text-3xl sm:mb-4">{heroCopy.header.first}</span>
+              <span className="text-center text-4xl uppercase sm:text-start">{heroCopy.header.second}</span>
+              <span className="text-end text-3xl sm:text-start">{heroCopy.header.third}</span>
             </h1>
-            <p className="hidden pt-12 font-serif text-2xl tracking-wide italic sm:block">{heroCopy.subHeader}</p>
+            <p className="hidden pt-12 text-xl tracking-wide italic sm:block sm:w-5/6">{heroCopy.subHeader}</p>
           </div>
         </div>
       </div>
