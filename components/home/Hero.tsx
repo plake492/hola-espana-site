@@ -6,7 +6,7 @@ import { HEADER_HEIGHT } from '@/lib/constants';
 export default function Hero() {
   const paddingTop = HEADER_HEIGHT / 1.5;
   return (
-    <section className="hero relative h-[550px] bg-black pt-0 sm:h-[unset]" id="hero">
+    <section className="hero relative h-[475px] bg-black pt-0 sm:h-[unset]" id="hero">
       {/* Background Image */}
       <div className="absolute top-0 left-0 z-0 h-full w-full">
         <div>
@@ -18,13 +18,13 @@ export default function Hero() {
         <div className="mt-16 flex flex-1 flex-col justify-center">
           <div className="relative z-3 mx-auto mb-60 w-full max-w-3xl text-white lg:mb-56 lg:max-w-6xl">
             {/* Airplane Icon */}
-            <div className="absolute top-0 right-0 z-1 -mt-4 hidden md:block">
+            <div className="absolute top-0 right-0 z-1 -mt-4 hidden min-[850px]:block">
               <div className="flex gap-8">
                 <Image alt="spain" src="/icons/air-plane.png" width={1000} height={1000} className="mt-8 h-32 w-auto" />
                 <Image alt="spain" src="/icons/marker.png" width={1000} height={1000} className="h-8 w-auto" />
               </div>
             </div>
-            <h1 className="mb-10 flex w-full flex-col gap-4 pt-10 sm:w-3/4 md:pt-24">
+            <h1 className="flex w-full flex-col gap-6 py-8 sm:w-3/4 sm:gap-4 sm:py-10 md:pt-24">
               <span className="text-start text-3xl sm:mb-4">{heroCopy.header.first}</span>
               <span className="text-center text-4xl uppercase sm:text-start">{heroCopy.header.second}</span>
               <span className="text-end text-3xl sm:text-start">{heroCopy.header.third}</span>
