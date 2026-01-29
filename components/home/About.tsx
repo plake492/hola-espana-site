@@ -22,7 +22,7 @@ export default function About() {
           </div>
         </div>
         {/* Mobile */}
-        <div className="block px-4 md:hidden">
+        <div className="block md:hidden">
           <h3 className="mb-8 text-center text-3xl">{aboutCopy.heading}</h3>
           <div className="clear-both">
             <Image width={400} height={600} src={'/images/fatima.webp'} alt="" className="float-left mr-2 h-[200px] w-auto sm:h-[300px]" />
