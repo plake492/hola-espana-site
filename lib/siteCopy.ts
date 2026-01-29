@@ -22,15 +22,15 @@ export const servicesCopy = {
       bgPosition: 'bg-position-[center_calc(100px_*_-1)]',
       title: 'Visa Assistance',
       description: 'Help securing the right visa for you and your family',
-      iconSrc: '/images/card-visa-icon.png',
+      iconSrc: '/icons/card-visa-icon.png',
     },
     {
       id: 2,
       img: 'bg-[url(/images/card-healthcare.webp)]',
       title: 'Health Insurance',
-      bgPosition: 'bg-position-[-340px_calc(50px_*_-1)]',
+      bgPosition: 'bg-position-[center_calc(50px_*_-1)] sm:bg-position-[-340px_calc(50px_*_-1)]',
       description: 'Partnering with ASSSA for quality visa required insurance',
-      iconSrc: '/images/card-healthcare-icon.png',
+      iconSrc: '/icons/card-healthcare-icon.png',
     },
     {
       id: 3,
@@ -38,16 +38,16 @@ export const servicesCopy = {
       title: 'Relocation Plan',
       bgPosition: 'bg-position-[center_calc(50px_*_-1)]',
       description: 'All inclusive packages with your family in mind',
-      iconSrc: '/images/card-relocation-icon.png',
+      iconSrc: '/icons/card-relocation-icon.png',
       iconSize: '50px',
     },
     {
       id: 4,
       img: 'bg-[url(/images/card-tax.webp)]',
-      bgPosition: 'bg-position-[-150px_center]',
+      bgPosition: 'sm:bg-position-[-150px_center]',
       title: 'Tax Services',
       description: 'Tax advice and preparation from Spanish tax experts',
-      iconSrc: '/images/card-tax-icon.png',
+      iconSrc: '/icons/card-tax-icon.png',
     },
     {
       id: 5,
@@ -55,7 +55,7 @@ export const servicesCopy = {
       bgPosition: 'bg-position-[center_calc(100px_*_-1)]',
       title: 'Law & Legal',
       description: 'Spanish attorneys to help with any legal situation',
-      iconSrc: '/images/card-law-legal-icon.png',
+      iconSrc: '/icons/card-law-legal-icon.png',
     },
     {
       id: 6,
@@ -64,7 +64,7 @@ export const servicesCopy = {
       title: 'Housing Solutions',
       bgPosition: 'bg-position-[center_calc(100px_*_-1)]',
       description: 'Connections with local Spanish realtors to vet and secure properties',
-      iconSrc: '/images/card-housing-icon.svg',
+      iconSrc: '/icons/card-housing-icon.svg',
       iconSize: '80px',
     },
   ],
@@ -73,7 +73,7 @@ export const servicesCopy = {
 export const weKnowSpainCopy = {
   heading: 'We Know Spain',
   description: [
-    "We don't just work in Spain. We are from here. Our services are delivered by Spanish professionals with first-hand knowledge of local systems, regulations, and customs",
+    "We don't just work in Spain. We are from here. Our services are delivered by Spanish professionals with first-hand knowledge of local systems, regulations, and customs.",
     'This means clear guidance, up-to-date legal and tax insight, and solutions shaped by how things actually work in Spain.',
     'The result is a smoother relocation and total peace of mind from day one.',
   ],
@@ -81,39 +81,45 @@ export const weKnowSpainCopy = {
 };
 
 export const whyChooseUsCopy = {
-  heading: 'Why Choose Us',
+  heading: 'Why Choose Us?',
+  images: [
+    { src: '/images/why-us-mosaic-casa.webp', className: '', alt: '' },
+    { src: '/images/why-us-bay-town.webp', className: 'block md:hidden', alt: '' },
+    { src: '/images/why-us-el-patio.webp', className: 'block md:hidden', alt: '' },
+    { src: '/images/why-us-cafe.webp', className: '', alt: '' },
+  ],
   list: [
     {
       title: 'True local experts',
       content: 'Handled by Spanish legal, tax, and relocation professionals who work within the system every day.',
-      icon: '/images/why-us-icon-map-pin.svg',
+      icon: '/icons/why-us-icon-map-pin.svg',
     },
     {
       title: 'Fully managed relocation',
       content: 'Visas, housing, insurance, legal, and tax needs coordinated seamlessly from start to finish.',
-      icon: '/images/why-us-icon-shield.svg',
+      icon: '/icons/why-us-icon-shield.svg',
     },
     {
       title: 'Protected housing search',
       content: 'Access to trusted local real estate agents so you secure fair terms and avoid foreigner markups.',
-      icon: '/images/why-us-icon-house.svg',
+      icon: '/icons/why-us-icon-house.svg',
     },
 
     {
       title: 'Licensed Legal & Tax Support',
       content: 'Direct access to qualified Spanish attorneys and tax advisors. No intermediaries.',
-      icon: '/images/why-us-icon-law.svg',
+      icon: '/icons/why-us-icon-law.svg',
     },
     {
       title: 'Visa-Compliant Insurance',
       content: 'Expat insurance partnerships that meet Spanish residency requirements without delays.',
-      icon: '/images/why-us-icon-heart.svg',
+      icon: '/icons/why-us-icon-heart.svg',
     },
     {
       title: 'Clarity & Ongoing Support',
       content:
         'We guide you through every step after arrival, including ID appointments, registrations, and local administration, so nothing is missed and nothing feels overwhelming.',
-      icon: '/images/why-us-icon-compass.svg',
+      icon: '/icons/why-us-icon-compass.svg',
     },
   ],
 };

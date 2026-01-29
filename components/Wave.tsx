@@ -5,7 +5,7 @@ export default function Wave({ className, color }: { className?: string; color: 
     return (
       <>
         <div className={`relative w-full ${className || ''}`}>
-          <Image alt="" src={`/images/wave-mosaic.webp`} width={1200} height={100} className="h-[200px] w-full object-cover object-top" />
+          <Image alt="" src={`/images/wave-mosaic.png`} width={1200} height={100} className="h-[18vw] w-full object-cover object-top" />
         </div>
       </>
     );
@@ -16,7 +16,7 @@ export default function Wave({ className, color }: { className?: string; color: 
       <div className={`relative w-full ${className || ''}`}>
         <Image alt="" src={`/images/wave-${imgColor}-1.png`} width={1200} height={100} className="w-full" />
         <div className="absolute bottom-0 left-0 w-full">
-          <Image alt="" src={`/images/wave-${imgColor}-2.png`} width={1200} height={100} className="h-[200px] w-full object-cover object-top" />
+          <Image alt="" src={`/images/wave-${imgColor}-2.png`} width={1200} height={100} className="h-[10vw] w-full object-cover object-top" />
         </div>
       </div>
     </>
