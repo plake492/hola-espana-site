@@ -23,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="flex min-h-dvh w-full flex-col justify-between scroll-smooth bg-[#fcf7f2] font-sans antialiased">
+    <html lang="en" className="scroll-smooth">
+      <body className="flex min-h-dvh w-full flex-col justify-between bg-[#fcf7f2] font-sans antialiased">
         {children}
         {/* Vercel Analytics */}
         <Analytics />

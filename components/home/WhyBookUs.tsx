@@ -7,7 +7,7 @@ export default function WhyBookUs() {
     <section className="bg-[#ede2d7]" id="why-choose-us">
       <Wave color="blue" />
       <div className="bg-[#d2e4ec] px-4 pt-4 pb-18 min-[400px]:px-8 sm:pl-16">
-        <h3 className="mb-12 block text-3xl sm:hidden">{whyChooseUsCopy.heading}</h3>
+        <h3 className="mb-8 block text-3xl sm:hidden">{whyChooseUsCopy.heading}</h3>
         <div className="block max-w-[1240px] grid-cols-[5fr_3fr] gap-4 min-[380px]:grid sm:mx-auto sm:grid-cols-[4fr_3fr] sm:gap-12 lg:gap-32">
           <div>
             <h3 className="mb-12 hidden text-3xl sm:block">{whyChooseUsCopy.heading}</h3>
@@ -18,7 +18,7 @@ export default function WhyBookUs() {
                     <div className="absolute top-0 right-full hidden h-10 w-10 -translate-x-3 sm:block">
                       <Image width={100} height={100} alt="icon" src={content.icon} />
                     </div>
-                    <p className="text-xl font-light italic">{content.title}</p>
+                    <p className="mb-2 text-xl font-light italic">{content.title}</p>
                     <p className="text-md">{content.content}</p>
                   </div>
                 </li>

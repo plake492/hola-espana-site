@@ -73,7 +73,7 @@ export const servicesCopy = {
 export const weKnowSpainCopy = {
   heading: 'We Know Spain',
   description: [
-    "We don't just work in Spain. We are from here. Our services are delivered by Spanish professionals with first-hand knowledge of local systems, regulations, and customs",
+    "We don't just work in Spain. We are from here. Our services are delivered by Spanish professionals with first-hand knowledge of local systems, regulations, and customs.",
     'This means clear guidance, up-to-date legal and tax insight, and solutions shaped by how things actually work in Spain.',
     'The result is a smoother relocation and total peace of mind from day one.',
   ],

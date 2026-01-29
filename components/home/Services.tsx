@@ -5,11 +5,11 @@ export default function Services() {
   return (
     <section className="relative mt-32" id="services">
       <div className="mx-auto max-w-6xl px-4 py-8">
-        <div className="flex flex-col items-center gap-4 text-center text-balance">
+        <div className="flex flex-col items-center text-center text-balance sm:gap-4">
           <h3 className="text-2xl">{servicesCopy.heading}</h3>
           <p className="max-w-3xl pt-6 text-lg">{servicesCopy.description}</p>
         </div>
-        <div className="mt-18 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
+        <div className="mt-16 grid grid-cols-1 gap-8 sm:mt-18 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
           {servicesCopy.cards.map((s) => (
             <ServiceCard content={s} key={s.id} />
           ))}
