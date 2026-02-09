@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Wave from '../Wave';
+import Wave from './components/Wave';
 import { weKnowSpainCopy } from '@/lib/siteCopy';
 
 export default function WeKnowSpain() {

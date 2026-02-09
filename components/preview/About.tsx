@@ -1,4 +1,4 @@
-import Wave from '../Wave';
+import Wave from './components/Wave';
 import Image from 'next/image';
 import { aboutCopy } from '@/lib/siteCopy';
 

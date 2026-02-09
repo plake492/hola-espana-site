@@ -1,11 +1,9 @@
-import Wave from '../Wave';
 import Image from 'next/image';
 import { whyChooseUsCopy } from '@/lib/siteCopy';
 
 export default function WhyBookUs() {
   return (
     <section className="bg-[#ede2d7]" id="why-choose-us">
-      <Wave color="blue" />
       <div className="bg-[#d2e4ec] pt-4 pr-4 pb-12 pl-4 sm:pb-18 sm:pl-16">
         <div className="max-w-[1240px] sm:mx-auto">
           <h3 className="mb-8 block text-3xl sm:mb-12">{whyChooseUsCopy.heading}</h3>

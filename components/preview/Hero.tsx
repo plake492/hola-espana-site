@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import HeroCta from './HeroCta';
+import HeroCta from '../home/HeroCta';
 import { heroCopy } from '@/lib/siteCopy';
 import { HEADER_HEIGHT } from '@/lib/constants';
 

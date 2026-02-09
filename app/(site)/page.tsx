@@ -1,4 +1,4 @@
-import { Hero, WeKnowSpain, WhatWeDo, WhyBookUs, HowItWorks, OurTeam, Reviews, Blogs, CTA } from '@/components/home';
+import { Hero, WeKnowSpain, WhatWeDo, WhyBookUs, HowItWorks, OurTeam, Reviews, Blogs, CTA } from '@/components/preview';
 
 export default function Home() {
   return (

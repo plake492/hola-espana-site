@@ -1,5 +1,5 @@
 import { ctaCopy } from '@/lib/siteCopy';
-import Button from '../Button';
+import Button from './components/Button';
 
 export default function CTA() {
   return (

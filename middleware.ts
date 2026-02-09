@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 // Set to true to redirect all pages to preview, false to show main site
-const PREVIEW_MODE = true;
+const PREVIEW_MODE = process.env.NODE_ENV !== 'development';
 const BYPASS_KEY = 'hola';
 
 export function middleware(request: NextRequest) {
@@ -28,7 +28,5 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   // Match all paths except static files, api, studio, and public assets
-  matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|studio|api|.*\\.(?:png|jpg|jpeg|gif|svg|webp|ico|mp4|webm|pdf|woff|woff2|ttf|otf)$).*)',
-  ],
+  matcher: ['/((?!_next/static|_next/image|favicon.ico|studio|api|.*\\.(?:png|jpg|jpeg|gif|svg|webp|ico|mp4|webm|pdf|woff|woff2|ttf|otf)$).*)'],
 };

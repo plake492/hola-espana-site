@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Hero, About, WeKnowSpain, WhyBookUs, CTA, Services } from '@/components/home';
+import { Hero, About, WeKnowSpain, WhyBookUs, CTA, Services } from '@/components/preview';
 
 export const metadata: Metadata = {
   title: 'Hola España - Spanish Immigration & Relocation Experts',
