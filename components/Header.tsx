@@ -31,6 +31,8 @@ const pages = [
   },
 ];
 
+const config = { tension: 180, friction: 12, duration: 225 };
+
 export default function Header({ isPreview }: { isPreview?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
   const pagesFilteres = isPreview ? previewPage : pages;
@@ -46,27 +48,21 @@ export default function Header({ isPreview }: { isPreview?: boolean }) {
   }, []);
 
   const springStyles = useSpring({
-    color: scrolled ? '#000000' : '#ffffff',
-    backgroundColor: scrolled ? '#fcf7f2' : 'rgba(255, 255, 255, 0)',
+    backgroundColor: scrolled ? '#c47556' : '#00000000',
     boxShadow: scrolled ? 'rgba(33, 35, 38, 0.1) 0px 10px 10px -10px' : 'rgba(33, 35, 38, 0) 0px 10px 10px -10px',
-    config: { tension: 200, friction: 20 },
+    config,
   });
 
+  const logoStyle = useSpring({ width: scrolled ? '225px' : '425px', config });
+
   return (
-    <animated.header style={springStyles} className={`h-[${HEADER_HEIGHT}px] absolute top-0 left-0 z-10 w-full text-white md:fixed`}>
+    <animated.header style={springStyles} className={`h-[${HEADER_HEIGHT}px] absolute top-0 left-0 z-50 w-full text-white md:fixed`}>
       <div className="relative mx-auto flex w-full max-w-[1440px] flex-col items-center justify-between px-4 py-2 min-[850px]:flex-row">
-        <Link href="/" className="" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <Image
-            alt="site logo"
-            src="/logo/logo.svg"
-            width={200}
-            height={100}
-            className="w-[284px]"
-            style={{
-              filter: scrolled ? 'invert(0)' : 'invert(1)',
-            }}
-          />
-        </Link>
+        <animated.div style={logoStyle}>
+          <Link href="/" className="" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <Image alt="site logo" src="/logo/logo.svg" width={200} height={100} className="w-full invert-100" style={{}} />
+          </Link>
+        </animated.div>
         {isPreview && (
           <p className="relative text-xs min-[850px]:absolute min-[850px]:top-1/2 min-[850px]:left-1/2 min-[850px]:-translate-1/2 sm:text-sm">
             FULL SITE COMING SOON!

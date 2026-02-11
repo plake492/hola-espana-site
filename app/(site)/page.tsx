@@ -1,17 +1,17 @@
-import { Hero, WeKnowSpain, WhatWeDo, WhyBookUs, HowItWorks, OurTeam, Reviews, Blogs, CTA } from '@/components/preview';
+import Hero from '@/components/home/Hero';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Hero />
-      <WeKnowSpain />
+      {/*<WeKnowSpain />
       <WhatWeDo />
       <WhyBookUs />
       <HowItWorks />
       <OurTeam />
       <Reviews />
       <Blogs />
-      <CTA />
-    </div>
+      <CTA /> */}
+    </>
   );
 }

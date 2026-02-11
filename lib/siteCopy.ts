@@ -4,7 +4,7 @@ export const heroCopy = {
     second: 'Spain',
     third: 'Perfectly arranged',
   },
-  subHeader: 'Relocation Packages, legal, and tax services guided by real Spanish experts',
+  subHeader: 'Relocation, legal, and tax — handled by Spanish experts',
 };
 
 export const heroCtaCopy = {

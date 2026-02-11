@@ -1,5 +1,3 @@
-@import 'tailwindcss';
-
 @font-face {
   font-family: 'TAN Aegean';
   src:
@@ -25,13 +23,17 @@
   font-family: var(--font-serif);
 }
 
+* * {
+  letter-spacing: var(--tracking-widest);
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-sans);
+  font-family: var(--font-aegean);
 }
 
 h1 *,
@@ -40,120 +42,7 @@ h3 *,
 h4 *,
 h5 *,
 h6 * {
-  font-family: var(--font-sans);
-}
-
-@theme {
-  /* ========================================
-     BACKGROUND COLORS
-     Foundation for layouts
-     ======================================== */
-  --color-background-primary: #f5efe7; /* Cream - Main background */
-  --color-background-secondary: #e8ded0; /* Beige - Cards */
-  --color-background-tertiary: #fffef9; /* Off-white - Overlays */
-
-  /* ========================================
-     PRIMARY COLORS
-     Main brand & CTAs (terracotta button)
-     ======================================== */
-  --color-primary: #c87b5a; /* Main CTA */
-  --color-primary-hover: #b86f52; /* Hover state */
-  --color-primary-light: #d89178; /* Light variant */
-  --color-primary-dark: #a66648; /* Dark variant */
-
-  /* ========================================
-     SECONDARY COLORS
-     Supporting actions (teal)
-     ======================================== */
-  --color-secondary: #4a6660; /* Secondary CTA */
-  --color-secondary-hover: #3a524d; /* Hover state */
-  --color-secondary-light: #5a7670; /* Light variant */
-
-  /* ========================================
-     TEXT COLORS
-     Typography hierarchy
-     ======================================== */
-  --color-text-primary: #1a1a1a; /* Headings, nav text */
-  --color-text-secondary: #4a4a4a; /* Body text */
-  --color-text-tertiary: #6b6b6b; /* Meta info */
-  --color-text-muted: #8b8b8b; /* Disabled */
-
-  /* ========================================
-     ACCENT COLORS
-     Decorative arches & visual interest
-     ======================================== */
-  --color-accent-mustard: #d4a574; /* Hamburger menu */
-  --color-accent-gold: #c89f5d; /* Premium accents */
-  --color-accent-terracotta: #c4734a; /* Warm accents */
-  --color-accent-olive: #7b8c5c; /* Green arches */
-  --color-accent-sage: #8c9b73; /* Soft green */
-  --color-accent-brown: #8b6f4d; /* Warm details */
-  --color-accent-purple: #8b5cf6; /* Bottom border line */
-
-  /* ========================================
-     BORDER COLORS
-     Dividers & outlines
-     ======================================== */
-  --color-border: #e0d5c7; /* Default borders */
-  --color-border-accent: #8b5cf6; /* Purple accent (header) */
-  --color-border-strong: #c4c4c4; /* Emphasized borders */
-
-  /* ========================================
-     FUNCTIONAL COLORS
-     Status & feedback
-     ======================================== */
-  --color-success: #7b8c5c; /* Success states */
-  --color-warning: #d4a574; /* Warnings */
-  --color-error: #c4734a; /* Errors */
-  --color-info: #4a6660; /* Info */
-
-  /* ========================================
-     LEGACY COLORS (for backwards compatibility)
-     Use semantic names above instead
-     ======================================== */
-  --color-hola-cream: #f5efe7;
-  --color-hola-beige: #e8ded0;
-  --color-hola-mustard: #d4a574;
-  --color-hola-gold: #c89f5d;
-  --color-hola-terracotta: #c87b5a;
-  --color-hola-rust: #b86f52;
-  --color-hola-teal: #4a6660;
-  --color-hola-teal-dark: #3a524d;
-  --color-hola-olive: #7b8c5c;
-  --color-hola-sage: #8c9b73;
-  --color-hola-brown: #8b6f4d;
-  --color-hola-accent: #c4734a;
-
-  /* ========================================
-     FONT FAMILIES
-     ======================================== */
-  --font-sans: 'TAN Aegean', ui-sans-serif, system-ui, sans-serif; /* Primary/display font */
-  --font-serif: serif-roboto, ui-serif, Georgia, serif; /* Serif fallback */
-  --font-script: 'La Luxes', cursive; /* Decorative script font */
-
-  /* ========================================
-     FONT SIZES - Fluid Typography
-     Scales between 320px and 1440px viewports
-     Formula: clamp(min, base + scale*vw, max)
-     ======================================== */
-  --text-xs: 0.875rem;
-  --text-sm: 1rem;
-  --text-md: 1.25rem;
-  --text-lg: 1.5rem;
-  --text-xl: 2rem;
-  --text-2xl: 2.25rem;
-  --text-3xl: 3rem;
-  --text-4xl: 7.875rem;
-
-  /* Line Heights - paired with font sizes */
-  --text-xs--line-height: 1.5;
-  --text-sm--line-height: 1.5;
-  --text-base--line-height: 1.5;
-  --text-lg--line-height: 1.4;
-  --text-xl--line-height: 1.35;
-  --text-2xl--line-height: 1.3;
-  --text-3xl--line-height: 1.3;
-  --text-4xl--line-height: 1.05;
+  font-family: var(--font-aegean);
 }
 
 /* Mobile overrides (< 640px) */
@@ -167,21 +56,75 @@ h6 * {
     --text-2xl: 1.5rem;
     --text-3xl: 1.75rem;
     --text-4xl: 4rem;
-    /* --text-6xl: 2rem;
-    --text-7xl: 3rem;
-    --text-8xl: 4rem;
-    --text-9xl: 4rem; */
-    /* --text-xs: 0.875rem;
-    --text-sm: 1rem; 14
-    --text-md: 1.25rem; 15
-    --text-lg: 1.5rem; 16
-    --text-xl: 2rem; 18
-    --text-2xl: 2.25rem; 20
-    --text-3xl: 3rem; 24
-    --text-4xl: 7.875rem;  64 */
   }
 }
 
 [id] {
   scroll-margin-top: 94px;
+}
+
+@import 'tailwindcss';
+
+@theme {
+  --color-white: #ffffff;
+  --color-sand: #ede2d7;
+  --color-ocean: #3e5674;
+  --color-ocean-alt: #8a9eb1;
+  --color-blue-footer: #3b6e95;
+  --color-blue-overlay: #3e5674a4;
+  --color-blue-overlay-alt: #33688585;
+  --color-terracotta: #c47556;
+  --color-terracotta-alt: #b56743;
+  --image-fade: linear-gradient(to bottom var(--background-color-white) 0%, var(--background-color-sand) 100%);
+
+  /* ========================================
+     FUNCTIONAL COLORS
+     Status & feedback
+     ======================================== */
+  --color-success: #7b8c5c; /* Success states */
+  --color-warning: #d4a574; /* Warnings */
+  --color-error: #c4734a; /* Errors */
+  --color-info: #4a6660; /* Info */
+
+  --text-color-black: #000000;
+  --text-color-dark: #000000a8;
+  --text-color-white: #ffffff;
+  --text-color-light: #fcf7f2;
+  --text-color-brown: #54331e;
+
+  /* ========================================
+     FONT FAMILIES
+     ======================================== */
+  --font-aegean: 'TAN Aegean', ui-sans-serif, system-ui, sans-serif; /* Primary/display font */
+  --font-serif: serif-roboto, ui-serif, Georgia, serif; /* Serif fallback */
+  --font-script: 'La Luxes', cursive; /* Decorative script font */
+  --font-sans: var(--font-aegean);
+
+  /* ========================================
+     FONT SIZES - Fluid Typography
+     Scales between 320px and 1440px viewports
+     Formula: clamp(min, base + scale*vw, max)
+     ======================================== */
+  --text-xs: 0.875rem;
+  --text-sm: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5rem;
+  --text-xl: 2rem;
+  --text-2xl: 2.25rem;
+  --text-3xl: 3rem;
+  --text-4xl: 4rem;
+  --text-headline1: 8.75rem;
+  --text-headline2: 6rem;
+
+  /* Line Heights - paired with font sizes */
+  --text-xs--line-height: 1.5;
+  --text-sm--line-height: 1.5;
+  --text-base--line-height: 1.5;
+  --text-lg--line-height: 1.4;
+  --text-xl--line-height: 1.35;
+  --text-2xl--line-height: 1.3;
+  --text-3xl--line-height: 1.3;
+  --text-4xl--line-height: 1.05;
+  --text-headline1--line-height: 1;
+  --text-headline2--line-height: 1;
 }
