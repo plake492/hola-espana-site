@@ -20,6 +20,16 @@ export default function Hero() {
         </h1>
         <p className="text-2xl italic">{heroCopy.subHeader}</p>
       </div>
+      <Tear />
     </section>
   );
 }
+
+const Tear = () => {
+  return (
+    <div className="absolute bottom-0 w-full translate-y-4">
+      <Image src="/images/tear-ocean.png" alt="" width={1200} height={300} className="absolute -z-1 h-auto w-full -translate-y-1" unoptimized />
+      <Image src="/images/tear-sand.png" alt="" width={1200} height={300} className="aboslute z-0 h-auto w-full" unoptimized />
+    </div>
+  );
+};
