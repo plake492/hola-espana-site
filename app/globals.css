@@ -101,9 +101,7 @@ h6 * {
   --font-sans: var(--font-aegean);
 
   /* ========================================
-     FONT SIZES - Fluid Typography
-     Scales between 320px and 1440px viewports
-     Formula: clamp(min, base + scale*vw, max)
+     DESKTOP FONT SIZES 
      ======================================== */
   --text-xs: 0.875rem;
   --text-sm: 1rem;
@@ -113,8 +111,27 @@ h6 * {
   --text-2xl: 2.25rem;
   --text-3xl: 3rem;
   --text-4xl: 4rem;
-  --text-headline1: 8.75rem;
-  --text-headline2: 6rem;
+  /* ── Headline sizes ──────────────────────────────────────
+
+  /* ── Headline clamp slope explained ──────────────────────
+     clamp(min, intercept + slope, max)
+     slope  = (max_px - min_px) / (max_vp - min_vp)
+     intercept = min_px - slope * min_vp
+     Higher vw value = faster shrink. The slope must be steep
+     enough that text never overflows the container (mx-16 = 128px).
+     "Perfectly arranged" at 96px ≈ 1209px wide, so at any viewport:
+       max headline2 = (viewport - 128) * 96 / 1209
+     ──────────────────────────────────────────────────────── */
+
+  /* ========================================
+     HOMEPAGE HERO FONT SIZES 
+     ======================================== */
+  --text-headline1: clamp(4.62rem, 0.16rem + 9.28vw, 8.75rem);
+  --text-headline2: clamp(3.17rem, 0.12rem + 6.36vw, 6rem);
+  --text-headline-sub: clamp(1.19rem, 0.06rem + 2.37vw, 2.25rem);
+
+  /* Homepage hero left offset for bottom h1 lines */
+  --headline-ml-offset: clamp(0px, calc(135vw - 1280px), 150px);
 
   /* Line Heights - paired with font sizes */
   --text-xs--line-height: 1.5;
