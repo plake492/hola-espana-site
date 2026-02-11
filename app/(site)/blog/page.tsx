@@ -14,7 +14,7 @@ export default async function page() {
   const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
   console.log(posts);
   return (
-    <>
+    <div className="bg-amber-200">
       <h2>Blog</h2>
       {posts.map((post) => (
         <li className="hover:underline" key={post._id}>
@@ -24,6 +24,6 @@ export default async function page() {
           </Link>
         </li>
       ))}
-    </>
+    </div>
   );
 }
