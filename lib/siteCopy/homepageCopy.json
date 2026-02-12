@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "header": {
+      "first": "Your Life in",
+      "second": "Spain",
+      "third": "Perfectly arranged"
+    },
+    "subHeader": "Relocation, legal, and tax — handled by Spanish experts"
+  },
+  "heroCta": {
+    "description": "Starting your dream life shouldn't be stressful & confusing",
+    "header": "Let us handle it",
+    "buttonText": "Start Your Relocation"
+  },
+  "services": {
+    "heading": "End-to-end Spain Relocation Services",
+    "description": " Whether you're relocating, buying a home, or starting a business, we're here to help.",
+    "cards": [
+      {
+        "id": 1,
+        "img": "bg-[url(/images/card-visa.webp)]",
+        "bgPosition": "bg-position-[center_calc(100px_*_-1)]",
+        "title": "Visa Assistance",
+        "description": "Help securing the right visa for you and your family",
+        "iconSrc": "/icons/card-visa-icon.png"
+      },
+      {
+        "id": 2,
+        "img": "bg-[url(/images/card-healthcare.webp)]",
+        "title": "Health Insurance",
+        "bgPosition": "bg-position-[center_calc(50px_*_-1)] sm:bg-position-[-340px_calc(50px_*_-1)]",
+        "description": "Partnering with ASSSA for quality visa required insurance",
+        "iconSrc": "/icons/card-healthcare-icon.png"
+      },
+      {
+        "id": 3,
+        "img": "bg-[url(/images/card-relocation.webp)]",
+        "title": "Relocation Plan",
+        "bgPosition": "bg-position-[center_calc(50px_*_-1)]",
+        "description": "All inclusive packages with your family in mind",
+        "iconSrc": "/icons/card-relocation-icon.png",
+        "iconSize": "50px"
+      },
+      {
+        "id": 4,
+        "img": "bg-[url(/images/card-tax.webp)]",
+        "bgPosition": "sm:bg-position-[-150px_center]",
+        "title": "Tax Services",
+        "description": "Tax advice and preparation from Spanish tax experts",
+        "iconSrc": "/icons/card-tax-icon.png"
+      },
+      {
+        "id": 5,
+        "img": "bg-[url(/images/card-law-legal.webp)]",
+        "bgPosition": "bg-position-[center_calc(100px_*_-1)]",
+        "title": "Law & Legal",
+        "description": "Spanish attorneys to help with any legal situation",
+        "iconSrc": "/icons/card-law-legal-icon.png"
+      },
+      {
+        "id": 6,
+        "img": "bg-[url(/images/card-housing.webp)]",
+        "imgPosition": "-100px",
+        "title": "Housing Solutions",
+        "bgPosition": "bg-position-[center_calc(100px_*_-1)]",
+        "description": "Connections with local Spanish realtors to vet and secure properties",
+        "iconSrc": "/icons/card-housing-icon.svg",
+        "iconSize": "80px"
+      }
+    ]
+  }
+}

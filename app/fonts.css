@@ -1,0 +1,50 @@
+/* ========================================
+   FONT DECLARATIONS
+   ======================================== */
+
+/* ── TAN Aegean (Headings) ──────────────────────────── */
+@font-face {
+  font-family: 'TAN Aegean';
+  src:
+    url('/fonts/Tan_Aeagean/TANAEGEAN-Regular.woff2') format('woff2'),
+    url('/fonts/Tan_Aeagean/TANAEGEAN-Regular.ttf') format('truetype');
+  font-weight: 100 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TAN Aegean';
+  src: url('/fonts/Tan_Aeagean/TANAEGEAN-Medium.ttf') format('truetype');
+  font-weight: 600 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── La Luxes Script (Decorative) ───────────────────── */
+@font-face {
+  font-family: 'La Luxes';
+  src:
+    url('/fonts/La_Luxes_Script/LaLuxesScript.woff2') format('woff2'),
+    url('/fonts/La_Luxes_Script/LaLuxesScript.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Roboto Serif Variable (Body) ───────────────────── */
+@font-face {
+  font-family: 'Roboto Serif';
+  src: url('/fonts/Roboto_Serif/RobotoSerif-VariableFont_GRAD,opsz,wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Serif';
+  src: url('/fonts/Roboto_Serif/RobotoSerif-Italic-VariableFont_GRAD,opsz,wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}

@@ -1,71 +1,8 @@
-@font-face {
-  font-family: 'TAN Aegean';
-  src:
-    url('/fonts/Tan_Aeagean/TANAEGEAN-Regular.woff2') format('woff2'),
-    url('/fonts/Tan_Aeagean/TANAEGEAN-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'La Luxes';
-  src:
-    url('/fonts/La_Luxes_Script/LaLuxesScript.woff2') format('woff2'),
-    url('/fonts/La_Luxes_Script/LaLuxesScript.woff') format('woff');
-  /* url('/fonts/La_Luxes_Script/La_Luxes_Script.f6d03b36d276fb6b05a49611.f14bdd2c1305658c4865e081192e3b8e.ttf') format('truetype'); */
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-*:not(:is(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) {
-  font-family: var(--font-serif);
-}
-
-* * {
-  letter-spacing: var(--tracking-widest);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-aegean);
-}
-
-h1 *,
-h2 *,
-h3 *,
-h4 *,
-h5 *,
-h6 * {
-  font-family: var(--font-aegean);
-}
-
-/* Mobile overrides (< 640px) */
-@media (max-width: 639px) {
-  :root {
-    --text-xs: 0.75rem;
-    --text-sm: 0.875rem;
-    --text-md: 1rem;
-    --text-lg: 1.125rem;
-    --text-xl: 1.25rem;
-    --text-2xl: 1.5rem;
-    --text-3xl: 1.75rem;
-    --text-4xl: 4rem;
-  }
-}
-
-[id] {
-  scroll-margin-top: 94px;
-}
-
+@import './fonts.css';
 @import 'tailwindcss';
 
 @theme {
+  --color-default: #fcf7f2;
   --color-white: #ffffff;
   --color-sand: #ede2d7;
   --color-ocean: #3e5674;
@@ -75,7 +12,6 @@ h6 * {
   --color-blue-overlay-alt: #33688585;
   --color-terracotta: #c47556;
   --color-terracotta-alt: #b56743;
-  --image-fade: linear-gradient(to bottom var(--background-color-white) 0%, var(--background-color-sand) 100%);
 
   /* ========================================
      FUNCTIONAL COLORS
@@ -86,17 +22,17 @@ h6 * {
   --color-error: #c4734a; /* Errors */
   --color-info: #4a6660; /* Info */
 
+  --text-color-light: var(--color-default);
+  --text-color-white: #ffffff;
   --text-color-black: #000000;
   --text-color-dark: #000000a8;
-  --text-color-white: #ffffff;
-  --text-color-light: #fcf7f2;
   --text-color-brown: #54331e;
 
   /* ========================================
      FONT FAMILIES
      ======================================== */
   --font-aegean: 'TAN Aegean', ui-sans-serif, system-ui, sans-serif; /* Primary/display font */
-  --font-serif: serif-roboto, ui-serif, Georgia, serif; /* Serif fallback */
+  --font-serif: 'Roboto Serif', ui-serif, Georgia, serif; /* Body font */
   --font-script: 'La Luxes', cursive; /* Decorative script font */
   --font-sans: var(--font-aegean);
 
@@ -111,8 +47,10 @@ h6 * {
   --text-2xl: 2.25rem;
   --text-3xl: 3rem;
   --text-4xl: 4rem;
-  /* ── Headline sizes ──────────────────────────────────────
 
+  /* ========================================
+  HOMEPAGE HERO FONT SIZES 
+  ======================================== */
   /* ── Headline clamp slope explained ──────────────────────
      clamp(min, intercept + slope, max)
      slope  = (max_px - min_px) / (max_vp - min_vp)
@@ -122,15 +60,11 @@ h6 * {
      "Perfectly arranged" at 96px ≈ 1209px wide, so at any viewport:
        max headline2 = (viewport - 128) * 96 / 1209
      ──────────────────────────────────────────────────────── */
-
-  /* ========================================
-     HOMEPAGE HERO FONT SIZES 
-     ======================================== */
   --text-headline1: clamp(4.62rem, 0.16rem + 9.28vw, 8.75rem);
   --text-headline2: clamp(3.17rem, 0.12rem + 6.36vw, 6rem);
   --text-headline-sub: clamp(1.19rem, 0.06rem + 2.37vw, 2.25rem);
 
-  /* Homepage hero left offset for bottom h1 lines */
+  /* Homepage hero text left offset */
   --headline-ml-offset: clamp(0px, calc(135vw - 1280px), 150px);
 
   /* Line Heights - paired with font sizes */
@@ -141,7 +75,65 @@ h6 * {
   --text-xl--line-height: 1.35;
   --text-2xl--line-height: 1.3;
   --text-3xl--line-height: 1.3;
-  --text-4xl--line-height: 1.05;
-  --text-headline1--line-height: 1;
-  --text-headline2--line-height: 1;
+  --text-4xl--line-height: 1.5;
+  --text-headline1--line-height: 1.2;
+  --text-headline2--line-height: 1.125;
+
+  /* ========================================
+     CUSTOM MEDIA QUERY 
+     ======================================== */
+  --breakpoint-2xl: 90rem; /* 1440px */
+
+  /* ========================================
+     ADD CONTAINER MAX-WIDTH AT 1440px
+     ======================================== */
+  --container-8xl: 90rem; /* 1440px */
+}
+
+/* ========================================
+     MOBILE FONT SIZES 
+     ======================================== */
+/* TODO Update mobile sizes */
+@media (max-width: 639px) {
+  :root {
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-md: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.75rem;
+    --text-4xl: 4rem;
+  }
+}
+
+* * {
+  letter-spacing: var(--tracking-widest);
+}
+
+body {
+  font-family: var(--font-serif);
+}
+
+/* *:not(:is(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) {
+  font-family: var(--font-serif);
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 *,
+h2 *,
+h3 *,
+h4 *,
+h5 *,
+h6 * {
+  font-family: var(--font-aegean);
+}
+
+[id] {
+  scroll-margin-top: 94px;
 }

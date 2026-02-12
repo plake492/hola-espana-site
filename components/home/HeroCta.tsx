@@ -1,12 +1,14 @@
-import { heroCtaCopy } from '@/lib/siteCopy';
+import Container from '../Container';
+import Button from '../Button';
+import homepageCopy from '@/lib/siteCopy/homepageCopy.json';
 
 export default function HeroCta() {
+  const { description, header, buttonText } = homepageCopy.heroCta;
   return (
-    <aside className="mx-auto max-w-5xl bg-[#c36c44] px-4 py-8 text-center text-balance text-white sm:px-16 sm:py-12">
-      <h2 className="flex w-full flex-col items-center gap-4">
-        <span className="font-serif! text-xl italic">{heroCtaCopy.header}</span>
-        <span className="text-2xl">{heroCtaCopy.subHeader}</span>
-      </h2>
-    </aside>
+    <Container className={'flex flex-col items-center px-4 pt-24 pb-8 text-center text-balance sm:gap-12 lg:gap-18'} id="hero-cta">
+      <p className="text-xl font-light italic">{description}</p>
+      <h3 className="text-2xl">{header}</h3>
+      <Button className="italic">{buttonText}</Button>
+    </Container>
   );
 }
