@@ -1,16 +1,4 @@
-type StarColors = 'sand' | 'lightSand' | 'ocean' | 'textLight' | 'textDark';
-
-const StarIcon = ({ color }: { color?: StarColors }) => {
-  const fillColors: Record<StarColors, string> = {
-    sand: '#DDD0C2',
-    lightSand: '#E6C76A',
-    ocean: '#3B6E95',
-    textLight: '#D0A97C',
-    textDark: '#C36C44',
-  };
-
-  const fill = color ? fillColors[color] : 'currentColor';
-
+const StarIcon = () => {
   return (
     <svg width="100%" height="100%" viewBox="0 0 335 335" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path

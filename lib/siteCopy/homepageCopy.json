@@ -28,7 +28,7 @@
         "id": 2,
         "img": "bg-[url(/images/card-healthcare.webp)]",
         "title": "Health Insurance",
-        "bgPosition": "bg-position-[center_calc(50px_*_-1)] sm:bg-position-[-340px_calc(50px_*_-1)]",
+        "bgPosition": "bg-position-[center_calc(50px_*_-1)] sm:bg-position-[-235px_calc(50px_*_-1)]",
         "description": "Partnering with ASSSA for quality visa required insurance",
         "iconSrc": "/icons/card-healthcare-icon.png"
       },
@@ -68,5 +68,44 @@
         "iconSize": "80px"
       }
     ]
+  },
+  "whyChooseUs": {
+    "header": {
+      "first": "Why Choose",
+      "last": "Us?"
+    },
+    "list": [
+      {
+        "title": "True local experts",
+        "content": "Handled by Spanish legal, tax, and relocation professionals who work within the system every day."
+      },
+      {
+        "title": "Fully managed relocation",
+        "content": "Visas, housing, insurance, legal, and tax needs coordinated seamlessly from start to finish."
+      },
+      {
+        "title": "Protected housing search",
+        "content": "Access to trusted local real estate agents so you secure fair terms and avoid foreigner markups."
+      },
+
+      {
+        "title": "Licensed Legal & Tax Support",
+        "content": "Direct access to qualified Spanish attorneys and tax advisors. No intermediaries."
+      },
+      {
+        "title": "Visa-Compliant Insurance",
+        "content": "Expat insurance partnerships that meet Spanish residency requirements without delays."
+      },
+      {
+        "title": "Clarity & Ongoing Support",
+        "content": "We guide you through every step after arrival, including ID appointments, registrations, and local administration, so nothing is missed and nothing feels overwhelming."
+      }
+    ]
+  },
+  "weKnowSpain": {
+    "header": {
+      "first": "We Know",
+      "last": "Spain"
+    }
   }
 }
