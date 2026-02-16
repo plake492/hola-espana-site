@@ -12,7 +12,7 @@ export default function WhyBookUs() {
         imgLeft
         cols={'grid-cols-2'}
         imgSrc="/images/why-us-mosaic-casa.webp"
-        className="bg-sand py-18 text-black"
+        className="bg-sand py-18 pr-8 text-black"
         header={<TextWithIcon text={header} className="uppercase" iconColor="text-terracotta-off" />}
         sectionFooter={
           <div>

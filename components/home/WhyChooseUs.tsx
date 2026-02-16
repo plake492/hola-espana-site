@@ -13,7 +13,7 @@ export default function WhyBookUs() {
         cols={'grid-cols-2'}
         imgSrc="/images/why-us-mosaic-casa.webp"
         className="bg-ocean text-light py-18"
-        header={<TextWithIcon text={header} className="uppercase" iconColor="text-sand-dark" />}
+        header={<TextWithIcon text={header} className="pr-8 uppercase" iconColor="text-sand-dark" />}
       >
         <Accordion content={list} />
       </SplitContainer>

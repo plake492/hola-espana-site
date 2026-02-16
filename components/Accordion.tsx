@@ -90,6 +90,7 @@ interface RowProps {
 const Row = ({ title, content, id, isActive, onToggle }: RowProps) => {
   const contentRef = useRef<HTMLDivElement>(null);
   const [contentHeight, setContentHeight] = useState(0);
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
     if (contentRef.current) {
@@ -97,21 +98,30 @@ const Row = ({ title, content, id, isActive, onToggle }: RowProps) => {
     }
   }, [content]);
 
+  // Skip animation on first render for the initially-active row
+  const immediate = !hasAnimated.current && isActive;
+  useEffect(() => {
+    if (contentHeight > 0) hasAnimated.current = true;
+  }, [contentHeight]);
+
   const springStyles = useSpring({
     height: isActive ? contentHeight : 0,
     opacity: isActive ? 1 : 0,
     config: { tension: 250, friction: 28 },
+    immediate,
   });
 
   const borderSpring = useSpring({
     opacity: isActive ? 1 : 0,
     scaleX: isActive ? 1 : 0,
     config: { tension: 250, friction: 28 },
+    immediate,
   });
 
   const chevronSpring = useSpring({
     transform: isActive ? 'rotate(180deg)' : 'rotate(0deg)',
     config: { tension: 260, friction: 24 },
+    immediate,
   });
 
   return (

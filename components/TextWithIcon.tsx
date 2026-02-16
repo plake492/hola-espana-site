@@ -13,7 +13,7 @@ export default function TextWithIcon({ text, iconColor, className, as }: TextWit
   const Tag = as || 'h3';
 
   return (
-    <Tag className={`${className} flex flex-row items-center gap-3 text-5xl`}>
+    <Tag className={`${className} flex flex-row flex-wrap items-center gap-3 text-5xl`}>
       <span>{first}</span>
       <span className={`${iconColor} mb-5 h-12 w-12 rotate-70`}>
         <StarIcon />
