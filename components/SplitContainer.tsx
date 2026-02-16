@@ -4,6 +4,7 @@ import Image from 'next/image';
 interface SplitContainerProps {
   className?: string;
   header: ReactNode;
+  sectionFooter?: ReactNode;
   children: ReactNode;
   cols?: 'grid-cols-2' | 'grid-cols-3';
   imgSrc: string;
@@ -11,7 +12,7 @@ interface SplitContainerProps {
   alt?: string;
 }
 
-export default function SplitContainer({ className, header, imgSrc, children, imgLeft, cols = 'grid-cols-2', alt = '' }: SplitContainerProps) {
+export default function SplitContainer({ className, header, imgSrc, children, imgLeft, sectionFooter, cols = 'grid-cols-2', alt = '' }: SplitContainerProps) {
   const isTwo = cols === 'grid-cols-2';
   const imgWidthClasses = isTwo ? 'w-[min(125%,50dvw)]' : 'w-[min(118%,66dvw)]';
 
@@ -28,13 +29,14 @@ export default function SplitContainer({ className, header, imgSrc, children, im
           </>
         ) : (
           <>
-            <div className={`pr-8 pl-16`}>{children}</div>
+            <div className={`self-stretch pr-8 pl-16`}>{children}</div>
             <div className={`'h-full col-span-2 col-start-2 ${imgWidthClasses}`}>
               <Image src={imgSrc} alt={alt} width={800} height={600} className="h-full w-full object-cover" />
             </div>
           </>
         )}
       </div>
+      <div className="mt-16 pl-16">{sectionFooter}</div>
     </div>
   );
 }

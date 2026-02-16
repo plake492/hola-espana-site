@@ -108,9 +108,13 @@
       "last": "Spain"
     },
     "content": {
-      "header": "",
-      "body": "",
-      "contentFooter": ""
-    }
+      "header": "We don't just work in Spain. We are from here. ",
+      "body": [
+        "Our services are delivered by Spanish professionals with first-hand knowledge of local systems, regulations, and customs.",
+        "This means clear guidance, up-to-date legal and tax insight, and solutions shaped by how things actually work in Spain.",
+        "The result is a smoother relocation and total peace of mind from day one."
+      ]
+    },
+    "sectionFooter": "Local expertise isn't just an advantage in Spain—it's essential."
   }
 }

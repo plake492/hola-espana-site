@@ -15,11 +15,7 @@ export default function WhyBookUs() {
         className="bg-ocean text-light py-18"
         header={<TextWithIcon text={header} className="uppercase" iconColor="text-sand-dark" />}
       >
-        {
-          <p className="h-[500px]">
-            <Accordion content={list} />
-          </p>
-        }
+        <Accordion content={list} />
       </SplitContainer>
     </Container>
   );

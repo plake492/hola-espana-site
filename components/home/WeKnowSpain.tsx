@@ -4,7 +4,7 @@ import SplitContainer from '../SplitContainer';
 import TextWithIcon from '../TextWithIcon';
 
 export default function WhyBookUs() {
-  const { header } = homePageCopy.weKnowSpain;
+  const { header, content, sectionFooter } = homePageCopy.weKnowSpain;
 
   return (
     <Container id="why-choose-us" className="my-24 px-8">
@@ -14,8 +14,19 @@ export default function WhyBookUs() {
         imgSrc="/images/why-us-mosaic-casa.webp"
         className="bg-sand py-18 text-black"
         header={<TextWithIcon text={header} className="uppercase" iconColor="text-terracotta-off" />}
+        sectionFooter={
+          <div>
+            <h6 className="text-start text-xl text-pretty">{sectionFooter}</h6>
+          </div>
+        }
       >
-        {<p className="h-[500px]">THIS IS CONTENT</p>}
+        {
+          <p className="flex max-w-lg flex-col gap-3 text-lg">
+            {content.body.map((text: string, i: number) => (
+              <span key={i}>{text}</span>
+            ))}
+          </p>
+        }
       </SplitContainer>
     </Container>
   );
