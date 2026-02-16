@@ -2,6 +2,7 @@ import homePageCopy from '@/lib/siteCopy/homepageCopy.json';
 import Container from '../Container';
 import SplitContainer from '../SplitContainer';
 import TextWithIcon from '../TextWithIcon';
+import Accordion from '../Accordion';
 
 export default function WhyBookUs() {
   const { list, header } = homePageCopy.whyChooseUs;
@@ -14,7 +15,11 @@ export default function WhyBookUs() {
         className="bg-ocean text-light py-18"
         header={<TextWithIcon text={header} className="uppercase" iconColor="text-sand-dark" />}
       >
-        {<p className="h-[500px]">THIS IS CONTENT</p>}
+        {
+          <p className="h-[500px]">
+            <Accordion content={list} />
+          </p>
+        }
       </SplitContainer>
     </Container>
   );
