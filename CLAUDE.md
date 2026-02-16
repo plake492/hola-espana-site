@@ -40,13 +40,18 @@ app/
 ├── studio/                  # Sanity CMS at /studio
 │   └── [[...tool]]/page.tsx
 ├── layout.tsx               # Root layout
-└── globals.css              # Tailwind v4 @theme config
+├── fonts.css                # All @font-face declarations
+└── globals.css              # Tailwind v4 @theme config (imports fonts.css)
 
 components/
 ├── Header.tsx               # Site navigation
 ├── Footer.tsx               # Site footer
-├── Icons.tsx                # SVG icon components
-├── SectionContainer.tsx     # Reusable section wrapper
+├── Icons.tsx                # SVG icon components (StarIcon, SunIcon)
+├── Button.tsx               # CTA button with pseudo-element underlay
+├── Container.tsx            # Max-width wrapper with optional icon
+├── SplitContainer.tsx       # Two-column grid: content + image
+├── TextWithIcon.tsx         # Heading with inline decorative star icon
+├── SectionContainer.tsx     # Reusable section wrapper (legacy)
 ├── animations/
 │   └── FadeIn.tsx           # Scroll-triggered animations
 ├── home/                    # Homepage sections
@@ -144,7 +149,7 @@ These are the **actual** color tokens defined in `app/globals.css`. Use these ex
 | Token            | Font          | Usage                         | Tailwind Class    |
 | ---------------- | ------------- | ----------------------------- | ----------------- |
 | `--font-aegean`  | TAN Aegean    | Headings (h1-h6)              | `font-aegean`     |
-| `--font-serif`   | serif-roboto  | Body text (default)           | `font-serif`      |
+| `--font-serif`   | Roboto Serif  | Body text (default)           | `font-serif`      |
 | `--font-script`  | La Luxes      | Decorative/accent text        | `font-script`     |
 | `--font-sans`    | = font-aegean | Alias for headings            | `font-sans`       |
 
@@ -182,7 +187,35 @@ These are the **actual** color tokens defined in `app/globals.css`. Use these ex
 - **Barrel exports:** Page section groups use `index.tsx` for re-exports
 - **Static copy:** Text content lives in `lib/siteCopy.ts`, not hardcoded in components
 - **Animations:** Use `<FadeIn>` component for scroll reveals
-- **Section wrapper:** Use `<SectionContainer>` for consistent section structure
+- **Section wrapper:** Use `<Container>` for consistent section structure
+
+### Reusable Components
+
+**`<Container>`** — Max-width section wrapper with optional decorative icon.
+- `size`: `'xs'` (672px) | `'sm'` (768px) | `'md'` (896px) | `'lg'` (1024px) | `'xl'` (1152px) | `'2xl'` (1280px) | `'full'` (1440px, default)
+- `as`: HTML element tag (default `'section'`)
+- `iconProps`: Optional `{ icon: 'star' | 'sun', iconColor, iconClassName }` for background decorative icon
+- `noCenter`: Disables `mx-auto` centering
+- Used on: "We Know Spain" section, "Why Choose Us" section
+
+**`<SplitContainer>`** — Two-column grid layout with a header, content side, and image side.
+- `header`: ReactNode rendered above the grid
+- `imgSrc`: Image source path
+- `imgLeft`: If true, image appears on the left; otherwise on the right (default)
+- `cols`: `'grid-cols-2'` (default) or `'grid-cols-3'`
+- Used on: "We Know Spain" section (image left + text right)
+
+**`<TextWithIcon>`** — Heading text split around a decorative star icon (e.g., "WE KNOW ★ SPAIN", "WHY CHOOSE ★ US?").
+- `text`: `{ first: string, last: string }` — text before and after the icon
+- `as`: HTML element tag (default `'h3'`)
+- `iconColor`: Tailwind color class for the star
+- Renders at `text-5xl` with the star rotated 70deg
+
+**`<Button>`** — CTA button with terracotta background and darker offset underlay.
+- `as`: HTML element tag (default `'button'`)
+- Uses `before:` pseudo-element for main bg, `after:` for underlay shadow offset
+- Hover lifts up 2px with shadow; active presses down
+- TODO: Add button variations
 
 ## Coding Conventions
 
