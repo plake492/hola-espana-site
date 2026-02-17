@@ -19,14 +19,14 @@ interface ContainerProps {
   as?: ElementType;
   children: ReactNode;
   className?: string;
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full';
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | 'full';
   noCenter?: boolean;
   iconProps?: IconProps;
   [key: string]: any;
 }
 
 // TODO Add icon options
-export default function Container({ as: Element = 'section', children, className, size = 'full', noCenter, iconProps, ...rest }: ContainerProps) {
+export default function Container({ as: Element = 'section', children, className, size = '3xl', noCenter, iconProps, ...rest }: ContainerProps) {
   const containerSize: Record<typeof size, string> = {
     /** 672px | 42rem */
     xs: 'max-w-2xl',
@@ -41,7 +41,9 @@ export default function Container({ as: Element = 'section', children, className
     /** 1280px | 80rem */
     '2xl': 'max-w-7xl',
     /** 1440px | 90rem */
-    full: 'max-w-8xl',
+    '3xl': 'max-w-8xl',
+    /** 100% */
+    full: 'max-w-full',
   };
 
   const icons = {
@@ -51,13 +53,13 @@ export default function Container({ as: Element = 'section', children, className
 
   const IconComponent = iconProps?.icon && iconProps.icon ? icons[iconProps.icon] : null;
   const iconClasses = iconProps?.iconClassName || 'absolute top-0 right-0 -z-1 h-[360px] w-[360px] translate-x-[100px]';
-  const iconColor = iconProps?.iconColor ? `text-${iconProps?.iconColor}` : 'text-inherit';
+  const iconColor = iconProps?.iconColor ? `text-${iconProps?.iconColor}` : '';
 
   return (
-    <Element className={`relative w-full ${containerSize[size]} ${className} ${!noCenter && 'mx-auto'}`.trim().replace(/ +/g, ' ')} {...rest}>
+    <Element className={`relative w-full ${containerSize[size]} ${className || ''} ${!noCenter && 'mx-auto'}`.trim().replace(/ +/g, ' ')} {...rest}>
       {IconComponent && (
         <div className={`${iconClasses} ${iconColor}`}>
-          <IconComponent color="sand" />
+          <IconComponent />
         </div>
       )}
       {children}

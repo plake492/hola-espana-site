@@ -3,6 +3,8 @@ import HeroCta from '@/components/home/HeroCta';
 import Services from '@/components/home/Services';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
 import WeKnowSpain from '@/components/home/WeKnowSpain';
+import ClearPath from '@/components/home/ClearPath';
+import Blogs from '@/components/home/Blogs';
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <Services />
       <WhyChooseUs />
       <WeKnowSpain />
+      <ClearPath />
+      <Blogs />
     </>
   );
 }

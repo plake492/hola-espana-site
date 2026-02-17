@@ -116,5 +116,17 @@
       ]
     },
     "sectionFooter": "Local expertise isn't just an advantage in Spain—it's essential."
+  },
+  "clearPath": {
+    "header": "A Clearer Path To Life In Spain",
+    "sectionFooter": "From dream to destination, our experts will guide you each step of the way."
+  },
+  "blog": {
+    "header": {
+      "first": "Hola España relocation ",
+      "last": "blog"
+    },
+    "ctaText": "Explore the blog",
+    "content": "Your go-to resource for practical guidance and trusted insight on moving to and living in Spain. You'll find clear, up-to-date information on visas, residency, taxes, housing, healthcare, and everyday life, designed to help you plan your move with confidence. Whether you are preparing to relocate or already living in Spain, our articles provide reliable answers, local perspective, and support at every stage of your journey."
   }
 }
