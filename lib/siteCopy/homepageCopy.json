@@ -119,6 +119,36 @@
   },
   "clearPath": {
     "header": "A Clearer Path To Life In Spain",
+    "steps": [
+      {
+        "title": "Initial Consultation",
+        "numeral": "I"
+      },
+      {
+        "title": "Personalized Relocation Plan",
+        "numeral": "II"
+      },
+      {
+        "title": "Legal & Visa Preparation",
+        "numeral": "III"
+      },
+      {
+        "title": "Arrival & ID Appointments",
+        "numeral": "IX"
+      },
+      {
+        "title": "Housing & Local Coordination",
+        "numeral": "X"
+      },
+      {
+        "title": "Insurance & Compliance Setup",
+        "numeral": "XI"
+      },
+      {
+        "title": "Ongoing Support & Settling In",
+        "numeral": "XII"
+      }
+    ],
     "sectionFooter": "From dream to destination, our experts will guide you each step of the way."
   },
   "blog": {

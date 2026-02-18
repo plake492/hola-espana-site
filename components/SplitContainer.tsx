@@ -6,7 +6,7 @@ interface SplitContainerProps {
   header?: ReactNode;
   sectionFooter?: ReactNode;
   children: ReactNode;
-  cols?: 'grid-cols-2' | 'grid-cols-3';
+  cols?: 'grid-cols-2' | 'grid-cols-3' | string;
   imgSrc: string;
   imgLeft?: boolean;
   alt?: string;
@@ -24,7 +24,7 @@ export default function SplitContainer({
   cols = 'grid-cols-2',
   alt = '',
 }: SplitContainerProps) {
-  const isTwo = cols === 'grid-cols-2';
+  const isTwo = cols.includes('grid-cols-2');
   const imgWidthClasses = isTwo ? 'w-[min(125%,50dvw)]' : 'w-[min(118%,66dvw)]';
 
   return (
@@ -33,7 +33,7 @@ export default function SplitContainer({
       <div className={`grid ${cols}`}>
         {imgLeft ? (
           <>
-            <div className={`col-span-1 col-start-0 h-full justify-self-end ${imgWidthClasses}`}>
+            <div className={`col-span-1 col-start-0 justify-self-end ${imgWidthClasses}`}>
               <Image src={imgSrc} alt={alt} width={800} height={600} className="h-auto w-full object-cover" />
               {underImageContent}
             </div>

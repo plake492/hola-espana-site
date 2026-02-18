@@ -132,18 +132,18 @@ const Row = ({ title, content, id, isActive, onToggle }: RowProps) => {
         onClick={() => onToggle(id)}
         aria-expanded={isActive}
       >
-        <h5 className="text-start font-serif text-lg italic">{title}</h5>
+        <h5 className="text-start font-serif text-lg text-white italic">{title}</h5>
         <animated.div style={chevronSpring} className="h-auto w-5">
           <Chevron />
         </animated.div>
       </button>
       <animated.div style={{ height: springStyles.height, opacity: springStyles.opacity, overflow: 'hidden' }}>
-        <div ref={contentRef} className="text-md pt-1 pb-4">
+        <div ref={contentRef} className="pt-1 pb-4 text-sm">
           <animated.div
             style={{ opacity: borderSpring.opacity, transform: borderSpring.scaleX.to((s) => `scaleX(${s})`) }}
             className="mb-3 h-0.5 w-full origin-left bg-white"
           />
-          {content}
+          <p className="text-light text-base/7">{content}</p>
           <animated.div
             style={{ opacity: borderSpring.opacity, transform: borderSpring.scaleX.to((s) => `scaleX(${s})`) }}
             className="mt-4 h-0.5 w-full origin-left bg-white"

@@ -8,10 +8,10 @@ export default function Services() {
 
   return (
     <>
-      <Container className={'px-4 pt-64 pb-42'} iconProps={{ icon: 'star', iconColor: 'sand' }} id="services">
+      <Container className={'px-4 pt-48 pb-32'} iconProps={{ icon: 'star', iconColor: 'sand' }} id="services">
         <div className="mb-20 max-w-7xl">
-          <h3 className="mb-6 text-4xl uppercase">{servicesCopy.heading}</h3>
-          <p className="text-lg font-light">{servicesCopy.description}</p>
+          <h3 className="mb-6 text-3xl text-balance uppercase">{servicesCopy.heading}</h3>
+          <p className="text-md font-light">{servicesCopy.description}</p>
         </div>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
           {servicesCopy.cards.map((s) => (

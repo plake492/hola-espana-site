@@ -71,6 +71,25 @@
   /* Homepage hero text left offset */
   --headline-ml-offset: clamp(0px, calc(135vw - 1280px), 150px);
 
+  /* ========================================
+     SECTION HEADING FLUID SIZES
+     Same clamp slope pattern as hero headlines.
+     Viewport range: 640px–1440px.
+     Always smaller than --text-headline2 (max 6rem).
+     ======================================== */
+  --text-section-xl: clamp(2rem, -0.2rem + 5.5vw, 4.75rem);
+  --text-section-xl--line-height: 1.2;
+  --text-section-lg: clamp(1.75rem, -0.05rem + 4.5vw, 4rem);
+  --text-section-lg--line-height: 1.3;
+
+  /* ClearPath arch text — scales 14px → 20px */
+  --text-arch: clamp(0.6875rem, -0.15rem + 1.4vw, 1.25rem);
+  --text-arch--line-height: 1.3;
+
+  /* Section heading indent offset (reusable staggered headings)
+     Same ramp as --headline-ml-offset: 0 below ~949px, max at ~1060px */
+  --section-heading-offset: clamp(0px, calc(135vw - 1310px), 150px);
+
   /* Line Heights - paired with font sizes */
   --text-xs--line-height: 1.5;
   --text-sm--line-height: 1.5;

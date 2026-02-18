@@ -11,7 +11,7 @@ interface IconProps {
     textLight: '#D0A97C',
     textDark: '#C36C44', 
   */
-  iconColor?: 'sand' | 'lightSand' | 'ocean' | 'textLight' | 'textDark' | 'string';
+  iconColor?: 'sand' | 'lightSand' | 'ocean' | 'textLight' | 'textDark' | string;
   iconClassName?: string;
 }
 
