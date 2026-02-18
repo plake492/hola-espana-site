@@ -15,7 +15,7 @@ export default function Blogs() {
           <SectionHeading
             lines={['Hola España', { first: 'Relocation', last: 'Blog' }]}
             className="uppercase"
-            textSize="text-section-lg"
+            textSize="text-section-sm"
             iconColor="text-terracotta-off"
           />
         </div>

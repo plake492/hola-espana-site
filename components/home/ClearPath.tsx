@@ -14,7 +14,7 @@ export default function ClearPath() {
         iconProps={{ icon: 'sun', iconClassName: 'text-sand-icon w-[350] h-[350] absolute top-0 left-0 -z-1 -translate-y-2 -translate-x-10' }}
       >
         <div className="pt-20 pb-16">
-          <h3 className="ml-auto max-w-5xl text-end text-4xl uppercase">{clearPath.header}</h3>
+          <h3 className="ml-auto max-w-4xl text-end text-4xl uppercase">{clearPath.header}</h3>
         </div>
       </Container>
 
