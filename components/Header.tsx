@@ -3,10 +3,9 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { useSpring, animated } from '@react-spring/web';
 import { HEADER_HEIGHT } from '@/lib/constants';
-
-const previewPage = [{ id: 'preview', href: '#contact', text: 'contact' }];
 
 const pages = [
   {
@@ -31,11 +30,44 @@ const pages = [
   },
 ];
 
+export default function Header() {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+
+  return isHomePage ? <AnimatedHeader /> : <StaticHeader />;
+}
+
+const StaticHeader = () => {
+  return (
+    <header className={`h-[${HEADER_HEIGHT}px] bg-terracotta absolute top-0 left-0 z-50 w-full text-white md:fixed`}>
+      <div className="max-w-8xl relative mx-auto flex w-full flex-col items-center justify-between px-4 py-2 min-[850px]:flex-row">
+        <div className="max-[850px]:max-w-[325px]">
+          <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <Image alt="site logo" src="/logo/logo.svg" width={200} height={100} className="h-auto w-full invert-100" />
+          </Link>
+        </div>
+
+        <nav className="hidden flex-1 justify-end gap-4 min-[850px]:flex">
+          {pages.map((page) => (
+            <Link
+              key={page.id}
+              href={page.href}
+              className="text-md relative uppercase after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
+            >
+              {page.text}
+            </Link>
+          ))}
+        </nav>
+      </div>
+    </header>
+  );
+};
+
 const config = { tension: 180, friction: 12, duration: 225 };
 
-export default function Header({ isPreview }: { isPreview?: boolean }) {
+const AnimatedHeader = () => {
   const [scrolled, setScrolled] = useState(false);
-  const pagesFilteres = isPreview ? previewPage : pages;
+  const pagesFilteres = pages;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,17 +89,12 @@ export default function Header({ isPreview }: { isPreview?: boolean }) {
 
   return (
     <animated.header style={springStyles} className={`h-[${HEADER_HEIGHT}px] absolute top-0 left-0 z-50 w-full text-white md:fixed`}>
-      <div className="relative mx-auto flex w-full max-w-[1440px] flex-col items-center justify-between px-4 py-2 min-[850px]:flex-row">
+      <div className="max-w-8xl relative mx-auto flex w-full flex-col items-center justify-between px-4 py-2 min-[850px]:flex-row">
         <animated.div style={logoStyle} className="max-[850px]:max-w-[325px]">
           <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <Image alt="site logo" src="/logo/logo.svg" width={200} height={100} className="h-auto w-full invert-100" />
           </Link>
         </animated.div>
-        {isPreview && (
-          <p className="relative text-xs min-[850px]:absolute min-[850px]:top-1/2 min-[850px]:left-1/2 min-[850px]:-translate-1/2 sm:text-sm">
-            FULL SITE COMING SOON!
-          </p>
-        )}
         <nav className="hidden flex-1 justify-end gap-4 min-[850px]:flex">
           {pagesFilteres.map((page) => (
             <Link
@@ -82,4 +109,4 @@ export default function Header({ isPreview }: { isPreview?: boolean }) {
       </div>
     </animated.header>
   );
-}
+};
