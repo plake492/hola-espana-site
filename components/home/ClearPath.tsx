@@ -7,7 +7,7 @@ export default function ClearPath() {
   const { clearPath } = homePageCopy;
 
   return (
-    <Container size="full">
+    <Container size="full" id="path">
       <TileBorder color="blue" />
       <Container
         className="px-16"

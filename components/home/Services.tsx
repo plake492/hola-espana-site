@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Container from '../Container';
-import ServiceCard from './ServiceCard';
 import homepageCopy from '@/lib/siteCopy/homepageCopy.json';
 
 export default function Services() {
@@ -21,5 +20,32 @@ export default function Services() {
       </Container>
       <Image src="/images/mosaic-strip.webp" width={1200} height={200} alt="" className="w-full" />
     </>
+  );
+}
+
+interface CardContent {
+  id: number;
+  img: string;
+  title: string;
+  bgPosition?: string;
+  description: string;
+  iconSrc: string;
+  iconSize?: string;
+}
+
+function ServiceCard({ content }: { content: CardContent }) {
+  const { img, title, description, bgPosition = 'bg-position-[center_center]' } = content;
+
+  return (
+    <div className="bg-white p-4 shadow-xs">
+      <div className={`relative flex h-[350px] flex-col justify-end overflow-hidden bg-white sm:h-[450px] ${img} bg-p ${bgPosition} bg-cover bg-no-repeat`}>
+        <div className="relative flex h-1/2 flex-col justify-end bg-white px-4 pb-6 min-[350px]:h-2/5 sm:h-1/3 sm:justify-center sm:pb-0 md:px-8">
+          <div className="text-center">
+            <h4 className="mb-2 font-serif! text-xl font-medium italic sm:text-lg">{title}</h4>
+            <p className="font-serif text-sm">{description}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

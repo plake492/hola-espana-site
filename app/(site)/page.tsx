@@ -5,6 +5,7 @@ import WhyChooseUs from '@/components/home/WhyChooseUs';
 import WeKnowSpain from '@/components/home/WeKnowSpain';
 import ClearPath from '@/components/home/ClearPath';
 import Blogs from '@/components/home/Blogs';
+import Reviews from '@/components/home/Reviews';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <WeKnowSpain />
       <ClearPath />
       <Blogs />
+      <Reviews />
     </>
   );
 }
