@@ -19,7 +19,9 @@ const GAP = 24;
 const ACTIVE_HEIGHT = 440;
 const INACTIVE_HEIGHT = 340;
 const ACTIVE_LIFT = 40;
-const TRANSITION = 'width 600ms cubic-bezier(0.33, 1, 0.68, 1), transform 600ms cubic-bezier(0.33, 1, 0.68, 1)';
+const CARD_TRANSITION = 'width 600ms cubic-bezier(0.33, 1, 0.68, 1), transform 600ms cubic-bezier(0.33, 1, 0.68, 1)';
+const TRACK_TRANSITION = 'transform 600ms cubic-bezier(0.33, 1, 0.68, 1)';
+const ANIMATION_DURATION = 650;
 
 function getResponsiveSizes(vw: number) {
   return {
@@ -38,7 +40,12 @@ function calcTrackX(activeIndex: number, inactiveWidth: number, leftOffset: numb
 }
 
 export default function Carousel({ reviews }: CarouselProps) {
-  const [current, setCurrent] = useState(0);
+  const totalCards = reviews.length;
+  const OFFSET = totalCards;
+  const extendedReviews = [...reviews, ...reviews, ...reviews];
+
+  const [current, setCurrent] = useState(OFFSET);
+  const [skipTransition, setSkipTransition] = useState(false);
   const [sizes, setSizes] = useState(() => getResponsiveSizes(1200));
 
   const { activeWidth, inactiveWidth, leftOffset } = sizes;
@@ -51,13 +58,46 @@ export default function Carousel({ reviews }: CarouselProps) {
   }, []);
 
   const trackX = calcTrackX(current, inactiveWidth, leftOffset);
+  const normalizedCurrent = (((current - OFFSET) % totalCards) + totalCards) % totalCards;
 
-  const goTo = useCallback(
-    (index: number) => {
-      setCurrent(Math.max(0, Math.min(index, reviews.length - 1)));
+  const goTo = useCallback((index: number) => {
+    setCurrent(index);
+  }, []);
+
+  // Indicator click — move in the direction of the selected indicator
+  const handleIndicatorClick = useCallback(
+    (reviewIndex: number) => {
+      const currentNorm = (((current - OFFSET) % totalCards) + totalCards) % totalCards;
+      const diff = reviewIndex - currentNorm;
+      if (diff === 0) return;
+      setCurrent(current + diff);
     },
-    [reviews.length]
+    [current, totalCards, OFFSET]
   );
+
+  // After animation completes, silently reset to the middle set
+  useEffect(() => {
+    const middleIndex = OFFSET + normalizedCurrent;
+    if (current === middleIndex) return;
+
+    const timer = setTimeout(() => {
+      setSkipTransition(true);
+      setCurrent(middleIndex);
+    }, ANIMATION_DURATION);
+
+    return () => clearTimeout(timer);
+  }, [current, normalizedCurrent, OFFSET]);
+
+  // Re-enable transition after the no-transition frame paints
+  useEffect(() => {
+    if (!skipTransition) return;
+    const raf = requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setSkipTransition(false);
+      });
+    });
+    return () => cancelAnimationFrame(raf);
+  }, [skipTransition]);
 
   return (
     <div className="overflow-hidden select-none">
@@ -67,10 +107,10 @@ export default function Carousel({ reviews }: CarouselProps) {
           style={{
             transform: `translateX(${trackX}px)`,
             gap: GAP,
-            transition: 'transform 600ms cubic-bezier(0.33, 1, 0.68, 1)',
+            transition: skipTransition ? 'none' : TRACK_TRANSITION,
           }}
         >
-          {reviews.map((review, i) => {
+          {extendedReviews.map((review, i) => {
             const isActive = current === i;
             return (
               <div
@@ -80,7 +120,7 @@ export default function Carousel({ reviews }: CarouselProps) {
                   width: isActive ? activeWidth : inactiveWidth,
                   height: isActive ? ACTIVE_HEIGHT : INACTIVE_HEIGHT,
                   transform: `translateY(${isActive ? -ACTIVE_LIFT : 0}px)`,
-                  transition: TRANSITION,
+                  transition: skipTransition ? 'none' : CARD_TRANSITION,
                 }}
               >
                 <ReviewCard {...review} isActive={isActive} onClick={() => goTo(i)} />
@@ -95,11 +135,11 @@ export default function Carousel({ reviews }: CarouselProps) {
         {reviews.map((_, i) => (
           <button
             key={i}
-            onClick={() => goTo(i)}
-            className={cn('py-2 transition-all duration-500 ease-out', current === i ? 'w-12' : 'w-7')}
+            onClick={() => handleIndicatorClick(i)}
+            className={cn('cursor-pointer py-2 transition-all duration-500 ease-out', normalizedCurrent === i ? 'w-12' : 'w-7')}
             aria-label={`Go to review ${i + 1}`}
           >
-            <div className={cn('h-1 w-full rounded-full', current === i ? 'bg-ocean' : 'bg-ocean-alt')} />
+            <div className={cn('h-1 w-full rounded-full', normalizedCurrent === i ? 'bg-ocean' : 'bg-ocean-alt')} />
           </button>
         ))}
       </div>
@@ -144,7 +184,7 @@ function ReviewCard({ name, review, image, isActive, onClick }: ReviewCardProps)
       {/* Name */}
       <div className="flex shrink-0 items-center px-8 pt-4">
         <div className={cn('h-0.5 shrink-0 transition-all duration-500 ease-out', isActive ? 'mr-4 w-20 bg-white' : 'mr-0 w-0')} />
-        <p className="font-aegean text-xs">{name}</p>
+        <p className="font-aegean truncate text-xs">{name}</p>
       </div>
     </div>
   );
