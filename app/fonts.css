@@ -15,8 +15,10 @@
 
 @font-face {
   font-family: 'TAN Aegean';
-  src: url('/fonts/Tan_Aeagean/TANAEGEAN-Medium.ttf') format('truetype');
-  font-weight: 600 900;
+  src:
+    url('/fonts/Tan_Aeagean/TANAEGEAN-Medium.woff2') format('woff2'),
+    url('/fonts/Tan_Aeagean/TANAEGEAN-Medium.ttf') format('truetype');
+  font-weight: 400 900;
   font-style: normal;
   font-display: swap;
 }
