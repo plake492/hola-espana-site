@@ -158,5 +158,9 @@
     },
     "ctaText": "Explore the blog",
     "content": "Your go-to resource for practical guidance and trusted insight on moving to and living in Spain. You'll find clear, up-to-date information on visas, residency, taxes, housing, healthcare, and everyday life, designed to help you plan your move with confidence. Whether you are preparing to relocate or already living in Spain, our articles provide reliable answers, local perspective, and support at every stage of your journey."
+  },
+  "ctaCopy": {
+    "heading": "Your dream life is calling",
+    "description": "Take the first step with a free 20-minute strategy call"
   }
 }

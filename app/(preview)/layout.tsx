@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function MainLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <>
-      <Header isPreview />
+      <Header />
       <main className="flex-1">{children}</main>
       <Footer />
       {process.env.NODE_ENV === 'development' && (

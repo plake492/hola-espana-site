@@ -1,7 +1,6 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
-// import { useDrag } from '@use-gesture/react'; // TODO: re-enable for drag-to-scroll
 import Image from 'next/image';
 import { cn } from '@/lib/utils/cn';
 
@@ -60,10 +59,6 @@ export default function Carousel({ reviews }: CarouselProps) {
   const trackX = calcTrackX(current, inactiveWidth, leftOffset);
   const normalizedCurrent = (((current - OFFSET) % totalCards) + totalCards) % totalCards;
 
-  const goTo = useCallback((index: number) => {
-    setCurrent(index);
-  }, []);
-
   // Indicator click — move in the direction of the selected indicator
   const handleIndicatorClick = useCallback(
     (reviewIndex: number) => {
@@ -99,15 +94,34 @@ export default function Carousel({ reviews }: CarouselProps) {
     return () => cancelAnimationFrame(raf);
   }, [skipTransition]);
 
+  // Click-to-activate a specific card
+  const goTo = useCallback(
+    (i: number) => {
+      if (i === current) return;
+      setCurrent(i);
+    },
+    [current]
+  );
+
+  const goNext = useCallback(() => setCurrent((c) => c + 1), []);
+  const goPrev = useCallback(() => setCurrent((c) => c - 1), []);
+
+  const finalTrackX = trackX;
+  const trackTransitionStyle = skipTransition ? 'none' : TRACK_TRANSITION;
+  const cardTransitionStyle = skipTransition ? 'none' : CARD_TRANSITION;
+
   return (
     <div className="overflow-hidden select-none">
-      <div className="overflow-hidden pt-8" style={{ minHeight: ACTIVE_HEIGHT + ACTIVE_LIFT }}>
+      <div
+        className="overflow-hidden pt-8"
+        style={{ minHeight: ACTIVE_HEIGHT + ACTIVE_LIFT }}
+      >
         <div
           className="flex items-end"
           style={{
-            transform: `translateX(${trackX}px)`,
+            transform: `translateX(${finalTrackX}px)`,
             gap: GAP,
-            transition: skipTransition ? 'none' : TRACK_TRANSITION,
+            transition: trackTransitionStyle,
           }}
         >
           {extendedReviews.map((review, i) => {
@@ -115,35 +129,77 @@ export default function Carousel({ reviews }: CarouselProps) {
             return (
               <div
                 key={i}
-                className="shrink-0"
+                className={cn('shrink-0', !isActive && 'cursor-pointer')}
                 style={{
                   width: isActive ? activeWidth : inactiveWidth,
                   height: isActive ? ACTIVE_HEIGHT : INACTIVE_HEIGHT,
                   transform: `translateY(${isActive ? -ACTIVE_LIFT : 0}px)`,
-                  transition: skipTransition ? 'none' : CARD_TRANSITION,
+                  transition: cardTransitionStyle,
                 }}
+                onClick={() => goTo(i)}
               >
-                <ReviewCard {...review} isActive={isActive} onClick={() => goTo(i)} />
+                <ReviewCard {...review} isActive={isActive} />
               </div>
             );
           })}
         </div>
       </div>
 
-      {/* Indicators */}
-      <div className="relative flex gap-2" style={{ paddingLeft: leftOffset, marginTop: -(ACTIVE_LIFT / 2 - 8) }}>
-        {reviews.map((_, i) => (
+      {/* Indicators + Chevrons */}
+      <div className="relative flex items-center" style={{ paddingLeft: leftOffset, marginTop: -(ACTIVE_LIFT / 2 - 8) }}>
+        <div className="flex gap-2">
+          {reviews.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => handleIndicatorClick(i)}
+              className={cn('cursor-pointer py-6 transition-all duration-500 ease-out', normalizedCurrent === i ? 'w-12' : 'w-7')}
+              aria-label={`Go to review ${i + 1}`}
+            >
+              <div className={cn('h-1 w-full rounded-full', normalizedCurrent === i ? 'bg-ocean' : 'bg-ocean-alt')} />
+            </button>
+          ))}
+        </div>
+
+        {/* Chevron arrows — right edge aligned to active card's right border */}
+        <div
+          className="absolute flex items-center gap-3"
+          style={{ right: `calc(100% - ${leftOffset + activeWidth}px)` }}
+        >
           <button
-            key={i}
-            onClick={() => handleIndicatorClick(i)}
-            className={cn('cursor-pointer py-2 transition-all duration-500 ease-out', normalizedCurrent === i ? 'w-12' : 'w-7')}
-            aria-label={`Go to review ${i + 1}`}
+            onClick={goPrev}
+            className="flex h-10 w-10 cursor-pointer items-center justify-center text-ocean transition-colors hover:text-terracotta"
+            aria-label="Previous review"
           >
-            <div className={cn('h-1 w-full rounded-full', normalizedCurrent === i ? 'bg-ocean' : 'bg-ocean-alt')} />
+            <ChevronLeft />
           </button>
-        ))}
+          <button
+            onClick={goNext}
+            className="flex h-10 w-10 cursor-pointer items-center justify-center text-ocean transition-colors hover:text-terracotta"
+            aria-label="Next review"
+          >
+            <ChevronRight />
+          </button>
+        </div>
       </div>
     </div>
+  );
+}
+
+/* ── Chevrons ────────────────────────────────────── */
+
+function ChevronLeft() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M15 18l-6-6 6-6" />
+    </svg>
+  );
+}
+
+function ChevronRight() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 18l6-6-6-6" />
+    </svg>
   );
 }
 
@@ -151,15 +207,13 @@ export default function Carousel({ reviews }: CarouselProps) {
 
 interface ReviewCardProps extends Review {
   isActive: boolean;
-  onClick: () => void;
 }
 
-function ReviewCard({ name, review, image, isActive, onClick }: ReviewCardProps) {
+function ReviewCard({ name, review, image, isActive }: ReviewCardProps) {
   return (
     <div
-      onClick={onClick}
       className={cn(
-        'relative flex h-full cursor-pointer flex-col pt-6 pb-8 transition-colors duration-500 ease-out',
+        'relative flex h-full flex-col pt-6 pb-8 transition-colors duration-500 ease-out',
         isActive ? 'bg-ocean text-white' : 'bg-ocean-alt text-black'
       )}
     >
