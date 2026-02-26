@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils/cn';
 
@@ -14,15 +14,26 @@ interface CarouselProps {
   reviews: Review[];
 }
 
+const MOBILE_BP = 601;
 const GAP = 24;
+const MOBILE_GAP = 16;
 const ACTIVE_HEIGHT = 440;
 const INACTIVE_HEIGHT = 340;
+const MOBILE_CARD_HEIGHT = 380;
 const ACTIVE_LIFT = 40;
 const CARD_TRANSITION = 'width 600ms cubic-bezier(0.33, 1, 0.68, 1), transform 600ms cubic-bezier(0.33, 1, 0.68, 1)';
 const TRACK_TRANSITION = 'transform 600ms cubic-bezier(0.33, 1, 0.68, 1)';
 const ANIMATION_DURATION = 650;
 
 function getResponsiveSizes(vw: number) {
+  if (vw < MOBILE_BP) {
+    const cardWidth = vw - 48;
+    return {
+      activeWidth: cardWidth,
+      inactiveWidth: cardWidth,
+      leftOffset: 24,
+    };
+  }
   return {
     activeWidth: Math.min(Math.max(vw * 0.38, 340), 520),
     inactiveWidth: Math.min(Math.max(vw * 0.24, 240), 350),
@@ -30,10 +41,10 @@ function getResponsiveSizes(vw: number) {
   };
 }
 
-function calcTrackX(activeIndex: number, inactiveWidth: number, leftOffset: number) {
+function calcTrackX(activeIndex: number, inactiveWidth: number, leftOffset: number, gap: number) {
   let cardStart = 0;
   for (let i = 0; i < activeIndex; i++) {
-    cardStart += inactiveWidth + GAP;
+    cardStart += inactiveWidth + gap;
   }
   return leftOffset - cardStart;
 }
@@ -46,17 +57,23 @@ export default function Carousel({ reviews }: CarouselProps) {
   const [current, setCurrent] = useState(OFFSET);
   const [skipTransition, setSkipTransition] = useState(false);
   const [sizes, setSizes] = useState(() => getResponsiveSizes(1200));
+  const [isMobile, setIsMobile] = useState(false);
 
   const { activeWidth, inactiveWidth, leftOffset } = sizes;
 
   useEffect(() => {
-    const update = () => setSizes(getResponsiveSizes(window.innerWidth));
+    const update = () => {
+      const vw = window.innerWidth;
+      setSizes(getResponsiveSizes(vw));
+      setIsMobile(vw < MOBILE_BP);
+    };
     update();
     window.addEventListener('resize', update);
     return () => window.removeEventListener('resize', update);
   }, []);
 
-  const trackX = calcTrackX(current, inactiveWidth, leftOffset);
+  const gap = isMobile ? MOBILE_GAP : GAP;
+  const trackX = calcTrackX(current, inactiveWidth, leftOffset, gap);
   const normalizedCurrent = (((current - OFFSET) % totalCards) + totalCards) % totalCards;
 
   // Indicator click — move in the direction of the selected indicator
@@ -106,36 +123,61 @@ export default function Carousel({ reviews }: CarouselProps) {
   const goNext = useCallback(() => setCurrent((c) => c + 1), []);
   const goPrev = useCallback(() => setCurrent((c) => c - 1), []);
 
+  // Simple swipe detection for mobile
+  const touchStartX = useRef<number | null>(null);
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  }, []);
+  const handleTouchEnd = useCallback(
+    (e: React.TouchEvent) => {
+      if (touchStartX.current === null) return;
+      const dx = e.changedTouches[0].clientX - touchStartX.current;
+      touchStartX.current = null;
+      if (Math.abs(dx) < 40) return;
+      if (dx < 0) goNext();
+      else goPrev();
+    },
+    [goNext, goPrev]
+  );
+
   const finalTrackX = trackX;
   const trackTransitionStyle = skipTransition ? 'none' : TRACK_TRANSITION;
   const cardTransitionStyle = skipTransition ? 'none' : CARD_TRANSITION;
 
   return (
     <div className="overflow-hidden select-none">
-      <div className="overflow-hidden pt-8" style={{ minHeight: ACTIVE_HEIGHT + ACTIVE_LIFT }}>
+      <div
+        className="overflow-hidden pt-8"
+        style={{ minHeight: isMobile ? MOBILE_CARD_HEIGHT : ACTIVE_HEIGHT + ACTIVE_LIFT, touchAction: 'pan-y' }}
+        onTouchStart={isMobile ? handleTouchStart : undefined}
+        onTouchEnd={isMobile ? handleTouchEnd : undefined}
+      >
         <div
           className="flex items-end"
           style={{
             transform: `translateX(${finalTrackX}px)`,
-            gap: GAP,
+            gap,
             transition: trackTransitionStyle,
           }}
         >
           {extendedReviews.map((review, i) => {
             const isActive = current === i;
+            const cardHeight = isMobile ? MOBILE_CARD_HEIGHT : isActive ? ACTIVE_HEIGHT : INACTIVE_HEIGHT;
+            const cardWidth = isMobile ? activeWidth : isActive ? activeWidth : inactiveWidth;
+            const lift = isMobile ? 0 : isActive ? -ACTIVE_LIFT : 0;
             return (
               <div
                 key={i}
-                className={cn('shrink-0', !isActive && 'cursor-pointer')}
+                className={cn('shrink-0', !isMobile && !isActive && 'cursor-pointer')}
                 style={{
-                  width: isActive ? activeWidth : inactiveWidth,
-                  height: isActive ? ACTIVE_HEIGHT : INACTIVE_HEIGHT,
-                  transform: `translateY(${isActive ? -ACTIVE_LIFT : 0}px)`,
+                  width: cardWidth,
+                  height: cardHeight,
+                  transform: `translateY(${lift}px)`,
                   transition: cardTransitionStyle,
                 }}
-                onClick={() => goTo(i)}
+                onClick={() => !isMobile && goTo(i)}
               >
-                <ReviewCard {...review} isActive={isActive} />
+                <ReviewCard {...review} isActive={isMobile || isActive} />
               </div>
             );
           })}
@@ -143,22 +185,8 @@ export default function Carousel({ reviews }: CarouselProps) {
       </div>
 
       {/* Indicators + Chevrons */}
-      <div className="relative flex items-center" style={{ paddingLeft: leftOffset, marginTop: -(ACTIVE_LIFT / 2 - 8) }}>
-        <div className="flex gap-2">
-          {reviews.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => handleIndicatorClick(i)}
-              className={cn('cursor-pointer py-6 transition-all duration-500 ease-out', normalizedCurrent === i ? 'w-12' : 'w-7')}
-              aria-label={`Go to review ${i + 1}`}
-            >
-              <div className={cn('h-1 w-full rounded-full', normalizedCurrent === i ? 'bg-ocean' : 'bg-ocean-alt')} />
-            </button>
-          ))}
-        </div>
-
-        {/* Chevron arrows — right edge aligned to active card's right border */}
-        <div className="absolute flex items-center gap-3" style={{ right: `calc(100% - ${leftOffset + activeWidth}px)` }}>
+      {isMobile ? (
+        <div className="flex items-center justify-center gap-2 pt-4">
           <button
             onClick={goPrev}
             className="text-ocean hover:text-terracotta flex h-10 w-10 cursor-pointer items-center justify-center transition-colors"
@@ -166,6 +194,18 @@ export default function Carousel({ reviews }: CarouselProps) {
           >
             <ChevronLeft />
           </button>
+          <div className="flex gap-2">
+            {reviews.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => handleIndicatorClick(i)}
+                className={cn('cursor-pointer py-4 transition-all duration-500 ease-out', normalizedCurrent === i ? 'w-12' : 'w-7')}
+                aria-label={`Go to review ${i + 1}`}
+              >
+                <div className={cn('h-1 w-full rounded-full', normalizedCurrent === i ? 'bg-ocean' : 'bg-ocean-alt')} />
+              </button>
+            ))}
+          </div>
           <button
             onClick={goNext}
             className="text-ocean hover:text-terracotta flex h-10 w-10 cursor-pointer items-center justify-center transition-colors"
@@ -174,7 +214,40 @@ export default function Carousel({ reviews }: CarouselProps) {
             <ChevronRight />
           </button>
         </div>
-      </div>
+      ) : (
+        <div className="relative flex items-center" style={{ paddingLeft: leftOffset, marginTop: -(ACTIVE_LIFT / 2 - 8) }}>
+          <div className="flex gap-2">
+            {reviews.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => handleIndicatorClick(i)}
+                className={cn('cursor-pointer py-6 transition-all duration-500 ease-out', normalizedCurrent === i ? 'w-12' : 'w-7')}
+                aria-label={`Go to review ${i + 1}`}
+              >
+                <div className={cn('h-1 w-full rounded-full', normalizedCurrent === i ? 'bg-ocean' : 'bg-ocean-alt')} />
+              </button>
+            ))}
+          </div>
+
+          {/* Chevron arrows — right edge aligned to active card's right border */}
+          <div className="absolute flex items-center gap-3" style={{ right: `calc(100% - ${leftOffset + activeWidth}px)` }}>
+            <button
+              onClick={goPrev}
+              className="text-ocean hover:text-terracotta flex h-10 w-10 cursor-pointer items-center justify-center transition-colors"
+              aria-label="Previous review"
+            >
+              <ChevronLeft />
+            </button>
+            <button
+              onClick={goNext}
+              className="text-ocean hover:text-terracotta flex h-10 w-10 cursor-pointer items-center justify-center transition-colors"
+              aria-label="Next review"
+            >
+              <ChevronRight />
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

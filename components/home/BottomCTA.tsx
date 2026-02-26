@@ -3,7 +3,7 @@ import Button from '../Button';
 
 export default function CTA() {
   return (
-    <section className="mt-24 bg-[url(/images/city-center.webp)] bg-cover bg-center sm:min-h-[max(90dvh,700px)]" id="contact">
+    <section className="mt-18 bg-[url(/images/city-center.webp)] bg-cover bg-center sm:min-h-[max(90dvh,700px)] md:mt-24" id="contact">
       <div className="bg-blue-overlay-alt sm:min-h-[max(90dvh,700px)]">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 px-4 pt-8 pb-42 sm:gap-24 sm:pt-20 sm:pb-20">
           <h4 className="mb-2 flex max-w-[850px] flex-col items-center text-center text-balance text-white">
