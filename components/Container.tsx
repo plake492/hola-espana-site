@@ -52,7 +52,8 @@ export default function Container({ as: Element = 'section', children, className
   };
 
   const IconComponent = iconProps?.icon && iconProps.icon ? icons[iconProps.icon] : null;
-  const iconClasses = iconProps?.iconClassName || 'absolute top-0 right-0 -z-1 h-[360px] w-[360px] translate-x-[100px]';
+  const iconClasses =
+    iconProps?.iconClassName || 'absolute top-8 md:top-0 right-0 -z-1 md:h-[360px] md:w-[360px] h-[180px] w-[180px] translate-x-[70px] md:translate-x-[100px]';
   const iconColor = iconProps?.iconColor ? `text-${iconProps?.iconColor}` : '';
 
   return (

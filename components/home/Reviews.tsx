@@ -8,7 +8,7 @@ export default function Reviews() {
   return (
     <Container size="full">
       <TileBorder color="green" />
-      <Container className="pt-36 pb-18">
+      <Container className="px-4 py-8 md:px-8 md:pt-36 md:pb-18">
         <SectionHeading lines={['Peace of mind shared by our clients']} className="uppercase" textSize="text-3xl" iconColor="text-terracotta-off" />
       </Container>
       <Carousel reviews={reviews} />

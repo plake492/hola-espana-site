@@ -14,9 +14,9 @@ export default function TextWithIcon({ text, iconColor, className, as, textSize 
   const Tag = as || 'h3';
 
   return (
-    <Tag className={`${className} ${textSize} flex flex-row flex-wrap items-center gap-3`}>
+    <Tag className={`${className} ${textSize} flex flex-row flex-wrap items-center leading-loose md:gap-3`}>
       <span>{first}</span>
-      <span className={`${iconColor} mb-5 h-12 w-12 rotate-70`}>
+      <span className={`${iconColor} mr-1.5 mb-5 ml-1.5 h-12 w-12 rotate-70 md:mr-0 md:ml-0`}>
         <StarIcon />
       </span>
       <span>{last}</span>

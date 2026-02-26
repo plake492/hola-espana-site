@@ -6,11 +6,10 @@ import Accordion from '../Accordion';
 
 export default function WhyBookUs() {
   return (
-    <Container id="why-choose-us" className="my-24 px-8">
+    <Container id="why-choose-us" className="my-16 px-4 md:my-24 md:px-8">
       <SplitContainer
-        cols={'grid-cols-2'}
         imgSrc="/images/why-us-mosaic-casa.webp"
-        className="bg-ocean text-light py-18"
+        className="bg-ocean text-light py-8 md:py-18"
         header={<TextWithIcon textSize="text-3xl" text={copy.header} className="pr-8 uppercase" iconColor="text-sand-dark" as="h3" />}
       >
         <Accordion content={copy.list} />

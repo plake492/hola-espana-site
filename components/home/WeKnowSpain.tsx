@@ -8,12 +8,12 @@ export default function WhyBookUs() {
 
   return (
     <>
-      <Container id="why-choose-us" className="my-24 px-8">
+      <Container id="why-choose-us" className="my-16 px-4 md:my-24 md:px-8">
         <SplitContainer
           imgLeft
-          cols={'grid-cols-2 items-center'}
+          cols={'md:grid-cols-2 items-center'}
           imgSrc="/images/city-mosaic.webp"
-          className="bg-sand py-18 pr-8 text-black"
+          className="bg-sand py-8 text-black md:py-18 md:pr-8"
           header={<TextWithIcon textSize="text-3xl" text={header} className="uppercase" iconColor="text-terracotta-off" />}
           sectionFooter={
             <div>
@@ -21,13 +21,11 @@ export default function WhyBookUs() {
             </div>
           }
         >
-          {
-            <p className="text-md flex max-w-lg flex-col gap-3">
-              {content.body.map((text: string, i: number) => (
-                <span key={i}>{text}</span>
-              ))}
-            </p>
-          }
+          <p className="text-md flex max-w-lg flex-col gap-3">
+            {content.body.map((text: string, i: number) => (
+              <span key={i}>{text}</span>
+            ))}
+          </p>
         </SplitContainer>
       </Container>
     </>

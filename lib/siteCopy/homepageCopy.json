@@ -28,7 +28,7 @@
         "id": 2,
         "img": "bg-[url(/images/card-healthcare.webp)]",
         "title": "Health Insurance",
-        "bgPosition": "bg-position-[center_calc(50px_*_-1)] sm:bg-position-[-235px_calc(50px_*_-1)]",
+        "bgPosition": "bg-position-[center_calc(50px_*_-1)] md:bg-position-[-235px_calc(50px_*_-1)] bg-position-[0px_calc(50px_*_-1)]",
         "description": "Partnering with ASSSA for quality visa required insurance",
         "iconSrc": "/icons/card-healthcare-icon.png"
       },
@@ -118,7 +118,7 @@
     "sectionFooter": "Local expertise isn't just an advantage in Spain—it's essential."
   },
   "clearPath": {
-    "header": "A Clearer Path To Life In Spain",
+    "header": "A Clear Path To Life In Spain",
     "steps": [
       {
         "title": "Initial Consultation",

@@ -64,9 +64,9 @@
      "Perfectly arranged" at 96px ≈ 1209px wide, so at any viewport:
        max headline2 = (viewport - 128) * 96 / 1209
      ──────────────────────────────────────────────────────── */
-  --text-headline1: clamp(4.62rem, 0.16rem + 9.28vw, 8.75rem);
-  --text-headline2: clamp(3.17rem, 0.12rem + 6.36vw, 6rem);
-  --text-headline-sub: clamp(1.19rem, 0.06rem + 2.37vw, 2.25rem);
+  --text-headline1: clamp(2.75rem, -0.66rem + 10.08vw, 8.75rem);
+  --text-headline2: clamp(1.875rem, -0.47rem + 6.93vw, 6rem);
+  --text-headline-sub: clamp(1rem, 0.26rem + 2.13vw, 2.25rem);
 
   /* Homepage hero text left offset */
   --headline-ml-offset: clamp(0px, calc(135vw - 1280px), 150px);
@@ -105,7 +105,8 @@
   --text-4xl--line-height: 1.5;
   --text-5xl--line-height: 1.3;
   --text-headline1--line-height: 1.2;
-  --text-headline2--line-height: 1.125;
+  --text-headline2--line-height: 1.4;
+  --text-headline-sub--line-height: 1.4;
 
   /* ========================================
      CUSTOM MEDIA QUERY 
@@ -119,19 +120,19 @@
 }
 
 /* ========================================
-     MOBILE FONT SIZES 
+     MOBILE FONT SIZES (< 768px)
      ======================================== */
-/* TODO Update mobile sizes */
-@media (max-width: 639px) {
+@media (max-width: 767px) {
   :root {
-    --text-xs: 0.75rem;
-    --text-sm: 0.875rem;
-    --text-md: 1rem;
-    --text-lg: 1.125rem;
-    --text-xl: 1.25rem;
-    --text-2xl: 1.5rem;
-    --text-3xl: 1.75rem;
-    --text-4xl: 4rem;
+    --text-xs: 0.75rem; /* 12px */
+    --text-sm: 0.875rem; /* 14px */
+    --text-md: 1rem; /* 16px */
+    --text-lg: 1.125rem; /* 18px */
+    --text-xl: 1.25rem; /* 20px */
+    --text-2xl: 1.5rem; /* 24px */
+    --text-3xl: 1.75rem; /* 28px */
+    --text-4xl: 2.25rem; /* 36px */
+    --text-5xl: 2.75rem; /* 44px */
   }
 }
 

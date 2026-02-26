@@ -40,9 +40,9 @@ export default function SectionHeading({
         }
 
         return (
-          <span key={i} className={cn('flex flex-row flex-wrap items-center gap-3', offsetClass)}>
-            <span>{line.first}</span>
-            <span className={cn('mb-5 h-12 w-12 rotate-70', iconColor)}>
+          <span key={i} className={cn('flex flex-row flex-wrap items-center md:gap-3', offsetClass)}>
+            <span className="">{line.first}</span>
+            <span className={cn('mb-5 h-[25px] w-[25px] rotate-70 md:h-12 md:w-12', iconColor)}>
               <StarIcon />
             </span>
             <span>{line.last}</span>
