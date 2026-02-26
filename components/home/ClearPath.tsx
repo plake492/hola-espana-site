@@ -16,7 +16,7 @@ export default function ClearPath() {
         }}
       >
         <div className="py-12 md:pt-20 md:pb-28">
-          <h3 className="ml-auto max-w-4xl text-end text-3xl uppercase">{pageCopy.header}</h3>
+          <h3 className="ml-auto max-w-4xl text-end text-section-md uppercase">{pageCopy.header}</h3>
         </div>
       </Container>
 

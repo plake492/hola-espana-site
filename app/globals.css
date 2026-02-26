@@ -133,6 +133,12 @@
     --text-3xl: 1.75rem; /* 28px */
     --text-4xl: 2.25rem; /* 36px */
     --text-5xl: 2.75rem; /* 44px */
+
+    /* Section heading line heights — looser on mobile for readability */
+    --text-section-xl--line-height: 1.4;
+    --text-section-lg--line-height: 1.5;
+    --text-section-md--line-height: 1.5;
+    --text-section-sm--line-height: 1.5;
   }
 }
 

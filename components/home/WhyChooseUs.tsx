@@ -10,7 +10,7 @@ export default function WhyBookUs() {
       <SplitContainer
         imgSrc="/images/why-us-mosaic-casa.webp"
         className="bg-ocean text-light py-8 md:py-18"
-        header={<TextWithIcon textSize="text-3xl" text={copy.header} className="pr-8 uppercase" iconColor="text-sand-dark" as="h3" />}
+        header={<TextWithIcon textSize="text-section-md" text={copy.header} className="uppercase md:pr-8" iconColor="text-sand-dark" as="h3" />}
       >
         <Accordion content={copy.list} />
       </SplitContainer>

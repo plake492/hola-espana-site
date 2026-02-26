@@ -14,7 +14,7 @@ export default function WhyBookUs() {
           cols={'md:grid-cols-2 items-center'}
           imgSrc="/images/city-mosaic.webp"
           className="bg-sand py-8 text-black md:py-18 md:pr-8"
-          header={<TextWithIcon textSize="text-3xl" text={header} className="uppercase" iconColor="text-terracotta-off" />}
+          header={<TextWithIcon textSize="text-section-md" text={header} className="uppercase" iconColor="text-terracotta-off" />}
           sectionFooter={
             <div>
               <h6 className="text-start text-lg text-pretty">{sectionFooter}</h6>
