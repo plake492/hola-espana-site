@@ -146,12 +146,6 @@
   letter-spacing: var(--tracking-widest);
 }
 
-html,
-body {
-  height: 100%;
-  height: -webkit-fill-available;
-}
-
 body {
   font-family: var(--font-serif);
   overscroll-behavior-y: none;
