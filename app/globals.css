@@ -146,9 +146,17 @@
   letter-spacing: var(--tracking-widest);
 }
 
+html,
+body {
+  height: 100%;
+  height: -webkit-fill-available;
+}
+
 body {
   font-family: var(--font-serif);
   overscroll-behavior-y: none;
+  height: 100lvh;
+  height: -webkit-fill-available;
 }
 
 /* *:not(:is(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) {
