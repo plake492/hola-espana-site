@@ -148,7 +148,11 @@
 
 body {
   font-family: var(--font-serif);
+}
+html,
+body {
   overscroll-behavior-y: none;
+  overflow-anchor: none; /* prevents scroll anchoring jumps */
 }
 
 /* *:not(:is(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) {
