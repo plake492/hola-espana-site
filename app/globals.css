@@ -149,7 +149,6 @@
 body {
   font-family: var(--font-serif);
   overscroll-behavior-y: none;
-  height: 100lvh;
   height: -webkit-fill-available;
 }
 

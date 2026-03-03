@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <Container
       size="full"
-      className="relative flex min-h-[max(85dvh,550px)] w-full flex-col items-center justify-center overflow-hidden bg-black text-white md:min-h-[max(calc(100dvh+250px),950px)]"
+      className="relative flex min-h-[max(85svh,550px)] w-full flex-col items-center justify-center overflow-hidden bg-black text-white md:min-h-[max(calc(100svh+250px),950px)]"
       id="hero"
     >
       <div className="absolute top-0 left-0 z-0 h-full w-full">
