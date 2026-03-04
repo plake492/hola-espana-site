@@ -12,7 +12,7 @@ interface BlogPostsProps {
 
 export default function BlogPosts({ posts }: BlogPostsProps) {
   return (
-    <Container className="px-4 pb-48 md:px-8">
+    <Container className="px-4 pb-24 md:px-8">
       <ul className="grid grid-cols-1 gap-20 sm:grid-cols-2 md:gap-24">
         {posts.map((post) => (
           <li key={post._id}>

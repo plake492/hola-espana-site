@@ -8,6 +8,7 @@ interface ButtonProps {
   as?: ElementType;
   className?: string;
   variant?: Variant;
+  onClick?: (e: React.MouseEvent) => void;
 }
 
 const variantStyles: Record<Variant, string> = {
@@ -15,9 +16,10 @@ const variantStyles: Record<Variant, string> = {
   sand: 'before:bg-sand after:bg-[#e3d8ce] text-black',
 };
 
-export default function Button({ as: Tag = 'button', children, className, variant = 'terracotta' }: ButtonProps) {
+export default function Button({ as: Tag = 'button', onClick, children, className, variant = 'terracotta' }: ButtonProps) {
   return (
     <Tag
+      onClick={onClick}
       className={cn(
         'text-light relative w-fit cursor-pointer rounded-md px-8 py-2 text-2xl font-light active:text-white',
         'before:absolute before:inset-0 before:z-0 before:rounded-md',
