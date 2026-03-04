@@ -6,7 +6,7 @@ import { type SanityDocument } from 'next-sanity';
 const POSTS_QUERY = `*[
   _type == "post"
   && defined(slug.current)
-]|order(publishedAt desc){_id, title, slug, publishedAt, mainImage, excerpt, categories}`;
+]|order(publishedAt desc){_id, title, slug, publishedAt, mainImage, excerpt, categories, body}`;
 
 const options = { next: { revalidate: 30 } };
 

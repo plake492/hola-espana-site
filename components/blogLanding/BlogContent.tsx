@@ -1,7 +1,8 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { type SanityDocument } from 'next-sanity';
+import { useDebounce } from '@/hooks/useDebounce';
 import Filters from './Filters';
 import BlogPosts from './BlogPosts';
 import Container from '../Container';
@@ -9,31 +10,58 @@ import { cn } from '@/lib/utils/cn';
 
 const POSTS_PER_PAGE = 6;
 
+function extractPlainText(body: any[]): string {
+  return body?.map((block) => (block._type === 'block' ? block.children?.map((child: any) => child.text).join(' ') : '')).join(' ') || '';
+}
+
+function searchPosts(posts: SanityDocument[], query: string): SanityDocument[] {
+  const q = query.toLowerCase().trim();
+  if (!q) return posts;
+  return posts.filter((post) => {
+    const searchText = [post.title, post.excerpt, post.categories?.join(' '), extractPlainText(post.body)].join(' ').toLowerCase();
+    return searchText.includes(q);
+  });
+}
+
 interface BlogContentProps {
   posts: SanityDocument[];
 }
 
 export default function BlogContent({ posts }: BlogContentProps) {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [debouncedQuery, setDebouncedQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(0);
 
-  const filteredPosts = useMemo(() => {
-    if (selectedCategories.length === 0) return posts;
-    return posts.filter((post) =>
-      post.categories?.some((cat: string) => selectedCategories.includes(cat))
-    );
-  }, [posts, selectedCategories]);
+  const debouncedSearch = useDebounce((query: string) => {
+    setDebouncedQuery(query);
+    setCurrentPage(0);
+  }, 300);
 
-  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
-  const displayedPosts = filteredPosts.slice(
-    currentPage * POSTS_PER_PAGE,
-    (currentPage + 1) * POSTS_PER_PAGE
+  const handleSearchChange = useCallback(
+    (query: string) => {
+      setSearchQuery(query);
+      debouncedSearch(query);
+    },
+    [debouncedSearch]
   );
 
+  const filteredPosts = useMemo(() => {
+    let result = posts;
+    if (selectedCategories.length > 0) {
+      result = result.filter((post) => post.categories?.some((cat: string) => selectedCategories.includes(cat)));
+    }
+    if (debouncedQuery) {
+      result = searchPosts(result, debouncedQuery);
+    }
+    return result;
+  }, [posts, selectedCategories, debouncedQuery]);
+
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+  const displayedPosts = filteredPosts.slice(currentPage * POSTS_PER_PAGE, (currentPage + 1) * POSTS_PER_PAGE);
+
   function handleToggleCategory(value: string) {
-    setSelectedCategories((prev) =>
-      prev.includes(value) ? prev.filter((c) => c !== value) : [...prev, value]
-    );
+    setSelectedCategories((prev) => (prev.includes(value) ? prev.filter((c) => c !== value) : [...prev, value]));
     setCurrentPage(0);
   }
 
@@ -48,6 +76,8 @@ export default function BlogContent({ posts }: BlogContentProps) {
         selectedCategories={selectedCategories}
         onToggleCategory={handleToggleCategory}
         onSelectAll={handleSelectAll}
+        searchQuery={searchQuery}
+        onSearchChange={handleSearchChange}
         resultCount={filteredPosts.length}
       />
       <BlogPosts posts={displayedPosts} />
