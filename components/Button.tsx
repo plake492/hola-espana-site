@@ -1,26 +1,33 @@
 import { ElementType, ReactNode } from 'react';
+import { cn } from '@/lib/utils/cn';
+
+type Variant = 'terracotta' | 'sand';
 
 interface ButtonProps {
   children: ReactNode;
   as?: ElementType;
   className?: string;
+  variant?: Variant;
 }
 
-// TODO Add button variations
-export default function Button({ as: Tag = 'button', children, className }: ButtonProps) {
-  const beforeClasses = 'before:absolute before:inset-0 before:bg-terracotta before:rounded-md before:z-0';
-  const afterClasses =
-    'after:w-[calc(100%+4px)] after:h-[calc(100%+4px)] after:-translate-x-[4px] after:p-1 after:absolute after:inset-0 after:bg-terracotta-alt after:rounded-md after:-z-1';
-  const hoverClasses = 'transition after:transition hover:-translate-y-[2px] hover:shadow-lg active:shadow-xl active:-translate-0';
+const variantStyles: Record<Variant, string> = {
+  terracotta: 'before:bg-terracotta after:bg-terracotta-alt text-white',
+  sand: 'before:bg-sand after:bg-[#e3d8ce] text-black',
+};
 
-  const classes =
-    `bg-terracotta text-light active:text-white cursor-pointer rounded-md relative w-fit text-2xl font-light px-8 py-2 ${beforeClasses} ${afterClasses} ${hoverClasses} ${className}`
-      .trim()
-      .replace(/ +/g, ' ');
-
+export default function Button({ as: Tag = 'button', children, className, variant = 'terracotta' }: ButtonProps) {
   return (
-    <Tag className={classes}>
-      <span className="color relative z-1">{children}</span>
+    <Tag
+      className={cn(
+        'text-light relative w-fit cursor-pointer rounded-md px-8 py-2 text-2xl font-light active:text-white',
+        'before:absolute before:inset-0 before:z-0 before:rounded-md',
+        'after:absolute after:inset-0 after:-z-1 after:h-[calc(100%+4px)] after:w-[calc(100%+4px)] after:-translate-x-1 after:rounded-md after:p-1',
+        'transition after:transition hover:-translate-y-0.5 hover:shadow-lg active:translate-0 active:shadow-xl',
+        variantStyles[variant],
+        className
+      )}
+    >
+      <span className="relative z-1">{children}</span>
     </Tag>
   );
 }

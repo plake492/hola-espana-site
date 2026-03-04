@@ -1,0 +1,9 @@
+{
+  "hero": {
+    "header": ["Hola España", { "first": "Relocation", "last": "Blog" }],
+    "description": [
+      "Relocating to Spain comes with important decisions at every step. This blog is a collection of helpful articles for every stage of your journey,written to provide clarity, local insight, and practical guidance you can trust.",
+      "Whether you're planning your move or already settling in, you'll find straightforward answers and professional insight to help you move forward withconfidence."
+    ]
+  }
+}
