@@ -82,7 +82,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
       />
       <BlogPosts posts={displayedPosts} />
       {totalPages > 1 && (
-        <Container className="flex items-center justify-center gap-6 px-8 pb-24">
+        <Container className="flex items-center justify-center gap-6 px-8 pb-8 md:pb-24">
           <button
             onClick={() => setCurrentPage((p) => p - 1)}
             disabled={currentPage === 0}

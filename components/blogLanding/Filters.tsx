@@ -26,9 +26,9 @@ export default function Filters({ selectedCategories, onToggleCategory, onSelect
   const hasActiveFilters = !allSelected || searchQuery.length > 0;
 
   return (
-    <Container className="px-4 py-24 pb-12 md:px-8">
-      <div className="flex items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
+    <Container className="px-4 py-12 pb-12 md:px-8 md:py-24">
+      <div className="flex flex-wrap-reverse items-center justify-between gap-4">
+        <div className="mt-4 flex flex-wrap items-center gap-3 md:mt-0">
           <div className="mr-4">
             <FilterButton active={allSelected} onClick={onSelectAll}>
               All Posts
@@ -42,7 +42,7 @@ export default function Filters({ selectedCategories, onToggleCategory, onSelect
         </div>
 
         {/* Search */}
-        <div className="relative">
+        <div className="relative w-full self-start md:w-auto">
           <svg
             className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 opacity-40"
             viewBox="0 0 24 24"
@@ -61,7 +61,7 @@ export default function Filters({ selectedCategories, onToggleCategory, onSelect
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
             autoComplete="off"
-            className="border-sand bg-sand focus:border-sand-dark w-48 rounded-md border py-2 pr-8 pl-9 text-sm tracking-widest transition-colors outline-none"
+            className="border-sand bg-sand focus:border-sand-dark w-full self-start rounded-md border py-2 pr-8 pl-9 text-sm tracking-widest transition-colors outline-none md:mb-0 md:w-48"
           />
           {searchQuery && (
             <button
@@ -89,7 +89,7 @@ function FilterButton({ active, onClick, children }: { active: boolean; onClick:
     <button
       onClick={onClick}
       className={cn(
-        'cursor-pointer rounded-md border px-5 py-2 text-sm tracking-widest transition-all',
+        'cursor-pointer rounded-md border px-5 py-2 text-xs tracking-widest transition-all md:text-sm',
         active ? 'border-sand-dark bg-sand-dark text-white hover:bg-[#c49a6a]' : 'border-sand bg-sand hover:border-sand-dark hover:bg-sand text-black'
       )}
     >

@@ -12,8 +12,8 @@ interface BlogPostsProps {
 
 export default function BlogPosts({ posts }: BlogPostsProps) {
   return (
-    <Container className="px-4 pb-24 md:px-8">
-      <ul className="grid grid-cols-1 gap-20 sm:grid-cols-2 md:gap-24">
+    <Container className="px-4 pb-12 md:px-8 md:pb-24">
+      <ul className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:gap-24">
         {posts.map((post) => (
           <li key={post._id}>
             <BlogPostCard post={post} />
@@ -28,7 +28,7 @@ function BlogPostCard({ post }: { post: SanityDocument }) {
   const imageUrl = post.mainImage ? urlFor(post.mainImage).width(600).height(350).url() : null;
 
   return (
-    <Link href={`/blog/${post.slug?.current}`} className="group flex h-full flex-col justify-between gap-4">
+    <Link href={`/blog/${post.slug?.current}`} className="group flex h-full flex-col justify-between gap-2 md:gap-4">
       <div>
         {imageUrl && (
           <div className="mb-4 overflow-hidden">
