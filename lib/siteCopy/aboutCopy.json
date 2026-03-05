@@ -1,0 +1,55 @@
+{
+  "hero": {
+    "header": [{ "first": "Meet the", "last": "experts" }],
+    "subHeader": "Navigating a move to Spain without guidance can be stressful and costly.",
+    "description": [
+      "We're passionate about helping people feel at home in Spain because we've seen how deeply a move can transform lives. Our role is to provide thoughtful, personalized support, so our clients can focus on settling in, enjoying their new life, and moving forward with confidence — knowing every detail is handled by people who truly know the system."
+    ]
+  },
+  "profileMain": {
+    "header": "FATIMA BOUKRIM",
+    "description": [
+      "At the heart of our company is Fatima, a native of Madrid, a Spanish lawyer specializing in labor and employment law, and a Spanish tax expert.",
+      "Growing up in Madrid, she learned firsthand how rewarding, and sometimes complex, life in Spain can be. With years of experience navigating Spain's legal, tax, and administrative systems, Fatima built this company to provide guidance and clarity to anyone making the move here."
+    ],
+    "imageSrc": "/images/fatima-main-site.webp"
+  },
+  "ourStory": {
+    "header": { "first": "Rooted in Spain.", "last": "Focused on you." },
+    "description": [
+      "Our team of Spanish professionals shares Fatima's commitment to accuracy, local insight, and exceptional service. Because we live and work in Spain, our clients benefit from direct access to authorities, trusted partners, and truly local expertise — removing the guesswork and giving expats confidence from day one."
+    ]
+  },
+  "team": {
+    "header": "MEET OUR PARTNERS",
+    "description": "We collaborate with trusted Spanish professionals to provide a seamless relocation experience. Each partner brings specialized expertise, ensuring every aspect of your move is handled with accuracy, efficiency, and local insight.",
+    "members": [
+      {
+        "name": "Cristina Fuentes Trillo",
+        "role": "Legal, court and EU parliament translations and interpretation",
+        "imageSrc": "/images/cristina.webp",
+        "bio": []
+      },
+      {
+        "name": "Ahmad Laabori & Yusra Dandash",
+        "role": "Attorneys at law specialized in Immigration, Labor Law, Social Security and Tax",
+        "imageSrc": "/images/ahmad-yusra.webp",
+        "bio": []
+      },
+      {
+        "name": "Erika Medina",
+        "role": "Financial & Real Estate Agent",
+        "imageSrc": "/images/erika.webp",
+        "bio": []
+      },
+      {
+        "name": "ASSSA Insurance",
+        "role": "Expat Health Insurance in Spain",
+        "imageSrc": "/images/asssa.webp",
+        "bio": [
+          "90 years of experience in serving the expat community in Spain with the best doctors, best technology and personal service. Enjoy the peace of mind offered by our exclusive guarantees, coverage that meets visa requirements and our unique expat service"
+        ]
+      }
+    ]
+  }
+}

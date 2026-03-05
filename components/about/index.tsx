@@ -1,7 +1,7 @@
 import Hero from './Hero';
+import ProfileMain from './ProfileMain';
+import GradientWrapper from './GradientWrapper';
 import OurStory from './OurStory';
 import Team from './Team';
-import WhatYouGet from './WhatYouGet';
-import CTA from './CTA';
 
-export { Hero, OurStory, Team, WhatYouGet, CTA };
+export { Hero, ProfileMain, GradientWrapper, OurStory, Team };

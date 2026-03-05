@@ -1,14 +1,14 @@
-import React from 'react';
-import { Hero, OurStory, Team, WhatYouGet, CTA } from '@/components/about';
+import { Hero, ProfileMain, GradientWrapper, OurStory, Team } from '@/components/about';
 
 export default function page() {
   return (
     <>
       <Hero />
-      <OurStory />
-      <Team />
-      <WhatYouGet />
-      <CTA />
+      <ProfileMain />
+      <GradientWrapper>
+        <OurStory />
+        <Team />
+      </GradientWrapper>
     </>
   );
 }

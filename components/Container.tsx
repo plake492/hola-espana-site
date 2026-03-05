@@ -1,5 +1,6 @@
 import { ElementType, ReactNode } from 'react';
 import { SunIcon, StarIcon } from './Icons';
+import { cn } from '@/lib/utils/cn';
 
 interface IconProps {
   icon?: 'star' | 'sun';
@@ -57,7 +58,7 @@ export default function Container({ as: Element = 'section', children, className
   const iconColor = iconProps?.iconColor ? `text-${iconProps?.iconColor}` : '';
 
   return (
-    <Element className={`relative w-full ${containerSize[size]} ${className || ''} ${!noCenter && 'mx-auto'}`.trim().replace(/ +/g, ' ')} {...rest}>
+    <Element className={cn('relative w-full', containerSize[size], !noCenter && 'mx-auto', className)} {...rest}>
       {IconComponent && (
         <div className={`${iconClasses} ${iconColor}`}>
           <IconComponent />
