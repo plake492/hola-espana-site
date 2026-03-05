@@ -42,7 +42,7 @@ const StaticHeader = () => {
     <header className={`h-[${HEADER_HEIGHT}px] bg-terracotta absolute top-0 left-0 z-50 w-full text-white md:fixed`}>
       <div className="max-w-8xl relative mx-auto flex w-full flex-col items-center justify-between px-4 py-2 min-[850px]:flex-row">
         <div className="max-[850px]:max-w-[325px]">
-          <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <Link href="/">
             <Image alt="site logo" src="/logo/logo.svg" width={200} height={100} className="h-auto w-full invert-100" />
           </Link>
         </div>
@@ -91,7 +91,7 @@ const AnimatedHeader = () => {
     <animated.header style={springStyles} className={`h-[${HEADER_HEIGHT}px] absolute top-0 left-0 z-50 w-full text-white md:fixed`}>
       <div className="max-w-8xl relative mx-auto flex w-full flex-col items-center justify-between px-4 py-2 min-[850px]:flex-row">
         <animated.div style={logoStyle} className="max-[850px]:max-w-[300px]">
-          <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <Link href="/">
             <Image alt="site logo" src="/logo/logo.svg" width={200} height={100} className="h-auto w-full invert-100" />
           </Link>
         </animated.div>

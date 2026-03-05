@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <head>
         <link rel="preload" href="/fonts/Tan_Aeagean/TANAEGEAN-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/La_Luxes_Script/LaLuxesScript.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />

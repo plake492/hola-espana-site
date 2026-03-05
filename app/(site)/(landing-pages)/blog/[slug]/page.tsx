@@ -74,7 +74,6 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
   return (
     <Container as="main" size="full" className="mx-auto flex flex-col gap-4 pb-16 md:pb-24">
-      <ScrollToTop />
       <Container as="div" className="px-4 md:px-8">
         <Link href="/blog" className="hover:underline">
           ← Back to posts
