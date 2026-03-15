@@ -5,5 +5,27 @@
       "Whether you're exploring life in Spain or ready to begin your relocation, we're here to help. With clear guidance, local expertise, and personalized support, you can move forward with confidence.",
       "Questions about visas, legal or tax matters, housing, or our services? We'd be happy to speak with you."
     ]
+  },
+  "calendar": {
+    "heading": "Book Your Free 20 Min Call",
+    "disclaimer": "No obligation. Just clear, professional guidance."
+  },
+  "email": {
+    "heading": "Email Fatima Directly",
+    "fields": {
+      "name": "Name",
+      "email": "E-mail",
+      "serviceType": "Service Type",
+      "message": "Write Message"
+    },
+    "serviceOptions": [
+      "Golden Visa",
+      "Digital Nomad Visa",
+      "Non-Lucrative Visa",
+      "Tax Advisory",
+      "Housing & Relocation",
+      "Other"
+    ],
+    "submit": "Send"
   }
 }

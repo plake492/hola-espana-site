@@ -20,21 +20,13 @@ export default function FAQ() {
 
       <div className="mx-auto max-w-3xl">
         {copy.items.map((item, i) => (
-          <div key={i} className="border-b border-sand">
-            <button
-              onClick={() => toggle(i)}
-              className="flex w-full cursor-pointer items-center justify-between py-5 text-left"
-            >
-              <span className="text-sm uppercase tracking-widest">{item.question}</span>
-              <span className="ml-4 flex-shrink-0 text-lg">{openIndex === i ? '×' : '+'}</span>
+          <div key={i} className="border-sand border-b">
+            <button onClick={() => toggle(i)} className="flex w-full cursor-pointer items-center justify-between py-5 text-left">
+              <span className="text-sm tracking-widest uppercase">{item.question}</span>
+              <span className="ml-4 shrink-0 text-lg">{openIndex === i ? '×' : '+'}</span>
             </button>
-            <div
-              className={cn(
-                'overflow-hidden transition-all duration-300',
-                openIndex === i ? 'max-h-96 pb-6' : 'max-h-0'
-              )}
-            >
-              <p className="text-sm text-color-dark">{item.answer}</p>
+            <div className={cn('overflow-hidden transition-all duration-300', openIndex === i ? 'max-h-96 pb-6' : 'max-h-0')}>
+              <p className="text-color-dark text-sm">{item.answer}</p>
             </div>
           </div>
         ))}
