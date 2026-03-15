@@ -7,7 +7,6 @@ import { notFound } from 'next/navigation';
 import Container from '@/components/Container';
 import { urlFor } from '@/sanity/lib/image';
 import Pill from '@/components/Pill';
-import ScrollToTop from '@/components/ScrollToTop';
 
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
 

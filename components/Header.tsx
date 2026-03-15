@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useSpring, animated } from '@react-spring/web';
 import { HEADER_HEIGHT } from '@/lib/constants';
+import Button from './Button';
 
 const pages = [
   {
@@ -57,6 +58,13 @@ const StaticHeader = () => {
               {page.text}
             </Link>
           ))}
+          <div className="ml-8">
+            <Link href="/contact">
+              <Button as="span" variant="sand" className="text-md">
+                Contact
+              </Button>
+            </Link>
+          </div>
         </nav>
       </div>
     </header>
@@ -95,7 +103,7 @@ const AnimatedHeader = () => {
             <Image alt="site logo" src="/logo/logo.svg" width={200} height={100} className="h-auto w-full invert-100" />
           </Link>
         </animated.div>
-        <nav className="hidden flex-1 justify-end gap-4 min-[850px]:flex">
+        <nav className="hidden flex-1 cursor-pointer items-baseline justify-end gap-4 min-[850px]:flex">
           {pagesFilteres.map((page) => (
             <Link
               key={page.id}
@@ -105,6 +113,13 @@ const AnimatedHeader = () => {
               {page.text}
             </Link>
           ))}
+          <div className="ml-8">
+            <Link href="/contact">
+              <Button as="span" variant={scrolled ? 'sand' : 'terracotta'} className="text-md transition-all duration-200">
+                Contact
+              </Button>
+            </Link>
+          </div>
         </nav>
       </div>
     </animated.header>

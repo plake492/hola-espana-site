@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "header": ["Services &", { "first": "", "last": "Packages" }],
+    "subHeader": "Relocation Support Your Way",
+    "description": [
+      "We offer tiered relocation packages designed to give you the right level of support for your move to Spain. From essential legal guidance to fully managed relocation, each option is built for clarity, confidence, and peace of mind."
+    ],
+    "imageSrc": "/images/hero-packages.webp",
+    "buttonText": "Talk to an expert"
+  },
+  "packages": {
+    "header": "Packages",
+    "description": "Choose the level of support that fits your needs",
+    "subDescription": "Tailored relocation services to guide you every step of the way",
+    "tiers": [
+      {
+        "name": "Essential Guidance",
+        "description": "Professional guidance for a compliant start",
+        "features": [
+          "Visa and residency eligibility assessment and guidance",
+          "Documentation review and application preparation",
+          "Certified document translation by a Spanish government-accredited translator",
+          "Visa-compliant expat insurance coordination",
+          "Clear step-by-step relocation roadmap",
+          "Email support for application-related questions"
+        ],
+        "price": "$1500"
+      },
+      {
+        "name": "Full Relocation Support",
+        "description": "Comprehensive assistance throughout your journey",
+        "features": [
+          "Everything in the Essential Guidance +",
+          "Full visa and residency application management",
+          "Coordination with Spanish attorneys and tax advisors",
+          "Tax orientation and residency overview",
+          "Introductions to trusted local real estate agents",
+          "Housing contract review support",
+          "Appointment scheduling for NIE",
+          "Translator support for key appointments when required",
+          "Pre-arrival and post-arrival planning support"
+        ],
+        "price": "$4500",
+        "featured": true
+      },
+      {
+        "name": "End-to-End Relocation",
+        "description": "A premium fully managed relocation",
+        "features": [
+          "Everything in the Full Relocation Support +",
+          "End-to-end relocation planning and management",
+          "Priority coordination with Spanish legal and tax professionals",
+          "Comprehensive tax planning and ongoing advisory setup",
+          "Full housing support including landlord communication, negotiation, and rental applications to secure local rates",
+          "Certified document translation and in-person translator accompaniment for appointments",
+          "Post-arrival appointment support and registrations",
+          "Ongoing support after arrival for renewals, updates, and compliance",
+          "Dedicated point of contact throughout your relocation"
+        ],
+        "price": "$9500"
+      }
+    ]
+  },
+  "cta": {
+    "header": "Not sure where to start or which path makes the most sense for your situation?",
+    "intro": "Schedule a free 20-minute strategy call with our team. During the call we will:",
+    "points": [
+      "Review your relocation goals and timeline",
+      "Clarify visa, legal, and tax considerations",
+      "Help you understand your next steps",
+      "Recommend the best support option for your needs"
+    ],
+    "footer": "No obligation. Just clear, honest guidance from local Spanish experts.",
+    "buttonText": "Speak with an expert"
+  },
+  "faq": {
+    "header": ["Frequently Asked", { "first": "", "last": "Questions" }],
+    "items": [
+      {
+        "question": "What types of visas do you help with?",
+        "answer": "We assist with a range of Spanish visa types including the Digital Nomad Visa, Non-Lucrative Visa, Golden Visa, and work permits. During your consultation, we'll determine which visa best fits your situation and goals."
+      },
+      {
+        "question": "How long does the relocation process typically take?",
+        "answer": "Timelines vary depending on the visa type and individual circumstances, but most clients can expect the process to take between 3 to 6 months from initial consultation to arrival in Spain. We'll give you a clear timeline during your strategy call."
+      },
+      {
+        "question": "Do I need to speak Spanish to relocate?",
+        "answer": "No, you don't need to speak Spanish. Our team handles all communication with Spanish authorities, landlords, and service providers on your behalf. We also provide translator support for key appointments when needed."
+      },
+      {
+        "question": "Can I upgrade my package after starting?",
+        "answer": "Yes, you can upgrade your package at any time. We'll credit what you've already paid toward the higher tier, so you only pay the difference. Many clients start with Essential Guidance and upgrade as their needs evolve."
+      },
+      {
+        "question": "What happens after my visa is approved?",
+        "answer": "Depending on your package, we continue supporting you with post-arrival tasks like NIE registration, local bank setup, housing coordination, and ongoing compliance. Our Full and End-to-End packages include comprehensive post-arrival support."
+      }
+    ]
+  }
+}

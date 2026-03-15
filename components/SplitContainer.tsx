@@ -36,7 +36,7 @@ export default function SplitContainer({
           <>
             <div className="block px-6 md:hidden md:pr-16 md:pl-8">{children}</div>
             <div className={cn('col-span-1 col-start-0 mt-4 mr-8 w-[110%] justify-self-end md:mt-0 md:mr-0', imgWidthClasses)}>
-              <Image src={imgSrc} alt={alt} width={800} height={600} className="h-auto w-full object-cover" />
+              <Image src={imgSrc} alt={alt} width={800} height={550} className="h-auto w-full object-cover" />
               {underImageContent}
             </div>
             <div className="hidden px-8 md:block md:pr-16 md:pl-8">{children}</div>
@@ -45,7 +45,7 @@ export default function SplitContainer({
           <>
             <div className="px-6 md:self-stretch md:pr-8 md:pl-16">{children}</div>
             <div className={cn('mt-4 ml-8 w-[110%] md:col-span-2 md:col-start-2 md:mt-0 md:ml-0 md:h-full', imgWidthClasses)}>
-              <Image src={imgSrc} alt={alt} width={800} height={600} className="h-auto w-full object-cover" />
+              <Image src={imgSrc} alt={alt} width={800} height={550} className="h-auto w-full object-cover" />
               {underImageContent}
             </div>
           </>
