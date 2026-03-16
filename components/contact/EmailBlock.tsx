@@ -37,12 +37,11 @@ export default function EmailBlock() {
     }
   };
 
-  const fieldClass =
-    'w-full rounded-sm bg-default px-3 py-1.5 font-serif text-xs text-black placeholder:text-[#b3b3b3] outline-none focus:ring-1 focus:ring-ocean';
+  const fieldClass = 'w-full bg-default px-3 py-3 font-serif text-xs text-black placeholder:text-[#b3b3b3] outline-none focus:ring-1 focus:ring-ocean';
 
   return (
-    <div className="bg-ocean-alt flex flex-col gap-4 rounded-sm p-5 text-white">
-      <div className="flex gap-4">
+    <div className="bg-ocean-alt flex flex-col gap-4 px-4 pt-12 pb-4 text-white">
+      <div className="grid grid-cols-[175px_auto] gap-4">
         {/* Left: label */}
         <p className="w-24 shrink-0 font-serif text-lg leading-snug">{copy.heading}</p>
 
@@ -52,7 +51,7 @@ export default function EmailBlock() {
             <p className="text-center font-serif text-sm">Thanks! We&apos;ll be in touch soon.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-1 flex-col gap-2">
+          <form onSubmit={handleSubmit} className="flex flex-1 flex-col gap-3">
             <input type="text" placeholder={copy.fields.name} value={form.name} onChange={handleChange('name')} required className={fieldClass} />
             <input type="email" placeholder={copy.fields.email} value={form.email} onChange={handleChange('email')} required className={fieldClass} />
             <div className="relative">
@@ -72,9 +71,9 @@ export default function EmailBlock() {
               placeholder={copy.fields.message}
               value={form.message}
               onChange={handleChange('message')}
-              rows={4}
+              rows={6}
               required
-              className={`${fieldClass} resize-none`}
+              className={`${fieldClass} mt-2 resize-none`}
             />
             {status === 'error' && <p className="font-serif text-xs text-white/80">Something went wrong — please try again.</p>}
             <div className="flex justify-end">

@@ -11,23 +11,28 @@ import Button from './Button';
 const pages = [
   {
     id: 1,
-    href: '/about',
-    text: 'About',
+    href: '/packages',
+    text: 'packages',
   },
   {
-    id: 2,
-    href: '/services',
-    text: 'Services',
+    id: 5,
+    href: '/about',
+    text: 'about',
   },
   {
     id: 3,
-    href: '/packages',
-    text: 'Packages',
+    href: '/legal',
+    text: 'legal',
   },
   {
     id: 4,
+    href: '/visas',
+    text: 'visas',
+  },
+  {
+    id: 2,
     href: '/blog',
-    text: 'Blog',
+    text: 'blog',
   },
 ];
 
@@ -53,12 +58,12 @@ const StaticHeader = () => {
             <Link
               key={page.id}
               href={page.href}
-              className="text-md relative uppercase after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
+              className="relative text-sm uppercase after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
             >
               {page.text}
             </Link>
           ))}
-          <div className="ml-8">
+          <div className="ml-16">
             <Link href="/contact">
               <Button as="span" variant="sand" className="text-md">
                 Contact
@@ -108,12 +113,12 @@ const AnimatedHeader = () => {
             <Link
               key={page.id}
               href={page.href}
-              className="text-md relative uppercase after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
+              className="relative text-sm uppercase after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
             >
               {page.text}
             </Link>
           ))}
-          <div className="ml-8">
+          <div className="ml-16">
             <Link href="/contact">
               <Button as="span" variant={scrolled ? 'sand' : 'terracotta'} className="text-md transition-all duration-200">
                 Contact
