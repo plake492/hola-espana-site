@@ -40,8 +40,8 @@ export default function EmailBlock() {
   const fieldClass = 'w-full bg-default px-3 py-3 font-serif text-xs text-black placeholder:text-[#b3b3b3] outline-none focus:ring-1 focus:ring-ocean';
 
   return (
-    <div className="bg-ocean-alt flex flex-col gap-4 px-4 pt-12 pb-4 text-white">
-      <div className="grid grid-cols-[175px_auto] gap-4">
+    <div className="bg-ocean-alt flex flex-col gap-4 px-4 pt-8 pb-4 text-white md:pt-12">
+      <div className="flex flex-col gap-4 md:grid md:grid-cols-[175px_auto]">
         {/* Left: label */}
         <p className="w-24 shrink-0 font-serif text-lg leading-snug">{copy.heading}</p>
 
