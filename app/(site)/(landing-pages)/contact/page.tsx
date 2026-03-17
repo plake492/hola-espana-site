@@ -13,7 +13,7 @@ const socialLinks = [
 export default function ContactPage() {
   return (
     <Container id="contact" size="full">
-      <div className="relative mx-8 mt-18 min-h-[max(90svh,700px)] bg-[url(/images/city-center.webp)] bg-cover bg-center md:mt-24">
+      <div className="relative mx-8 mt-18 min-h-[max(90svh,700px)] bg-[url(/images/city-center.webp)] bg-cover bg-center md:my-24">
         <div className="bg-blue-overlay min-h-[max(90svh,700px)]">
           {/* Content */}
           <div className="mx-auto grid grid-cols-[1fr_650px] items-start justify-between gap-24 px-24 py-16">
