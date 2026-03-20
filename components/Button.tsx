@@ -21,10 +21,10 @@ export default function Button({ as: Tag = 'button', onClick, children, classNam
     <Tag
       onClick={onClick}
       className={cn(
-        'text-light relative w-fit cursor-pointer rounded-md px-8 py-2 text-2xl font-light active:text-white',
-        'before:absolute before:inset-0 before:z-0 before:rounded-md',
+        'isolate text-light relative w-fit cursor-pointer rounded-md px-8 py-2 text-2xl font-light active:text-white',
+        'before:absolute before:inset-0 before:z-0 before:rounded-md before:transition',
         'after:absolute after:inset-0 after:-z-1 after:h-[calc(100%+4px)] after:w-[calc(100%+4px)] after:-translate-x-1 after:rounded-md after:p-1',
-        'transition after:transition hover:-translate-y-0.5 hover:shadow-lg active:translate-0 active:shadow-xl',
+        'transition hover:-translate-y-0.5 hover:before:shadow-lg active:translate-0',
         variantStyles[variant],
         className
       )}

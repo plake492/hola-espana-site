@@ -23,7 +23,7 @@ export default function Hero() {
             ))}
           </div>
           <Link href="/contact">
-            <Button as="span" className="text-md uppercase">
+            <Button className="text-md uppercase" variant="sand">
               {copy.buttonText}
             </Button>
           </Link>

@@ -15,10 +15,10 @@ export default function FAQ() {
   }
 
   return (
-    <Container className="bg-white px-4 py-16 md:px-8 md:py-24">
+    <Container className="px-4 py-16 md:px-8 md:pt-36 md:pb-24">
       <SectionHeading lines={copy.header} className="mb-12 uppercase md:mb-16" textSize="text-section-md" iconColor="text-sand-dark" />
 
-      <div className="mx-auto max-w-3xl">
+      <div className="md:px-16">
         {copy.items.map((item, i) => (
           <div key={i} className="border-sand border-b">
             <button onClick={() => toggle(i)} className="flex w-full cursor-pointer items-center justify-between py-5 text-left">

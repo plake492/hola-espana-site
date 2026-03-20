@@ -14,7 +14,7 @@ export default async function page() {
   const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
 
   return (
-    <div style={{ background: 'linear-gradient(#FCF7F2, #F5EBDF)' }}>
+    <div style={{ background: 'linear-gradient(#ffffff, #FCF7F2, #F5EBDF)' }}>
       <Hero />
       <BlogContent posts={posts} />
     </div>
