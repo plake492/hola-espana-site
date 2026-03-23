@@ -75,26 +75,26 @@
   },
   "faq": {
     "header": ["Frequently Asked", { "first": "", "last": "Questions" }],
-    "items": [
+    "list": [
       {
-        "question": "What types of visas do you help with?",
-        "answer": "We assist with a range of Spanish visa types including the Digital Nomad Visa, Non-Lucrative Visa, Golden Visa, and work permits. During your consultation, we'll determine which visa best fits your situation and goals."
+        "title": "What types of visas do you help with?",
+        "content": "We assist with a range of Spanish visa types including the Digital Nomad Visa, Non-Lucrative Visa, Golden Visa, and work permits. During your consultation, we'll determine which visa best fits your situation and goals."
       },
       {
-        "question": "How long does the relocation process typically take?",
-        "answer": "Timelines vary depending on the visa type and individual circumstances, but most clients can expect the process to take between 3 to 6 months from initial consultation to arrival in Spain. We'll give you a clear timeline during your strategy call."
+        "title": "How long does the relocation process typically take?",
+        "content": "Timelines vary depending on the visa type and individual circumstances, but most clients can expect the process to take between 3 to 6 months from initial consultation to arrival in Spain. We'll give you a clear timeline during your strategy call."
       },
       {
-        "question": "Do I need to speak Spanish to relocate?",
-        "answer": "No, you don't need to speak Spanish. Our team handles all communication with Spanish authorities, landlords, and service providers on your behalf. We also provide translator support for key appointments when needed."
+        "title": "Do I need to speak Spanish to relocate?",
+        "content": "No, you don't need to speak Spanish. Our team handles all communication with Spanish authorities, landlords, and service providers on your behalf. We also provide translator support for key appointments when needed."
       },
       {
-        "question": "Can I upgrade my package after starting?",
-        "answer": "Yes, you can upgrade your package at any time. We'll credit what you've already paid toward the higher tier, so you only pay the difference. Many clients start with Essential Guidance and upgrade as their needs evolve."
+        "title": "Can I upgrade my package after starting?",
+        "content": "Yes, you can upgrade your package at any time. We'll credit what you've already paid toward the higher tier, so you only pay the difference. Many clients start with Essential Guidance and upgrade as their needs evolve."
       },
       {
-        "question": "What happens after my visa is approved?",
-        "answer": "Depending on your package, we continue supporting you with post-arrival tasks like NIE registration, local bank setup, housing coordination, and ongoing compliance. Our Full and End-to-End packages include comprehensive post-arrival support."
+        "title": "What happens after my visa is approved?",
+        "content": "Depending on your package, we continue supporting you with post-arrival tasks like NIE registration, local bank setup, housing coordination, and ongoing compliance. Our Full and End-to-End packages include comprehensive post-arrival support."
       }
     ]
   }

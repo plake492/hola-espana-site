@@ -1,6 +1,6 @@
 import { SunIcon } from '@/components/Icons';
 import { cn } from '@/lib/utils/cn';
-import type { RequirementItem } from '@/lib/siteCopy/visasCopy';
+import type { RequirementItem } from '@/lib/siteCopy/visasCopy.json';
 
 interface RequirementsSectionProps {
   heading: string;
@@ -15,7 +15,7 @@ const sunColors: Record<'nlv' | 'dnv', 'sand' | 'ocean'> = {
 
 export default function RequirementsSection({ heading, items, variant }: RequirementsSectionProps) {
   return (
-    <section className="to-default relative overflow-hidden bg-linear-to-b from-[#f5ebdf] px-6 py-20 md:px-12">
+    <section className="relative overflow-hidden px-6 py-20 md:px-12">
       {/* Decorative sun */}
       <div className="pointer-events-none absolute top-1/2 -right-32 w-[500px] -translate-y-1/2 opacity-20">
         <SunIcon color={sunColors[variant]} />

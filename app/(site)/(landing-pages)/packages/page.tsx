@@ -8,9 +8,6 @@ export default function page() {
         <Hero />
         <PackageCards />
         <CTA />
-        <div className="text-terracotta">
-          <TileBorder color="terracotta" />
-        </div>
       </div>
       <FAQ />
     </>

@@ -12,6 +12,7 @@ interface SplitContainerProps {
   imgLeft?: boolean;
   alt?: string;
   underImageContent?: ReactNode;
+  imgHeight?: string;
 }
 
 export default function SplitContainer({
@@ -24,6 +25,7 @@ export default function SplitContainer({
   underImageContent,
   cols = 'grid-cols-1 md:grid-cols-2',
   alt = '',
+  imgHeight = 'h-auto',
 }: SplitContainerProps) {
   const isTwo = cols.includes('grid-cols-2');
   const imgWidthClasses = isTwo ? 'md:w-[min(125%,50dvw)]' : 'md:w-[min(118%,66dvw)]';
@@ -31,12 +33,12 @@ export default function SplitContainer({
   return (
     <div className={className}>
       {header && <div className="mb-8 pl-8 md:mb-16 md:pl-16">{header}</div>}
-      <div className={cn('md:grid', cols)}>
+      <div className={cn('items-start md:grid', cols)}>
         {imgLeft ? (
           <>
-            <div className="block px-6 md:hidden md:pr-16 md:pl-8">{children}</div>
-            <div className={cn('col-span-1 col-start-0 mt-4 mr-8 w-[110%] justify-self-end md:mt-0 md:mr-0', imgWidthClasses)}>
-              <Image src={imgSrc} alt={alt} width={800} height={550} className="h-auto w-full object-cover" />
+            <div className="inline-block px-6 md:hidden md:pr-16 md:pl-8">{children}</div>
+            <div className={cn('col-span-1 col-start-0 mt-4 mr-8 flex w-[110%] flex-col justify-self-end md:mt-0 md:mr-0', imgWidthClasses)}>
+              <Image src={imgSrc} alt={alt} width={800} height={550} className={cn('w-full object-cover', imgHeight)} />
               {underImageContent}
             </div>
             <div className="hidden px-8 md:block md:pr-16 md:pl-8">{children}</div>
@@ -45,7 +47,7 @@ export default function SplitContainer({
           <>
             <div className="px-6 md:self-stretch md:pr-8 md:pl-16">{children}</div>
             <div className={cn('mt-4 ml-8 w-[110%] md:col-span-2 md:col-start-2 md:mt-0 md:ml-0 md:h-full', imgWidthClasses)}>
-              <Image src={imgSrc} alt={alt} width={800} height={550} className="h-auto w-full object-cover" />
+              <Image src={imgSrc} alt={alt} width={800} height={550} className={cn('w-full object-cover', imgHeight)} />
               {underImageContent}
             </div>
           </>
