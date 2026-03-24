@@ -27,7 +27,7 @@ interface ContainerProps {
 }
 
 // TODO Add icon options
-export default function Container({ as: Element = 'section', children, className, size = '3xl', noCenter, iconProps, ...rest }: ContainerProps) {
+export default function Container({ as: Element = 'section', children, className, size = '3xl', noCenter, iconProps, ...rest }: Readonly<ContainerProps>) {
   const containerSize: Record<typeof size, string> = {
     /** 672px | 42rem */
     xs: 'max-w-2xl',

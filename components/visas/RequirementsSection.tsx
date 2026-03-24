@@ -1,10 +1,8 @@
 import { SunIcon } from '@/components/Icons';
-import { cn } from '@/lib/utils/cn';
-import type { RequirementItem } from '@/lib/siteCopy/visasCopy.json';
+import Container from '../Container';
 
 interface RequirementsSectionProps {
-  heading: string;
-  items: RequirementItem[];
+  copy: { heading: string; items: { bold: string; text: string; italic?: string }[] };
   variant: 'nlv' | 'dnv';
 }
 
@@ -13,20 +11,18 @@ const sunColors: Record<'nlv' | 'dnv', 'sand' | 'ocean'> = {
   dnv: 'ocean',
 };
 
-export default function RequirementsSection({ heading, items, variant }: RequirementsSectionProps) {
+export default function RequirementsSection({ copy, variant }: Readonly<RequirementsSectionProps>) {
   return (
-    <section className="relative overflow-hidden px-6 py-20 md:px-12">
-      {/* Decorative sun */}
-      <div className="pointer-events-none absolute top-1/2 -right-32 w-[500px] -translate-y-1/2 opacity-20">
+    <Container as="div" className="relative z-1 overflow-hidden px-4 pb-20 md:px-8">
+      <div className="pointer-events-none absolute top-1/2 right-0 w-[500px] -translate-y-1/2 opacity-20">
         <SunIcon color={sunColors[variant]} />
       </div>
 
-      <div className="relative mx-auto max-w-4xl space-y-10">
-        <h2 className="font-aegean text-3xl text-black uppercase md:text-4xl">{heading}</h2>
-
-        <ul className="space-y-6">
-          {items.map(({ bold, text, italic }, i) => (
-            <li key={i} className="font-serif text-lg leading-relaxed text-black">
+      <div className="relative space-y-10 text-balance">
+        <h2 className="font-aegean text-xl text-black uppercase md:text-2xl">{copy.heading}</h2>
+        <ul className="flex max-w-4xl flex-col gap-4 space-y-6">
+          {copy.items.map(({ bold, text, italic }) => (
+            <li key={bold + text + italic} className="font-serif text-lg leading-relaxed text-black">
               <span className="font-semibold">{bold}</span>
               {text}
               {italic && <em className="italic">{italic}</em>}
@@ -34,6 +30,6 @@ export default function RequirementsSection({ heading, items, variant }: Require
           ))}
         </ul>
       </div>
-    </section>
+    </Container>
   );
 }

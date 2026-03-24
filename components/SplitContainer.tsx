@@ -26,7 +26,7 @@ export default function SplitContainer({
   cols = 'grid-cols-1 md:grid-cols-2',
   alt = '',
   imgHeight = 'h-auto',
-}: SplitContainerProps) {
+}: Readonly<SplitContainerProps>) {
   const isTwo = cols.includes('grid-cols-2');
   const imgWidthClasses = isTwo ? 'md:w-[min(125%,50dvw)]' : 'md:w-[min(118%,66dvw)]';
 
@@ -41,7 +41,7 @@ export default function SplitContainer({
               <Image src={imgSrc} alt={alt} width={800} height={550} className={cn('w-full object-cover', imgHeight)} />
               {underImageContent}
             </div>
-            <div className="hidden px-8 md:block md:pr-16 md:pl-8">{children}</div>
+            <div className="hidden h-full px-8 md:block md:pr-16 md:pl-8">{children}</div>
           </>
         ) : (
           <>

@@ -1,9 +1,10 @@
 import { cn } from '@/lib/utils/cn';
 import Container from '../Container';
+import Image from 'next/image';
 
 interface WhoCanApply {
   heading: string;
-  personas: { label: string }[];
+  personas: { label: string; img: string }[];
 }
 
 interface Copy {
@@ -33,20 +34,20 @@ const variantStyles = {
   },
 };
 
-export default function PersonaCards({ copy, variant }: PersonaCardsProps) {
+export default function PersonaCards({ copy, variant }: Readonly<PersonaCardsProps>) {
   const styles = variantStyles[variant];
 
   return (
-    <Container as="div" className="px-6 py-32 md:px-12">
-      <div className="mx-auto max-w-5xl space-y-10">
+    <Container as="div" className="px-6 py-18 md:px-12 md:py-32">
+      <div className="mx-auto max-w-5xl md:space-y-10">
         <div className="text-black lg:-ml-12">
           <h2 className="mb-8 font-serif text-xl md:text-3xl">{copy.title.toUpperCase()}</h2>
           <p className="text-lg">{copy.whoCanApply.heading}</p>
         </div>
 
         <div className="grid grid-cols-1 grid-rows-[180px_180px] gap-6 pt-16 text-balance lg:grid-cols-2 lg:gap-32">
-          {copy.whoCanApply.personas.map(({ label }, i) => (
-            <PersonaCard key={i} label={label} styles={styles} />
+          {copy.whoCanApply.personas.map(({ label, img }, i) => (
+            <PersonaCard key={label + i} label={label} img={img} styles={styles} />
           ))}
         </div>
       </div>
@@ -57,17 +58,20 @@ export default function PersonaCards({ copy, variant }: PersonaCardsProps) {
 const PersonaCard = ({
   label,
   styles,
+  img,
 }: {
   label: string;
+  img: string;
   styles: {
     card: string;
     text: string;
   };
 }) => {
   return (
-    <div className="relative ml-12" style={{ height: `${(IMG_SIZE + 30).toString()}px` }}>
+    <div className="relative ml-12 px-4 md:px-8" style={{ height: `${(IMG_SIZE + 30).toString()}px` }}>
       <div className={cn('bg-ocean-alt absolute mr-0 shrink-0 overflow-hidden')} style={imgStyle}>
         {/* TODO: Replace with real persona photo */}
+        <Image src={img} alt="" width={IMG_SIZE} height={IMG_SIZE} />
         <div className="flex h-full w-full items-center justify-center text-xs text-white/40">photo</div>
       </div>
 

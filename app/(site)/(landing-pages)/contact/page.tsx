@@ -13,14 +13,14 @@ const socialLinks = [
 export default function ContactPage() {
   return (
     <Container id="contact" size="full">
-      <div className="relative mt-18 min-h-[max(90svh,700px)] bg-[url(/images/city-center.webp)] bg-cover bg-center md:mx-8 md:mt-24">
-        <div className="min-h-[max(90svh,700px)] bg-blue-overlay">
+      <div className="relative min-h-[max(90svh,700px)] bg-[url(/images/city-center.webp)] bg-cover bg-center md:mx-8">
+        <div className="bg-blue-overlay min-h-[max(90svh,700px)]">
           {/* Content */}
           <div className="mx-auto grid grid-cols-1 items-start gap-10 px-6 py-12 md:px-12 md:py-16 lg:grid-cols-[1fr_600px] lg:gap-20 lg:px-20">
             {/* Left */}
             <div className="flex flex-col gap-8">
               <div className="flex flex-col gap-8">
-                <h1 className="text-balance text-2xl font-light text-white">{copy.header}</h1>
+                <h1 className="text-2xl font-light text-balance text-white">{copy.header}</h1>
                 <div className="space-y-4 font-serif text-lg text-white">
                   {copy.description.map((p, i) => (
                     <p key={i}>{p}</p>
