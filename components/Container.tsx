@@ -12,7 +12,7 @@ interface IconProps {
     textLight: '#D0A97C',
     textDark: '#C36C44', 
   */
-  iconColor?: 'sand' | 'lightSand' | 'ocean' | 'textLight' | 'textDark' | string;
+  iconColor?: string;
   iconClassName?: string;
 }
 
@@ -26,7 +26,6 @@ interface ContainerProps {
   [key: string]: any;
 }
 
-// TODO Add icon options
 export default function Container({ as: Element = 'section', children, className, size = '3xl', noCenter, iconProps, ...rest }: Readonly<ContainerProps>) {
   const containerSize: Record<typeof size, string> = {
     /** 672px | 42rem */

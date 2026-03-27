@@ -148,9 +148,4 @@ const TileBorder = ({ color }: { color?: TileColors }) => {
   );
 };
 
-// TODO Add Arch Icons
-const Arches = () => {
-  return <></>;
-};
-
-export { SunIcon, StarIcon, Instagram, Facebook, Phone, Mail, TileBorder, Arches };
+export { SunIcon, StarIcon, Instagram, Facebook, Phone, Mail, TileBorder };

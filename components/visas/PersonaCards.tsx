@@ -70,7 +70,6 @@ const PersonaCard = ({
   return (
     <div className="relative ml-12 px-4 md:px-8" style={{ height: `${(IMG_SIZE + 30).toString()}px` }}>
       <div className={cn('bg-ocean-alt absolute mr-0 shrink-0 overflow-hidden')} style={imgStyle}>
-        {/* TODO: Replace with real persona photo */}
         <Image src={img} alt="" width={IMG_SIZE} height={IMG_SIZE} />
         <div className="flex h-full w-full items-center justify-center text-xs text-white/40">photo</div>
       </div>

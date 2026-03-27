@@ -10,7 +10,7 @@ import BottomCTA from '@/components/home/BottomCTA';
 
 export default function Home() {
   return (
-    <section className="bg-default">
+    <div className="bg-default">
       <Hero />
       <HeroCta />
       <Services />
@@ -20,6 +20,6 @@ export default function Home() {
       <Blogs />
       <Reviews />
       <BottomCTA />
-    </section>
+    </div>
   );
 }
