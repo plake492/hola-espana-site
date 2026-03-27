@@ -13,7 +13,7 @@ export default function Hero() {
         <Image alt="spain" src="/images/hero.webp" width={1000} height={1000} priority className="absolute h-full w-full object-cover" />
         <div className="bg-blue-overlay absolute right-0 left-0 z-1 h-full w-full"></div>
       </div>
-      <div className="md:-0 relative z-1 mx-2 flex h-full flex-col gap-8 pt-24 md:pt-24">
+      <div className="md:-0 relative z-1 mx-2 flex h-full flex-col gap-8 pt-8">
         <h1 className="text-balanced flex flex-col flex-wrap items-start gap-6 tracking-widest md:gap-8 md:whitespace-nowrap">
           <span className="text-headline2 font-light">{pageCopy.header.first}</span>
           <span className="text-headline1 -mb-4 ml-(--headline-ml-offset) font-semibold uppercase max-[950px]:ml-[-2.75px]">{pageCopy.header.second}</span>

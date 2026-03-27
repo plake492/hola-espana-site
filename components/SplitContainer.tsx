@@ -7,7 +7,7 @@ interface SplitContainerProps {
   header?: ReactNode;
   sectionFooter?: ReactNode;
   children: ReactNode;
-  cols?: 'grid-cols-2' | 'grid-cols-3' | string;
+  cols?: string;
   imgSrc: string;
   imgLeft?: boolean;
   alt?: string;
