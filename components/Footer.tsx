@@ -78,6 +78,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-
-claude --resume 4e27d63e-0657-4994-b7e2-f50cdc7b5e72                                                                                                                                                                                     
