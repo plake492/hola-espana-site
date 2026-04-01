@@ -31,6 +31,8 @@ const pages: NavPage[] = [
   { id: 2, href: '/blog', text: 'blog' },
 ];
 
+// ─── Desktop dropdown ──────────────────────────────────────────────────────────
+
 const ChevronIcon = () => (
   <svg viewBox="0 0 20 20" fill="currentColor" className="inline-block h-3 w-3 translate-y-px">
     <path
@@ -91,6 +93,128 @@ const DropdownNavItem = ({ page, linkClassName }: DropdownNavItemProps) => {
   );
 };
 
+// ─── Mobile nav drawer ─────────────────────────────────────────────────────────
+
+const HamburgerIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" className="h-6 w-6">
+    <line x1="3" y1="6" x2="21" y2="6" />
+    <line x1="3" y1="12" x2="21" y2="12" />
+    <line x1="3" y1="18" x2="21" y2="18" />
+  </svg>
+);
+
+const CloseIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" className="h-6 w-6">
+    <line x1="18" y1="6" x2="6" y2="18" />
+    <line x1="6" y1="6" x2="18" y2="18" />
+  </svg>
+);
+
+const MobileNav = () => {
+  const [open, setOpen] = useState(false);
+
+  const drawerSpring = useSpring({
+    transform: open ? 'translateX(0%)' : 'translateX(100%)',
+    config: { tension: 280, friction: 30 },
+  });
+
+  const backdropSpring = useSpring({
+    opacity: open ? 1 : 0,
+    config: { tension: 300, friction: 32 },
+  });
+
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
+
+  const close = () => setOpen(false);
+
+  return (
+    <>
+      <button
+        onClick={() => setOpen(true)}
+        aria-label="Open navigation"
+        className="flex items-center justify-center text-white min-[850px]:hidden"
+      >
+        <HamburgerIcon />
+      </button>
+
+      {/* Backdrop */}
+      <animated.div
+        style={{ ...backdropSpring, pointerEvents: open ? 'auto' : 'none' }}
+        onClick={close}
+        className="fixed inset-0 z-[60] bg-black/50 min-[850px]:hidden"
+      />
+
+      {/* Drawer */}
+      <animated.div
+        style={drawerSpring}
+        className="fixed top-0 right-0 z-[70] flex h-full w-72 flex-col bg-terracotta text-white min-[850px]:hidden"
+      >
+        {/* Top bar */}
+        <div className="flex items-center justify-between px-6 py-5">
+          <Link href="/" onClick={close}>
+            <Image alt="Hola España" src="/logo/logo.svg" width={120} height={50} className="h-auto w-28 invert-100" />
+          </Link>
+          <button onClick={close} aria-label="Close navigation" className="opacity-70 hover:opacity-100 transition-opacity">
+            <CloseIcon />
+          </button>
+        </div>
+
+        <div className="mx-6 h-px bg-white/20" />
+
+        {/* Links */}
+        <div className="flex flex-1 flex-col gap-0.5 overflow-y-auto px-6 pt-4 pb-4">
+          {pages.map((page) => (
+            <div key={page.id}>
+              <Link
+                href={page.href}
+                onClick={close}
+                className="flex items-center justify-between py-3.5 font-aegean text-sm uppercase tracking-widest opacity-90 transition-opacity hover:opacity-100"
+              >
+                {page.text}
+              </Link>
+
+              {page.dropdown && (
+                <div className="mb-2 flex flex-col border-l-2 border-white/25 pl-4">
+                  {page.dropdown.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={close}
+                      className="py-2 font-serif text-xs uppercase tracking-widest opacity-60 transition-opacity hover:opacity-100"
+                    >
+                      {item.text}
+                    </Link>
+                  ))}
+                </div>
+              )}
+
+              <div className="h-px bg-white/10" />
+            </div>
+          ))}
+        </div>
+
+        {/* Contact CTA */}
+        <div className="px-6 pb-10 pt-4">
+          <Link
+            href="/contact"
+            onClick={close}
+            className="block w-full rounded-md bg-white/15 py-3.5 text-center font-aegean text-sm uppercase tracking-widest transition-colors hover:bg-white/25"
+          >
+            Contact
+          </Link>
+        </div>
+      </animated.div>
+    </>
+  );
+};
+
+// ─── Header variants ───────────────────────────────────────────────────────────
+
 export default function Header() {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
@@ -98,30 +222,26 @@ export default function Header() {
   return isHomePage ? <AnimatedHeader /> : <StaticHeader />;
 }
 
+const NAV_LINK_CLASS =
+  'relative text-sm uppercase after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full';
+
 const StaticHeader = () => {
   return (
     <header className={`h-[${HEADER_HEIGHT}px] bg-terracotta absolute top-0 left-0 z-50 w-full text-white md:fixed`}>
-      <div className="max-w-8xl relative mx-auto flex w-full flex-col items-center justify-between px-4 py-2 min-[850px]:flex-row">
-        <div className="max-[850px]:max-w-[325px]">
+      <div className="max-w-8xl relative mx-auto flex w-full items-center justify-between px-4 py-2">
+        <div className="max-w-[325px] min-[850px]:max-w-none">
           <Link href="/">
             <Image alt="site logo" src="/logo/logo.svg" width={200} height={100} className="h-auto w-full invert-100" />
           </Link>
         </div>
 
+        {/* Desktop nav */}
         <nav className="hidden flex-1 justify-end gap-4 min-[850px]:flex">
           {pages.map((page) =>
             page.dropdown ? (
-              <DropdownNavItem
-                key={page.id}
-                page={page}
-                linkClassName="relative text-sm uppercase after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
-              />
+              <DropdownNavItem key={page.id} page={page} linkClassName={NAV_LINK_CLASS} />
             ) : (
-              <Link
-                key={page.id}
-                href={page.href}
-                className="relative text-sm uppercase after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
-              >
+              <Link key={page.id} href={page.href} className={NAV_LINK_CLASS}>
                 {page.text}
               </Link>
             )
@@ -134,6 +254,9 @@ const StaticHeader = () => {
             </Link>
           </div>
         </nav>
+
+        {/* Mobile nav */}
+        <MobileNav />
       </div>
     </header>
   );
@@ -143,7 +266,6 @@ const config = { tension: 180, friction: 12, duration: 225 };
 
 const AnimatedHeader = () => {
   const [scrolled, setScrolled] = useState(false);
-  const pagesFilteres = pages;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -165,26 +287,20 @@ const AnimatedHeader = () => {
 
   return (
     <animated.header style={springStyles} className={`h-[${HEADER_HEIGHT}px] absolute top-0 left-0 z-50 w-full text-white md:fixed`}>
-      <div className="max-w-8xl relative mx-auto flex w-full flex-col items-center justify-between px-4 py-2 min-[850px]:flex-row">
+      <div className="max-w-8xl relative mx-auto flex w-full items-center justify-between px-4 py-2">
         <animated.div style={logoStyle} className="max-[850px]:max-w-[300px]">
           <Link href="/">
             <Image alt="site logo" src="/logo/logo.svg" width={200} height={100} className="h-auto w-full invert-100" />
           </Link>
         </animated.div>
+
+        {/* Desktop nav */}
         <nav className="hidden flex-1 cursor-pointer items-baseline justify-end gap-4 min-[850px]:flex">
-          {pagesFilteres.map((page) =>
+          {pages.map((page) =>
             page.dropdown ? (
-              <DropdownNavItem
-                key={page.id}
-                page={page}
-                linkClassName="relative text-sm uppercase after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
-              />
+              <DropdownNavItem key={page.id} page={page} linkClassName={NAV_LINK_CLASS} />
             ) : (
-              <Link
-                key={page.id}
-                href={page.href}
-                className="relative text-sm uppercase after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
-              >
+              <Link key={page.id} href={page.href} className={NAV_LINK_CLASS}>
                 {page.text}
               </Link>
             )
@@ -197,6 +313,9 @@ const AnimatedHeader = () => {
             </Link>
           </div>
         </nav>
+
+        {/* Mobile nav */}
+        <MobileNav />
       </div>
     </animated.header>
   );
