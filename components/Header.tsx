@@ -134,11 +134,7 @@ const MobileNav = () => {
 
   return (
     <>
-      <button
-        onClick={() => setOpen(true)}
-        aria-label="Open navigation"
-        className="flex items-center justify-center text-white min-[850px]:hidden"
-      >
+      <button onClick={() => setOpen(true)} aria-label="Open navigation" className="flex items-center justify-center text-white min-[850px]:hidden">
         <HamburgerIcon />
       </button>
 
@@ -146,20 +142,17 @@ const MobileNav = () => {
       <animated.div
         style={{ ...backdropSpring, pointerEvents: open ? 'auto' : 'none' }}
         onClick={close}
-        className="fixed inset-0 z-[60] bg-black/50 min-[850px]:hidden"
+        className="fixed inset-0 z-60 bg-black/50 min-[850px]:hidden"
       />
 
       {/* Drawer */}
-      <animated.div
-        style={drawerSpring}
-        className="fixed top-0 right-0 z-[70] flex h-full w-72 flex-col bg-terracotta text-white min-[850px]:hidden"
-      >
+      <animated.div style={drawerSpring} className="bg-terracotta fixed top-0 right-0 z-70 flex h-full w-72 flex-col text-white min-[850px]:hidden">
         {/* Top bar */}
         <div className="flex items-center justify-between px-6 py-5">
           <Link href="/" onClick={close}>
             <Image alt="Hola España" src="/logo/logo.svg" width={120} height={50} className="h-auto w-28 invert-100" />
           </Link>
-          <button onClick={close} aria-label="Close navigation" className="opacity-70 hover:opacity-100 transition-opacity">
+          <button onClick={close} aria-label="Close navigation" className="opacity-70 transition-opacity hover:opacity-100">
             <CloseIcon />
           </button>
         </div>
@@ -173,7 +166,7 @@ const MobileNav = () => {
               <Link
                 href={page.href}
                 onClick={close}
-                className="flex items-center justify-between py-3.5 font-aegean text-sm uppercase tracking-widest opacity-90 transition-opacity hover:opacity-100"
+                className="font-aegean flex items-center justify-between py-3.5 text-sm tracking-widest uppercase opacity-90 transition-opacity hover:opacity-100"
               >
                 {page.text}
               </Link>
@@ -185,7 +178,7 @@ const MobileNav = () => {
                       key={item.href}
                       href={item.href}
                       onClick={close}
-                      className="py-2 font-serif text-xs uppercase tracking-widest opacity-60 transition-opacity hover:opacity-100"
+                      className="py-2 font-serif text-xs tracking-widest uppercase opacity-60 transition-opacity hover:opacity-100"
                     >
                       {item.text}
                     </Link>
@@ -199,11 +192,11 @@ const MobileNav = () => {
         </div>
 
         {/* Contact CTA */}
-        <div className="px-6 pb-10 pt-4">
+        <div className="px-6 pt-4 pb-10">
           <Link
             href="/contact"
             onClick={close}
-            className="block w-full rounded-md bg-white/15 py-3.5 text-center font-aegean text-sm uppercase tracking-widest transition-colors hover:bg-white/25"
+            className="font-aegean block w-full rounded-md bg-white/15 py-3.5 text-center text-sm tracking-widest uppercase transition-colors hover:bg-white/25"
           >
             Contact
           </Link>
