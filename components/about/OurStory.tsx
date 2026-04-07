@@ -9,7 +9,7 @@ export default function OurStory() {
         <h3 className="text-section-sm mb-10 flex flex-col uppercase">
           <span className="flex flex-row items-center">
             <span>{copy.header.first}</span>
-            <span className="text-sand-dark mb-5 ml-1.5 h-[25px] w-[25px] rotate-70 md:ml-3 md:h-12 md:w-12">
+            <span className="text-terracotta mb-5 ml-1.5 h-[25px] w-[25px] rotate-70 md:ml-3 md:h-12 md:w-12">
               <StarIcon />
             </span>
           </span>

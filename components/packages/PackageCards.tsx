@@ -33,7 +33,7 @@ export default function PackageCards() {
               <ul
                 className={cn(
                   "relative flex h-full flex-col items-center gap-4 text-center after:absolute after:right-9 after:bottom-0 after:left-9 after:hidden after:h-px after:bg-[#C4755650] after:content-[''] md:pb-6 md:after:block",
-                  isFeatured && 'lg:border-xlg:border-[#C4755650] md:px-12',
+                  isFeatured && 'md:px-12 lg:border-x lg:border-[#C4755650]',
                   !isFeatured && 'md:px-8'
                 )}
               >

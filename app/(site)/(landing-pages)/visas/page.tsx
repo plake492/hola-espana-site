@@ -2,6 +2,7 @@ import Container from '@/components/Container';
 import { toBottomGradient } from '@/lib/styles';
 import { VisasHero, VisasIntro, PersonaCards, BenefitsBlock, RequirementsSection, VisasCTA } from '@/components/visas';
 import { nlv, dnv } from '@/lib/siteCopy/visasCopy.json';
+import { TileBorder } from '@/components/Icons';
 
 export const metadata = {
   title: 'Spanish Visa Options | Hola España',
@@ -17,13 +18,18 @@ export default function VisasPage() {
       {/* ── Non-Lucrative Visa ─────────────────────── */}
 
       <Container size="full" id={nlv.id} className={toBottomGradient}>
+        <div className="abosulte top-0 left-0 z-1 w-full -translate-y-1/2">
+          <TileBorder color="blue" />
+        </div>
         <PersonaCards copy={nlv} variant="nlv" />
         <BenefitsBlock copy={nlv.benefits} variant="nlv" />
         <RequirementsSection copy={nlv.requirements} variant="nlv" />
       </Container>
-
       {/* ── Digital Nomad Visa ─────────────────────── */}
       <Container size="full" id={dnv.id} className={toBottomGradient}>
+        <div className="abosulte top-0 left-0 z-1 w-full -translate-y-1/2">
+          <TileBorder color="terracotta" />
+        </div>
         <PersonaCards copy={dnv} variant="dnv" />
         <BenefitsBlock copy={dnv.benefits} variant="dnv" />
         <RequirementsSection copy={dnv.requirements} variant="dnv" />

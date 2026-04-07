@@ -1,5 +1,4 @@
 import { Hero, PackageCards, CTA, FAQ } from '@/components/packages';
-import { TileBorder } from '@/components/Icons';
 
 export default function page() {
   return (

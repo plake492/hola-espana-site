@@ -15,14 +15,14 @@ export default function Hero() {
         cols="cols-2"
         header={<SectionHeading as="h1" lines={copy.header} className="uppercase" textSize="text-section-sm" iconColor="text-terracotta-off" />}
       >
-        <div className="text-md flex h-full flex-col justify-between gap-6">
-          <div className="text-balance">
+        <div className="text-md flex flex-col justify-between gap-6">
+          <div className="text-balance md:mb-12">
             <h2 className="mb-6 text-xl">{copy.subHeader}</h2>
             {copy.description.map((text, i) => (
               <p key={i}>{text}</p>
             ))}
           </div>
-          <Link href="/contact">
+          <Link href="/contact" className="mb-8 md:mb-0">
             <Button className="text-md uppercase" variant="sand">
               {copy.buttonText}
             </Button>

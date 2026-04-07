@@ -1,13 +1,28 @@
 import Link from 'next/link';
 import Container from '../Container';
-import TileBorder from './TileBorder';
 import { intro as copy } from '@/lib/siteCopy/visasCopy.json';
 
 export default function VisasIntro() {
   return (
-    <section className="relative z-1">
-      <Container as="div" className="bg-white px-6 py-24 text-center md:px-12 md:py-32">
-        <div className="mx-auto max-w-6xl space-y-6 text-balance">
+    <Container
+      size="full"
+      className="m-0"
+      // iconProps={{
+      //   icon: 'star',
+      //   iconColor: 'sand',
+      //   iconClassName: 'hidden lg:block z-1 absolute -translate-x-[calc(50%-55px)] left-0 top-1/2 -translate-y-[calc(50%+50px)] opacity-40',
+      // }}
+    >
+      <Container
+        as="div"
+        className="relative -z-1 bg-white px-6 py-24 text-center md:px-12 md:py-32"
+        iconProps={{
+          icon: 'star',
+          iconColor: 'sand',
+          iconClassName: 'hidden lg:block z-1 absolute left-0 top-1/2 -translate-3/5 -translate-y-[calc(50%+65px)] opacity-40',
+        }}
+      >
+        <div className="z-2 mx-auto max-w-6xl space-y-6 text-balance">
           <h2 className="font-aegean text-lg text-black md:text-xl">{copy.heading}</h2>
           <p className="md:text-md text-dark font-serif text-lg opacity-95">{copy.subheading}</p>
 
@@ -24,10 +39,6 @@ export default function VisasIntro() {
           </div>
         </div>
       </Container>
-
-      <div className="abosulte bottom-0 left-0 z-1 w-full translate-y-1/2">
-        <TileBorder variant="ocean" />
-      </div>
-    </section>
+    </Container>
   );
 }

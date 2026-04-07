@@ -8,7 +8,7 @@ interface RequirementsSectionProps {
 
 const sunColors: Record<'nlv' | 'dnv', 'sand' | 'ocean'> = {
   nlv: 'sand',
-  dnv: 'ocean',
+  dnv: 'sand',
 };
 
 export default function RequirementsSection({ copy, variant }: Readonly<RequirementsSectionProps>) {
