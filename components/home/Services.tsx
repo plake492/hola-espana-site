@@ -6,7 +6,15 @@ import SectionHeading from '../SectionHeading';
 export default function Services() {
   return (
     <>
-      <Container className={'px-4 pt-24 pb-12 md:pt-64 md:pb-32'} iconProps={{ icon: 'star', iconColor: 'sand' }} id="services">
+      <Container
+        className={'z-0 px-4 pt-24 pb-12 md:pt-36 md:pb-32 lg:pt-64'}
+        iconProps={{
+          icon: 'star',
+          iconColor: 'sand',
+          iconClassName: 'top-0 right-0 color-sand absolute translate-x-[120px] -translate-y-[60px] md:-translate-y-0 md:translate-x-[80px] -z-1',
+        }}
+        id="services"
+      >
         <div className="mb-10 max-w-7xl md:mb-20">
           <SectionHeading lines={[copy.heading]} className="mb-6 uppercase md:text-balance" as="h3" textSize="text-section-md" />
           <p className="text-lg font-light">{copy.description}</p>

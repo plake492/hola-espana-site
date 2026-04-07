@@ -8,11 +8,12 @@ export default function ClearPath() {
     <Container size="full" id="path">
       <TileBorder color="blue" />
       <Container
-        className="px-8 md:px-16"
+        className="z-0 px-8 md:px-1"
         iconProps={{
           icon: 'sun',
           iconClassName:
-            'text-sand-icon w-[200px] h-[200px] md:w-[325] md:h-[325] absolute top-0 left-0 -z-1 md:-translate-y-2 md:-translate-x-10 -translate-x-20',
+            'w-[200px] h-[200px] md:w-[375px] md:h-[375px] absolute top-0 left-0 -z-1 -translate-y-2 lg:-translate-y-2 lg:-translate-x-10 -translate-x-1/2',
+          iconColor: 'sand',
         }}
       >
         <div className="py-12 md:pt-20 md:pb-28">
@@ -42,8 +43,8 @@ export default function ClearPath() {
         ))}
       </div>
       <Container className="px-8 md:px-16">
-        <div className="py-12">
-          <h5 className="font-serif! text-xl font-light text-pretty">{pageCopy.sectionFooter}</h5>
+        <div className="max-w-5xl py-12">
+          <h5 className="text-xl font-light text-pretty">{pageCopy.sectionFooter}</h5>
         </div>
       </Container>
       <Image src="/images/mosaic-strip.webp" width={1200} height={200} alt="" className="w-full" />

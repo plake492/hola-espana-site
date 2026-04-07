@@ -6,9 +6,9 @@ export default function CTA() {
   return (
     <Container size="full" className="mt-18 bg-[url(/images/city-center.webp)] bg-cover bg-center sm:min-h-[max(90svh,700px)] md:mt-24" id="contact">
       <div className="bg-blue-overlay-alt sm:min-h-[max(90svh,700px)]">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 px-4 pt-8 pb-42 sm:gap-24 sm:pt-20 sm:pb-20">
-          <h3 className="mb-2 flex max-w-112.5 flex-col items-center text-center text-balance text-white">
-            <span className="mb-6 text-3xl font-semibold uppercase">{ctaCopy.heading}</span>
+        <div className="mx-auto flex flex-col items-center gap-12 px-4 pt-8 pb-42 sm:gap-16 sm:pt-36 sm:pb-20">
+          <h3 className="flex max-w-4xl flex-col items-center text-center text-balance text-white">
+            <span className="mb-6 text-3xl leading-18 font-semibold uppercase">{ctaCopy.heading}</span>
             <span className="font-serif! text-xl">{ctaCopy.description}</span>
           </h3>
           <Button className="w-full max-w-100 font-bold tracking-widest uppercase">
