@@ -22,8 +22,8 @@ export default function RequirementsSection({ copy, variant }: Readonly<Requirem
         <h2 className="font-aegean text-xl text-black uppercase md:text-2xl">{copy.heading}</h2>
         <ul className="flex max-w-4xl flex-col gap-4 space-y-6">
           {copy.items.map(({ bold, text, italic }) => (
-            <li key={bold + text + italic} className="font-serif text-lg leading-relaxed text-black">
-              <span className="font-semibold">{bold}</span>
+            <li key={bold + text + italic} className="font-serif text-sm leading-relaxed text-black">
+              <span className="text-md font-semibold">{bold}</span>
               {text}
               {italic && <em className="italic">{italic}</em>}
             </li>

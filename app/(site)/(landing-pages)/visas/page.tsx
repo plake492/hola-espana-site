@@ -1,6 +1,6 @@
 import Container from '@/components/Container';
 import { toBottomGradient } from '@/lib/styles';
-import { VisasHero, VisasIntro, PersonaCards, BenefitsBlock, RequirementsSection, VisasCTA } from '@/components/visas';
+import { VisasIntro, PersonaCards, BenefitsBlock, RequirementsSection, VisasCTA } from '@/components/visas';
 import { nlv, dnv } from '@/lib/siteCopy/visasCopy.json';
 import { TileBorder } from '@/components/Icons';
 
@@ -12,7 +12,7 @@ export const metadata = {
 export default function VisasPage() {
   return (
     <>
-      <VisasHero />
+      {/* <VisasHero /> */}
       <VisasIntro />
 
       {/* ── Non-Lucrative Visa ─────────────────────── */}

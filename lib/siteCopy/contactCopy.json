@@ -18,14 +18,7 @@
       "serviceType": "Service Type",
       "message": "Write Message"
     },
-    "serviceOptions": [
-      "Golden Visa",
-      "Digital Nomad Visa",
-      "Non-Lucrative Visa",
-      "Tax Advisory",
-      "Housing & Relocation",
-      "Other"
-    ],
+    "serviceOptions": ["Digital Nomad Visa", "Non-Lucrative Visa", "Tax Advisory", "Housing & Relocation", "Other"],
     "submit": "Send"
   }
 }

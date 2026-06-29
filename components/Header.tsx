@@ -17,18 +17,28 @@ interface NavPage {
 
 const pages: NavPage[] = [
   { id: 1, href: '/packages', text: 'packages' },
-  { id: 5, href: '/about', text: 'about' },
+  { id: 2, href: '/about', text: 'about' },
   { id: 3, href: '/legal', text: 'legal' },
   {
     id: 4,
-    href: '/visas',
-    text: 'visas',
+    href: '/life-in-spain',
+    text: 'life in spain',
     dropdown: [
-      { href: '/visas#nlv', text: 'Non-Lucrative Visa' },
-      { href: '/visas#dnv', text: 'Digital Nomad Visa' },
+      { href: '/life-in-spain#', text: 'Link' },
+      { href: '/life-in-spain#1', text: 'Link' },
+      { href: '/life-in-spain#2', text: 'Link' },
     ],
   },
-  { id: 2, href: '/blog', text: 'blog' },
+  // {
+  //   id: 5,
+  //   href: '/visas',
+  //   text: 'visas',
+  //   dropdown: [
+  //     { href: '/visas#nlv', text: 'Non-Lucrative Visa' },
+  //     { href: '/visas#dnv', text: 'Digital Nomad Visa' },
+  //   ],
+  // },
+  { id: 6, href: '/blog', text: 'blog' },
 ];
 
 // ─── Desktop dropdown ──────────────────────────────────────────────────────────

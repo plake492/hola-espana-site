@@ -1,0 +1,7 @@
+# Hola España Windsurf Rules
+
+When working on landing pages under `app/(site)/(landing-pages)` or their associated components in `components/`, always review the style guide first:
+
+- `@/.windsurf/docs/landing-pages-style-guide.md`
+
+Follow the conventions documented there for layout, colors, typography, spacing, Container/SplitContainer/SectionHeading/Button usage, and copy JSON structure.
