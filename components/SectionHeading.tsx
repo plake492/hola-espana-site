@@ -3,7 +3,7 @@ import { ElementType } from 'react';
 import { StarIcon } from './Icons';
 import { cn } from '@/lib/utils/cn';
 
-type HeadingLine = string | { first: string; last: string };
+export type HeadingLine = string | { first: string; last: string };
 
 interface SectionHeadingProps {
   as?: ElementType;

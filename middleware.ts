@@ -1,6 +1,17 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, type NextRequest } from 'next/server';
 
-export function middleware() {
+export function middleware(request: NextRequest) {
+  if (process.env.NODE_ENV === 'development') {
+    return NextResponse.next();
+  }
+
+  console.log('middleware', request.nextUrl);
+
+  const redirects = ['/visas', '/tax'];
+  if (process.env.VERCEL_ENV === 'production' && redirects.includes(request.nextUrl.pathname)) {
+    return NextResponse.redirect(new URL('/', request.url));
+  }
+
   return NextResponse.next();
 }
 

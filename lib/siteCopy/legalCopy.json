@@ -1,0 +1,836 @@
+{
+  "hero": {
+    "title": "Legal Resources"
+  },
+  "intro": {
+    "heading": "Relocating to Spain involves more than securing a visa.",
+    "subheading": "The sections below provide an overview of important tax considerations, immigration options, and the legal requirements for starting and operating a business in Spain.",
+    "cta": {
+      "text": "Explore Legal Resources",
+      "heading": "on this page:",
+      "label": "Click to jump to section"
+    }
+  },
+  "jumpLinks": [
+    {
+      "label": "Visa Pathways in Spain",
+      "href": "#visa-pathways",
+      "children": [
+        { "label": "Non-Lucrative Visa (NLV)", "href": "#non-lucrative-visa" },
+        { "label": "Digital Nomad Visa (DNV)", "href": "#digital-nomad-visa" },
+        { "label": "Self-Employed Residence Permit (Autónomo)", "href": "#self-employed-residence" },
+        { "label": "Family Reunification Residence", "href": "#family-reunification" },
+        { "label": "Residence and Work Permits", "href": "#residence-work-permits" },
+        { "label": "Residence Permit for Study or Research", "href": "#study-research-permit" },
+        { "label": "Family Members of EU Citizen", "href": "#family-eu-citizen" }
+      ]
+    },
+    {
+      "label": "Taxes in Spain",
+      "href": "#taxes",
+      "children": [
+        { "label": "Personal Tax", "href": "#personal-tax" },
+        { "label": "Tax Returns & Reporting", "href": "#tax-returns-reporting" },
+        { "label": "Housing & Property Taxes", "href": "#housing-property-taxes" },
+        { "label": "Inheritance, Gifts & Donations", "href": "#inheritance-gifts-donations" }
+      ]
+    },
+    {
+      "label": "Business Laws & Regulations in Spain",
+      "href": "#business-laws",
+      "children": [
+        { "label": "Business Creation & Formation", "href": "#business-creation" },
+        { "label": "Company Management & Corporate Governance", "href": "#company-management" },
+        { "label": "Family Businesses", "href": "#family-businesses" },
+        { "label": "Associations & Foundations", "href": "#associations-foundations" },
+        { "label": "International Companies & Cross-Border Commerce", "href": "#international-companies" },
+        { "label": "Intellectual Property", "href": "#intellectual-property" },
+        { "label": "Patents & Innovation Protection", "href": "#patents-innovation" },
+        { "label": "EU and International Business Regulations", "href": "#eu-international-regulations" }
+      ]
+    }
+  ],
+  "visaPathways": {
+    "id": "visa-pathways",
+    "title": "Visa Pathways in Spain",
+    "overview": "Spain offers several immigration pathways for individuals, families, students, and entrepreneurs looking to make Spain their new home. The right visa or residence permit will depend on your goals, whether you're planning to work, study, join family members, or establish your own business.",
+    "jumpToLabel": "Jump to:",
+    "subsections": [
+      {
+        "id": "non-lucrative-visa",
+        "title": "Non-Lucrative Visa (NLV)",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The Non-Lucrative Visa is one of the most popular pathways for individuals and families who want to live in Spain without working for a Spanish employer.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "Spain Non Lucrative Visa Explained", "href": "/blog/spain-non-lucrative-visa-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "This visa may be a good fit for:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Retirees",
+              "Individuals living from savings or investments",
+              "People with passive income sources",
+              "Those taking a sabbatical or planning a lifestyle move to Spain"
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "paragraph",
+            "text": "To qualify, applicants generally need to demonstrate sufficient financial resources to support themselves and any dependent family members, along with private health insurance and a clean criminal record."
+          },
+          {
+            "type": "list",
+            "items": [
+              "Proof of sufficient financial means — you’ll need to show stable savings or passive income to support yourself (and any dependents) without working in Spain.",
+              "Private health insurance — full-coverage Spanish health insurance with no co-payments is required for the duration of your stay.",
+              "Clean criminal record — background checks from your country (or countries) of residence for the past five years.",
+              "Medical certificate — confirmation that you do not have any illnesses that pose a public health risk under international regulations.",
+              "No employment in Spain — this visa is designed for those who will not work for a Spanish employer.",
+              "Apply from your home country — the initial application must be submitted through the Spanish consulate where you legally reside. Our team at Hola España handles the document preparation and coordinates the submission process, so everything is organized, accurate, and stress-free from start to finish."
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "The Non-Lucrative Visa does not authorize employment in Spain. However, many people use this pathway as a first step toward long-term residency while enjoying Spain's lifestyle, culture, and quality of life."
+          },
+          {
+            "type": "paragraph",
+            "text": "The visa is typically granted for one year initially and may be renewed, eventually creating a pathway toward long-term residence in Spain."
+          }
+        ]
+      },
+      {
+        "id": "digital-nomad-visa",
+        "title": "Digital Nomad Visa (DNV)",
+        "hasBackground": true,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Spain's Digital Nomad Visa was created for remote workers and freelancers who want to live in Spain while working for employers or clients located outside the country.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "Spain Digital Nomad Visa Explained", "href": "/blog/spain-digital-nomad-visa-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "This visa may be a good fit for:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Remote employees working for foreign companies",
+              "Freelancers serving international clients",
+              "Online business owners",
+              "Location-independent professionals"
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "paragraph",
+            "text": "This visa may also be a good fit for:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Remote employees of foreign companies — professionals working for a non-Spanish employer with authorization to work remotely from Spain.",
+              "Freelancers or independent contractors — individuals providing services primarily to clients located outside of Spain.",
+              "Business owners or entrepreneurs — those running an established company abroad and managing it remotely.",
+              "Tech and knowledge-based professionals — specialists in fields like IT, marketing, consulting, design, finance, and other digital industries who can perform their work fully online."
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "paragraph",
+            "text": "Applicants generally need to demonstrate a stable source of income, professional qualifications or relevant work experience, and the ability to perform their work remotely. Private health insurance and a clean criminal record are also typically required."
+          },
+          {
+            "type": "note",
+            "text": "For many remote professionals, the Digital Nomad Visa offers a flexible pathway to Spanish residency while continuing to work with international employers and clients."
+          },
+          {
+            "type": "paragraph",
+            "text": "The visa is typically granted for one to three years initially and may be renewed, eventually creating a pathway toward long-term residence in Spain."
+          }
+        ]
+      },
+      {
+        "id": "self-employed-residence",
+        "title": "Self-Employed Residence Permit (Autónomo)",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "For entrepreneurs, freelancers, and business owners who wish to live and work in Spain by operating their own business.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "Spanish Autonomo Visa Explained", "href": "/blog/spanish-autonomo-visa-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "This residence permit may be suitable if you plan to:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Launch a new business in Spain",
+              "Work as a freelancer or independent contractor",
+              "Offer professional services to clients",
+              "Become self-employed as an autónomo"
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "paragraph",
+            "text": "Applicants are generally required to present a viable business plan, demonstrate sufficient financial resources, and show that the proposed activity complies with Spanish regulations."
+          },
+          {
+            "type": "note",
+            "text": "This pathway allows you to live and work legally in Spain while building your own business."
+          }
+        ]
+      },
+      {
+        "id": "family-reunification",
+        "title": "Family Reunification Residence",
+        "hasBackground": true,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "If you already have close family members legally residing in Spain, you may be able to join them through Spain's family reunification process.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "Spanish Family Reunification Visa Explained", "href": "/blog/spanish-family-reunification-visa-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Family reunification may be available for:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Spouses and registered partners",
+              "Dependent children",
+              "Certain dependent parents and relatives"
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "paragraph",
+            "text": "The sponsoring family member must generally demonstrate adequate housing, financial means, and legal residence status in Spain. Once approved, family members can obtain residence authorization and, in many cases, access employment opportunities in Spain."
+          }
+        ]
+      },
+      {
+        "id": "residence-work-permits",
+        "title": "Residence and Work Permits",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "For individuals who have secured employment with a Spanish employer.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "Spanish Work Permit Visa Explained", "href": "/blog/spanish-work-permit-visa-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "This pathway is commonly used by:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Skilled professionals",
+              "Employees relocating to Spain",
+              "Individuals accepting a job offer from a Spanish company"
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "paragraph",
+            "text": "In most cases, the employer begins the application process by obtaining work authorization on behalf of the employee. Once approved, the applicant can obtain the appropriate visa and residence permit to live and work in Spain. Initial permits are typically granted for one year and may be renewed."
+          }
+        ]
+      },
+      {
+        "id": "study-research-permit",
+        "title": "Residence Permit for Study or Research (Student visa)",
+        "hasBackground": true,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "For students, researchers, and academics pursuing educational or research opportunities in Spain.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "Spanish Student Visa Explained", "href": "/blog/spanish-student-visa-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "This permit may be appropriate for:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "University students",
+              "Language students",
+              "Postgraduate and doctoral candidates",
+              "Researchers and innovation professionals"
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "paragraph",
+            "text": "Applicants generally must be accepted into an approved educational institution or research program and demonstrate sufficient financial means and health insurance coverage. Depending on the circumstances, certain permits may also allow limited work activities or pathways to longer-term residence after studies are completed."
+          }
+        ]
+      },
+      {
+        "id": "family-eu-citizen",
+        "title": "Family Members of an EU Citizen",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Non-EU family members of European Union, EEA, or Swiss citizens may have access to a special residence pathway when accompanying or joining their qualifying family member in Spain.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "Family of EU Citizen Spanish Visa Explained", "href": "/blog/family-of-eu-citizen-spanish-visa-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "This route may apply to:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Spouses and registered partners",
+              "Dependent children",
+              "Certain dependent parents and relatives"
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "paragraph",
+            "text": "Eligible family members can apply for a residence card that allows them to reside in Spain alongside their EU family member and, in many cases, access employment and other residency rights."
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "heading": "Immigration Planning & Visa Advice",
+      "headingLines": ["Immigration Planning", "& Visa Advice"],
+      "imageSrc": "/images/card-visa.webp",
+      "description": "Spanish immigration law can be complex, and the best pathway is not always immediately obvious. Choosing the correct visa or residence permit from the beginning can help avoid delays, unnecessary expenses, and future immigration complications.",
+      "button": {
+        "text": "Get a Visa Consultation",
+        "subtext": "Need help finding the right visa? Our immigration specialists can assess your circumstances, explain your options, and guide you through every step of the application process. You can start the process by scheduling a free 20 min consultation."
+      }
+    }
+  },
+  "taxes": {
+    "id": "taxes",
+    "title": "Taxes in Spain",
+    "overview": "Understanding your tax obligations is an important part of relocating to Spain. Tax rules can vary depending on your residency status, income sources, assets, and investments. The overview below highlights some of the most common tax considerations for individuals, property owners, and business operators.",
+    "jumpToLabel": "Jump to:",
+    "subsections": [
+      {
+        "id": "personal-tax",
+        "title": "Personal Tax",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Your tax obligations in Spain will depend largely on whether you are considered a tax resident or non-resident.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "Personal Taxes in Spain Explained", "href": "/blog/personal-taxes-in-spain-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              "Income Tax (IRPF): Spanish tax residents are generally taxed on their worldwide income.",
+              "Non-Resident Tax: Non-residents may only be taxed on income earned within Spain.",
+              "Wealth Tax: Individuals with significant assets may be subject to wealth tax depending on their circumstances and region of residence.",
+              "Tax Residency: Generally, spending more than 183 days per year in Spain may result in tax residency status."
+            ],
+            "style": "bullet"
+          }
+        ]
+      },
+      {
+        "id": "tax-returns-reporting",
+        "title": "Tax Returns & Reporting",
+        "hasBackground": true,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Spain requires various tax filings depending on your residency status, assets, and business activities.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "Tax Returns in Spain Explained", "href": "/blog/tax-returns-in-spain-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              "Form 720: Declaration of certain assets held outside Spain.",
+              "Form 210: Commonly used by non-residents to report taxable income and property ownership obligations.",
+              "Income Tax Returns: Annual filings for tax residents.",
+              "Corporate Tax Returns: Required for companies operating within Spain."
+            ],
+            "style": "bullet"
+          }
+        ]
+      },
+      {
+        "id": "housing-property-taxes",
+        "title": "Housing & Property Taxes",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Owning property in Spain may create additional tax obligations.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "Property Taxes in Spain Explained", "href": "/blog/property-taxes-in-spain-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              "Real Estate Taxes: Property owners may be responsible for local property taxes and other municipal charges.",
+              "Capital Gains Tax: May apply when selling Spanish property or other qualifying assets.",
+              "Rental Income Tax: Income earned from renting property may be subject to taxation.",
+              "Property Ownership Requirements: Tax responsibilities can vary based on residency status and property usage."
+            ],
+            "style": "bullet"
+          }
+        ]
+      },
+      {
+        "id": "inheritance-gifts-donations",
+        "title": "Inheritance, Gifts & Donations",
+        "hasBackground": true,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Spain applies taxes to certain transfers of wealth, though rates and exemptions can vary by region.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "Inheritance and Gift Tax in Spain Explained", "href": "/blog/inheritance-and-gift-tax-in-spain-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              "Inheritance Tax: May apply when assets are inherited by beneficiaries.",
+              "Gift Tax: Can apply when money, property, or other assets are gifted during a person's lifetime.",
+              "Donations: Certain charitable donations may have tax implications or available deductions.",
+              "Regional Differences: Tax rates and allowances often vary between Spain's autonomous communities."
+            ],
+            "style": "bullet"
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "heading": "International Tax Planning",
+      "headingLines": ["International Tax", "Planning"],
+      "imageSrc": "/images/card-tax.webp",
+      "description": "Moving to Spain often involves cross-border tax considerations. Professional tax planning can help you understand your obligations, identify potential tax-saving opportunities, and structure your finances efficiently before and after your relocation.",
+      "button": {
+        "text": "Get a Tax Consultation",
+        "subtext": "Need personalized guidance? Our international tax specialists can help you navigate Spanish tax planning with confidence. You can start the process by scheduling a free 20 min consultation."
+      }
+    }
+  },
+  "businessLaws": {
+    "id": "business-laws",
+    "title": "Business Laws & Regulations in Spain",
+    "overview": "Spain offers a stable and well-regulated environment for entrepreneurs, investors, and international companies. Whether you're launching a new venture, managing a family business, or expanding an existing company into the Spanish market, understanding the legal framework is an important part of long-term success.",
+    "jumpToLabel": "Jump to:",
+    "subsections": [
+      {
+        "id": "business-creation",
+        "title": "Business Creation & Formation",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Starting a business in Spain involves selecting the appropriate legal structure, registering the company, obtaining tax identification numbers, and complying with local and national regulations.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "Starting a Business in Spain Explained", "href": "/blog/starting-a-business-in-spain-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Common business structures include:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Sole Trader (Autónomo)",
+              "Limited Liability Company (Sociedad Limitada or S.L.)",
+              "Public Limited Company (Sociedad Anónima or S.A.)",
+              "Branches of foreign companies"
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "The right structure will depend on your business goals, liability considerations, tax planning, and investment needs."
+          }
+        ]
+      },
+      {
+        "id": "company-management",
+        "title": "Company Management & Corporate Governance",
+        "hasBackground": true,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Spanish companies are subject to regulations governing how businesses are managed, operated, and reported.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "Company Management in Spain Explained", "href": "/blog/company-management-in-spain-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Key considerations may include:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Director and shareholder responsibilities",
+              "Corporate governance requirements",
+              "Accounting and bookkeeping obligations",
+              "Annual filings and reporting requirements",
+              "Employment and labor law compliance"
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "Maintaining proper corporate records and regulatory compliance is essential for the smooth operation of any business in Spain."
+          }
+        ]
+      },
+      {
+        "id": "family-businesses",
+        "title": "Family Businesses",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Family-owned businesses play an important role in Spain's economy and often require specialized planning to support long-term growth and succession.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "Family Businesses in Spain Explained", "href": "/blog/family-businesses-in-spain-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Important considerations may include:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Ownership structures",
+              "Succession planning",
+              "Inheritance considerations",
+              "Shareholder agreements",
+              "Tax-efficient business transfers"
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "Proper legal planning can help protect both the business and future generations."
+          }
+        ]
+      },
+      {
+        "id": "associations-foundations",
+        "title": "Associations & Foundations",
+        "hasBackground": true,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Spain allows for the creation of non-profit organizations, associations, and charitable foundations for educational, cultural, social, and philanthropic purposes.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "Operating a Foundation in Spain Explained", "href": "/blog/operating-a-foundation-in-spain-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "These organizations are governed by specific legal and administrative requirements relating to:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Registration procedures",
+              "Governance structures",
+              "Reporting obligations",
+              "Tax treatment",
+              "Public benefit activities"
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "Selecting the appropriate organizational structure is an important first step when establishing a non-profit entity in Spain."
+          }
+        ]
+      },
+      {
+        "id": "international-companies",
+        "title": "International Companies & Cross-Border Commerce",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Spain serves as an important gateway between Europe, Latin America, and international markets, making it an attractive location for global business operations.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "International Commerce in Spain Explained", "href": "/blog/international-commerce-in-spain-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Companies engaged in international commerce may need to consider:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Import and export regulations",
+              "International contracts",
+              "Customs requirements",
+              "Cross-border taxation",
+              "Regulatory compliance within multiple jurisdictions"
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "Understanding these requirements can help businesses operate efficiently while minimizing legal and financial risks."
+          }
+        ]
+      },
+      {
+        "id": "intellectual-property",
+        "title": "Intellectual Property",
+        "hasBackground": true,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Protecting intellectual property is an important consideration for businesses, entrepreneurs, creatives, and innovators operating in Spain.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "Intellectual Property in Spain Explained", "href": "/blog/intellectual-property-in-spain-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Intellectual property rights may include:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Trademarks",
+              "Copyrights",
+              "Trade names",
+              "Designs",
+              "Proprietary business assets"
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "Proper registration and protection can help safeguard valuable business assets and prevent unauthorized use."
+          }
+        ]
+      },
+      {
+        "id": "patents-innovation",
+        "title": "Patents & Innovation Protection",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Businesses developing new products, technologies, or inventions may benefit from patent protection.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "Patents in Spain Explained", "href": "/blog/patents-in-spain-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Patent rights can provide legal protection for qualifying innovations and may help businesses:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Protect research and development investments",
+              "Secure competitive advantages",
+              "License technology",
+              "Expand into international markets"
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "Understanding the patent application process early can be an important part of a company's growth strategy."
+          }
+        ]
+      },
+      {
+        "id": "eu-international-regulations",
+        "title": "EU and International Business Regulations",
+        "hasBackground": true,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Businesses operating within Spain often benefit from access to the broader European Union market. However, this also means complying with various EU regulations that affect commercial activities.",
+            "italic": true
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "'",
+              { "text": "New EU Inc. Law Explained", "href": "/blog/new-eu-inc-law-explained" },
+              "'"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Depending on the nature of the business, regulations may involve:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Consumer protection laws",
+              "Data privacy and GDPR compliance",
+              "Competition regulations",
+              "Digital commerce requirements",
+              "Cross-border trade standards"
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "For companies operating internationally, understanding both Spanish and European regulations is essential for sustainable growth and compliance."
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "heading": "Business Planning & Legal Guidance",
+      "headingLines": ["Business Planning", "& Legal Guidance"],
+      "imageSrc": "/images/card-law-legal.webp",
+      "description": "Understanding Spain's legal and regulatory environment is an important part of long-term success. Professional legal guidance can help you navigate complex regulations, reduce risk, and create a strong foundation for your business in Spain.",
+      "button": {
+        "text": "Get a Business Consultation",
+        "subtext": "Need help starting or growing a business in Spain? Our team can assist with company formation, compliance, international commerce, intellectual property protection, and strategic business planning. You can start the process by scheduling a free 20 min consultation."
+      }
+    }
+  }
+}

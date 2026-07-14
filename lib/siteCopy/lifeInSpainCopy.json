@@ -1,0 +1,549 @@
+{
+  "hero": {
+    "title": "Life in Spain"
+  },
+  "intro": {
+    "heading": "Relocating to Spain involves more than securing a visa.",
+    "subheading": "Practical resources to help you understand what day-to-day life in Spain actually looks like, from finding a home and obtaining residency documents to transportation, finances, and settling into your new community.",
+    "cta": {
+      "text": "Explore Life in Spain",
+      "heading": "Explore Life in Spain",
+      "label": "Click to jump to section"
+    }
+  },
+  "jumpLinks": [
+    {
+      "label": "Housing & Real Estate",
+      "href": "#housing",
+      "children": [
+        { "label": "Renting vs Buying in Spain", "href": "#renting-vs-buying" },
+        { "label": "How Real Estate Works in Spain", "href": "#how-real-estate-works" },
+        { "label": "Buying a Home in Spain", "href": "#buying-a-home" },
+        { "label": "Getting a Mortgage in Spain", "href": "#getting-a-mortgage" }
+      ]
+    },
+    {
+      "label": "Transportation & Driving",
+      "href": "#transportation",
+      "children": [
+        { "label": "Do You Need a Car in Spain?", "href": "#need-a-car" },
+        { "label": "Bringing Your Car to Spain", "href": "#bringing-a-car" },
+        { "label": "Buying a Car in Spain", "href": "#buying-a-car" },
+        { "label": "Spanish Driver's License", "href": "#drivers-license" }
+      ]
+    },
+    {
+      "label": "Residency Documents",
+      "href": "#residency",
+      "children": [
+        { "label": "What is an NIE?", "href": "#what-is-nie" },
+        { "label": "What is a TIE?", "href": "#what-is-tie" },
+        { "label": "Why Are NIE & TIE Important?", "href": "#why-important" },
+        { "label": "How Do You Get an NIE or TIE?", "href": "#how-to-get" }
+      ]
+    },
+    {
+      "label": "Banking & Finances",
+      "href": "#banking",
+      "children": [
+        { "label": "Opening a Bank Account", "href": "#opening-account" },
+        { "label": "Getting a Loan or Mortgage", "href": "#loan-mortgage" },
+        { "label": "Understanding Everyday Costs", "href": "#everyday-costs" }
+      ]
+    }
+  ],
+  "housing": {
+    "id": "housing",
+    "title": "Housing & Real Estate",
+    "overview": "Whether you're renting for your first year or purchasing your forever home, understanding Spain's housing market can help you make informed decisions before you relocate.",
+    "jumpToLabel": "Jump to:",
+    "subsections": [
+      {
+        "id": "renting-vs-buying",
+        "title": "Renting vs Buying in Spain",
+        "icon": {
+          "icon": "star",
+          "color": "sand",
+          "className": "pointer-events-none absolute top-1/2 right-25 w-[260px] -translate-y-1/2 opacity-50 md:w-[380px]"
+        },
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Renting can offer flexibility while you adjust to your new life, especially if you're unfamiliar with the area you're moving to. Buying may make sense if you're planning to stay long term, have established residency plans, or are investing in property.",
+            "italic": true
+          },
+          {
+            "type": "list",
+            "title": "Things to consider include:",
+            "items": [
+              "Your long-term plans in Spain",
+              "Your visa or residency status",
+              "Your budget",
+              "Your desired location",
+              "Whether you prefer flexibility or stability"
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "Many expats rent during their first year before committing to a property purchase."
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "To read more in depth about ",
+              { "text": "Renting vs. Buying in Spain", "href": "/blog/renting-vs-buying-in-spain" },
+              " visit our blog."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "how-real-estate-works",
+        "title": "How Real Estate Works in Spain",
+        "hasBackground": true,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The home buying process in Spain can look quite different from what many expats are used to. Several professionals may be involved throughout the process, including:",
+            "italic": true
+          },
+          {
+            "type": "list",
+            "items": ["Real estate agents", "Property lawyers", "Notaries", "Mortgage lenders", "Property registrars"],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "Having professional guidance is highly recommended to help verify ownership records, review contracts, and identify any potential legal issues before purchasing a property."
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "To read more about the process of ",
+              { "text": "How Real Estate Works In Spain", "href": "/blog/how-real-estate-works-in-spain" },
+              " visit our blog."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "buying-a-home",
+        "title": "Buying a Home in Spain",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Buying a home in Spain generally follows several steps:",
+            "italic": true
+          },
+          {
+            "type": "list",
+            "items": [
+              "Find a property",
+              "Make an offer",
+              "Sign a reservation agreement",
+              "Conduct legal due diligence",
+              "Secure financing if needed",
+              "Sign final paperwork before a notary",
+              "Register the property"
+            ],
+            "style": "number"
+          },
+          {
+            "type": "note",
+            "text": "It's important to remember that additional costs often apply beyond the purchase price, including taxes, notary fees, registration fees, and legal expenses. Taking time to understand these costs upfront can help you budget more effectively."
+          },
+          {
+            "type": "footer",
+            "segments": ["To read more about ", { "text": "Buying A Home In Spain", "href": "/blog/buying-a-home-in-spain" }, " visit our blog."]
+          }
+        ]
+      },
+      {
+        "id": "getting-a-mortgage",
+        "title": "Getting a Mortgage in Spain",
+        "hasBackground": true,
+        "icon": {
+          "icon": "sun",
+          "color": "sand",
+          "className": "pointer-events-none absolute top-1/2 -right-50 w-[260px] -translate-y-1/2 opacity-15 md:w-[380px]"
+        },
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Both residents and non-residents may be eligible for mortgages in Spain, although requirements can vary. Lenders often consider:",
+            "italic": true
+          },
+          {
+            "type": "list",
+            "items": ["Your income", "Employment status", "Existing debt", "Residency status", "Creditworthiness", "Available down payment"],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "Foreign buyers are often required to provide a larger down payment than residents. Gathering your financial documents early can help streamline the process."
+          },
+          {
+            "type": "footer",
+            "segments": ["To read more about ", { "text": "Getting A Mortgage In Spain", "href": "/blog/getting-a-mortgage-in-spain" }, " visit our blog."]
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "heading": "Finding Your Place in Spain Starts with a Plan",
+      "headingLines": ["Finding Your Place in", "Spain Starts with a Plan"],
+      "imageSrc": "/images/card-housing.webp",
+      "body": [
+        "Remote employees of foreign companies — professionals working for a non-Spanish employer with authorization to work remotely from Spain.",
+        "Freelancers or independent contractors — individuals providing services primarily to clients located outside of Spain.",
+        "Business owners or entrepreneurs — those running an established company abroad and managing it remotely.",
+        "Tech and knowledge-based professionals — specialists in fields like IT, marketing, consulting, design, finance, and other digital industries who can perform their work fully online."
+      ],
+      "description": "Navigating Spain's housing market can feel overwhelming, especially if you're unfamiliar with local processes, legal requirements, and regional differences. Having the right guidance early can help you avoid costly mistakes and make confident decisions about where and how to settle.",
+      "button": {
+        "text": "Schedule a Housing Consultation",
+        "subtext": "Need help deciding whether to rent, buy, or explore mortgage options in Spain?"
+      }
+    }
+  },
+  "transportation": {
+    "id": "transportation",
+    "title": "Transportation & Driving",
+    "overview": "Spain has one of Europe's most efficient transportation systems, and many expats are pleasantly surprised to discover they may not need a car at all. Whether a car makes sense for you will largely depend on where you choose to live.",
+    "jumpToLabel": "Jump to:",
+    "subsections": [
+      {
+        "id": "need-a-car",
+        "title": "Do You Need a Car in Spain?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "If you're living in a major city such as Madrid, Barcelona, Valencia, Málaga, or Bilbao, you may find that public transportation meets nearly all of your daily needs. Spain offers extensive networks of:",
+            "italic": true
+          },
+          {
+            "type": "list",
+            "items": ["High-speed trains", "Regional trains", "Metro systems", "Buses", "Trams", "Bike-sharing programs"],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "If you plan to live in a smaller town or rural area, a car may provide more flexibility. Your lifestyle, work situation, and location will ultimately determine whether owning a vehicle is necessary."
+          }
+        ]
+      },
+      {
+        "id": "bringing-a-car",
+        "title": "Bringing Your Car to Spain",
+        "hasBackground": true,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Some expats choose to import their existing vehicle, while others decide to purchase one after arriving. Importing a car may involve:",
+            "italic": true
+          },
+          {
+            "type": "list",
+            "items": ["Shipping costs", "Customs procedures", "Vehicle inspections", "Registration requirements", "Additional taxes and fees."],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "Depending on your circumstances, purchasing a car locally may be more practical and cost effective."
+          },
+          {
+            "type": "footer",
+            "segments": ["To read more about ", { "text": "Bringing Your Car To Spain", "href": "/blog/bringing-your-car-to-spain" }, " visit our blog."]
+          }
+        ]
+      },
+      {
+        "id": "buying-a-car",
+        "title": "Buying a Car in Spain",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Buying a car in Spain is relatively straightforward. You can purchase:",
+            "italic": true
+          },
+          {
+            "type": "list",
+            "items": ["New vehicles", "Used vehicles", "Certified pre-owned vehicles"],
+            "style": "bullet"
+          },
+          {
+            "type": "list",
+            "title": "You'll typically need:",
+            "items": ["Identification documents", "Residency documents", "Insurance coverage", "A Spanish address"],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "Researching insurance and ongoing ownership costs ahead of time can help you determine if car ownership aligns with your lifestyle."
+          }
+        ]
+      },
+      {
+        "id": "drivers-license",
+        "title": "Getting a Spanish Driver's License",
+        "hasBackground": true,
+        "icon": {
+          "icon": "sun",
+          "color": "sand",
+          "className": "pointer-events-none absolute top-1/2 right-0 w-[260px] -translate-y-1/2 opacity-15 md:w-[380px]"
+        },
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Whether you'll need a Spanish driver's license depends on your nationality and residency status. Some countries have license exchange agreements with Spain, allowing residents to exchange their existing license without taking a full driving exam. Others may be required to complete:",
+            "italic": true
+          },
+          {
+            "type": "list",
+            "items": ["A written exam", "A practical driving test", "A medical evaluation"],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "Understanding these requirements early can help you prepare before your move."
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "To read more about ",
+              { "text": "Getting A Spanish Drivers License", "href": "/blog/getting-a-spanish-drivers-license" },
+              " visit our blog."
+            ]
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "heading": "Build a Lifestyle That Works for You",
+      "headingLines": ["Build a Lifestyle", "That Works for You"],
+      "imageSrc": "/images/card-relocation.webp",
+      "description": "One of the biggest adjustments when moving abroad is figuring out how you'll navigate daily life. Whether you're deciding if you need a car, importing a vehicle, or obtaining a Spanish driver's license, understanding your options can make your transition much smoother.",
+      "button": {
+        "text": "Schedule a Relocation Consultation",
+        "subtext": "Need help deciding what transportation options make the most sense for your move?"
+      }
+    }
+  },
+  "residency": {
+    "id": "residency",
+    "title": "Residency Documents",
+    "overview": "Several important documents will become part of your daily life in Spain. Understanding them ahead of time can make your transition significantly smoother.",
+    "jumpToLabel": "Jump to:",
+    "subsections": [
+      {
+        "id": "what-is-nie",
+        "title": "What is an NIE?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The NIE, or Número de Identidad de Extranjero, is your Foreigner Identification Number. Think of it as your official identification number for many administrative activities in Spain.",
+            "italic": true
+          },
+          {
+            "type": "list",
+            "items": ["Open a bank account", "Sign a lease", "Purchase property", "Pay taxes", "Establish utilities", "Conduct financial transactions"],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "For many expats, obtaining an NIE is one of the first administrative steps after deciding to move."
+          },
+          {
+            "type": "footer",
+            "segments": ["To read more about ", { "text": "NIE and TIE In Spain", "href": "/blog/nie-and-tie-in-spain" }, " visit our blog."]
+          }
+        ]
+      },
+      {
+        "id": "what-is-tie",
+        "title": "What is a TIE?",
+        "hasBackground": true,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The TIE, or Tarjeta de Identidad de Extranjero, is your physical residency card. Unlike the NIE, which is simply a number, the TIE serves as proof of your legal residency status in Spain. The card generally includes:",
+            "italic": true
+          },
+          {
+            "type": "list",
+            "items": ["Your photograph", "Your NIE number", "Your residency information", "Your expiration date"],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "Many non-EU residents will eventually need a TIE as part of their immigration process."
+          },
+          {
+            "type": "footer",
+            "segments": ["To read more about ", { "text": "NIE and TIE In Spain", "href": "/blog/nie-and-tie-in-spain" }, " visit our blog."]
+          }
+        ]
+      },
+      {
+        "id": "why-important",
+        "title": "Why Are NIE & TIE Important?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Your NIE and TIE are used throughout nearly every aspect of life in Spain. You'll often need them when:",
+            "italic": true
+          },
+          {
+            "type": "list",
+            "items": [
+              "Opening bank accounts",
+              "Renting or buying property",
+              "Obtaining healthcare",
+              "Starting a business",
+              "Registering for services",
+              "Signing contracts"
+            ],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "Because these documents are so important, it's beneficial to understand the application process before arriving."
+          }
+        ]
+      },
+      {
+        "id": "how-to-get",
+        "title": "How Do You Get an NIE or TIE?",
+        "hasBackground": true,
+        "icon": {
+          "icon": "sun",
+          "color": "sand",
+          "className": "pointer-events-none absolute top-1/2 right-0 w-[260px] -translate-y-1/2 opacity-15 md:w-[380px]"
+        },
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The exact process will depend on your immigration pathway and residency status. In general, obtaining these documents may involve:",
+            "italic": true
+          },
+          {
+            "type": "list",
+            "items": [
+              "Completing official applications",
+              "Booking appointments",
+              "Providing supporting documentation",
+              "Attending biometric appointments",
+              "Paying administrative fees"
+            ],
+            "style": "number"
+          },
+          {
+            "type": "note",
+            "text": "Planning ahead can help minimize delays and make your transition smoother."
+          },
+          {
+            "type": "footer",
+            "segments": ["To read more about ", { "text": "How To Get An NIE Or TIE", "href": "/blog/how-to-get-an-nie-or-tie" }, " visit our blog."]
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "heading": "Simplify the Administrative Process",
+      "headingLines": ["Simplify the", "Administrative Process"],
+      "imageSrc": "/images/card-visa.webp",
+      "description": "Spain's paperwork and administrative systems can feel intimidating at first, but obtaining the right documents early will make nearly every aspect of life easier once you arrive. We can even help you obtain an appointment in Spain for your NIE and TIE.",
+      "button": {
+        "text": "Schedule a Residency Consultation",
+        "subtext": "Need help understanding your NIE, TIE, and other essential residency requirements?"
+      }
+    }
+  },
+  "banking": {
+    "id": "banking",
+    "title": "Banking & Finances",
+    "overview": "Setting up your finances is one of the most important parts of settling into life in Spain. Fortunately, once your foundational documents are in place, many financial processes become much easier.",
+    "jumpToLabel": "Jump to:",
+    "subsections": [
+      {
+        "id": "opening-account",
+        "title": "Opening a Bank Account",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Opening a Spanish bank account can make daily life significantly more convenient. You'll often need one to:",
+            "italic": true
+          },
+          {
+            "type": "list",
+            "items": ["Pay rent or mortgages", "Receive income", "Pay utilities", "Set up automatic payments", "Manage everyday expenses"],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "Banks may offer different accounts for residents and non-residents, so choosing the right option is important."
+          }
+        ]
+      },
+      {
+        "id": "loan-mortgage",
+        "title": "Getting a Loan or Mortgage",
+        "hasBackground": true,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Spain offers various lending options for residents and foreign buyers. Approval may depend on factors such as:",
+            "italic": true
+          },
+          {
+            "type": "list",
+            "items": ["Income", "Residency status", "Existing debt obligations", "Employment history", "Available down payment"],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "Preparing financial documentation ahead of time can improve your chances of approval."
+          }
+        ]
+      },
+      {
+        "id": "everyday-costs",
+        "title": "Understanding Everyday Costs",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The cost of living in Spain varies widely depending on where you choose to live. Your monthly expenses may include:",
+            "italic": true
+          },
+          {
+            "type": "list",
+            "items": ["Housing", "Groceries", "Utilities", "Internet", "Mobile phone service", "Transportation", "Healthcare"],
+            "style": "bullet"
+          },
+          {
+            "type": "note",
+            "text": "Many expats find that Spain offers an excellent quality of life while maintaining a lower cost of living than many other Western countries."
+          },
+          {
+            "type": "footer",
+            "segments": [
+              "To explore what your monthly costs could look like in your selected city, visit: ",
+              { "text": "Numbeo", "href": "https://www.numbeo.com/cost-of-living/city-estimator/in/Valencia", "external": true }
+            ]
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "heading": "Create a Strong Financial Foundation in Spain",
+      "headingLines": ["Create a Strong Financial", "Foundation in Spain"],
+      "imageSrc": "/images/card-tax.webp",
+      "description": "Need help preparing your finances before relocating to Spain?",
+      "button": {
+        "text": "Schedule a Financial Planning Consultation",
+        "subtext": "Want help building a financial plan for your move to Spain?"
+      }
+    }
+  }
+}

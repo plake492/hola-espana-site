@@ -17,18 +17,38 @@ interface NavPage {
 
 const pages: NavPage[] = [
   { id: 1, href: '/packages', text: 'packages' },
-  { id: 5, href: '/about', text: 'about' },
-  { id: 3, href: '/legal', text: 'legal' },
+  { id: 2, href: '/about', text: 'about' },
   {
-    id: 4,
-    href: '/visas',
-    text: 'visas',
+    id: 3,
+    href: '/legal',
+    text: 'legal',
     dropdown: [
-      { href: '/visas#nlv', text: 'Non-Lucrative Visa' },
-      { href: '/visas#dnv', text: 'Digital Nomad Visa' },
+      { href: '/legal#visa-pathways', text: 'Visa Pathways' },
+      { href: '/legal#taxes', text: 'Taxes in Spain' },
+      { href: '/legal#business-laws', text: 'Business Laws & Regulations' },
     ],
   },
-  { id: 2, href: '/blog', text: 'blog' },
+  {
+    id: 4,
+    href: '/life-in-spain',
+    text: 'life in spain',
+    dropdown: [
+      { href: '/life-in-spain#housing', text: 'Housing & Real Estate' },
+      { href: '/life-in-spain#transportation', text: 'Transportation & Driving' },
+      { href: '/life-in-spain#residency', text: 'Residency Documents' },
+      { href: '/life-in-spain#banking', text: 'Banking & Finances' },
+    ],
+  },
+  // {
+  //   id: 5,
+  //   href: '/visas',
+  //   text: 'visas',
+  //   dropdown: [
+  //     { href: '/visas#nlv', text: 'Non-Lucrative Visa' },
+  //     { href: '/visas#dnv', text: 'Digital Nomad Visa' },
+  //   ],
+  // },
+  { id: 6, href: '/blog', text: 'blog' },
 ];
 
 // ─── Desktop dropdown ──────────────────────────────────────────────────────────
