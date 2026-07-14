@@ -1,50 +1,20 @@
 'use client';
 
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { useSpring, animated } from '@react-spring/web';
+import { useMeasuredAccordion } from '@/hooks/useMeasuredAccordion';
 
 interface AccordionProps {
   content: Record<string, string>[];
 }
 
 export default function Accordion({ content }: AccordionProps) {
-  const [activeId, setActiveId] = useState<number | null>(0);
-  const measureRef = useRef<HTMLDivElement>(null);
-  const wrapperRef = useRef<HTMLDivElement>(null);
-
-  const handleToggle = useCallback((id: number) => {
-    setActiveId((prev) => (prev === id ? null : id));
-  }, []);
-
   const items = content;
 
-  const [minHeight, setMinHeight] = useState<number>(0);
-
-  useEffect(() => {
-    const measure = () => {
-      if (!measureRef.current || !wrapperRef.current) return;
-      // Find the tallest content panel
-      const children = measureRef.current.children;
-      let max = 0;
-      for (let i = 0; i < children.length; i++) {
-        max = Math.max(max, children[i].scrollHeight);
-      }
-      // Collapsed height = sum of all header button heights (borders are now inside the animated content)
-      const buttons = wrapperRef.current.querySelectorAll<HTMLElement>('[data-accordion-row] button');
-      let collapsedHeight = 0;
-      buttons.forEach((button) => {
-        collapsedHeight += button.offsetHeight;
-      });
-
-      setMinHeight(collapsedHeight + max);
-    };
-
-    measure();
-
-    const observer = new ResizeObserver(measure);
-    if (wrapperRef.current) observer.observe(wrapperRef.current);
-    return () => observer.disconnect();
-  }, [items.length]);
+  const { toggle, isOpen, wrapperRef, measureRef, minHeight } = useMeasuredAccordion<number>({
+    defaultOpenId: 0,
+    itemCount: items.length,
+  });
 
   return (
     <div ref={wrapperRef} className="text-light relative" style={{ minHeight }}>
@@ -60,7 +30,7 @@ export default function Accordion({ content }: AccordionProps) {
       </div>
 
       {items.map(({ title, content }, id) => (
-        <Row key={id} title={title} content={content} id={id} isActive={activeId === id} onToggle={handleToggle} />
+        <Row key={id} title={title} content={content} id={id} isActive={isOpen(id)} onToggle={toggle} />
       ))}
     </div>
   );
