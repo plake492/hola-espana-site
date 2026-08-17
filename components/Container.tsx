@@ -1,9 +1,9 @@
 import { ElementType, ReactNode } from 'react';
-import { SunIcon, StarIcon } from './Icons';
+import { SunIcon, StarIcon, RosetteIcon } from './Icons';
 import { cn } from '@/lib/utils/cn';
 
-interface IconProps {
-  icon?: 'star' | 'sun';
+export interface IconProps {
+  icon: 'star' | 'sun' | 'rosetta';
   /**  
    * Icon Theme Colors
     sand: '#DDD0C2',
@@ -22,8 +22,8 @@ interface ContainerProps {
   className?: string;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | 'full';
   noCenter?: boolean;
-  iconProps?: IconProps;
-  [key: string]: any;
+  iconProps?: IconProps[];
+  [key: string]: unknown;
 }
 
 export default function Container({ as: Element = 'section', children, className, size = '3xl', noCenter, iconProps, ...rest }: Readonly<ContainerProps>) {
@@ -49,20 +49,30 @@ export default function Container({ as: Element = 'section', children, className
   const icons = {
     star: StarIcon,
     sun: SunIcon,
+    rosetta: RosetteIcon,
   };
 
-  const IconComponent = iconProps?.icon && iconProps.icon ? icons[iconProps.icon] : null;
-  const iconClasses =
-    iconProps?.iconClassName || 'absolute top-8 md:top-0 right-0 -z-1 md:h-[360px] md:w-[360px] h-[180px] w-[180px] translate-x-[70px] md:translate-x-[100px]';
-  const iconColor = iconProps?.iconColor ? `text-${iconProps?.iconColor}` : '';
+  const iconPropsForcArray = iconProps && Array.isArray(iconProps) ? iconProps : [iconProps];
 
   return (
     <Element className={cn('relative w-full', containerSize[size], !noCenter && 'mx-auto', className)} {...rest}>
-      {IconComponent && (
-        <div className={`${iconClasses} ${iconColor}`}>
-          <IconComponent />
-        </div>
-      )}
+      {!!iconPropsForcArray && iconPropsForcArray.length > 0
+        ? iconPropsForcArray.map((icon, index) => {
+            const IconComponent = icon?.icon && icon.icon ? icons[icon.icon] : null;
+            if (!IconComponent) return null;
+
+            const iconClasses =
+              icon?.iconClassName || 'top-8 md:top-0 right-0 -z-1 md:h-[360px] md:w-[360px] h-[180px] w-[180px] translate-x-[70px] md:translate-x-[100px]';
+
+            const iconColor = icon?.iconColor ? `text-${icon?.iconColor}` : '';
+
+            return (
+              <div key={index} className={cn('absolute', iconClasses, iconColor)}>
+                <IconComponent />
+              </div>
+            );
+          })
+        : null}
       {children}
     </Element>
   );

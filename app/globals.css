@@ -39,6 +39,7 @@
   --font-serif: 'Roboto Serif', ui-serif, Georgia, serif; /* Body font */
   --font-script: 'La Luxes', cursive; /* Decorative script font */
   --font-sans: var(--font-aegean);
+  --tracking-aegean: 0.25rem;
 
   /* ========================================
      DESKTOP FONT SIZES 
@@ -173,6 +174,7 @@ h4 *,
 h5 *,
 h6 * {
   font-family: var(--font-aegean);
+  letter-spacing: var(--tracking-aegean);
 }
 
 [id] {
