@@ -37,7 +37,7 @@ export default function PackageCard({ tier, presentation, expanded }: PackageCar
       </div>
       <div className="relative flex h-full flex-col px-4 pt-10 pb-8 lg:px-8 lg:pt-18 lg:pb-0 xl:px-12">
         <h3 className={cn('font-aegean mb-3 transition-all duration-500', expanded ? 'text-lg' : 'text-md')}>{tier.name}</h3>
-        <p className={cn('text-color-dark mb-6 italic transition-all duration-500', expanded ? 'text-sm' : 'text-xs')}>{tier.description}</p>
+        <p className={cn('text-color-dark mb-6 italic transition-all duration-500', expanded ? 'text-md' : 'text-sm')}>{tier.description}</p>
         <p className={cn('font-serif font-semibold italic transition-all duration-500', expanded ? 'text-3xl' : 'text-2xl')}>{tier.price}</p>
         <hr className="my-6 w-24 border-t" style={{ borderColor: presentation.borderColor }} />
         <p className="text-sm">What&apos;s included:</p>
@@ -48,7 +48,7 @@ export default function PackageCard({ tier, presentation, expanded }: PackageCar
               <span aria-hidden className="text-terracotta mt-1 h-2.5 w-2.5 shrink-0">
                 <StarIcon />
               </span>
-              <span className={`text-color-dark italic ${expanded ? 'text-xs' : 'text-[12px]'}`}>{feature}</span>
+              <span className={`text-color-dark italic ${expanded ? 'text-sm' : 'text-xs'}`}>{feature}</span>
             </li>
           ))}
         </ul>

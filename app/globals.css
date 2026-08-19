@@ -44,15 +44,15 @@
   /* ========================================
      DESKTOP FONT SIZES 
      ======================================== */
-  --text-xs: 0.875rem;
-  --text-sm: 1rem;
-  --text-md: 1.25rem;
-  --text-lg: 1.5rem;
-  --text-xl: 2rem;
-  --text-2xl: 2.25rem;
-  --text-3xl: 3rem;
-  --text-4xl: 4rem;
-  --text-5xl: 4.75rem;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.25rem;
+  --text-4xl: 3rem;
+  --text-5xl: 4rem;
 
   /* ========================================
   HOMEPAGE HERO FONT SIZES 
@@ -79,13 +79,13 @@
      Viewport range: 640px–1440px.
      Always smaller than --text-headline2 (max 6rem).
      ======================================== */
-  --text-section-xl: clamp(2rem, -0.2rem + 5.5vw, 4.75rem);
-  --text-section-xl--line-height: 1.2;
-  --text-section-lg: clamp(1.75rem, -0.05rem + 4.5vw, 4rem);
+  --text-section-xl: clamp(1.75rem, -0.05rem + 4.5vw, 4rem);
+  --text-section-xl--line-height: 1.3;
+  --text-section-lg: clamp(1.625rem, 0.125rem + 3.75vw, 3.5rem);
   --text-section-lg--line-height: 1.3;
-  --text-section-md: clamp(1.625rem, 0.125rem + 3.75vw, 3.5rem);
+  --text-section-md: clamp(1.5rem, 0.3rem + 3vw, 3rem);
   --text-section-md--line-height: 1.3;
-  --text-section-sm: clamp(1.5rem, 0.3rem + 3vw, 3rem);
+  --text-section-sm: clamp(1.375rem, 0.2rem + 2.5vw, 2.5rem);
   --text-section-sm--line-height: 1.3;
 
   /* ClearPath arch text — scales 14px → 20px */
@@ -100,12 +100,11 @@
   --text-xs--line-height: 1.5;
   --text-sm--line-height: 1.5;
   --text-base--line-height: 1.5;
-  --text-lg--line-height: 1.4;
-  --text-xl--line-height: 1.5;
-  --text-2xl--line-height: 1.4;
-  --text-3xl--line-height: 1.3;
-  --text-4xl--line-height: 1.5;
-  --text-5xl--line-height: 1.3;
+  --text-xl--line-height: 1.4;
+  --text-2xl--line-height: 1.5;
+  --text-3xl--line-height: 1.4;
+  --text-4xl--line-height: 1.3;
+  --text-5xl--line-height: 1.5;
   --text-headline1--line-height: 1.2;
   --text-headline2--line-height: 1.4;
   --text-headline-sub--line-height: 1.4;
@@ -126,18 +125,18 @@
      ======================================== */
 @media (max-width: 767px) {
   :root {
-    --text-xs: 0.75rem; /* 12px */
-    --text-sm: 0.875rem; /* 14px */
-    --text-md: 1rem; /* 16px */
-    --text-lg: 1.25rem; /* 20px */
+    --text-xs: 0.625rem; /* 10px */
+    --text-sm: 0.75rem; /* 12px */
+    --text-md: 0.875rem; /* 14px */
+    --text-lg: 1rem; /* 16px */
     --text-xl: 1.25rem; /* 20px */
-    --text-2xl: 1.5rem; /* 24px */
-    --text-3xl: 1.75rem; /* 28px */
-    --text-4xl: 2.25rem; /* 36px */
-    --text-5xl: 2.75rem; /* 44px */
+    --text-2xl: 1.25rem; /* 20px */
+    --text-3xl: 1.5rem; /* 24px */
+    --text-4xl: 1.75rem; /* 28px */
+    --text-5xl: 2.25rem; /* 36px */
 
     /* Section heading line heights — looser on mobile for readability */
-    --text-section-xl--line-height: 1.4;
+    --text-section-xl--line-height: 1.5;
     --text-section-lg--line-height: 1.5;
     --text-section-md--line-height: 1.5;
     --text-section-sm--line-height: 1.5;
@@ -174,6 +173,10 @@ h4 *,
 h5 *,
 h6 * {
   font-family: var(--font-aegean);
+}
+
+h1,
+h1 * {
   letter-spacing: var(--tracking-aegean);
 }
 

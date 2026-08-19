@@ -17,14 +17,12 @@ const icons: IconProps[] = [
 export default function PackageCards() {
   return (
     <Container className="px-4 py-16 md:px-8 md:py-36" iconProps={icons} size="full">
-      <Container as="div">
-        <div className="mb-12 flex flex-col gap-4 text-center md:mb-16">
-          <h2 className="font mb-4 text-3xl">{copy.header}</h2>
-          <p className="text-md text-color-dark">{copy.description}</p>
-          <p className="text-color-dark text-sm italic">{copy.subDescription}</p>
-        </div>
-        <PackageCarousel tiers={copy.tiers} />
-      </Container>
+      <div className="mb-12 flex flex-col gap-4 text-center md:mb-16">
+        <h2 className="font mb-4 text-3xl">{copy.header}</h2>
+        <p className="text-md text-color-dark">{copy.description}</p>
+        <p className="text-color-dark text-sm italic">{copy.subDescription}</p>
+      </div>
+      <PackageCarousel tiers={copy.tiers} />
     </Container>
   );
 }

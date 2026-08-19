@@ -58,9 +58,7 @@ Common patterns:
 Typical usage:
 
 ```tsx
-<Container className="px-4 py-16 md:px-8 md:py-24">
-  {/* content */}
-</Container>
+<Container className="px-4 py-16 md:px-8 md:py-24">{/* content */}</Container>
 ```
 
 ### `SplitContainer`
@@ -122,19 +120,19 @@ Example from packages hero:
 
 All colors are defined in `@/app/globals.css` as CSS variables:
 
-| Token | Value | Usage |
-| --- | --- | --- |
-| `default` | `#fcf7f2` | Page background |
-| `sand` | `#ede2d7` | Cards, buttons, sections |
-| `sand-gold` | `#d7b48b` | Featured sections |
-| `sand-dark` | `#d0a97c` | Accents, hover states |
-| `ocean` | `#3e5674` | Primary dark sections |
-| `ocean-alt` | `#8a9eb1` | Lighter ocean variant |
-| `terracotta` | `#c47556` | Brand accent |
-| `terracotta-off` | `#c36c44` | Icon color |
-| `terracotta-alt` | `#b56743` | Hover/darker accent |
-| `blue-overlay` | `#3e5674a4` | Image overlays |
-| `text-dark` | `#000000a8` | Secondary body text |
+| Token            | Value       | Usage                    |
+| ---------------- | ----------- | ------------------------ |
+| `default`        | `#fcf7f2`   | Page background          |
+| `sand`           | `#ede2d7`   | Cards, buttons, sections |
+| `sand-gold`      | `#d7b48b`   | Featured sections        |
+| `sand-dark`      | `#d0a97c`   | Accents, hover states    |
+| `ocean`          | `#3e5674`   | Primary dark sections    |
+| `ocean-alt`      | `#8a9eb1`   | Lighter ocean variant    |
+| `terracotta`     | `#c47556`   | Brand accent             |
+| `terracotta-off` | `#c36c44`   | Icon color               |
+| `terracotta-alt` | `#b56743`   | Hover/darker accent      |
+| `blue-overlay`   | `#3e5674a4` | Image overlays           |
+| `text-dark`      | `#000000a8` | Secondary body text      |
 
 Use Tailwind classes like `bg-ocean`, `text-white`, `text-color-dark`, `bg-sand-gold`.
 
@@ -142,18 +140,18 @@ Use Tailwind classes like `bg-ocean`, `text-white`, `text-color-dark`, `bg-sand-
 
 Headings use `font-aegean` (TAN Aegean). Body text uses `font-serif` (Roboto Serif).
 
-| Token | Desktop | Mobile |
-| --- | --- | --- |
-| `text-xs` | 14px | 12px |
-| `text-sm` | 16px | 14px |
-| `text-md` | 20px | 16px |
-| `text-lg` | 24px | 20px |
-| `text-xl` | 32px | 20px |
-| `text-2xl` | 36px | 24px |
-| `text-3xl` | 48px | 28px |
-| `text-section-sm` | clamp(24px → 48px) | — |
-| `text-section-md` | clamp(26px → 56px) | — |
-| `text-section-xl` | clamp(32px → 76px) | — |
+| Token             | Desktop            | Mobile |
+| ----------------- | ------------------ | ------ |
+| `text-xs`         | 14px               | 12px   |
+| `text-sm`         | 16px               | 14px   |
+| `text-md`         | 20px               | 16px   |
+| `text-lg`         | 24px               | 20px   |
+| `text-xl`         | 32px               | 20px   |
+| `text-2xl`        | 36px               | 24px   |
+| `text-3xl`        | 48px               | 28px   |
+| `text-section-sm` | clamp(24px → 48px) | —      |
+| `text-section-md` | clamp(26px → 56px) | —      |
+| `text-section-xl` | clamp(32px → 76px) | —      |
 
 - Section headings are usually uppercase.
 - Body paragraphs often use `text-color-dark` for softer contrast.

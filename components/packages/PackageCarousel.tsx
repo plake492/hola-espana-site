@@ -36,7 +36,7 @@ export default function PackageCarousel({ tiers }: { tiers: Tier[] }) {
 
         return (
           <div key={tier.name} className={cn('w-full', isMiddle ? 'md:flex-[1.2]' : 'md:flex-1')}>
-            <PackageCard tier={tier} presentation={TIER_PRESENTATION[i % TIER_PRESENTATION.length]} expanded={isMiddle} />
+            <PackageCard tier={tier} presentation={TIER_PRESENTATION[1]} expanded={isMiddle} />
           </div>
         );
       })}

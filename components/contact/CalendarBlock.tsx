@@ -22,17 +22,14 @@ export default function CalendarBlock() {
   return (
     <>
       {/* Calendly popup CSS */}
-      <link
-        href="https://assets.calendly.com/assets/external/widget.css"
-        rel="stylesheet"
-      />
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
 
       <div className="bg-ocean-alt flex flex-col items-center gap-6 px-8 py-10 text-white">
         <p className="text-center font-serif text-lg leading-snug">{copy.heading}</p>
 
         <button
           onClick={openCalendly}
-          className="relative cursor-pointer rounded-sm bg-sand px-8 py-3 font-aegean text-sm tracking-widest text-black shadow-[4px_4px_0px_0px_#d0c5b9] transition hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0"
+          className="bg-sand font-aegean relative cursor-pointer rounded-sm px-8 py-3 text-sm tracking-widest text-black shadow-[4px_4px_0px_0px_#d0c5b9] transition hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0"
         >
           Book a Call
         </button>
@@ -40,10 +37,7 @@ export default function CalendarBlock() {
         <p className="text-center font-serif text-sm italic opacity-90">{copy.disclaimer}</p>
       </div>
 
-      <Script
-        src="https://assets.calendly.com/assets/external/widget.js"
-        strategy="lazyOnload"
-      />
+      <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
     </>
   );
 }
