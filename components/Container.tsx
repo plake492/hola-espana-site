@@ -22,7 +22,7 @@ interface ContainerProps {
   className?: string;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | 'full';
   noCenter?: boolean;
-  iconProps?: IconProps[];
+  iconProps?: IconProps | IconProps[];
   [key: string]: unknown;
 }
 
